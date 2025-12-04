@@ -1,16 +1,6 @@
 # Crab Sunset 🦀🌅
 
-Token holder snapshot system for Crab Network governance tokens.
-
-## Features
-
-- 📊 **Token Holder Tracking**: Fetch and track ERC-20 token holders
-- 🔍 **Smart Contract Detection**: Separate contract holders from EOA holders
-- 🏷️ **Address Annotations**: Automatic annotation of special addresses (Treasury, Snow LPs)
-- 💾 **Caching System**: Reduce API calls with intelligent address caching
-- 🔢 **BigInt Support**: Handle large token balances without scientific notation
-- ⚡ **Native Token Support**: Track native CRAB token holders
-- 🌊 **Snow LP Analysis**: Identify and analyze all Snow LP tokens
+Token holder snapshot system for Crab chain.
 
 ## Project Structure
 
@@ -35,15 +25,7 @@ crab-sunset/
 
 ```
 
-## Quick Start
-
-### Install Dependencies
-
-```bash
-npm install
-```
-
-### Fetch Token Holders
+## Usage
 
 ```bash
 # Fetch specific tokens
@@ -67,123 +49,6 @@ npm run evolution-land
 
 # Fetch everything
 npm run fetch:all
-```
-
-## Usage
-
-### As CLI Tool
-
-```bash
-# Fetch any ERC-20 token
-node bin/fetch-token <contract_address>
-
-# Fetch native CRAB
-node bin/fetch-native
-
-# Fetch Snow LPs
-node bin/fetch-snow-lps
-
-# Fetch Evolution Land tokens
-node bin/fetch-evolution-land
-```
-
-### As Module
-
-```javascript
-const { fetchTokenHoldersSnapshot } = require('./src');
-
-async function example() {
-  const result = await fetchTokenHoldersSnapshot(
-    '0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329',
-    './data'
-  );
-  console.log(result);
-}
-```
-
-## Output Format
-
-### Token Snapshot (ERC-20)
-
-```json
-{
-  "address": "0x...",
-  "name": "Token Name",
-  "symbol": "SYMBOL",
-  "decimals": 18,
-  "total_supply": "1000000000000000000000",
-  "holders_count": 100,
-  "contract_holders_count": 20,
-  "eoa_holders_count": 80,
-  "contract_holders": {
-    "0x... (Snow LP contract)": "500000000000000000000",
-    "0x... (Treasury contract)": "300000000000000000000"
-  },
-  "eoa_holders": {
-    "0x...": "200000000000000000000"
-  }
-}
-```
-
-### Native Token Snapshot
-
-```json
-{
-  "name": "CRAB",
-  "symbol": "CRAB",
-  "decimals": 18,
-  "holders_count": 500,
-  "contract_holders_count": 50,
-  "eoa_holders_count": 450,
-  "total_balance": "10000000000000000000000",
-  "contract_holders": { ... },
-  "eoa_holders": { ... }
-}
-```
-
-### Snow LPs Snapshot
-
-```json
-{
-  "timestamp": "2025-12-04T...",
-  "chain": "Crab Network",
-  "snow_lps_count": 32,
-  "snow_lps": [
-    {
-      "address": "0x...",
-      "name": "Snow LPs",
-      "symbol": "SNOW-LP",
-      "decimals": 18,
-      "total_supply": "...",
-      "holders_count": 11,
-      "contract_holders_count": 3,
-      "eoa_holders_count": 8,
-      "lp_contract_balances": {
-        "0x...": {
-          "symbol": "WCRAB",
-          "name": "Wrapped CRAB",
-          "balance": "..."
-        }
-      },
-      "contract_holders": { ... },
-      "eoa_holders": { ... }
-    }
-  ]
-}
-```
-
-## Address Annotations
-
-Special addresses are automatically annotated:
-
-- **Treasury Contract**: `0x6D6f646c64612f74727372790000000000000000`
-- **Snow LP Contracts**: All detected Snow LP token contracts
-- **Evolution Land Tokens**: All detected Evolution Land token contracts
-
-Example output:
-```
-"0x6d6f646c64612f74727372790000000000000000 (Treasury contract)": "12568565..."
-"0x05f0bc920a23d1662764907910b150c819c110aa (Snow LP contract)": "60854459..."
 ```
 
 ## Configuration

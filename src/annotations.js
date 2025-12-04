@@ -3,7 +3,7 @@ const path = require("path");
 
 // Special addresses that need annotations
 const SPECIAL_ADDRESSES = {
-	"0x6d6f646c64612f74727372790000000000000000": "Treasury contract"
+	"0x6d6f646c64612f74727372790000000000000000": "Treasury"
 };
 
 // Load Snow LP addresses from the snapshot file
@@ -21,7 +21,7 @@ function loadSnowLPAddresses() {
 	// Add each Snow LP contract address
 	snapshot.snow_lps?.forEach(lp => {
 		const address = lp.address.toLowerCase();
-		lpAddresses[address] = `Snow LP contract`;
+		lpAddresses[address] = `Snow LP`;
 	});
 
 	return lpAddresses;
@@ -37,7 +37,7 @@ function loadEvolutionLandAddresses() {
 		const snapshot = JSON.parse(fs.readFileSync(snapshotPath, 'utf-8'));
 		const evoAddresses = {};
 		(snapshot.evolution_tokens || []).forEach(t => {
-			if (t.address) evoAddresses[(t.address || '').toLowerCase()] = 'Evolution Land token';
+			if (t.address) evoAddresses[(t.address || '').toLowerCase()] = 'Evolution Land';
 		});
 		return evoAddresses;
 	} catch (_) {

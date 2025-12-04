@@ -15,6 +15,7 @@
     "native": "node bin/fetch-native",
     "snow-lps": "node bin/fetch-snow-lps",
     "evolution-land": "node bin/fetch-evolution-land",
+    "fix-cache": "node bin/fix-cache",
     "fetch:all": "npm run snow-lps && npm run evolution-land && npm run wcrab && npm run gcrab && npm run ckton && npm run wkton && npm run gkton && npm run xring && npm run xwring && npm run wcring && npm run native"
   },
   "keywords": [

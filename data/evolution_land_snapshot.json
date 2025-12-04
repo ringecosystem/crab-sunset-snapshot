@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-04T07:57:07.089Z",
+  "timestamp": "2025-12-04T08:28:41.389Z",
   "chain": "Crab Network",
   "evolution_tokens_count": 7,
   "evolution_tokens": [
@@ -77,8 +77,8 @@
       "eoa_holders_count": 18,
       "contract_balances": {},
       "contract_holders": {
-        "0x15f2fbd98a0657e2afcab08922632e58b1cc9fdd (Snow LP contract)": "141446606508564805394767",
-        "0xa946116131932f2a6b5f2a2a52007418d706168a (Snow LP contract)": "83837369727034075017720",
+        "0x15f2fbd98a0657e2afcab08922632e58b1cc9fdd (Snow LP)": "141446606508564805394767",
+        "0xa946116131932f2a6b5f2a2a52007418d706168a (Snow LP)": "83837369727034075017720",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "24000000000000000000000",
         "0x90e2fa4099eb1fed203769b99c9c64cdda1acb57": "2515000000000000000000"
       },
@@ -114,8 +114,8 @@
       "eoa_holders_count": 18,
       "contract_balances": {},
       "contract_holders": {
-        "0x506c391b6c1eb4911241a918de5c3984a603e112 (Snow LP contract)": "102097957826193446800708",
-        "0x8e97f45bd127e7af3034d82a34d665746d348841 (Snow LP contract)": "93854870205232702655671",
+        "0x506c391b6c1eb4911241a918de5c3984a603e112 (Snow LP)": "102097957826193446800708",
+        "0x8e97f45bd127e7af3034d82a34d665746d348841 (Snow LP)": "93854870205232702655671",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "30500000000000000000000",
         "0x90e2fa4099eb1fed203769b99c9c64cdda1acb57": "3135000000000000000000"
       },
@@ -151,8 +151,8 @@
       "eoa_holders_count": 16,
       "contract_balances": {},
       "contract_holders": {
-        "0x76f6877ac6b03bf80ab911de4580c51dcb358927 (Snow LP contract)": "48952660535938397741868",
-        "0x1e4b46582bba7e5ddb107d3a640e441774980525 (Snow LP contract)": "45805641686973058885692",
+        "0x76f6877ac6b03bf80ab911de4580c51dcb358927 (Snow LP)": "48952660535938397741868",
+        "0x1e4b46582bba7e5ddb107d3a640e441774980525 (Snow LP)": "45805641686973058885692",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "20000000000000000000000",
         "0x90e2fa4099eb1fed203769b99c9c64cdda1acb57": "1115000000000000000000",
         "0x58fed52ae6c20bcbdbc2949236595415e5014276": "17654867392444958375"
@@ -187,10 +187,10 @@
       "eoa_holders_count": 17,
       "contract_balances": {},
       "contract_holders": {
-        "0x2eb5b4a0624d6e646ba2ad919411072476fa1568 (Snow LP contract)": "89360870735786773986518",
-        "0x3710f045307d7e0906f1fbd0b0df12c0bc787382 (Snow LP contract)": "36541499786190597580294",
+        "0x2eb5b4a0624d6e646ba2ad919411072476fa1568 (Snow LP)": "89360870735786773986518",
+        "0x3710f045307d7e0906f1fbd0b0df12c0bc787382 (Snow LP)": "36541499786190597580294",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "13500000000000000000000",
-        "0x316d4f81339d810f0342828868dafe4365f07f22 (Snow LP contract)": "3265269223036322727"
+        "0x316d4f81339d810f0342828868dafe4365f07f22 (Snow LP)": "3265269223036322727"
       },
       "eoa_holders": {
         "0x87f0c169d8acc432acdb5e7d0907322c80ec6621": "96096637012234057768133",
@@ -223,8 +223,8 @@
       "eoa_holders_count": 17,
       "contract_balances": {},
       "contract_holders": {
-        "0xd4b2b19a62500bb32a731a0889ef0b5147a963e4 (Snow LP contract)": "95401776266004290585326",
-        "0xdb279d65225162280facae2f3ca8a3d2f63ea9bf (Snow LP contract)": "73484499385123593533772",
+        "0xd4b2b19a62500bb32a731a0889ef0b5147a963e4 (Snow LP)": "95401776266004290585326",
+        "0xdb279d65225162280facae2f3ca8a3d2f63ea9bf (Snow LP)": "73484499385123593533772",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "13500000000000000000000"
       },
       "eoa_holders": {

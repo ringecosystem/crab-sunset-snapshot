@@ -1,0 +1,111 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+const CACHE_PATH = path.join(__dirname, '..', 'data', '.address_cache.json');
+const BASE_URL = "https://crab-scan.darwinia.network/api";
+
+async function isSmartContract(address) {
+	try {
+		const url = `${BASE_URL}/v2/smart-contracts/${address}`;
+		const response = await fetch(url, {
+			headers: { 'Accept': 'application/json' }
+		});
+		
+		if (response.status === 404) {
+			return false; // Not a contract
+		}
+		
+		if (!response.ok) {
+			return null; // Unknown (API error)
+		}
+		
+		return true; // It's a contract
+	} catch (error) {
+		return null; // Unknown (network error)
+	}
+}
+
+async function scanAndFixCache() {
+	console.log('\n🔍 Scanning address cache...\n');
+	
+	// Load cache
+	if (!fs.existsSync(CACHE_PATH)) {
+		console.error('❌ Cache file not found:', CACHE_PATH);
+		process.exit(1);
+	}
+	
+	const cache = JSON.parse(fs.readFileSync(CACHE_PATH, 'utf-8'));
+	const addresses = Object.keys(cache);
+	
+	console.log(`📊 Total addresses: ${addresses.length}\n`);
+	
+	const stats = {
+		checked: 0,
+		correct: 0,
+		fixed: 0,
+		errors: 0
+	};
+	
+	// Check and fix each address
+	for (let i = 0; i < addresses.length; i++) {
+		const address = addresses[i];
+		const cachedValue = cache[address];
+		
+		// Show progress
+		const progress = Math.round((i + 1) / addresses.length * 100);
+		process.stdout.write(`\r⏳ Progress: ${i + 1}/${addresses.length} (${progress}%) | ✅ ${stats.correct} | 🔧 ${stats.fixed} | ❌ ${stats.errors}`);
+		
+		const actualValue = await isSmartContract(address);
+		stats.checked++;
+		
+		if (actualValue === null) {
+			// API/network error
+			stats.errors++;
+		} else if (cachedValue === actualValue) {
+			// Correct
+			stats.correct++;
+		} else {
+			// Incorrect - fix it
+			const oldType = cachedValue ? 'Contract' : 'EOA';
+			const newType = actualValue ? 'Contract' : 'EOA';
+			process.stdout.write(`\n  🔧 Fixing ${address.slice(0, 10)}...${address.slice(-6)}: ${oldType} → ${newType}\n`);
+			cache[address] = actualValue;
+			stats.fixed++;
+		}
+		
+		// Rate limiting
+		await new Promise(r => setTimeout(r, 100));
+	}
+	
+	process.stdout.write('\n\n');
+	
+	// Save updated cache if fixes were made
+	if (stats.fixed > 0) {
+		fs.writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
+		console.log(`💾 Cache updated with ${stats.fixed} fixes\n`);
+	}
+	
+	// Summary
+	console.log('📈 Summary:');
+	console.log(`   ✅ Correct:  ${stats.correct}`);
+	console.log(`   🔧 Fixed:    ${stats.fixed}`);
+	console.log(`   ❌ Errors:   ${stats.errors}`);
+	console.log(`   📊 Total:    ${stats.checked}\n`);
+	
+	if (stats.fixed === 0 && stats.errors === 0) {
+		console.log('🎉 All cache entries are correct!\n');
+	} else if (stats.fixed > 0) {
+		console.log('✅ Cache has been fixed!\n');
+	}
+	
+	if (stats.errors > 0) {
+		console.log('⚠️  Some addresses could not be verified due to API/network errors.\n');
+	}
+}
+
+scanAndFixCache().catch(error => {
+	console.error('\n❌ Fatal error:', error.message);
+	process.exit(1);
+});

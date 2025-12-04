@@ -18,7 +18,8 @@ async function fetchAllHolders(contractAddress, offset = 100) {
 
 			// Collect holder data
 			results.forEach((item) => {
-				allHolders[item.address] = parseFloat(item.value);
+				// Store as string directly to avoid scientific notation
+				allHolders[item.address] = item.value;
 			});
 
 			process.stdout.write(`\rFetching holders: ${Object.keys(allHolders).length} found (page ${page})...`);

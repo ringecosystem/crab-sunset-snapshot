@@ -19,6 +19,18 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 	// Separate contract holders and EOA holders
 	const { contractHolders, eoaHolders } = await separateHoldersByType(allHolders, addressCache);
 
+	// Sort holders by balance (descending)
+	const sortHoldersByBalance = (holders) => {
+		const sorted = Object.entries(holders).sort((a, b) => {
+			const balA = BigInt(a[1]);
+			const balB = BigInt(b[1]);
+			if (balA > balB) return -1;
+			if (balA < balB) return 1;
+			return 0;
+		});
+		return Object.fromEntries(sorted);
+	};
+
 	// Prepare output JSON with token info
 	const output = {
 		address: contractAddress,
@@ -29,8 +41,8 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 		holders_count: Object.keys(allHolders).length,
 		contract_holders_count: Object.keys(contractHolders).length,
 		eoa_holders_count: Object.keys(eoaHolders).length,
-		contract_holders: contractHolders,
-		eoa_holders: eoaHolders
+		contract_holders: sortHoldersByBalance(contractHolders),
+		eoa_holders: sortHoldersByBalance(eoaHolders)
 	};
 
 	// Ensure output directory exists

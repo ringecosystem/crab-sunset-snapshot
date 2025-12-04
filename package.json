@@ -11,7 +11,8 @@
     "gkton": "node main.js 0xB633Ad1142941CA2Eb9C350579cF88BbE266660D",
     "xring": "node main.js 0x7399Ea6C9d35124d893B8d9808930e9d3F211501",
     "xwring": "node main.js 0x273131F7CB50ac002BDd08cA721988731F7e1092",
-    "fetch:all": "npm run wcrab && npm run gcrab && npm run ckton && npm run wkton && npm run gkton && npm run xring && npm run xwring"
+    "native": "node native.js",
+    "fetch:all": "npm run wcrab && npm run gcrab && npm run ckton && npm run wkton && npm run gkton && npm run xring && npm run xwring && npm run native"
   },
   "author": "",
   "license": "ISC"

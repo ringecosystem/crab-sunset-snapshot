@@ -3,6 +3,7 @@ const path = require("path");
 const { fetchTokenInfo, isSmartContract } = require('./api');
 const { fetchAllHolders } = require('./holders');
 const { loadCache, saveCache } = require('./cache');
+const { getAnnotations, annotateHolders } = require('./annotations');
 
 const BASE_URL = "https://crab-scan.darwinia.network/api";
 
@@ -137,7 +138,7 @@ async function fetchLPContractBalances(lpAddress, trackedTokens) {
 	return balances;
 }
 
-async function processSnowLP(lpToken, addressCache, trackedTokens) {
+async function processSnowLP(lpToken, addressCache, trackedTokens, annotations) {
 	const address = lpToken.address;
 	const name = lpToken.name || "Unknown";
 	const symbol = lpToken.symbol || "Unknown";
@@ -215,8 +216,8 @@ async function processSnowLP(lpToken, addressCache, trackedTokens) {
 		contract_holders_count: Object.keys(contractHolders).length,
 		eoa_holders_count: Object.keys(eoaHolders).length,
 		lp_contract_balances: lpBalances,
-		contract_holders: sortHoldersByBalance(contractHolders),
-		eoa_holders: sortHoldersByBalance(eoaHolders)
+		contract_holders: annotateHolders(sortHoldersByBalance(contractHolders), annotations),
+		eoa_holders: annotateHolders(sortHoldersByBalance(eoaHolders), annotations)
 	};
 }
 
@@ -224,8 +225,9 @@ async function fetchSnowLPsSnapshot(outputDir) {
 	console.log(`\n📊 Snow LPs Snapshot`);
 	console.log(`📍 Crab Network`);
 
-	// Load cache
+	// Load cache and annotations
 	const addressCache = loadCache();
+	const annotations = getAnnotations();
 	
 	// Get tracked tokens from data folder
 	const trackedTokens = getTrackedTokenAddresses(outputDir);
@@ -245,7 +247,7 @@ async function fetchSnowLPsSnapshot(outputDir) {
 	const results = [];
 	for (let i = 0; i < snowLPs.length; i++) {
 		console.log(`\n[${i + 1}/${snowLPs.length}]`);
-		const result = await processSnowLP(snowLPs[i], addressCache, trackedTokens);
+		const result = await processSnowLP(snowLPs[i], addressCache, trackedTokens, annotations);
 		results.push(result);
 	}
 	

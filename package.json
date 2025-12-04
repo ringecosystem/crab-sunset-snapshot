@@ -14,7 +14,7 @@
     "wcring": "node main.js 0xA3eE184ed6eA8fa276AfA282980f83A7091b1E8C",
     "native": "node native.js",
     "snow-lps": "node snow-lps.js",
-    "fetch:all": "npm run wcrab && npm run gcrab && npm run ckton && npm run wkton && npm run gkton && npm run xring && npm run xwring && npm run wcring && npm run native && npm run snow-lps"
+    "fetch:all": "npm run snow-lps && npm run wcrab && npm run gcrab && npm run ckton && npm run wkton && npm run gkton && npm run xring && npm run xwring && npm run wcring && npm run native"
   },
   "author": "",
   "license": "ISC"

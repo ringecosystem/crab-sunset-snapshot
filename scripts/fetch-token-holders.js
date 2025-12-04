@@ -3,10 +3,12 @@ const path = require("path");
 const { fetchTokenInfo } = require('./api');
 const { fetchAllHolders, separateHoldersByType } = require('./holders');
 const { loadCache } = require('./cache');
+const { getAnnotations, annotateHolders } = require('./annotations');
 
 async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
-	// Load cache
+	// Load cache and annotations
 	const addressCache = loadCache();
+	const annotations = getAnnotations();
 
 	// First, fetch token information
 	const tokenInfo = await fetchTokenInfo(contractAddress);
@@ -31,7 +33,7 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 		return Object.fromEntries(sorted);
 	};
 
-	// Prepare output JSON with token info
+	// Prepare output JSON with token info and annotations
 	const output = {
 		address: contractAddress,
 		name: tokenInfo?.name || "Unknown",
@@ -41,8 +43,8 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 		holders_count: Object.keys(allHolders).length,
 		contract_holders_count: Object.keys(contractHolders).length,
 		eoa_holders_count: Object.keys(eoaHolders).length,
-		contract_holders: sortHoldersByBalance(contractHolders),
-		eoa_holders: sortHoldersByBalance(eoaHolders)
+		contract_holders: annotateHolders(sortHoldersByBalance(contractHolders), annotations),
+		eoa_holders: annotateHolders(sortHoldersByBalance(eoaHolders), annotations)
 	};
 
 	// Ensure output directory exists

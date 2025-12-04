@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const { isSmartContract } = require('./api');
 const { loadCache, saveCache } = require('./cache');
+const { getAnnotations, annotateHolders } = require('./annotations');
 
 const BASE_URL = "https://crab-scan.darwinia.network/api";
 
@@ -155,8 +156,9 @@ async function fetchNativeTokenSnapshot(outputDir) {
 	console.log(`\n📊 Native Token - CRAB`);
 	console.log(`📍 Crab Network Native Token`);
 
-	// Load cache
+	// Load cache and annotations
 	const addressCache = loadCache();
+	const annotations = getAnnotations();
 	
 	// Fetch all native token holders
 	const allHolders = await fetchAllNativeHolders();
@@ -184,7 +186,7 @@ async function fetchNativeTokenSnapshot(outputDir) {
 		return Object.fromEntries(sorted);
 	};
 
-	// Prepare output JSON
+	// Prepare output JSON with annotations
 	const output = {
 		name: "CRAB",
 		symbol: "CRAB",
@@ -193,8 +195,8 @@ async function fetchNativeTokenSnapshot(outputDir) {
 		contract_holders_count: Object.keys(contractHolders).length,
 		eoa_holders_count: Object.keys(eoaHolders).length,
 		total_balance: calculateTotalBalance(allHolders),
-		contract_holders: sortHoldersByBalance(contractHolders),
-		eoa_holders: sortHoldersByBalance(eoaHolders)
+		contract_holders: annotateHolders(sortHoldersByBalance(contractHolders), annotations),
+		eoa_holders: annotateHolders(sortHoldersByBalance(eoaHolders), annotations)
 	};
 
 	// Ensure output directory exists

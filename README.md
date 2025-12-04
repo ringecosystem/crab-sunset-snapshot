@@ -19,7 +19,8 @@ crab-sunset/
 ├── bin/                    # CLI entry points
 │   ├── fetch-token         # Fetch ERC-20 token holders
 │   ├── fetch-native        # Fetch native CRAB holders
-│   └── fetch-snow-lps      # Fetch Snow LP tokens
+│   ├── fetch-snow-lps      # Fetch Snow LP tokens
+│   └── fetch-evolution-land# Fetch Evolution Land tokens
 ├── src/                    # Core functionality
 │   ├── index.js            # Main exports
 │   ├── api.js              # Blockscout API client
@@ -28,7 +29,8 @@ crab-sunset/
 │   ├── annotations.js      # Address annotation system
 │   ├── fetch-token-holders.js
 │   ├── fetch-native-holders.js
-│   └── fetch-snow-lps.js
+│   ├── fetch-snow-lps.js
+│   └── fetch-evolution-land.js
 └── data/                   # Output directory for JSON snapshots
 
 ```
@@ -60,6 +62,9 @@ npm run native
 # Fetch all Snow LP tokens
 npm run snow-lps
 
+# Fetch all Evolution Land tokens
+npm run evolution-land
+
 # Fetch everything
 npm run fetch:all
 ```
@@ -77,6 +82,9 @@ node bin/fetch-native
 
 # Fetch Snow LPs
 node bin/fetch-snow-lps
+
+# Fetch Evolution Land tokens
+node bin/fetch-evolution-land
 ```
 
 ### As Module
@@ -170,6 +178,7 @@ Special addresses are automatically annotated:
 
 - **Treasury Contract**: `0x6D6f646c64612f74727372790000000000000000`
 - **Snow LP Contracts**: All detected Snow LP token contracts
+- **Evolution Land Tokens**: All detected Evolution Land token contracts
 
 Example output:
 ```

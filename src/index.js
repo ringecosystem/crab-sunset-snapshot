@@ -7,6 +7,7 @@
 const { fetchTokenHoldersSnapshot } = require('./fetch-token-holders');
 const { fetchNativeTokenSnapshot } = require('./fetch-native-holders');
 const { fetchSnowLPsSnapshot } = require('./fetch-snow-lps');
+const { fetchEvolutionLandSnapshot } = require('./fetch-evolution-land');
 const { getAnnotations, annotateAddress, annotateHolders } = require('./annotations');
 const { fetchTokenInfo, isSmartContract } = require('./api');
 const { loadCache, saveCache } = require('./cache');
@@ -16,6 +17,7 @@ module.exports = {
 	fetchTokenHoldersSnapshot,
 	fetchNativeTokenSnapshot,
 	fetchSnowLPsSnapshot,
+	fetchEvolutionLandSnapshot,
 	
 	// Annotation utilities
 	getAnnotations,

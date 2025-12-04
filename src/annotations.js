@@ -27,9 +27,28 @@ function loadSnowLPAddresses() {
 	return lpAddresses;
 }
 
+// Load Evolution Land token addresses from the chain (via snapshot output if present)
+function loadEvolutionLandAddresses() {
+	const snapshotPath = path.resolve(__dirname, '../data/evolution_land_snapshot.json');
+	if (!fs.existsSync(snapshotPath)) {
+		return {};
+	}
+	try {
+		const snapshot = JSON.parse(fs.readFileSync(snapshotPath, 'utf-8'));
+		const evoAddresses = {};
+		(snapshot.evolution_tokens || []).forEach(t => {
+			if (t.address) evoAddresses[(t.address || '').toLowerCase()] = 'Evolution Land token';
+		});
+		return evoAddresses;
+	} catch (_) {
+		return {};
+	}
+}
+
 // Get all special addresses with annotations
 function getAnnotations() {
 	const snowLPs = loadSnowLPAddresses();
+	const evoTokens = loadEvolutionLandAddresses();
 	
 	// Merge special addresses and Snow LPs
 	const annotations = {};
@@ -41,6 +60,11 @@ function getAnnotations() {
 	
 	// Add Snow LP addresses
 	for (const [address, annotation] of Object.entries(snowLPs)) {
+		annotations[address] = annotation;
+	}
+
+	// Add Evolution Land token addresses
+	for (const [address, annotation] of Object.entries(evoTokens)) {
 		annotations[address] = annotation;
 	}
 	
@@ -74,5 +98,6 @@ module.exports = {
 	getAnnotations,
 	annotateAddress,
 	annotateHolders,
-	loadSnowLPAddresses
+	loadSnowLPAddresses,
+	loadEvolutionLandAddresses
 };

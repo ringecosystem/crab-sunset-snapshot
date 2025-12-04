@@ -1,21 +1,27 @@
 {
   "name": "crab-sunset",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "description": "Token holder snapshot system for Crab Network",
+  "main": "src/index.js",
   "scripts": {
-    "wcrab": "node main.js 0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329",
-    "gcrab": "node main.js 0xdafa555e2785DC8834F4Ea9D1ED88B6049142999",
-    "ckton": "node main.js 0x0000000000000000000000000000000000000402",
-    "wkton": "node main.js 0x159933C635570D5042723359fbD1619dFe83D3f3",
-    "gkton": "node main.js 0xB633Ad1142941CA2Eb9C350579cF88BbE266660D",
-    "xring": "node main.js 0x7399Ea6C9d35124d893B8d9808930e9d3F211501",
-    "xwring": "node main.js 0x273131F7CB50ac002BDd08cA721988731F7e1092",
-    "wcring": "node main.js 0xA3eE184ed6eA8fa276AfA282980f83A7091b1E8C",
-    "native": "node native.js",
-    "snow-lps": "node snow-lps.js",
+    "wcrab": "node bin/fetch-token 0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329",
+    "gcrab": "node bin/fetch-token 0xdafa555e2785DC8834F4Ea9D1ED88B6049142999",
+    "ckton": "node bin/fetch-token 0x0000000000000000000000000000000000000402",
+    "wkton": "node bin/fetch-token 0x159933C635570D5042723359fbD1619dFe83D3f3",
+    "gkton": "node bin/fetch-token 0xB633Ad1142941CA2Eb9C350579cF88BbE266660D",
+    "xring": "node bin/fetch-token 0x7399Ea6C9d35124d893B8d9808930e9d3F211501",
+    "xwring": "node bin/fetch-token 0x273131F7CB50ac002BDd08cA721988731F7e1092",
+    "wcring": "node bin/fetch-token 0xA3eE184ed6eA8fa276AfA282980f83A7091b1E8C",
+    "native": "node bin/fetch-native",
+    "snow-lps": "node bin/fetch-snow-lps",
     "fetch:all": "npm run snow-lps && npm run wcrab && npm run gcrab && npm run ckton && npm run wkton && npm run gkton && npm run xring && npm run xwring && npm run wcring && npm run native"
   },
+  "keywords": [
+    "blockchain",
+    "crab-network",
+    "token-holders",
+    "snapshot"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }

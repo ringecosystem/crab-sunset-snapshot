@@ -1,0 +1,17 @@
+{
+  "address": "0xA3eE184ed6eA8fa276AfA282980f83A7091b1E8C",
+  "name": "Wrapped CRing",
+  "symbol": "WCRING",
+  "decimals": 18,
+  "total_supply": "4042358360734223846975091",
+  "holders_count": 3,
+  "contract_holders_count": 1,
+  "eoa_holders_count": 2,
+  "contract_holders": {
+    "0xe67d681eed8c4b1837307a85bd813b89421dc7e1": "4012618231008360927574164"
+  },
+  "eoa_holders": {
+    "0x998b736aa535e2333ce2462a49681b69c4d44aac": "24433289576964712428391",
+    "0xb156c425f325d750968702d4bd4226573edc3aed": "473463951150486"
+  }
+}

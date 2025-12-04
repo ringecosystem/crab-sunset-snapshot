@@ -1,0 +1,744 @@
+{
+  "timestamp": "2025-12-04T07:13:16.250Z",
+  "chain": "Crab Network",
+  "snow_lps_count": 32,
+  "snow_lps": [
+    {
+      "address": "0x819891bE4586dDfc3399cfFc69d22CC40B913349",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "10466539056184497700095",
+      "holders_count": 11,
+      "contract_holders_count": 3,
+      "eoa_holders_count": 8,
+      "lp_contract_balances": {
+        "0x0000000000000000000000000000000000000402": {
+          "symbol": "CKTON",
+          "name": "Crab Commitment Token",
+          "balance": "301655136825701220776"
+        },
+        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
+          "symbol": "WCRAB",
+          "name": "Wrapped CRAB",
+          "balance": "381114067404855093574576"
+        }
+      },
+      "contract_holders": {
+        "0x41965d8f028183419b12234045b22a98585c60d2": "9734874366901618945108",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "228260178567332570034",
+        "0xc98da33c619361b0810ad65c6421eee68e21520a": "2553434537932459948"
+      },
+      "eoa_holders": {
+        "0x927f7d7e443a87da77a293970a7aed8bb404f955": "423800792901891142558",
+        "0xefb73e47099485c72b7678cb59fb0da7dacf173f": "34419812084207197626",
+        "0x60ff1c39b331f4035db7799973893a690ca06360": "23064423274744179407",
+        "0x21b7b075ed133a7f3faf10698bdc6613998c4180": "10586382816297635507",
+        "0x050066b4c414db66954e496972c05852c505c7f4": "8040728394590481860",
+        "0xef0d6c11cbee22fa642582024380efbd893aa1a6": "636396885039227027",
+        "0x05e0375b33aef6a5bc6c02f52e02f62aadc586fe": "253857419435710715",
+        "0x1116bffe122485addff8d182caa91c94b05e490c": "48682401408149305"
+      }
+    },
+    {
+      "address": "0x05F0Bc920A23D1662764907910b150C819C110aa",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "12636007352026544351439789",
+      "holders_count": 9,
+      "contract_holders_count": 2,
+      "eoa_holders_count": 7,
+      "lp_contract_balances": {
+        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
+          "symbol": "WCRAB",
+          "name": "Wrapped CRAB",
+          "balance": "60854459411618003136925631"
+        },
+        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
+          "symbol": "xWRING",
+          "name": "Wrapped Ring[Darwinia Smart&gt;",
+          "balance": "2662597193764786961625623"
+        }
+      },
+      "contract_holders": {
+        "0x02b04c69918808083ac8fc60abe786855999f2bd": "3901619059740753817522",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "94160234570146250"
+      },
+      "eoa_holders": {
+        "0x6d6f646c64612f74727372790000000000000000": "12568565767522379105723006",
+        "0xd9b8954ce0970c29a7c65b32babc810ac19cccfe": "33115134474520643635373",
+        "0x05e0375b33aef6a5bc6c02f52e02f62aadc586fe": "27038045751311064589590",
+        "0x73db0f38391583c9f4786f7a317afab23b6749f7": "3053344779743549005227",
+        "0x050066b4c414db66954e496972c05852c505c7f4": "186933750256801201014",
+        "0x8f49a10fcacd7cd22257b9fd358bcab2cb3cffdc": "113881443500249068167",
+        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "32531084857614252640"
+      }
+    },
+    {
+      "address": "0xA946116131932f2a6B5f2A2A52007418d706168A",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "16235422743183455606883",
+      "holders_count": 6,
+      "contract_holders_count": 3,
+      "eoa_holders_count": 3,
+      "lp_contract_balances": {
+        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
+          "symbol": "xWRING",
+          "name": "Wrapped Ring[Darwinia Smart&gt;",
+          "balance": "3354509648779770909903"
+        }
+      },
+      "contract_holders": {
+        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "1350000000000000000000",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "76604993023460385304",
+        "0xa796964e8c6d73f78963439d1882e8f4a1808178": "299999999999999000"
+      },
+      "eoa_holders": {
+        "0x73db0f38391583c9f4786f7a317afab23b6749f7": "10717098175124107839493",
+        "0x12d529cfa26891cdf1d25453f9851c73e2720373": "16277606944873532103",
+        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "380594102013849983"
+      }
+    },
+    {
+      "address": "0x506C391b6c1eb4911241A918de5c3984A603E112",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "26818164663432996664208",
+      "holders_count": 5,
+      "contract_holders_count": 3,
+      "eoa_holders_count": 2,
+      "lp_contract_balances": {
+        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
+          "symbol": "xWRING",
+          "name": "Wrapped Ring[Darwinia Smart&gt;",
+          "balance": "7355650023582673556530"
+        }
+      },
+      "contract_holders": {
+        "0x9579391a03ffb1f30641dcb453a6212558935065": "15350747685318028267330",
+        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "450000000000000000000",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "84107814044557770317"
+      },
+      "eoa_holders": {
+        "0x73db0f38391583c9f4786f7a317afab23b6749f7": "8228929636813924982986",
+        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "447656729670174231"
+      }
+    },
+    {
+      "address": "0x15f2fBD98a0657e2afcAB08922632e58B1cC9FdD",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "1150780946677922272",
+      "holders_count": 4,
+      "contract_holders_count": 3,
+      "eoa_holders_count": 1,
+      "lp_contract_balances": {
+        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
+          "symbol": "xRING",
+          "name": "Darwinia Network Native Token[Darwinia&gt;",
+          "balance": "9680545901484"
+        }
+      },
+      "contract_holders": {
+        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "540000000000000000",
+        "0xd02f1e68bc8973ae8638fafccbb8a22d010661c8": "539685428736694936",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "7376881463797123"
+      },
+      "eoa_holders": {
+        "0x12d529cfa26891cdf1d25453f9851c73e2720373": "4722850936488524"
+      }
+    },
+    {
+      "address": "0x2Eb5b4A0624d6E646Ba2aD919411072476FA1568",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "25553069239145709301943",
+      "holders_count": 4,
+      "contract_holders_count": 2,
+      "eoa_holders_count": 2,
+      "lp_contract_balances": {
+        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
+          "symbol": "xWRING",
+          "name": "Wrapped Ring[Darwinia Smart&gt;",
+          "balance": "7536797959931602287102"
+        }
+      },
+      "contract_holders": {
+        "0x21dc35da3262f6fe9bd60c6225a0fe478322441a": "10429349749232935581653",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "93319958095235529235"
+      },
+      "eoa_holders": {
+        "0x73db0f38391583c9f4786f7a317afab23b6749f7": "10471813415498049072303",
+        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "373939667489117752"
+      }
+    },
+    {
+      "address": "0x76F6877Ac6b03BF80AB911DE4580C51dcb358927",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "13451763375493142240143",
+      "holders_count": 4,
+      "contract_holders_count": 2,
+      "eoa_holders_count": 2,
+      "lp_contract_balances": {
+        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
+          "symbol": "xWRING",
+          "name": "Wrapped Ring[Darwinia Smart&gt;",
+          "balance": "3867548402061688698827"
+        }
+      },
+      "contract_holders": {
+        "0x7982f2d3ebc7540ab4d6c252df459330a919b27c": "2177936629058845028486",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "42902183972701622023"
+      },
+      "eoa_holders": {
+        "0x73db0f38391583c9f4786f7a317afab23b6749f7": "9430532644228145143888",
+        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "391918233450444746"
+      }
+    },
+    {
+      "address": "0xd4b2b19a62500bb32a731a0889eF0b5147A963E4",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "16678990620535841363043",
+      "holders_count": 4,
+      "contract_holders_count": 2,
+      "eoa_holders_count": 2,
+      "lp_contract_balances": {
+        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
+          "symbol": "xWRING",
+          "name": "Wrapped Ring[Darwinia Smart&gt;",
+          "balance": "3087078288130410198442"
+        }
+      },
+      "contract_holders": {
+        "0xe11ac68b9cc9a8191f4d1916beb285561e13f67c": "2286333255169960072247",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "78094013923549850661"
+      },
+      "eoa_holders": {
+        "0x73db0f38391583c9f4786f7a317afab23b6749f7": "9159034881234814249620",
+        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "289917269517189515"
+      }
+    },
+    {
+      "address": "0x1E4b46582bbA7E5Ddb107d3a640e441774980525",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "521767216067441130",
+      "holders_count": 3,
+      "contract_holders_count": 3,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
+          "symbol": "xRING",
+          "name": "Darwinia Network Native Token[Darwinia&gt;",
+          "balance": "6223659651123"
+        }
+      },
+      "contract_holders": {
+        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "480000000000000000",
+        "0xb74200016e1296f2a41e7efe44b3908f5762c859": "33670000000000000",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "4565755662620176"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0x3710F045307d7e0906F1Fbd0B0dF12c0Bc787382",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "427137893620209816",
+      "holders_count": 3,
+      "contract_holders_count": 3,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
+          "symbol": "xRING",
+          "name": "Darwinia Network Native Token[Darwinia&gt;",
+          "balance": "5265962704242"
+        }
+      },
+      "contract_holders": {
+        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "315000000000000000",
+        "0x6317fe2f7a7bbbd08770cb6e0a8523292f74a9d0": "72516561594658765",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "4896899156584599"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0x8e97f45bD127E7af3034d82a34d665746d348841",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "1024302403616730512",
+      "holders_count": 3,
+      "contract_holders_count": 3,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
+          "symbol": "xRING",
+          "name": "Darwinia Network Native Token[Darwinia&gt;",
+          "balance": "11610692649994"
+        }
+      },
+      "contract_holders": {
+        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "810000000000000000",
+        "0x595ef7c4ab61d6f9fe9b368dc83ce7fd9aec0d83": "156218342173357282",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "7214104516595591"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0xA0Bbe4777cb20c6015deb66E3E2600023312eEBb",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "408834612836402846",
+      "holders_count": 3,
+      "contract_holders_count": 2,
+      "eoa_holders_count": 1,
+      "lp_contract_balances": {
+        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
+          "symbol": "WCRAB",
+          "name": "Wrapped CRAB",
+          "balance": "23566816623603943069525"
+        }
+      },
+      "contract_holders": {
+        "0x58fed52ae6c20bcbdbc2949236595415e5014276": "186335307200004360",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "2044913709440367"
+      },
+      "eoa_holders": {
+        "0x675ee25611307e630bffec1e26ceae5e4f7faaa8": "17200186739854"
+      }
+    },
+    {
+      "address": "0xdb279D65225162280fACae2F3Ca8A3D2F63ea9BF",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "533579431024594854",
+      "holders_count": 3,
+      "contract_holders_count": 3,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
+          "symbol": "xRING",
+          "name": "Darwinia Network Native Token[Darwinia&gt;",
+          "balance": "4059599531692"
+        }
+      },
+      "contract_holders": {
+        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "375000000000000000",
+        "0xe77164dc95057337e40367f66416be6d394d6fe6": "119518317069620079",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "6300437722146304"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0xEb6c388706Cd58fDD3c0F5AAA7bF45ED9f332283",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "2871882301189719149288",
+      "holders_count": 3,
+      "contract_holders_count": 2,
+      "eoa_holders_count": 1,
+      "lp_contract_balances": {
+        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
+          "symbol": "WCRAB",
+          "name": "Wrapped CRAB",
+          "balance": "22287877905964507011"
+        }
+      },
+      "contract_holders": {
+        "0x58fed52ae6c20bcbdbc2949236595415e5014276": "1627334384897056948084",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "2842011752376325836"
+      },
+      "eoa_holders": {
+        "0x3fbe6a4d2d9b6c662264f21de76da510d1972fef": "1241705904540285874368"
+      }
+    },
+    {
+      "address": "0x04C096815f99778c0d28E66B2a58c9706dF89BA2",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "212464848560920",
+      "holders_count": 2,
+      "contract_holders_count": 2,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x0000000000000000000000000000000000000402": {
+          "symbol": "CKTON",
+          "name": "Crab Commitment Token",
+          "balance": "346567288860473240"
+        }
+      },
+      "contract_holders": {
+        "0x58fed52ae6c20bcbdbc2949236595415e5014276": "212318803902564",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "146044657356"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0x05751685Bf5BE88A4CD39380A0ee5E04fa39D9F1",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "82931564864585984",
+      "holders_count": 2,
+      "contract_holders_count": 2,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
+          "symbol": "xWRING",
+          "name": "Wrapped Ring[Darwinia Smart&gt;",
+          "balance": "1000960212315706344446"
+        }
+      },
+      "contract_holders": {
+        "0x58fed52ae6c20bcbdbc2949236595415e5014276": "82845336828361456",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "86228036223528"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0x84cdD089141f86183559C79eB6fe1a72dCc6834f",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "1559422560",
+      "holders_count": 2,
+      "contract_holders_count": 2,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {},
+      "contract_holders": {
+        "0x58fed52ae6c20bcbdbc2949236595415e5014276": "1559398865",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "22695"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0xF157c9393255Db1728bC6483c3545Ca8a1655a0F",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "139366547884667145",
+      "holders_count": 2,
+      "contract_holders_count": 2,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
+          "symbol": "WCRAB",
+          "name": "Wrapped CRAB",
+          "balance": "175402058048156705936074"
+        },
+        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
+          "symbol": "xRING",
+          "name": "Darwinia Network Native Token[Darwinia&gt;",
+          "balance": "13073860309194"
+        }
+      },
+      "contract_holders": {
+        "0x33dcd10d19a4875637fdc359d1eb4ff6972ab5c0": "62693010000000000",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "62451528808871603"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0x04Cd063018cC55279C81c31E298E51094C3D1e43",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "35718752473438284330",
+      "holders_count": 1,
+      "contract_holders_count": 1,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
+          "symbol": "xWRING",
+          "name": "Wrapped Ring[Darwinia Smart&gt;",
+          "balance": "1403017623626218805"
+        }
+      },
+      "contract_holders": {
+        "0x58fed52ae6c20bcbdbc2949236595415e5014276": "35718752473438283330"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0x17Fc1A4EB48B612588687E286c90043096aB1FFb",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "1000000000000000000",
+      "holders_count": 1,
+      "contract_holders_count": 0,
+      "eoa_holders_count": 1,
+      "lp_contract_balances": {
+        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
+          "symbol": "WCRAB",
+          "name": "Wrapped CRAB",
+          "balance": "1100000000000000000"
+        }
+      },
+      "contract_holders": {},
+      "eoa_holders": {
+        "0x08a34d53ea8a8956e3a1ea556895c5b85d165b2a": "999999999999999000"
+      }
+    },
+    {
+      "address": "0x187dc6b42AA55D4B302010D4a30D0066bD4F7Bfb",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "2617717138",
+      "holders_count": 1,
+      "contract_holders_count": 0,
+      "eoa_holders_count": 1,
+      "lp_contract_balances": {
+        "0x0000000000000000000000000000000000000402": {
+          "symbol": "CKTON",
+          "name": "Crab Commitment Token",
+          "balance": "6248014887659684"
+        }
+      },
+      "contract_holders": {},
+      "eoa_holders": {
+        "0x8f49a10fcacd7cd22257b9fd358bcab2cb3cffdc": "2617716138"
+      }
+    },
+    {
+      "address": "0x29BF15B31029c889E397Cc153C1F225e200581BC",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "330307177120",
+      "holders_count": 1,
+      "contract_holders_count": 1,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
+          "symbol": "xRING",
+          "name": "Darwinia Network Native Token[Darwinia&gt;",
+          "balance": "198174410513558"
+        }
+      },
+      "contract_holders": {
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "20696235614"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0x316d4F81339D810f0342828868DAFe4365F07f22",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "125955796360064914",
+      "holders_count": 1,
+      "contract_holders_count": 0,
+      "eoa_holders_count": 1,
+      "lp_contract_balances": {
+        "0x0000000000000000000000000000000000000402": {
+          "symbol": "CKTON",
+          "name": "Crab Commitment Token",
+          "balance": "4863696751378064"
+        }
+      },
+      "contract_holders": {},
+      "eoa_holders": {
+        "0xefb73e47099485c72b7678cb59fb0da7dacf173f": "125955796360063914"
+      }
+    },
+    {
+      "address": "0x55Ca5B31C1883Be971f1B41e75cA8D98B939E9Ac",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "1946599723895429489",
+      "holders_count": 1,
+      "contract_holders_count": 1,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {},
+      "contract_holders": {
+        "0xb31406460c6cb1f8d34b4341a1a52884c5597db1": "1109863166839460728"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0x669eA16ccE83b98dA83eEEEf665Af5Aa4Ea93a7e",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "2174500920076",
+      "holders_count": 1,
+      "contract_holders_count": 1,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
+          "symbol": "xRING",
+          "name": "Darwinia Network Native Token[Darwinia&gt;",
+          "balance": "1076189952758"
+        }
+      },
+      "contract_holders": {
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "8550782146"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0x75D4D59991D388Dd0e1c5224AF605a3E79e1f17e",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "7659865390233914",
+      "holders_count": 1,
+      "contract_holders_count": 1,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
+          "symbol": "WCRAB",
+          "name": "Wrapped CRAB",
+          "balance": "453360348881398611896932"
+        }
+      },
+      "contract_holders": {
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "1686506235464944"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0x8738496549679EE307D79697177fBFa046391451",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "1511806944",
+      "holders_count": 1,
+      "contract_holders_count": 1,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {},
+      "contract_holders": {
+        "0x58fed52ae6c20bcbdbc2949236595415e5014276": "1511805944"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0xaa2b2C07710634AA4d88BfcbDB4fe9Fb9BEcED1D",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "8215838362577",
+      "holders_count": 1,
+      "contract_holders_count": 0,
+      "eoa_holders_count": 1,
+      "lp_contract_balances": {
+        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
+          "symbol": "WCRAB",
+          "name": "Wrapped CRAB",
+          "balance": "575711792216107113069"
+        }
+      },
+      "contract_holders": {},
+      "eoa_holders": {
+        "0x8f49a10fcacd7cd22257b9fd358bcab2cb3cffdc": "8215838361577"
+      }
+    },
+    {
+      "address": "0xb0fe91f4fa6ac7bedFB741FDf2d521766db4a925",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "300225177093328",
+      "holders_count": 1,
+      "contract_holders_count": 1,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
+          "symbol": "xWRING",
+          "name": "Wrapped Ring[Darwinia Smart&gt;",
+          "balance": "4432437542221895546563"
+        }
+      },
+      "contract_holders": {
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "300225177092328"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0xC2835441055a190F6878aEB5A5254f2016B6a5f9",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "9083620763",
+      "holders_count": 1,
+      "contract_holders_count": 1,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
+          "symbol": "xWRING",
+          "name": "Wrapped Ring[Darwinia Smart&gt;",
+          "balance": "94527882882890061"
+        }
+      },
+      "contract_holders": {
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "9083619763"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0xF2Cdf22824BfaFDcd78d3bb937cD8450d52f749F",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "1509566467041619028",
+      "holders_count": 1,
+      "contract_holders_count": 1,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x0000000000000000000000000000000000000402": {
+          "symbol": "CKTON",
+          "name": "Crab Commitment Token",
+          "balance": "210512655792830859"
+        },
+        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
+          "symbol": "xWRING",
+          "name": "Wrapped Ring[Darwinia Smart&gt;",
+          "balance": "11476695816905340033"
+        }
+      },
+      "contract_holders": {
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "1509566467041618028"
+      },
+      "eoa_holders": {}
+    },
+    {
+      "address": "0xaA3C043f0FEdCd9F94c9d032Da6e99Be6e9DdFe0",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "1000",
+      "holders_count": 0,
+      "contract_holders_count": 0,
+      "eoa_holders_count": 0,
+      "lp_contract_balances": {
+        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
+          "symbol": "xRING",
+          "name": "Darwinia Network Native Token[Darwinia&gt;",
+          "balance": "1"
+        }
+      },
+      "contract_holders": {},
+      "eoa_holders": {}
+    }
+  ]
+}

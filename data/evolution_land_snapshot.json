@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-04T08:28:41.389Z",
+  "timestamp": "2026-01-04T06:05:37.924Z",
   "chain": "Crab Network",
   "evolution_tokens_count": 7,
   "evolution_tokens": [
@@ -8,15 +8,15 @@
       "name": "Evolution Land Objects",
       "symbol": "EVO",
       "decimals": 18,
-      "total_supply": "12449",
+      "total_supply": "12424",
       "holders_count": 48,
       "contract_holders_count": 5,
       "eoa_holders_count": 43,
       "contract_balances": {},
       "contract_holders": {
-        "0x4e319297f77ea8099520f3467a083050090a1d81": "827",
+        "0x4e319297f77ea8099520f3467a083050090a1d81": "811",
         "0x9de583525b19c59c1e8ff4dc601826c27a825e6e": "411",
-        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "379",
+        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "354",
         "0xa561c8f6ac9ecb31e0793fbe2ccec136a7e4be84": "16",
         "0x2e998c97a564d480c83861d9b5c4e0d05b0bdc87": "5"
       },
@@ -32,9 +32,9 @@
         "0x2dcd241135d2d5b2e9ba2926e436c054fdf8bf0b": "113",
         "0x0d6f9bdf7adb1fc13654a1281dce12f212068076": "112",
         "0x39278b9e346faf4b453d3c2e53515a594abd8484": "72",
+        "0x7d0caefbe8a6f66aea68389f8cbff9052acd8fd7": "62",
         "0x3aab6779d50181ce73a1fe5b2f545a09eb70eec8": "57",
         "0xae354a3233e36bc91149419e068658c01bacb9a8": "51",
-        "0x7d0caefbe8a6f66aea68389f8cbff9052acd8fd7": "46",
         "0x1b00cccc5483975b1b9abe574bf15a193fbfe773": "44",
         "0xc5cf70818024406541e50202c535cc7b234092eb": "40",
         "0xbcdf24077c76026dbd911840df4de861a0e44b20": "39",
@@ -71,15 +71,15 @@
       "name": "Evolution Land Fire",
       "symbol": "FIRE",
       "decimals": 18,
-      "total_supply": "760233913741196410957189",
+      "total_supply": "765262131557806711643165",
       "holders_count": 22,
       "contract_holders_count": 4,
       "eoa_holders_count": 18,
       "contract_balances": {},
       "contract_holders": {
-        "0x15f2fbd98a0657e2afcab08922632e58b1cc9fdd (Snow LP)": "141446606508564805394767",
-        "0xa946116131932f2a6b5f2a2a52007418d706168a (Snow LP)": "83837369727034075017720",
-        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "24000000000000000000000",
+        "0x15f2fbd98a0657e2afcab08922632e58b1cc9fdd (Snow LP)": "159303770409460912856267",
+        "0xa946116131932f2a6b5f2a2a52007418d706168a (Snow LP)": "73008423642748268242196",
+        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "22000000000000000000000",
         "0x90e2fa4099eb1fed203769b99c9c64cdda1acb57": "2515000000000000000000"
       },
       "eoa_holders": {
@@ -108,15 +108,15 @@
       "name": "Evolution Land Gold",
       "symbol": "GOLD",
       "decimals": 18,
-      "total_supply": "717288787441902291729775",
+      "total_supply": "720793715687571686893293",
       "holders_count": 22,
       "contract_holders_count": 4,
       "eoa_holders_count": 18,
       "contract_balances": {},
       "contract_holders": {
-        "0x506c391b6c1eb4911241a918de5c3984a603e112 (Snow LP)": "102097957826193446800708",
-        "0x8e97f45bd127e7af3034d82a34d665746d348841 (Snow LP)": "93854870205232702655671",
-        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "30500000000000000000000",
+        "0x8e97f45bd127e7af3034d82a34d665746d348841 (Snow LP)": "109331531071149771885826",
+        "0x506c391b6c1eb4911241a918de5c3984a603e112 (Snow LP)": "92126225205945772734071",
+        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "28500000000000000000000",
         "0x90e2fa4099eb1fed203769b99c9c64cdda1acb57": "3135000000000000000000"
       },
       "eoa_holders": {
@@ -141,55 +141,19 @@
       }
     },
     {
-      "address": "0x9AC045F4B69C2DB58fDF70D4bEF8228ef5A2C5a8",
-      "name": "Evolution Land Silicon",
-      "symbol": "SIOO",
-      "decimals": 18,
-      "total_supply": "483476425586008313878015",
-      "holders_count": 21,
-      "contract_holders_count": 5,
-      "eoa_holders_count": 16,
-      "contract_balances": {},
-      "contract_holders": {
-        "0x76f6877ac6b03bf80ab911de4580c51dcb358927 (Snow LP)": "48952660535938397741868",
-        "0x1e4b46582bba7e5ddb107d3a640e441774980525 (Snow LP)": "45805641686973058885692",
-        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "20000000000000000000000",
-        "0x90e2fa4099eb1fed203769b99c9c64cdda1acb57": "1115000000000000000000",
-        "0x58fed52ae6c20bcbdbc2949236595415e5014276": "17654867392444958375"
-      },
-      "eoa_holders": {
-        "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478": "80209369108242317981997",
-        "0x87f0c169d8acc432acdb5e7d0907322c80ec6621": "65588004220813004285022",
-        "0x4295e87fb5113c85720298d73e4760c240ca41fa": "53701655787814038444605",
-        "0xebd9a48ed1128375eb4383ed4d53478b4fd85a8d": "52040617278935821082884",
-        "0x12d529cfa26891cdf1d25453f9851c73e2720373": "43086185689131223299269",
-        "0xbff1e53b23d9f5cd13429cd4bacbc017589f51eb": "29591459939150014014895",
-        "0x73db0f38391583c9f4786f7a317afab23b6749f7": "11797509757859758767198",
-        "0x7eef076bc5c57afd42ac3cbf3e29b13a7baf4cac": "9176082947104729326668",
-        "0x3aab6779d50181ce73a1fe5b2f545a09eb70eec8": "4532112605488457089867",
-        "0xbffadc0f1e9f0e91e792f9761c8799373c357013": "772173232067760415208",
-        "0x56c82cc840621d929a3c98957fa5d34fa008da8d": "737177761268200704855",
-        "0xc7809e89482774ae66b01c006fee95e82f1b8a79": "401000000000000000000",
-        "0x5c597e485e9b7b55074ffca365497ec61a842ae3": "29715101578627286123",
-        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "9000000000000000000",
-        "0x7d0caefbe8a6f66aea68389f8cbff9052acd8fd7": "3139224454716652741",
-        "0xe2cc4f1e7d609df4b69f35fe3b851f03f228e9ed": "494800064306128876"
-      }
-    },
-    {
       "address": "0xbA91F2d6d78953881A912f3DF71a541cD30eb980",
       "name": "Evolution Land Wood",
       "symbol": "WOOD",
       "decimals": 18,
-      "total_supply": "559157748701761716673160",
+      "total_supply": "561612177175478467156400",
       "holders_count": 21,
       "contract_holders_count": 4,
       "eoa_holders_count": 17,
       "contract_balances": {},
       "contract_holders": {
-        "0x2eb5b4a0624d6e646ba2ad919411072476fa1568 (Snow LP)": "89360870735786773986518",
-        "0x3710f045307d7e0906f1fbd0b0df12c0bc787382 (Snow LP)": "36541499786190597580294",
-        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "13500000000000000000000",
+        "0x2eb5b4a0624d6e646ba2ad919411072476fa1568 (Snow LP)": "84440657812507976226571",
+        "0x3710f045307d7e0906f1fbd0b0df12c0bc787382 (Snow LP)": "44416141183186145823481",
+        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "13000000000000000000000",
         "0x316d4f81339d810f0342828868dafe4365f07f22 (Snow LP)": "3265269223036322727"
       },
       "eoa_holders": {
@@ -213,18 +177,53 @@
       }
     },
     {
+      "address": "0x9AC045F4B69C2DB58fDF70D4bEF8228ef5A2C5a8",
+      "name": "Evolution Land Silicon",
+      "symbol": "SIOO",
+      "decimals": 18,
+      "total_supply": "484438751108016976674986",
+      "holders_count": 20,
+      "contract_holders_count": 5,
+      "eoa_holders_count": 15,
+      "contract_balances": {},
+      "contract_holders": {
+        "0x1e4b46582bba7e5ddb107d3a640e441774980525 (Snow LP)": "52380960693150507272315",
+        "0x76f6877ac6b03bf80ab911de4580c51dcb358927 (Snow LP)": "43342806276224328804957",
+        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "20000000000000000000000",
+        "0x90e2fa4099eb1fed203769b99c9c64cdda1acb57": "1115000000000000000000",
+        "0x58fed52ae6c20bcbdbc2949236595415e5014276": "17654867392444958375"
+      },
+      "eoa_holders": {
+        "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478": "80209369108242317981997",
+        "0x87f0c169d8acc432acdb5e7d0907322c80ec6621": "65588004220813004285022",
+        "0x4295e87fb5113c85720298d73e4760c240ca41fa": "53701655787814038444605",
+        "0xebd9a48ed1128375eb4383ed4d53478b4fd85a8d": "52040617278935821082884",
+        "0x12d529cfa26891cdf1d25453f9851c73e2720373": "43086185689131223299269",
+        "0xbff1e53b23d9f5cd13429cd4bacbc017589f51eb": "29591459939150014014895",
+        "0x73db0f38391583c9f4786f7a317afab23b6749f7": "11797509757859758767198",
+        "0x7eef076bc5c57afd42ac3cbf3e29b13a7baf4cac": "9176082947104729326668",
+        "0x3aab6779d50181ce73a1fe5b2f545a09eb70eec8": "4532112605488457089867",
+        "0xbffadc0f1e9f0e91e792f9761c8799373c357013": "772173232067760415208",
+        "0x56c82cc840621d929a3c98957fa5d34fa008da8d": "737177761268200704855",
+        "0xc7809e89482774ae66b01c006fee95e82f1b8a79": "401000000000000000000",
+        "0x5c597e485e9b7b55074ffca365497ec61a842ae3": "29715101578627286123",
+        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "9000000000000000000",
+        "0xe2cc4f1e7d609df4b69f35fe3b851f03f228e9ed": "494800064306128876"
+      }
+    },
+    {
       "address": "0x54Eb408696E6b3Cc1795Caaf53B22F38F24200Fa",
       "name": "Evolution Land Water",
       "symbol": "HHO",
       "decimals": 18,
-      "total_supply": "731614434993220950701904",
+      "total_supply": "736844757829246532112568",
       "holders_count": 20,
       "contract_holders_count": 3,
       "eoa_holders_count": 17,
       "contract_balances": {},
       "contract_holders": {
-        "0xd4b2b19a62500bb32a731a0889ef0b5147a963e4 (Snow LP)": "95401776266004290585326",
-        "0xdb279d65225162280facae2f3ca8a3d2f63ea9bf (Snow LP)": "73484499385123593533772",
+        "0xd4b2b19a62500bb32a731a0889ef0b5147a963e4 (Snow LP)": "87358937160990184888363",
+        "0xdb279d65225162280facae2f3ca8a3d2f63ea9bf (Snow LP)": "86757661326163280641399",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "13500000000000000000000"
       },
       "eoa_holders": {

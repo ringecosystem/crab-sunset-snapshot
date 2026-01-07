@@ -1,27 +1,23 @@
+const BaseAPI = require('../base/api');
+const BaseCache = require('../base/cache');
+const BaseHolders = require('../base/holders');
+const DarwiniaAnnotations = require('./annotations');
+const DarwiniaAPI = require('./api');
 const fs = require("fs");
 const path = require("path");
-const { fetchTokenInfo } = require('./api');
-const { fetchAllHolders, separateHoldersByType } = require('./holders');
-const { loadCache } = require('./cache');
-const { getAnnotations, annotateHolders } = require('./annotations');
 
 async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
-	// Load cache and annotations
-	const addressCache = loadCache();
-	const annotations = getAnnotations();
-
-	// First, fetch token information
-	const tokenInfo = await fetchTokenInfo(contractAddress);
+	const api = new DarwiniaAPI();
+	const annotations = new DarwiniaAnnotations(api);
+	const cacheManager = api.getCacheManager();
+	const holdersManager = new BaseHolders(api, cacheManager);
+	const tokenInfo = await api.fetchTokenInfo(contractAddress);
 	console.log(`\n📊 ${tokenInfo?.symbol || "Unknown"} - ${tokenInfo?.name || "Unknown"}`);
 	console.log(`📍 ${contractAddress}`);
 	
-	// Fetch all holders
-	const allHolders = await fetchAllHolders(contractAddress);
-	
-	// Separate contract holders and EOA holders
-	const { contractHolders, eoaHolders } = await separateHoldersByType(allHolders, addressCache);
+	const allHolders = await holdersManager.fetchAllHolders(contractAddress);
+	const { contractHolders, eoaHolders } = await holdersManager.separateHoldersByType(allHolders, cacheManager);
 
-	// Sort holders by balance (descending)
 	const sortHoldersByBalance = (holders) => {
 		const sorted = Object.entries(holders).sort((a, b) => {
 			const balA = BigInt(a[1]);
@@ -33,28 +29,12 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 		return Object.fromEntries(sorted);
 	};
 
-	// Prepare output JSON with token info and annotations
-	const output = {
-		address: contractAddress,
-		name: tokenInfo?.name || "Unknown",
-		symbol: tokenInfo?.symbol || "Unknown",
-		decimals: tokenInfo?.decimals || 18,
-		total_supply: tokenInfo?.total_supply || "0",
-		holders_count: Object.keys(allHolders).length,
-		contract_holders_count: Object.keys(contractHolders).length,
-		eoa_holders_count: Object.keys(eoaHolders).length,
-		contract_holders: annotateHolders(sortHoldersByBalance(contractHolders), annotations),
-		eoa_holders: annotateHolders(sortHoldersByBalance(eoaHolders), annotations),
-		lp_holders: {}
-	};
-
-	// Check if any contract holders are LP tokens and fetch their holders
 	console.log(`\n🔍 Checking for LP contracts...`);
 	const lpContracts = [];
 
 	for (const contractAddr of Object.keys(contractHolders)) {
-		const tokenInfo = await fetchTokenInfo(contractAddr);
-		if (tokenInfo && tokenInfo.name && tokenInfo.name.includes("Snow LP")) {
+		const tokenInfo = await api.fetchTokenInfo(contractAddr);
+		if (tokenInfo && ((tokenInfo.name && tokenInfo.name.includes("Snow LP")) || tokenInfo.symbol === "SNOW-LP")) {
 			console.log(`  ✅ Found LP token: ${tokenInfo.symbol} (${contractAddr})`);
 			lpContracts.push({
 				address: contractAddr,
@@ -67,6 +47,24 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 		await new Promise(r => setTimeout(r, 100));
 	}
 
+	await annotations.loadForContracts(Object.keys(contractHolders));
+	const finalContractHolders = annotations.annotateHolders(sortHoldersByBalance(contractHolders));
+	const finalEoaHolders = annotations.annotateHolders(sortHoldersByBalance(eoaHolders));
+
+	const output = {
+		address: contractAddress,
+		name: tokenInfo?.name || "Unknown",
+		symbol: tokenInfo?.symbol || "Unknown",
+		decimals: tokenInfo?.decimals || 18,
+		total_supply: tokenInfo?.total_supply || "0",
+		holders_count: Object.keys(allHolders).length,
+		contract_holders_count: Object.keys(contractHolders).length,
+		eoa_holders_count: Object.keys(eoaHolders).length,
+		contract_holders: finalContractHolders,
+		eoa_holders: finalEoaHolders,
+		lp_holders: {}
+	};
+
 	if (lpContracts.length > 0) {
 		console.log(`\n🔄 Fetching holders for ${lpContracts.length} LP contracts...`);
 		
@@ -74,14 +72,10 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 			console.log(`\n  📊 ${lp.symbol} - ${lp.name}`);
 			console.log(`  📍 ${lp.address}`);
 			
-			// Fetch LP token holders
-			const lpAllHolders = await fetchAllHolders(lp.address);
+			const lpAllHolders = await holdersManager.fetchAllHolders(lp.address);
+			const lpCache = api.getCache();
+			const { contractHolders: lpContractHolders, eoaHolders: lpEoaHolders } = await holdersManager.separateHoldersByType(lpAllHolders, lpCache);
 			
-			// Separate LP holders by type
-			const lpAddressCache = loadCache();
-			const { contractHolders: lpContractHolders, eoaHolders: lpEoaHolders } = await separateHoldersByType(lpAllHolders, lpAddressCache);
-			
-			// Sort LP holders by balance
 			const lpContractHoldersSorted = sortHoldersByBalance(lpContractHolders);
 			const lpEoaHoldersSorted = sortHoldersByBalance(lpEoaHolders);
 			
@@ -93,8 +87,8 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 				holders_count: Object.keys(lpAllHolders).length,
 				contract_holders_count: Object.keys(lpContractHolders).length,
 				eoa_holders_count: Object.keys(lpEoaHolders).length,
-				contract_holders: annotateHolders(lpContractHoldersSorted, annotations),
-				eoa_holders: annotateHolders(lpEoaHoldersSorted, annotations)
+				contract_holders: annotations.annotateHolders(lpContractHoldersSorted),
+				eoa_holders: annotations.annotateHolders(lpEoaHoldersSorted)
 			};
 		}
 		
@@ -103,17 +97,14 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 		console.log(`  ℹ️  No LP contracts found holding ${tokenInfo?.symbol}`);
 	}
 
-	// Ensure output directory exists
 	const outputPath = path.resolve(outputDir);
 	if (!fs.existsSync(outputPath)) {
 		fs.mkdirSync(outputPath, { recursive: true });
 	}
 
-	// Generate filename with symbol for easier recognition
 	const symbol = (tokenInfo?.symbol || "Unknown").replace(/[^a-zA-Z0-9]/g, '_');
 	const outputFile = path.join(outputPath, `${symbol}_${contractAddress}.json`);
 
-	// Write JSON file
 	fs.writeFileSync(outputFile, JSON.stringify(output, null, 2));
 
 	console.log(`💾 Saved: ${path.basename(outputFile)}`);

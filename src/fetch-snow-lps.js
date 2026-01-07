@@ -1,11 +1,9 @@
 const fs = require("fs");
 const path = require("path");
-const { fetchTokenInfo, isSmartContract } = require('./api');
-const { fetchAllHolders } = require('./holders');
-const { loadCache, saveCache } = require('./cache');
-const { getAnnotations, annotateHolders } = require('./annotations');
-
-const BASE_URL = "https://crab-scan.darwinia.network/api";
+const CrabAPI = require('./crab/api');
+const { BaseHolders } = require('./base/holders');
+const { BaseCache } = require('./base/cache');
+const { CrabAnnotations } = require('./crab/annotations');
 
 function getTrackedTokenAddresses(dataDir) {
 	console.log(`📂 Loading tracked tokens from data folder...`);

@@ -1,10 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
-// Cache file path - store in data folder
-const CACHE_FILE = path.join(__dirname, '..', 'data', '.address_cache_crab.json');
+const CACHE_FILE = path.join(__dirname, '..', 'data', '.address_cache_darwinia.json');
 
-// Load cache from file
 function loadCache() {
 	try {
 		if (fs.existsSync(CACHE_FILE)) {
@@ -17,7 +15,6 @@ function loadCache() {
 	return {};
 }
 
-// Save cache to file
 function saveCache(cache) {
 	try {
 		fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));

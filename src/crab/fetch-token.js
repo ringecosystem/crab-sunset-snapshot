@@ -1,27 +1,25 @@
+const BaseAPI = require('../base/api');
+const BaseCache = require('../base/cache');
+const BaseHolders = require('../base/holders');
+const CrabAnnotations = require('./annotations');
+const CrabAPI = require('./api');
 const fs = require("fs");
 const path = require("path");
-const { fetchTokenInfo } = require('./api');
-const { fetchAllHolders, separateHoldersByType } = require('./holders');
-const { loadCache } = require('./cache');
-const { getAnnotations, annotateHolders } = require('./annotations');
 
 async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
-	// Load cache and annotations
-	const addressCache = loadCache();
-	const annotations = getAnnotations();
+	const api = new CrabAPI();
+	const annotations = new CrabAnnotations();
+	const cacheManager = api.getCacheManager();
+	const holdersManager = new BaseHolders(api, cacheManager);
+	annotations.getAll();
 
-	// First, fetch token information
-	const tokenInfo = await fetchTokenInfo(contractAddress);
+	const tokenInfo = await api.fetchTokenInfo(contractAddress);
 	console.log(`\n📊 ${tokenInfo?.symbol || "Unknown"} - ${tokenInfo?.name || "Unknown"}`);
 	console.log(`📍 ${contractAddress}`);
 	
-	// Fetch all holders
-	const allHolders = await fetchAllHolders(contractAddress);
-	
-	// Separate contract holders and EOA holders
-	const { contractHolders, eoaHolders } = await separateHoldersByType(allHolders, addressCache);
+	const allHolders = await holdersManager.fetchAllHolders(contractAddress);
+	const { contractHolders, eoaHolders } = await holdersManager.separateHoldersByType(allHolders, cacheManager);
 
-	// Sort holders by balance (descending)
 	const sortHoldersByBalance = (holders) => {
 		const sorted = Object.entries(holders).sort((a, b) => {
 			const balA = BigInt(a[1]);
@@ -33,7 +31,6 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 		return Object.fromEntries(sorted);
 	};
 
-	// Prepare output JSON with token info and annotations
 	const output = {
 		address: contractAddress,
 		name: tokenInfo?.name || "Unknown",
@@ -43,17 +40,16 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 		holders_count: Object.keys(allHolders).length,
 		contract_holders_count: Object.keys(contractHolders).length,
 		eoa_holders_count: Object.keys(eoaHolders).length,
-		contract_holders: annotateHolders(sortHoldersByBalance(contractHolders), annotations),
-		eoa_holders: annotateHolders(sortHoldersByBalance(eoaHolders), annotations),
+		contract_holders: annotations.annotateHolders(sortHoldersByBalance(contractHolders)),
+		eoa_holders: annotations.annotateHolders(sortHoldersByBalance(eoaHolders)),
 		lp_holders: {}
 	};
 
-	// Check if any contract holders are LP tokens and fetch their holders
 	console.log(`\n🔍 Checking for LP contracts...`);
 	const lpContracts = [];
 
 	for (const contractAddr of Object.keys(contractHolders)) {
-		const tokenInfo = await fetchTokenInfo(contractAddr);
+		const tokenInfo = await api.fetchTokenInfo(contractAddr);
 		if (tokenInfo && tokenInfo.name && tokenInfo.name.includes("Snow LP")) {
 			console.log(`  ✅ Found LP token: ${tokenInfo.symbol} (${contractAddr})`);
 			lpContracts.push({
@@ -74,14 +70,10 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 			console.log(`\n  📊 ${lp.symbol} - ${lp.name}`);
 			console.log(`  📍 ${lp.address}`);
 			
-			// Fetch LP token holders
-			const lpAllHolders = await fetchAllHolders(lp.address);
+			const lpAllHolders = await holdersManager.fetchAllHolders(lp.address);
+			const lpCache = api.getCache();
+			const { contractHolders: lpContractHolders, eoaHolders: lpEoaHolders } = await holdersManager.separateHoldersByType(lpAllHolders, lpCache);
 			
-			// Separate LP holders by type
-			const lpAddressCache = loadCache();
-			const { contractHolders: lpContractHolders, eoaHolders: lpEoaHolders } = await separateHoldersByType(lpAllHolders, lpAddressCache);
-			
-			// Sort LP holders by balance
 			const lpContractHoldersSorted = sortHoldersByBalance(lpContractHolders);
 			const lpEoaHoldersSorted = sortHoldersByBalance(lpEoaHolders);
 			
@@ -93,8 +85,8 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 				holders_count: Object.keys(lpAllHolders).length,
 				contract_holders_count: Object.keys(lpContractHolders).length,
 				eoa_holders_count: Object.keys(lpEoaHolders).length,
-				contract_holders: annotateHolders(lpContractHoldersSorted, annotations),
-				eoa_holders: annotateHolders(lpEoaHoldersSorted, annotations)
+				contract_holders: annotations.annotateHolders(lpContractHoldersSorted),
+				eoa_holders: annotations.annotateHolders(lpEoaHoldersSorted)
 			};
 		}
 		
@@ -103,17 +95,14 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 		console.log(`  ℹ️  No LP contracts found holding ${tokenInfo?.symbol}`);
 	}
 
-	// Ensure output directory exists
 	const outputPath = path.resolve(outputDir);
 	if (!fs.existsSync(outputPath)) {
 		fs.mkdirSync(outputPath, { recursive: true });
 	}
 
-	// Generate filename with symbol for easier recognition
 	const symbol = (tokenInfo?.symbol || "Unknown").replace(/[^a-zA-Z0-9]/g, '_');
 	const outputFile = path.join(outputPath, `${symbol}_${contractAddress}.json`);
 
-	// Write JSON file
 	fs.writeFileSync(outputFile, JSON.stringify(output, null, 2));
 
 	console.log(`💾 Saved: ${path.basename(outputFile)}`);

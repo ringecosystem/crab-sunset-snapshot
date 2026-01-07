@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-04T06:05:02.346Z",
+  "timestamp": "2026-01-06T09:24:03.876Z",
   "chain": "Crab Network",
   "snow_lps_count": 32,
   "snow_lps": [
@@ -45,29 +45,28 @@
       "name": "Snow LPs",
       "symbol": "SNOW-LP",
       "decimals": 18,
-      "total_supply": "12636007352026544351439789",
-      "holders_count": 9,
+      "total_supply": "12607599811335499354389808",
+      "holders_count": 8,
       "contract_holders_count": 2,
-      "eoa_holders_count": 7,
+      "eoa_holders_count": 6,
       "lp_contract_balances": {
         "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
           "symbol": "WCRAB",
           "name": "Wrapped CRAB",
-          "balance": "61239427883285983079099329"
+          "balance": "61078997725799525117589256"
         },
         "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
           "symbol": "xWRING",
           "name": "Wrapped Ring[Darwinia Smart&gt;",
-          "balance": "2645945879188877927627346"
+          "balance": "2639014241700233595214926"
         }
       },
       "contract_holders": {
-        "0x02b04c69918808083ac8fc60abe786855999f2bd": "3901619059740753817522",
-        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "94160234570146250"
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "4707687943710216731642",
+        "0x02b04c69918808083ac8fc60abe786855999f2bd": "3901619059740753817522"
       },
       "eoa_holders": {
         "0x6d6f646c64612f74727372790000000000000000 (Treasury)": "12568565767522379105723006",
-        "0xd9b8954ce0970c29a7c65b32babc810ac19cccfe": "33115134474520643635373",
         "0x05e0375b33aef6a5bc6c02f52e02f62aadc586fe": "27038045751311064589590",
         "0x73db0f38391583c9f4786f7a317afab23b6749f7": "3053344779743549005227",
         "0x050066b4c414db66954e496972c05852c505c7f4": "186933750256801201014",

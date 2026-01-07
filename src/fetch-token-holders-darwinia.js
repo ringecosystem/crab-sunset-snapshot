@@ -1,14 +1,14 @@
 const fs = require("fs");
 const path = require("path");
-const { fetchTokenInfo } = require('./api');
-const { fetchAllHolders, separateHoldersByType } = require('./holders');
-const { loadCache } = require('./cache');
-const { getAnnotations, annotateHolders } = require('./annotations');
+const { fetchTokenInfo, fetchTokenHolders } = require('./api-darwinia');
+const { fetchAllHolders, separateHoldersByType } = require('./holders-darwinia');
+const { loadCache } = require('./cache-darwinia');
+const { getAnnotations, annotateHolders, checkIsSnowLP } = require('./annotations-darwinia');
 
 async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 	// Load cache and annotations
 	const addressCache = loadCache();
-	const annotations = getAnnotations();
+	let annotations = getAnnotations();
 
 	// First, fetch token information
 	const tokenInfo = await fetchTokenInfo(contractAddress);
@@ -33,6 +33,34 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 		return Object.fromEntries(sorted);
 	};
 
+	// Check if any contract holders are LP tokens and fetch their holders
+	console.log(`\n🔍 Checking for LP contracts...`);
+	const lpContracts = [];
+
+	for (const contractAddr of Object.keys(contractHolders)) {
+		const isLP = await checkIsSnowLP(contractAddr);
+		if (isLP) {
+			const tokenInfo = await fetchTokenInfo(contractAddr);
+			if (tokenInfo) {
+				console.log(`  ✅ Found LP token: ${tokenInfo.symbol} (${contractAddr})`);
+				lpContracts.push({
+					address: contractAddr,
+					name: tokenInfo.name,
+					symbol: tokenInfo.symbol,
+					decimals: tokenInfo.decimals,
+					lp_contract_balances: contractHolders[contractAddr]
+				});
+				// Add to annotations
+				annotations[contractAddr.toLowerCase()] = "Snow LP";
+			}
+		}
+		await new Promise(r => setTimeout(r, 100));
+	}
+
+	// Re-annotate holders with updated annotations including LPs
+	const finalContractHolders = annotateHolders(sortHoldersByBalance(contractHolders), annotations);
+	const finalEoaHolders = annotateHolders(sortHoldersByBalance(eoaHolders), annotations);
+
 	// Prepare output JSON with token info and annotations
 	const output = {
 		address: contractAddress,
@@ -43,29 +71,10 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 		holders_count: Object.keys(allHolders).length,
 		contract_holders_count: Object.keys(contractHolders).length,
 		eoa_holders_count: Object.keys(eoaHolders).length,
-		contract_holders: annotateHolders(sortHoldersByBalance(contractHolders), annotations),
-		eoa_holders: annotateHolders(sortHoldersByBalance(eoaHolders), annotations),
+		contract_holders: finalContractHolders,
+		eoa_holders: finalEoaHolders,
 		lp_holders: {}
 	};
-
-	// Check if any contract holders are LP tokens and fetch their holders
-	console.log(`\n🔍 Checking for LP contracts...`);
-	const lpContracts = [];
-
-	for (const contractAddr of Object.keys(contractHolders)) {
-		const tokenInfo = await fetchTokenInfo(contractAddr);
-		if (tokenInfo && tokenInfo.name && tokenInfo.name.includes("Snow LP")) {
-			console.log(`  ✅ Found LP token: ${tokenInfo.symbol} (${contractAddr})`);
-			lpContracts.push({
-				address: contractAddr,
-				name: tokenInfo.name,
-				symbol: tokenInfo.symbol,
-				decimals: tokenInfo.decimals,
-				lp_contract_balances: contractHolders[contractAddr]
-			});
-		}
-		await new Promise(r => setTimeout(r, 100));
-	}
 
 	if (lpContracts.length > 0) {
 		console.log(`\n🔄 Fetching holders for ${lpContracts.length} LP contracts...`);

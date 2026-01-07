@@ -1,34 +1,35 @@
-/**
- * Crab Sunset - Token Holder Snapshot System
- * 
- * Main exports for the Crab Network token holder tracking system.
- */
+const fs = require("fs");
+const path = require("path");
 
-const { fetchTokenHoldersSnapshot } = require('./fetch-token-holders');
-const { fetchNativeTokenSnapshot } = require('./fetch-native-holders');
+const BaseCache = require('./base/cache');
+const { BaseAPI } = require('./base/api');
+const { BaseHolders } = require('./base/holders');
+
+const CrabAPI = require('./crab/api');
+const CrabAnnotations = require('./crab/annotations');
+const { fetchTokenHoldersSnapshot as fetchCrabTokenSnapshot } = require('./crab/fetch-token');
 const { fetchSnowLPsSnapshot } = require('./fetch-snow-lps');
+const { fetchNativeTokenSnapshot } = require('./fetch-native-holders');
 const { fetchEvolutionLandSnapshot } = require('./fetch-evolution-land');
-const { getAnnotations, annotateAddress, annotateHolders } = require('./annotations');
-const { fetchTokenInfo, isSmartContract } = require('./api');
-const { loadCache, saveCache } = require('./cache');
+
+const DarwiniaAPI = require('./darwinia/api');
+const DarwiniaAnnotations = require('./darwinia/annotations');
+const { fetchTokenHoldersSnapshot as fetchDarwiniaTokenSnapshot } = require('./darwinia/fetch-token');
 
 module.exports = {
-	// Main snapshot functions
-	fetchTokenHoldersSnapshot,
-	fetchNativeTokenSnapshot,
+	BaseAPI,
+	BaseHolders,
+	BaseCache,
+	BaseAnnotations,
+	
+	CrabAPI,
+	CrabAnnotations,
+	fetchCrabTokenSnapshot,
 	fetchSnowLPsSnapshot,
+	fetchNativeTokenSnapshot,
 	fetchEvolutionLandSnapshot,
 	
-	// Annotation utilities
-	getAnnotations,
-	annotateAddress,
-	annotateHolders,
-	
-	// API utilities
-	fetchTokenInfo,
-	isSmartContract,
-	
-	// Cache utilities
-	loadCache,
-	saveCache
+	DarwiniaAPI,
+	DarwiniaAnnotations,
+	fetchDarwiniaTokenSnapshot
 };

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-06T09:24:03.876Z",
+  "timestamp": "2026-01-07T07:21:35.771Z",
   "chain": "Crab Network",
   "snow_lps_count": 32,
   "snow_lps": [
@@ -8,25 +8,14 @@
       "name": "Snow LPs",
       "symbol": "SNOW-LP",
       "decimals": 18,
-      "total_supply": "10466539056184497700095",
-      "holders_count": 11,
+      "total_supply": "10466293417514570817985",
+      "holders_count": 10,
       "contract_holders_count": 3,
-      "eoa_holders_count": 8,
-      "lp_contract_balances": {
-        "0x0000000000000000000000000000000000000402": {
-          "symbol": "CKTON",
-          "name": "Crab Commitment Token",
-          "balance": "302184224797450992032"
-        },
-        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
-          "symbol": "WCRAB",
-          "name": "Wrapped CRAB",
-          "balance": "380448648793934896213152"
-        }
-      },
+      "eoa_holders_count": 7,
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x41965d8f028183419b12234045b22a98585c60d2": "9734874366901618945108",
-        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "228260178567332570034",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "228268397316841398639",
         "0xc98da33c619361b0810ad65c6421eee68e21520a": "2553434537932459948"
       },
       "eoa_holders": {
@@ -36,7 +25,6 @@
         "0x21b7b075ed133a7f3faf10698bdc6613998c4180": "10586382816297635507",
         "0x050066b4c414db66954e496972c05852c505c7f4": "8040728394590481860",
         "0xef0d6c11cbee22fa642582024380efbd893aa1a6": "636396885039227027",
-        "0x05e0375b33aef6a5bc6c02f52e02f62aadc586fe": "253857419435710715",
         "0x1116bffe122485addff8d182caa91c94b05e490c": "48682401408149305"
       }
     },
@@ -45,29 +33,17 @@
       "name": "Snow LPs",
       "symbol": "SNOW-LP",
       "decimals": 18,
-      "total_supply": "12607599811335499354389808",
-      "holders_count": 8,
+      "total_supply": "12580563416361387357200459",
+      "holders_count": 7,
       "contract_holders_count": 2,
-      "eoa_holders_count": 6,
-      "lp_contract_balances": {
-        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
-          "symbol": "WCRAB",
-          "name": "Wrapped CRAB",
-          "balance": "61078997725799525117589256"
-        },
-        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
-          "symbol": "xWRING",
-          "name": "Wrapped Ring[Darwinia Smart&gt;",
-          "balance": "2639014241700233595214926"
-        }
-      },
+      "eoa_holders_count": 5,
+      "lp_contract_balances": {},
       "contract_holders": {
-        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "4707687943710216731642",
+        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "4709338720909284131883",
         "0x02b04c69918808083ac8fc60abe786855999f2bd": "3901619059740753817522"
       },
       "eoa_holders": {
         "0x6d6f646c64612f74727372790000000000000000 (Treasury)": "12568565767522379105723006",
-        "0x05e0375b33aef6a5bc6c02f52e02f62aadc586fe": "27038045751311064589590",
         "0x73db0f38391583c9f4786f7a317afab23b6749f7": "3053344779743549005227",
         "0x050066b4c414db66954e496972c05852c505c7f4": "186933750256801201014",
         "0x8f49a10fcacd7cd22257b9fd358bcab2cb3cffdc": "113881443500249068167",
@@ -83,13 +59,7 @@
       "holders_count": 6,
       "contract_holders_count": 3,
       "eoa_holders_count": 3,
-      "lp_contract_balances": {
-        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
-          "symbol": "xWRING",
-          "name": "Wrapped Ring[Darwinia Smart&gt;",
-          "balance": "3856080663608839666290"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "1350000000000000000000",
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "76604993023460385304",
@@ -110,13 +80,7 @@
       "holders_count": 5,
       "contract_holders_count": 3,
       "eoa_holders_count": 2,
-      "lp_contract_balances": {
-        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
-          "symbol": "xRING",
-          "name": "Darwinia Network Native Token[Darwinia&gt;",
-          "balance": "8599027914276"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0xd02f1e68bc8973ae8638fafccbb8a22d010661c8": "539685428736694936",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "450000000000000000",
@@ -136,13 +100,7 @@
       "holders_count": 5,
       "contract_holders_count": 3,
       "eoa_holders_count": 2,
-      "lp_contract_balances": {
-        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
-          "symbol": "xWRING",
-          "name": "Wrapped Ring[Darwinia Smart&gt;",
-          "balance": "8157758697288077683509"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x9579391a03ffb1f30641dcb453a6212558935065": "15350747685318028267330",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "450000000000000000000",
@@ -162,13 +120,7 @@
       "holders_count": 4,
       "contract_holders_count": 2,
       "eoa_holders_count": 2,
-      "lp_contract_balances": {
-        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
-          "symbol": "xWRING",
-          "name": "Wrapped Ring[Darwinia Smart&gt;",
-          "balance": "7979777001355677830271"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x21dc35da3262f6fe9bd60c6225a0fe478322441a": "10429349749232935581653",
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "93319958095235529235"
@@ -187,13 +139,7 @@
       "holders_count": 4,
       "contract_holders_count": 3,
       "eoa_holders_count": 1,
-      "lp_contract_balances": {
-        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
-          "symbol": "xRING",
-          "name": "Darwinia Network Native Token[Darwinia&gt;",
-          "balance": "4335977405765"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "285000000000000000",
         "0x6317fe2f7a7bbbd08770cb6e0a8523292f74a9d0": "72516561594658765",
@@ -212,13 +158,7 @@
       "holders_count": 4,
       "contract_holders_count": 2,
       "eoa_holders_count": 2,
-      "lp_contract_balances": {
-        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
-          "symbol": "xWRING",
-          "name": "Wrapped Ring[Darwinia Smart&gt;",
-          "balance": "4370266661212514273927"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x7982f2d3ebc7540ab4d6c252df459330a919b27c": "2177936629058845028486",
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "42902183972701622023"
@@ -237,13 +177,7 @@
       "holders_count": 4,
       "contract_holders_count": 3,
       "eoa_holders_count": 1,
-      "lp_contract_balances": {
-        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
-          "symbol": "xRING",
-          "name": "Darwinia Network Native Token[Darwinia&gt;",
-          "balance": "9972623114065"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "735000000000000000",
         "0x595ef7c4ab61d6f9fe9b368dc83ce7fd9aec0d83": "156218342173357282",
@@ -262,13 +196,7 @@
       "holders_count": 4,
       "contract_holders_count": 2,
       "eoa_holders_count": 2,
-      "lp_contract_balances": {
-        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
-          "symbol": "xWRING",
-          "name": "Wrapped Ring[Darwinia Smart&gt;",
-          "balance": "3373245468622000850657"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0xe11ac68b9cc9a8191f4d1916beb285561e13f67c": "2286333255169960072247",
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "78094013923549850661"
@@ -287,13 +215,7 @@
       "holders_count": 4,
       "contract_holders_count": 3,
       "eoa_holders_count": 1,
-      "lp_contract_balances": {
-        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
-          "symbol": "xRING",
-          "name": "Darwinia Network Native Token[Darwinia&gt;",
-          "balance": "3440228235698"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "330000000000000000",
         "0xe77164dc95057337e40367f66416be6d394d6fe6": "119518317069620079",
@@ -312,13 +234,7 @@
       "holders_count": 3,
       "contract_holders_count": 3,
       "eoa_holders_count": 0,
-      "lp_contract_balances": {
-        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
-          "symbol": "xRING",
-          "name": "Darwinia Network Native Token[Darwinia&gt;",
-          "balance": "5444675076328"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "480000000000000000",
         "0xb74200016e1296f2a41e7efe44b3908f5762c859": "33670000000000000",
@@ -335,13 +251,7 @@
       "holders_count": 3,
       "contract_holders_count": 2,
       "eoa_holders_count": 1,
-      "lp_contract_balances": {
-        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
-          "symbol": "WCRAB",
-          "name": "Wrapped CRAB",
-          "balance": "23946332218621749502170"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x58fed52ae6c20bcbdbc2949236595415e5014276": "186335307200004360",
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "2044913709440367"
@@ -359,13 +269,7 @@
       "holders_count": 3,
       "contract_holders_count": 2,
       "eoa_holders_count": 1,
-      "lp_contract_balances": {
-        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
-          "symbol": "WCRAB",
-          "name": "Wrapped CRAB",
-          "balance": "22287877905964507011"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x58fed52ae6c20bcbdbc2949236595415e5014276": "1627334384897056948084",
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "2842011752376325836"
@@ -383,13 +287,7 @@
       "holders_count": 2,
       "contract_holders_count": 2,
       "eoa_holders_count": 0,
-      "lp_contract_balances": {
-        "0x0000000000000000000000000000000000000402": {
-          "symbol": "CKTON",
-          "name": "Crab Commitment Token",
-          "balance": "346451447085400731"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x58fed52ae6c20bcbdbc2949236595415e5014276": "212318803902564",
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "146044657356"
@@ -405,13 +303,7 @@
       "holders_count": 2,
       "contract_holders_count": 2,
       "eoa_holders_count": 0,
-      "lp_contract_balances": {
-        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
-          "symbol": "xWRING",
-          "name": "Wrapped Ring[Darwinia Smart&gt;",
-          "balance": "1005202881836159733046"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x58fed52ae6c20bcbdbc2949236595415e5014276": "82845336828361456",
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "86228036223528"
@@ -443,18 +335,7 @@
       "holders_count": 2,
       "contract_holders_count": 2,
       "eoa_holders_count": 0,
-      "lp_contract_balances": {
-        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
-          "symbol": "WCRAB",
-          "name": "Wrapped CRAB",
-          "balance": "227730284839490250727684"
-        },
-        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
-          "symbol": "xRING",
-          "name": "Darwinia Network Native Token[Darwinia&gt;",
-          "balance": "10110178150698"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x33dcd10d19a4875637fdc359d1eb4ff6972ab5c0": "62693010000000000",
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "62451528808871603"
@@ -470,13 +351,7 @@
       "holders_count": 1,
       "contract_holders_count": 1,
       "eoa_holders_count": 0,
-      "lp_contract_balances": {
-        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
-          "symbol": "xWRING",
-          "name": "Wrapped Ring[Darwinia Smart&gt;",
-          "balance": "1403017623626218805"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x58fed52ae6c20bcbdbc2949236595415e5014276": "35718752473438283330"
       },
@@ -491,13 +366,7 @@
       "holders_count": 1,
       "contract_holders_count": 0,
       "eoa_holders_count": 1,
-      "lp_contract_balances": {
-        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
-          "symbol": "WCRAB",
-          "name": "Wrapped CRAB",
-          "balance": "1100000000000000000"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {},
       "eoa_holders": {
         "0x08a34d53ea8a8956e3a1ea556895c5b85d165b2a": "999999999999999000"
@@ -512,13 +381,7 @@
       "holders_count": 1,
       "contract_holders_count": 0,
       "eoa_holders_count": 1,
-      "lp_contract_balances": {
-        "0x0000000000000000000000000000000000000402": {
-          "symbol": "CKTON",
-          "name": "Crab Commitment Token",
-          "balance": "6248014887659684"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {},
       "eoa_holders": {
         "0x8f49a10fcacd7cd22257b9fd358bcab2cb3cffdc": "2617716138"
@@ -533,13 +396,7 @@
       "holders_count": 1,
       "contract_holders_count": 1,
       "eoa_holders_count": 0,
-      "lp_contract_balances": {
-        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
-          "symbol": "xRING",
-          "name": "Darwinia Network Native Token[Darwinia&gt;",
-          "balance": "196339864965919"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "20696235614"
       },
@@ -554,13 +411,7 @@
       "holders_count": 1,
       "contract_holders_count": 0,
       "eoa_holders_count": 1,
-      "lp_contract_balances": {
-        "0x0000000000000000000000000000000000000402": {
-          "symbol": "CKTON",
-          "name": "Crab Commitment Token",
-          "balance": "4863696751378064"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {},
       "eoa_holders": {
         "0xefb73e47099485c72b7678cb59fb0da7dacf173f": "125955796360063914"
@@ -590,13 +441,7 @@
       "holders_count": 1,
       "contract_holders_count": 1,
       "eoa_holders_count": 0,
-      "lp_contract_balances": {
-        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
-          "symbol": "xRING",
-          "name": "Darwinia Network Native Token[Darwinia&gt;",
-          "balance": "841202599703"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "8550782146"
       },
@@ -611,13 +456,7 @@
       "holders_count": 1,
       "contract_holders_count": 1,
       "eoa_holders_count": 0,
-      "lp_contract_balances": {
-        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
-          "symbol": "WCRAB",
-          "name": "Wrapped CRAB",
-          "balance": "456632677405199371216562"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "1686506235464944"
       },
@@ -647,13 +486,7 @@
       "holders_count": 1,
       "contract_holders_count": 0,
       "eoa_holders_count": 1,
-      "lp_contract_balances": {
-        "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329": {
-          "symbol": "WCRAB",
-          "name": "Wrapped CRAB",
-          "balance": "733621257426289359505"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {},
       "eoa_holders": {
         "0x8f49a10fcacd7cd22257b9fd358bcab2cb3cffdc": "8215838361577"
@@ -668,13 +501,7 @@
       "holders_count": 1,
       "contract_holders_count": 1,
       "eoa_holders_count": 0,
-      "lp_contract_balances": {
-        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
-          "symbol": "xWRING",
-          "name": "Wrapped Ring[Darwinia Smart&gt;",
-          "balance": "5635577612210151719474"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "300225177092328"
       },
@@ -689,13 +516,7 @@
       "holders_count": 1,
       "contract_holders_count": 1,
       "eoa_holders_count": 0,
-      "lp_contract_balances": {
-        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
-          "symbol": "xWRING",
-          "name": "Wrapped Ring[Darwinia Smart&gt;",
-          "balance": "104581691777005704"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "9083619763"
       },
@@ -710,18 +531,7 @@
       "holders_count": 1,
       "contract_holders_count": 1,
       "eoa_holders_count": 0,
-      "lp_contract_balances": {
-        "0x0000000000000000000000000000000000000402": {
-          "symbol": "CKTON",
-          "name": "Crab Commitment Token",
-          "balance": "210640525818132112"
-        },
-        "0x273131F7CB50ac002BDd08cA721988731F7e1092": {
-          "symbol": "xWRING",
-          "name": "Wrapped Ring[Darwinia Smart&gt;",
-          "balance": "11471503394981753896"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {
         "0x304a8103a36c145c41d6c2542e08b634fba249a5": "1509566467041618028"
       },
@@ -736,13 +546,7 @@
       "holders_count": 0,
       "contract_holders_count": 0,
       "eoa_holders_count": 0,
-      "lp_contract_balances": {
-        "0x7399Ea6C9d35124d893B8d9808930e9d3F211501": {
-          "symbol": "xRING",
-          "name": "Darwinia Network Native Token[Darwinia&gt;",
-          "balance": "1"
-        }
-      },
+      "lp_contract_balances": {},
       "contract_holders": {},
       "eoa_holders": {}
     }

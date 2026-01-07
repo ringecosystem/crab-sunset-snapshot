@@ -8,7 +8,7 @@ class CrabAnnotations extends BaseAnnotations {
 	}
 
 	getAll() {
-		return this.loadSnowLPs();
+		return this.loadSnowLPs('crab');
 	}
 }
 

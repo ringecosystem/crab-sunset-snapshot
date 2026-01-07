@@ -20,7 +20,11 @@ class BaseCache {
 
 	save(cache) {
 		try {
-			fs.writeFileSync(this.cacheFile, JSON.stringify(cache, null, 2));
+			// Filter out the cacheFile key if it exists (legacy/metadata)
+			const cleanCache = { ...cache };
+			delete cleanCache.cacheFile;
+			
+			fs.writeFileSync(this.cacheFile, JSON.stringify(cleanCache, null, 2));
 		} catch (error) {
 			console.warn('⚠️  Could not save cache:', error.message);
 		}

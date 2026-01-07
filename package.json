@@ -13,13 +13,13 @@
     "xring": "node bin/fetch-crab 0x7399Ea6C9d35124d893B8d9808930e9d3F211501",
     "xwring": "node bin/fetch-crab 0x273131F7CB50ac002BDd08cA721988731F7e1092",
     "wcring": "node bin/fetch-crab 0xA3eE184ed6eA8fa276AfA282980f83A7091b1E8C",
-    "snow-lps": "node bin/fetch-snow-lps",
+    "snow-lps": "node bin/fetch-snow-lps crab",
+    "snow-lps-darwinia": "node bin/fetch-snow-lps darwinia",
     "evolution-land": "node bin/fetch-evolution-land",
-    "fix:cache:crab": "node bin/fix-crab-cache",
+    "fix-cache": "node bin/fix-cache crab && node bin/fix-cache darwinia",
     "fetch:crab": "npm run snow-lps && npm run evolution-land && npm run wcrab && npm run gcrab && npm run ckton && npm run wkton && npm run gkton && npm run xring && npm run xwring && npm run wcring && npm run native",
     "xwcrab": "node bin/fetch-darwinia 0x656567Eb75b765FC320783cc6EDd86bD854b2305",
-    "fetch:darwinia": "npm run xwcrab",
-    "fix:cache:darwinia": "node bin/fix-darwinia-cache",
+    "fetch:darwinia": "npm run snow-lps-darwinia && npm run xwcrab",
     "fetch:all": "npm run fetch:crab && npm run fetch:darwinia"
   },
   "keywords": [

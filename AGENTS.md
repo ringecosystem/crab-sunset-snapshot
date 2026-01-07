@@ -4,24 +4,51 @@ This file contains guidelines and commands for agentic coding agents working in 
 
 ## Project Overview
 
-Crab Sunset is a Node.js token holder snapshot system for Crab Network. It fetches token holder data from the Blockscout API and generates JSON snapshots with address annotations.
+Crab Sunset is a Node.js token holder snapshot system for Crab and Darwinia Networks. It fetches token holder data from the Blockscout API and generates JSON snapshots with address annotations.
+
+### Architecture Overview
+
+**Token Snapshots:**
+- Each token generates a JSON file with holder addresses and balances
+- Holders are separated into contracts and EOAs
+- Snow LP contracts are annotated in the holder list (e.g., `"0xaddr... (Snow LP)"`)
+- Detailed LP holder data is available in network-specific snapshot files: `snow_lps_crab.json` and `snow_lps_darwinia.json`
+
+**Snow LP Handling:**
+- LP contracts are detected and annotated during token fetching
+- Full LP holder details are stored separately in network-specific files
+- Crab: `npm run snow-lps` → `snow_lps_crab.json`
+- Darwinia: `npm run snow-lps-darwinia` → `snow_lps_darwinia.json`
+- This separation keeps token files clean while preserving LP data access
 
 ## Build/Development Commands
 
 ### Running Token Snapshots
 ```bash
-# Token snapshots (wcrab, gcrab, ckton, wkton, gkton, xring, xwring, wcring)
-npm run wcrab          # Wrapped CRAB example
-npm run gcrab          # gCRAB example
+# Crab Network tokens
+npm run wcrab          # Wrapped CRAB
+npm run gcrab          # gCRAB
+npm run ckton          # CKTON
+npm run wkton          # WKTON
+npm run gkton          # gCKTON
+npm run xring          # xRING
+npm run xwring         # xWRING
+npm run wcring         # WCRING
+
+# Darwinia Network tokens
+npm run xwcrab         # xWCRAB
 
 # Other data sources
 npm run native         # Native CRAB holders
-npm run snow-lps       # Snow LP tokens
+npm run snow-lps       # Crab Snow LP tokens (→ snow_lps_crab.json)
+npm run snow-lps-darwinia  # Darwinia Snow LP tokens (→ snow_lps_darwinia.json)
 npm run evolution-land # Evolution Land tokens
 
 # Batch operations
-npm run fetch:all      # Fetch all tokens and data
-npm run fix-cache      # Repair address cache
+npm run fetch:crab     # Fetch all Crab network data
+npm run fetch:darwinia # Fetch all Darwinia network data
+npm run fetch:all      # Fetch all tokens and data from both networks
+npm run fix-cache      # Repair both Crab and Darwinia address caches
 ```
 
 ### Testing
@@ -34,7 +61,11 @@ No linting or formatting tools are currently configured. Agents should maintain 
 
 ### File Structure
 - `bin/` - CLI entry points with shebang `#!/usr/bin/env node`
-- `src/` - Core functionality modules
+- `src/` - Core functionality modules organized by purpose:
+  - `src/base/` - Base classes for API, cache, holders, and annotations
+  - `src/crab/` - Crab Network specific implementations
+  - `src/darwinia/` - Darwinia Network specific implementations
+  - `src/special/` - Special data fetchers (native, evolution-land, snow-lps)
 - `data/` - JSON snapshot outputs and cache files
 
 ### CLI Entry Points
@@ -49,11 +80,12 @@ No linting or formatting tools are currently configured. Agents should maintain 
 - Export objects with descriptive property names
 
 ### Naming Conventions
-- **Files**: kebab-case (`fetch-token-holders.js`, `api.js`)
+- **Files**: kebab-case (`fetch-token.js`, `api.js`)
+- **Directories**: kebab-case (`crab/`, `darwinia/`, `special/`)
 - **Functions**: camelCase (`fetchAllHolders`, `separateHoldersByType`)
 - **Variables**: camelCase (`contractAddress`, `addressCache`)
 - **Constants**: UPPER_SNAKE_CASE (`BASE_URL`, `CACHE_FILE`)
-- **Classes**: Not used in this codebase (procedural style)
+- **Classes**: PascalCase (e.g., `CrabAPI`, `BaseAPI`, `BaseCache`)
 
 ### Code Formatting
 - **Indentation**: Tabs (not spaces)
@@ -85,9 +117,11 @@ No linting or formatting tools are currently configured. Agents should maintain 
 - Sort holders by balance (descending) using `BigInt` comparison
 
 ### API Integration
-- Base URL: `https://crab-scan.darwinia.network/api`
+- Crab Network Base URL: `https://crab-scan.darwinia.network/api`
+- Darwinia Network Base URL: `https://explorer.darwinia.network/api`
 - Always include `Accept: application/json` header
 - Handle HTTP errors gracefully with null returns
+- Network-specific API logic is in `src/crab/api.js` and `src/darwinia/api.js`
 - Cache address types to reduce API calls
 
 ### File I/O
@@ -97,10 +131,12 @@ No linting or formatting tools are currently configured. Agents should maintain 
 - Use `path.join()` and `path.resolve()` for cross-platform paths
 
 ### Caching Strategy
-- Cache file: `data/.address_cache.json`
+- Crab cache file: `data/crab-cache.json`
+- Darwinia cache file: `data/darwinia-cache.json`
 - Cache address types (contract vs EOA) to minimize API calls
 - Load cache at startup, save after modifications
 - Cache keys are lowercase addresses
+- Each network has its own cache to avoid conflicts
 
 ### Annotation System
 - Special addresses defined in constants
@@ -116,7 +152,8 @@ No linting or formatting tools are currently configured. Agents should maintain 
    - Follow naming pattern: `npm run <symbol>`
 
 2. **Modifying API Logic**:
-   - Update `src/api.js` for endpoint changes
+   - Update network-specific API classes in `src/crab/api.js` or `src/darwinia/api.js`
+   - For shared functionality, update base classes in `src/base/`
    - Maintain backward compatibility
    - Add error handling for new fields
 
@@ -129,7 +166,7 @@ No linting or formatting tools are currently configured. Agents should maintain 
     - Create file in `bin/` directory without `.js` extension
     - Make executable: `chmod +x bin/script-name`
     - Add shebang and argument validation
-    - Call functions from `src/` modules
+    - Call functions from network-specific modules in `src/crab/`, `src/darwinia/`, or `src/special/`
 
 ## Important Notes
 

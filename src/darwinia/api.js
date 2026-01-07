@@ -5,7 +5,7 @@ const { BaseAnnotations, checkIsSnowLP } = require('../base/annotations');
 class DarwiniaAPI extends BaseAPI {
 	constructor() {
 		super("https://explorer.darwinia.network/api");
-		this.cache = new BaseCache('.address_cache_darwinia.json');
+		this.cache = new BaseCache('darwinia-cache.json');
 	}
 
 	getCache() {

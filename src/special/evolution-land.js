@@ -1,9 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const { fetchAllHolders } = require('./holders');
-const { isSmartContract } = require('./api');
-const { loadCache, saveCache } = require('./cache');
-const { getAnnotations, annotateHolders } = require('./annotations');
+const BaseHolders = require('../base/holders');
+const CrabAPI = require('../crab/api');
+const CrabAnnotations = require('../crab/annotations');
 
 const BASE_URL = "https://crab-scan.darwinia.network/api";
 
@@ -138,7 +137,7 @@ async function fetchContractBalances(contractAddress, trackedTokens) {
 	return balances;
 }
 
-async function processEvolutionToken(evolutionToken, addressCache, trackedTokens, annotations) {
+async function processEvolutionToken(evolutionToken, api, trackedTokens, annotationsObj) {
 	const address = evolutionToken.address;
 	const name = evolutionToken.name || "Unknown";
 	const symbol = evolutionToken.symbol || "Unknown";
@@ -147,60 +146,13 @@ async function processEvolutionToken(evolutionToken, addressCache, trackedTokens
 	console.log(`📍 ${address}`);
 	
 	// Fetch all holders
-	const allHolders = await fetchAllHolders(address);
+	const holdersManager = new BaseHolders(api, api.getCacheManager());
+	const allHolders = await holdersManager.fetchAllHolders(address);
 	
 	// Separate contract holders and EOA holders
-	const contractHolders = {};
-	const eoaHolders = {};
-	
-	const addresses = Object.keys(allHolders);
-	let checkedCount = 0;
-	let cacheHits = 0;
-	let apiCalls = 0;
-	
-	for (const holderAddress of addresses) {
-		const wasCached = holderAddress in addressCache;
-		const isContract = await isSmartContract(holderAddress, addressCache);
-		
-		if (wasCached) {
-			cacheHits++;
-		} else {
-			apiCalls++;
-		}
-		
-		if (isContract) {
-			contractHolders[holderAddress] = allHolders[holderAddress];
-		} else {
-			eoaHolders[holderAddress] = allHolders[holderAddress];
-		}
-		
-		checkedCount++;
-		if (checkedCount % 10 === 0 || checkedCount === addresses.length) {
-			process.stdout.write(`\rChecking types: ${checkedCount}/${addresses.length} (cache: ${cacheHits}, API: ${apiCalls})`);
-		}
-		
-		if (!wasCached) {
-			await new Promise((r) => setTimeout(r, 100));
-		}
-	}
-	
-	process.stdout.write(`\n`);
-	
-	// Save updated cache
-	saveCache(addressCache);
-	
-	// Sort holders by balance
-	const sortHoldersByBalance = (holders) => {
-		const sorted = Object.entries(holders).sort((a, b) => {
-			const balA = BigInt(a[1]);
-			const balB = BigInt(b[1]);
-			if (balA > balB) return -1;
-			if (balA < balB) return 1;
-			return 0;
-		});
-		return Object.fromEntries(sorted);
-	};
-	
+	const addressCache = api.getCache();
+	const { contractHolders, eoaHolders } = await holdersManager.separateHoldersByType(allHolders, addressCache);
+
 	// Fetch contract balances for tracked tokens
 	console.log(`🔍 Fetching contract balances...`);
 	const contractBalances = await fetchContractBalances(address, trackedTokens);
@@ -216,8 +168,8 @@ async function processEvolutionToken(evolutionToken, addressCache, trackedTokens
 		contract_holders_count: Object.keys(contractHolders).length,
 		eoa_holders_count: Object.keys(eoaHolders).length,
 		contract_balances: contractBalances,
-		contract_holders: annotateHolders(sortHoldersByBalance(contractHolders), annotations),
-		eoa_holders: annotateHolders(sortHoldersByBalance(eoaHolders), annotations)
+		contract_holders: annotationsObj.annotateHolders(holdersManager.sortHoldersByBalance(contractHolders)),
+		eoa_holders: annotationsObj.annotateHolders(holdersManager.sortHoldersByBalance(eoaHolders))
 	};
 }
 
@@ -226,8 +178,8 @@ async function fetchEvolutionLandSnapshot(outputDir) {
 	console.log(`📍 Crab Network`);
 
 	// Load cache and annotations
-	const addressCache = loadCache();
-	const annotations = getAnnotations();
+	const api = new CrabAPI();
+	const annotationsObj = new CrabAnnotations();
 	
 	// Get tracked tokens from data folder
 	const trackedTokens = getTrackedTokenAddresses(outputDir);
@@ -247,7 +199,7 @@ async function fetchEvolutionLandSnapshot(outputDir) {
 	const results = [];
 	for (let i = 0; i < evolutionTokens.length; i++) {
 		console.log(`\n[${i + 1}/${evolutionTokens.length}]`);
-		const result = await processEvolutionToken(evolutionTokens[i], addressCache, trackedTokens, annotations);
+		const result = await processEvolutionToken(evolutionTokens[i], api, trackedTokens, annotationsObj);
 		results.push(result);
 	}
 	

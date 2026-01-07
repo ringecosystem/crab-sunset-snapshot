@@ -4,11 +4,11 @@
   "symbol": "xWRING",
   "decimals": 18,
   "total_supply": "41122342257198411896012734",
-  "holders_count": 141,
+  "holders_count": 142,
   "contract_holders_count": 28,
-  "eoa_holders_count": 113,
+  "eoa_holders_count": 114,
   "contract_holders": {
-    "0x05f0bc920a23d1662764907910b150c819c110aa (Snow LP)": "2639014241700233595214926",
+    "0x05f0bc920a23d1662764907910b150c819c110aa (Snow LP)": "2632494815304437368113958",
     "0xded6edd731f5f59feb2555ec3f1b6c085dc6e42e": "2110233924538553000000000",
     "0x81bc43e2ca13571d2bb63630cfa27ffba6028648": "66104494746155592592592",
     "0xefb8f5a7479a6532a71f70919c00a18ae8a164d6": "64314256618462619950712",
@@ -48,6 +48,7 @@
     "0x8abc0ed7e7885c82395bd1f11091b96375081c59": "7382734979485644318699",
     "0x958c50a13afe090c24a43fff5f4334e6f92a2891": "7048471852798297515472",
     "0x880d7082a89d6e2e217a9311083c6b04f7c42890": "6844055688641008468618",
+    "0x05e0375b33aef6a5bc6c02f52e02f62aadc586fe": "6528426395796227100968",
     "0xd4dc3eb21c9ec200ef82c825fbf86188c1a6c03c": "5807048875995936485033",
     "0x4de51875c1a58799a0de58fc1049e9c4a83d7ad0": "4592902365254780605760",
     "0xb7ae3beb06dd402962cef689e7fc6d025ea1028c": "3041811712052288890986",
@@ -151,182 +152,5 @@
     "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478": "9416496",
     "0xbff1e53b23d9f5cd13429cd4bacbc017589f51eb": "1",
     "0x7ae77149ed38c5dd313e9069d790ce7085caf0a6": "1"
-  },
-  "lp_holders": {
-    "0x05f0bc920a23d1662764907910b150c819c110aa": {
-      "name": "Snow LPs",
-      "symbol": "SNOW-LP",
-      "decimals": 18,
-      "lp_contract_balances": "2639014241700233595214926",
-      "holders_count": 8,
-      "contract_holders_count": 2,
-      "eoa_holders_count": 6,
-      "contract_holders": {
-        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "4707687943710216731642",
-        "0x02b04c69918808083ac8fc60abe786855999f2bd": "3901619059740753817522"
-      },
-      "eoa_holders": {
-        "0x6d6f646c64612f74727372790000000000000000 (Treasury)": "12568565767522379105723006",
-        "0x05e0375b33aef6a5bc6c02f52e02f62aadc586fe": "27038045751311064589590",
-        "0x73db0f38391583c9f4786f7a317afab23b6749f7": "3053344779743549005227",
-        "0x050066b4c414db66954e496972c05852c505c7f4": "186933750256801201014",
-        "0x8f49a10fcacd7cd22257b9fd358bcab2cb3cffdc": "113881443500249068167",
-        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "32531084857614252640"
-      }
-    },
-    "0x506c391b6c1eb4911241a918de5c3984a603e112": {
-      "name": "Snow LPs",
-      "symbol": "SNOW-LP",
-      "decimals": 18,
-      "lp_contract_balances": "8157758697288077683509",
-      "holders_count": 5,
-      "contract_holders_count": 3,
-      "eoa_holders_count": 2,
-      "contract_holders": {
-        "0x9579391a03ffb1f30641dcb453a6212558935065": "15350747685318028267330",
-        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "450000000000000000000",
-        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "84107814044557770317"
-      },
-      "eoa_holders": {
-        "0x73db0f38391583c9f4786f7a317afab23b6749f7": "8228929636813924982986",
-        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "447656729670174231"
-      }
-    },
-    "0x2eb5b4a0624d6e646ba2ad919411072476fa1568": {
-      "name": "Snow LPs",
-      "symbol": "SNOW-LP",
-      "decimals": 18,
-      "lp_contract_balances": "7979777001355677830271",
-      "holders_count": 4,
-      "contract_holders_count": 2,
-      "eoa_holders_count": 2,
-      "contract_holders": {
-        "0x21dc35da3262f6fe9bd60c6225a0fe478322441a": "10429349749232935581653",
-        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "93319958095235529235"
-      },
-      "eoa_holders": {
-        "0x73db0f38391583c9f4786f7a317afab23b6749f7": "10471813415498049072303",
-        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "373939667489117752"
-      }
-    },
-    "0xb0fe91f4fa6ac7bedfb741fdf2d521766db4a925": {
-      "name": "Snow LPs",
-      "symbol": "SNOW-LP",
-      "decimals": 18,
-      "lp_contract_balances": "5635577612210151719474",
-      "holders_count": 1,
-      "contract_holders_count": 1,
-      "eoa_holders_count": 0,
-      "contract_holders": {
-        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "300225177092328"
-      },
-      "eoa_holders": {}
-    },
-    "0x76f6877ac6b03bf80ab911de4580c51dcb358927": {
-      "name": "Snow LPs",
-      "symbol": "SNOW-LP",
-      "decimals": 18,
-      "lp_contract_balances": "4370266661212514273927",
-      "holders_count": 4,
-      "contract_holders_count": 2,
-      "eoa_holders_count": 2,
-      "contract_holders": {
-        "0x7982f2d3ebc7540ab4d6c252df459330a919b27c": "2177936629058845028486",
-        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "42902183972701622023"
-      },
-      "eoa_holders": {
-        "0x73db0f38391583c9f4786f7a317afab23b6749f7": "9430532644228145143888",
-        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "391918233450444746"
-      }
-    },
-    "0xa946116131932f2a6b5f2a2a52007418d706168a": {
-      "name": "Snow LPs",
-      "symbol": "SNOW-LP",
-      "decimals": 18,
-      "lp_contract_balances": "3856080663608839666290",
-      "holders_count": 6,
-      "contract_holders_count": 3,
-      "eoa_holders_count": 3,
-      "contract_holders": {
-        "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "1350000000000000000000",
-        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "76604993023460385304",
-        "0xa796964e8c6d73f78963439d1882e8f4a1808178": "299999999999999000"
-      },
-      "eoa_holders": {
-        "0x73db0f38391583c9f4786f7a317afab23b6749f7": "10717098175124107839493",
-        "0x12d529cfa26891cdf1d25453f9851c73e2720373": "16277606944873532103",
-        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "380594102013849983"
-      }
-    },
-    "0xd4b2b19a62500bb32a731a0889ef0b5147a963e4": {
-      "name": "Snow LPs",
-      "symbol": "SNOW-LP",
-      "decimals": 18,
-      "lp_contract_balances": "3373245468622000850657",
-      "holders_count": 4,
-      "contract_holders_count": 2,
-      "eoa_holders_count": 2,
-      "contract_holders": {
-        "0xe11ac68b9cc9a8191f4d1916beb285561e13f67c": "2286333255169960072247",
-        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "78094013923549850661"
-      },
-      "eoa_holders": {
-        "0x73db0f38391583c9f4786f7a317afab23b6749f7": "9159034881234814249620",
-        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "289917269517189515"
-      }
-    },
-    "0x05751685bf5be88a4cd39380a0ee5e04fa39d9f1": {
-      "name": "Snow LPs",
-      "symbol": "SNOW-LP",
-      "decimals": 18,
-      "lp_contract_balances": "1005202881836159733046",
-      "holders_count": 2,
-      "contract_holders_count": 2,
-      "eoa_holders_count": 0,
-      "contract_holders": {
-        "0x58fed52ae6c20bcbdbc2949236595415e5014276": "82845336828361456",
-        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "86228036223528"
-      },
-      "eoa_holders": {}
-    },
-    "0xf2cdf22824bfafdcd78d3bb937cd8450d52f749f": {
-      "name": "Snow LPs",
-      "symbol": "SNOW-LP",
-      "decimals": 18,
-      "lp_contract_balances": "11471503394981753896",
-      "holders_count": 1,
-      "contract_holders_count": 1,
-      "eoa_holders_count": 0,
-      "contract_holders": {
-        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "1509566467041618028"
-      },
-      "eoa_holders": {}
-    },
-    "0x04cd063018cc55279c81c31e298e51094c3d1e43": {
-      "name": "Snow LPs",
-      "symbol": "SNOW-LP",
-      "decimals": 18,
-      "lp_contract_balances": "1403017623626218805",
-      "holders_count": 1,
-      "contract_holders_count": 1,
-      "eoa_holders_count": 0,
-      "contract_holders": {
-        "0x58fed52ae6c20bcbdbc2949236595415e5014276": "35718752473438283330"
-      },
-      "eoa_holders": {}
-    },
-    "0xc2835441055a190f6878aeb5a5254f2016b6a5f9": {
-      "name": "Snow LPs",
-      "symbol": "SNOW-LP",
-      "decimals": 18,
-      "lp_contract_balances": "104581691777005704",
-      "holders_count": 1,
-      "contract_holders_count": 1,
-      "eoa_holders_count": 0,
-      "contract_holders": {
-        "0x304a8103a36c145c41d6c2542e08b634fba249a5": "9083619763"
-      },
-      "eoa_holders": {}
-    }
   }
 }

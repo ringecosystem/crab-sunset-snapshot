@@ -5,7 +5,7 @@ const { loadSnowLPAddresses } = require('./annotations');
 class CrabAPI extends BaseAPI {
 	constructor() {
 		super("https://crab-scan.darwinia.network/api");
-		this.cache = new BaseCache('.address_cache_crab.json');
+		this.cache = new BaseCache('crab-cache.json');
 	}
 
 	getCache() {

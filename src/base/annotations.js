@@ -5,11 +5,12 @@ const SPECIAL_ADDRESSES = {
 	"0x6d6f646c64612f74727372790000000000000000": "Treasury"
 };
 
-function loadSnowLPAddresses() {
-	const snapshotPath = path.resolve(__dirname, '..', '..', 'data', 'snow_lps_snapshot.json');
+function loadSnowLPAddresses(network = 'crab') {
+	const filename = `snow_lps_${network}.json`;
+	const snapshotPath = path.resolve(__dirname, '..', '..', 'data', filename);
 	
 	if (!fs.existsSync(snapshotPath)) {
-		console.log("⚠️  Snow LPs snapshot not found. Run 'npm run fetch:crab' first.");
+		console.log(`⚠️  ${network} Snow LPs snapshot not found. Run 'npm run snow-lps ${network}' first.`);
 		return {};
 	}
 

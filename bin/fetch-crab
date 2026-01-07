@@ -1,12 +1,9 @@
 #!/usr/bin/env node
 
 const path = require('path');
-const m = require('../src/crab/fetch-token');
+const { fetchCrabTokenSnapshot } = require('../src/crab/fetch-token');
 
 async function main() {
-	// Debug
-	console.log('Module loaded, fetchTokenHoldersSnapshot type:', typeof m.fetchTokenHoldersSnapshot);
-	
 	const contractAddress = process.argv[2];
 	if (!contractAddress) {
 		console.error("❌ Error: Please provide contract address as parameter");
@@ -17,7 +14,7 @@ async function main() {
 	const outputDir = path.join(__dirname, '..', 'data');
 
 	try {
-		await m.%(contractAddress, outputDir);
+		await fetchCrabTokenSnapshot(contractAddress, outputDir);
 	} catch (error) {
 		console.error("❌ Fatal error:", error.message);
 		process.exit(1);

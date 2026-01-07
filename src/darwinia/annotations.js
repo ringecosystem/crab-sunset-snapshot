@@ -14,7 +14,7 @@ class DarwiniaAnnotations extends BaseAnnotations {
 	}
 
 	getAll() {
-		const baseAnnotations = super.getAll();
+		const baseAnnotations = this.loadSnowLPs('darwinia');
 		return { ...baseAnnotations, ...this.dynamicAnnotations };
 	}
 
@@ -22,11 +22,12 @@ class DarwiniaAnnotations extends BaseAnnotations {
 		for (const address of contractAddresses) {
 			const tokenInfo = await this.api.fetchTokenInfo(address);
 			if (tokenInfo && ((tokenInfo.name && tokenInfo.name.includes("Snow LP")) || tokenInfo.symbol === "SNOW-LP")) {
-				this.dynamicAnnotations[address.toLowerCase()] = "Snow LP";
+				// Store in base annotations object so annotateHolders can access it
+				this.annotations[address.toLowerCase()] = "Snow LP";
 			}
 			await new Promise(r => setTimeout(r, 100));
 		}
-		return { ...this.getAll() };
+		return this.getAll();
 	}
 }
 

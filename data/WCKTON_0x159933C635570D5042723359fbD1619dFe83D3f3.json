@@ -5,15 +5,14 @@
   "decimals": 18,
   "total_supply": "1228121763690000000000",
   "holders_count": 4,
-  "contract_holders_count": 2,
-  "eoa_holders_count": 2,
+  "contract_holders_count": 3,
+  "eoa_holders_count": 1,
   "contract_holders": {
+    "0xd5f4940704eb4ce5e4b51877d49b58a3e93531b6": "1173515192306481364418",
     "0x120ea90253c7c1d353dac0c645a45f750a767c8d": "485936798440986015",
     "0x1eff28284ec053527a48afe5108806319c3ca667": "104391140284396687"
   },
   "eoa_holders": {
-    "0xd5f4940704eb4ce5e4b51877d49b58a3e93531b6": "1173515192306481364418",
     "0x0e059f47cb04ce5ef7502f5ca2545d8102c0f9cd": "2136603342101450"
-  },
-  "lp_holders": {}
+  }
 }

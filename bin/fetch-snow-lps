@@ -1,14 +1,20 @@
 #!/usr/bin/env node
 
 const path = require('path');
-const { fetchSnowLPsSnapshot } = require('../src/fetch-snow-lps');
+const { fetchSnowLPsSnapshot } = require('../src/special/snow-lps');
 
 async function main() {
 	// Output directory is fixed to data folder
 	const outputDir = path.join(__dirname, '..', 'data');
+	const network = process.argv[2] || 'crab';
+
+	if (!['crab', 'darwinia'].includes(network)) {
+		console.error(`❌ Invalid network: ${network}. Must be 'crab' or 'darwinia'`);
+		process.exit(1);
+	}
 
 	try {
-		await fetchSnowLPsSnapshot(outputDir);
+		await fetchSnowLPsSnapshot(outputDir, network);
 	} catch (error) {
 		console.error("❌ Fatal error:", error.message);
 		process.exit(1);

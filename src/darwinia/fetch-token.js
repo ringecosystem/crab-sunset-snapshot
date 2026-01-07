@@ -30,21 +30,19 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 	};
 
 	console.log(`\n🔍 Checking for LP contracts...`);
-	const lpContracts = [];
+	let lpContractCount = 0;
 
 	for (const contractAddr of Object.keys(contractHolders)) {
 		const tokenInfo = await api.fetchTokenInfo(contractAddr);
 		if (tokenInfo && ((tokenInfo.name && tokenInfo.name.includes("Snow LP")) || tokenInfo.symbol === "SNOW-LP")) {
 			console.log(`  ✅ Found LP token: ${tokenInfo.symbol} (${contractAddr})`);
-			lpContracts.push({
-				address: contractAddr,
-				name: tokenInfo.name,
-				symbol: tokenInfo.symbol,
-				decimals: tokenInfo.decimals,
-				lp_contract_balances: contractHolders[contractAddr]
-			});
+			lpContractCount++;
 		}
 		await new Promise(r => setTimeout(r, 100));
+	}
+
+	if (lpContractCount === 0) {
+		console.log(`  ℹ️  No LP contracts found holding ${tokenInfo?.symbol}`);
 	}
 
 	await annotations.loadForContracts(Object.keys(contractHolders));
@@ -61,41 +59,8 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 		contract_holders_count: Object.keys(contractHolders).length,
 		eoa_holders_count: Object.keys(eoaHolders).length,
 		contract_holders: finalContractHolders,
-		eoa_holders: finalEoaHolders,
-		lp_holders: {}
+		eoa_holders: finalEoaHolders
 	};
-
-	if (lpContracts.length > 0) {
-		console.log(`\n🔄 Fetching holders for ${lpContracts.length} LP contracts...`);
-		
-		for (const lp of lpContracts) {
-			console.log(`\n  📊 ${lp.symbol} - ${lp.name}`);
-			console.log(`  📍 ${lp.address}`);
-			
-			const lpAllHolders = await holdersManager.fetchAllHolders(lp.address);
-			const lpCache = api.getCache();
-			const { contractHolders: lpContractHolders, eoaHolders: lpEoaHolders } = await holdersManager.separateHoldersByType(lpAllHolders, lpCache);
-			
-			const lpContractHoldersSorted = sortHoldersByBalance(lpContractHolders);
-			const lpEoaHoldersSorted = sortHoldersByBalance(lpEoaHolders);
-			
-			output.lp_holders[lp.address] = {
-				name: lp.name,
-				symbol: lp.symbol,
-				decimals: lp.decimals,
-				lp_contract_balances: lp.lp_contract_balances,
-				holders_count: Object.keys(lpAllHolders).length,
-				contract_holders_count: Object.keys(lpContractHolders).length,
-				eoa_holders_count: Object.keys(lpEoaHolders).length,
-				contract_holders: annotations.annotateHolders(lpContractHoldersSorted),
-				eoa_holders: annotations.annotateHolders(lpEoaHoldersSorted)
-			};
-		}
-		
-		console.log(`\n✅ Fetched holders for all LP contracts`);
-	} else {
-		console.log(`  ℹ️  No LP contracts found holding ${tokenInfo?.symbol}`);
-	}
 
 	const outputPath = path.resolve(outputDir);
 	if (!fs.existsSync(outputPath)) {
@@ -114,5 +79,6 @@ async function fetchTokenHoldersSnapshot(contractAddress, outputDir) {
 }
 
 module.exports = {
-	fetchTokenHoldersSnapshot
+	fetchTokenHoldersSnapshot,
+	fetchDarwiniaTokenSnapshot: fetchTokenHoldersSnapshot
 };

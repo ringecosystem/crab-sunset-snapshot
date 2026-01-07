@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const path = require('path');
-const { fetchEvolutionLandSnapshot } = require('../src/fetch-evolution-land');
+const { fetchEvolutionLandSnapshot } = require('../src/special/evolution-land');
 
 async function main() {
   const outputDir = path.join(__dirname, '..', 'data');

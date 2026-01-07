@@ -3,8 +3,43 @@
 const fs = require('fs');
 const path = require('path');
 
-const CACHE_PATH = path.join(__dirname, '..', 'data', '.address_cache_crab.json');
-const BASE_URL = "https://crab-scan.darwinia.network/api";
+// Parse command line arguments
+let network = process.argv[2] || 'crab';
+
+// Show help if requested
+if (network === '--help' || network === '-h') {
+	console.log('Usage: fix-cache [network]');
+	console.log('  network: crab (default) or darwinia');
+	console.log('\nExamples:');
+	console.log('  fix-cache         # Fix Crab Network cache');
+	console.log('  fix-cache crab    # Fix Crab Network cache');
+	console.log('  fix-cache darwinia # Fix Darwinia Network cache');
+	process.exit(0);
+}
+
+const NETWORKS = {
+	crab: {
+		name: 'Crab',
+		cachePath: path.join(__dirname, '..', 'data', 'crab-cache.json'),
+		baseUrl: 'https://crab-scan.darwinia.network/api'
+	},
+	darwinia: {
+		name: 'Darwinia',
+		cachePath: path.join(__dirname, '..', 'data', 'darwinia-cache.json'),
+		baseUrl: 'https://explorer.darwinia.network/api'
+	}
+};
+
+if (!NETWORKS[network]) {
+	console.error(`❌ Error: Invalid network '${network}'`);
+	console.log('Usage: fix-cache [network]');
+	console.log('  network: crab (default) or darwinia');
+	process.exit(1);
+}
+
+const config = NETWORKS[network];
+const CACHE_PATH = config.cachePath;
+const BASE_URL = config.baseUrl;
 
 async function isSmartContract(address) {
 	try {
@@ -28,7 +63,7 @@ async function isSmartContract(address) {
 }
 
 async function scanAndFixCache() {
-	console.log('\n🔍 Scanning address cache...\n');
+	console.log(`\n🔍 Scanning ${config.name} Network address cache...\n`);
 	
 	// Load cache
 	if (!fs.existsSync(CACHE_PATH)) {

@@ -1,8 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-const { isSmartContract } = require('./api');
-const { loadCache, saveCache } = require('./cache');
-const { getAnnotations, annotateHolders } = require('./annotations');
+const CrabAPI = require('../crab/api');
+const CrabAnnotations = require('../crab/annotations');
 
 const BASE_URL = "https://crab-scan.darwinia.network/api";
 
@@ -107,18 +106,19 @@ async function fetchAllNativeHolders() {
 	return allHolders;
 }
 
-async function separateNativeHoldersByType(allHolders, addressCache) {
+async function separateNativeHoldersByType(allHolders, api) {
 	const contractHolders = {};
 	const eoaHolders = {};
 	
 	const addresses = Object.keys(allHolders);
+	const cache = api.getCache();
 	let checkedCount = 0;
 	let cacheHits = 0;
 	let apiCalls = 0;
 	
 	for (const address of addresses) {
-		const wasCached = address in addressCache;
-		const isContract = await isSmartContract(address, addressCache);
+		const wasCached = address in cache;
+		const isContract = await api.isSmartContract(address, cache);
 		
 		if (wasCached) {
 			cacheHits++;
@@ -144,7 +144,7 @@ async function separateNativeHoldersByType(allHolders, addressCache) {
 	}
 	
 	// Save updated cache
-	saveCache(addressCache);
+	api.saveCache(cache);
 	
 	process.stdout.write(`\n`);
 	console.log(`✅ Contracts: ${Object.keys(contractHolders).length}, EOAs: ${Object.keys(eoaHolders).length} (cache: ${cacheHits}, API: ${apiCalls})`);
@@ -157,14 +157,15 @@ async function fetchNativeTokenSnapshot(outputDir) {
 	console.log(`📍 Crab Network Native Token`);
 
 	// Load cache and annotations
-	const addressCache = loadCache();
-	const annotations = getAnnotations();
+	const api = new CrabAPI();
+	const annotations = new CrabAnnotations();
+	annotations.getAll();
 	
 	// Fetch all native token holders
 	const allHolders = await fetchAllNativeHolders();
 	
 	// Separate contract holders and EOA holders
-	const { contractHolders, eoaHolders } = await separateNativeHoldersByType(allHolders, addressCache);
+	const { contractHolders, eoaHolders } = await separateNativeHoldersByType(allHolders, api);
 
 	// Calculate total balance
 	const calculateTotalBalance = (holders) => {
@@ -195,8 +196,8 @@ async function fetchNativeTokenSnapshot(outputDir) {
 		contract_holders_count: Object.keys(contractHolders).length,
 		eoa_holders_count: Object.keys(eoaHolders).length,
 		total_balance: calculateTotalBalance(allHolders),
-		contract_holders: annotateHolders(sortHoldersByBalance(contractHolders), annotations),
-		eoa_holders: annotateHolders(sortHoldersByBalance(eoaHolders), annotations)
+		contract_holders: annotations.annotateHolders(sortHoldersByBalance(contractHolders)),
+		eoa_holders: annotations.annotateHolders(sortHoldersByBalance(eoaHolders))
 	};
 
 	// Ensure output directory exists

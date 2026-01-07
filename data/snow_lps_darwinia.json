@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-01-07T08:27:30.864Z",
+  "chain": "Darwinia Network",
+  "snow_lps_count": 7,
+  "snow_lps": [
+    {
+      "address": "0x28B4579C37E82D6F57F88d35D34591E7Cd26398E",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "13692021682942304328141",
+      "holders_count": 4,
+      "contract_holders_count": 1,
+      "eoa_holders_count": 3,
+      "contract_holders": {
+        "0x7363383d8332536e8abd129a304209589b724966": "13663054057585822718521"
+      },
+      "eoa_holders": {
+        "0xec0261e19791a0b34a73bd1aab363526845fcb5b": "25415860003982785602",
+        "0x735182c782cb8e7806f8903de7913e6880cbf82e": "3106306317633165055",
+        "0x1116bffe122485addff8d182caa91c94b05e490c": "445459034865657963"
+      }
+    },
+    {
+      "address": "0x4624469f12374AD71099104b2F1cB603bDe1e319",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "26838817752299251726419",
+      "holders_count": 3,
+      "contract_holders_count": 0,
+      "eoa_holders_count": 3,
+      "contract_holders": {},
+      "eoa_holders": {
+        "0x8de3c3891268502f77db7e876d727257dec0f852": "26347675419285094873595",
+        "0xb8d018bf6acf616f8e3e5c8d9c213fe509dc9218": "490347035136384667728",
+        "0xec0261e19791a0b34a73bd1aab363526845fcb5b": "795297877772184096"
+      }
+    },
+    {
+      "address": "0x89d1fa5c57dac3CB38d89e5e3bd33080D02d31b1",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "30028198091540286",
+      "holders_count": 2,
+      "contract_holders_count": 0,
+      "eoa_holders_count": 2,
+      "contract_holders": {},
+      "eoa_holders": {
+        "0x6a8cfdf197eb48593ac86738b3b23edcd91923c7": "30026616952710202",
+        "0xa5bb292801bd357cd8f19e47fd4d44deb7396bd4": "1581138829084"
+      }
+    },
+    {
+      "address": "0xdfA67E8f80F6B37a21e5C3baeEb0eCa893652Ab9",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "4251900858393420007465179",
+      "holders_count": 2,
+      "contract_holders_count": 0,
+      "eoa_holders_count": 2,
+      "contract_holders": {},
+      "eoa_holders": {
+        "0x6a8cfdf197eb48593ac86738b3b23edcd91923c7": "4251518266157891053050183",
+        "0x0617f1967f0214391cbfe8ede54912b2e7608c93": "382592235528954413996"
+      }
+    },
+    {
+      "address": "0x990776191d3680aeA3477C3Ffd45283d565DB203",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "1000000000000000000000",
+      "holders_count": 1,
+      "contract_holders_count": 0,
+      "eoa_holders_count": 1,
+      "contract_holders": {},
+      "eoa_holders": {
+        "0x8d73472bce57aa02436fbe00b89b6920032259bc": "999999999999999999000"
+      }
+    },
+    {
+      "address": "0xB8138006146e3A564eAa03e1C89F14C2806a8E39",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "19254305000578262195",
+      "holders_count": 1,
+      "contract_holders_count": 0,
+      "eoa_holders_count": 1,
+      "contract_holders": {},
+      "eoa_holders": {
+        "0x6a8cfdf197eb48593ac86738b3b23edcd91923c7": "19254305000578261195"
+      }
+    },
+    {
+      "address": "0xe30ce10Eece35cBE55Bb4aC65C2F5a001CFA1A1b",
+      "name": "Snow LPs",
+      "symbol": "SNOW-LP",
+      "decimals": 18,
+      "total_supply": "10000000000000000000",
+      "holders_count": 1,
+      "contract_holders_count": 0,
+      "eoa_holders_count": 1,
+      "contract_holders": {},
+      "eoa_holders": {
+        "0x0617f1967f0214391cbfe8ede54912b2e7608c93": "9999999999999999000"
+      }
+    }
+  ]
+}

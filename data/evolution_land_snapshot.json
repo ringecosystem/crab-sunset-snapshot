@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-07T07:22:32.030Z",
+  "timestamp": "2026-01-07T08:16:38.705Z",
   "chain": "Crab Network",
   "evolution_tokens_count": 7,
   "evolution_tokens": [
@@ -12,7 +12,6 @@
       "holders_count": 48,
       "contract_holders_count": 5,
       "eoa_holders_count": 43,
-      "contract_balances": {},
       "contract_holders": {
         "0x4e319297f77ea8099520f3467a083050090a1d81": "811",
         "0x9de583525b19c59c1e8ff4dc601826c27a825e6e": "411",
@@ -75,10 +74,9 @@
       "holders_count": 22,
       "contract_holders_count": 4,
       "eoa_holders_count": 18,
-      "contract_balances": {},
       "contract_holders": {
-        "0x15f2fbd98a0657e2afcab08922632e58b1cc9fdd (Snow LP)": "159303770409460912856267",
-        "0xa946116131932f2a6b5f2a2a52007418d706168a (Snow LP)": "73008423642748268242196",
+        "0x15f2fbd98a0657e2afcab08922632e58b1cc9fdd": "159303770409460912856267",
+        "0xa946116131932f2a6b5f2a2a52007418d706168a": "73008423642748268242196",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "22000000000000000000000",
         "0x90e2fa4099eb1fed203769b99c9c64cdda1acb57": "2515000000000000000000"
       },
@@ -112,10 +110,9 @@
       "holders_count": 22,
       "contract_holders_count": 4,
       "eoa_holders_count": 18,
-      "contract_balances": {},
       "contract_holders": {
-        "0x8e97f45bd127e7af3034d82a34d665746d348841 (Snow LP)": "109331531071149771885826",
-        "0x506c391b6c1eb4911241a918de5c3984a603e112 (Snow LP)": "92126225205945772734071",
+        "0x8e97f45bd127e7af3034d82a34d665746d348841": "109887348307134142520187",
+        "0x506c391b6c1eb4911241a918de5c3984a603e112": "91570407969961402099710",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "28500000000000000000000",
         "0x90e2fa4099eb1fed203769b99c9c64cdda1acb57": "3135000000000000000000"
       },
@@ -149,12 +146,11 @@
       "holders_count": 21,
       "contract_holders_count": 4,
       "eoa_holders_count": 17,
-      "contract_balances": {},
       "contract_holders": {
-        "0x2eb5b4a0624d6e646ba2ad919411072476fa1568 (Snow LP)": "84440657812507976226571",
-        "0x3710f045307d7e0906f1fbd0b0df12c0bc787382 (Snow LP)": "44416141183186145823481",
+        "0x2eb5b4a0624d6e646ba2ad919411072476fa1568": "84048047131384115225571",
+        "0x3710f045307d7e0906f1fbd0b0df12c0bc787382": "44808751864310006824481",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "13000000000000000000000",
-        "0x316d4f81339d810f0342828868dafe4365f07f22 (Snow LP)": "3265269223036322727"
+        "0x316d4f81339d810f0342828868dafe4365f07f22": "3265269223036322727"
       },
       "eoa_holders": {
         "0x87f0c169d8acc432acdb5e7d0907322c80ec6621": "96096637012234057768133",
@@ -185,10 +181,9 @@
       "holders_count": 20,
       "contract_holders_count": 5,
       "eoa_holders_count": 15,
-      "contract_balances": {},
       "contract_holders": {
-        "0x1e4b46582bba7e5ddb107d3a640e441774980525 (Snow LP)": "52380960693150507272315",
-        "0x76f6877ac6b03bf80ab911de4580c51dcb358927 (Snow LP)": "43342806276224328804957",
+        "0x1e4b46582bba7e5ddb107d3a640e441774980525": "52380960693150507272315",
+        "0x76f6877ac6b03bf80ab911de4580c51dcb358927": "43342806276224328804957",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "20000000000000000000000",
         "0x90e2fa4099eb1fed203769b99c9c64cdda1acb57": "1115000000000000000000",
         "0x58fed52ae6c20bcbdbc2949236595415e5014276": "17654867392444958375"
@@ -220,10 +215,9 @@
       "holders_count": 20,
       "contract_holders_count": 3,
       "eoa_holders_count": 17,
-      "contract_balances": {},
       "contract_holders": {
-        "0xd4b2b19a62500bb32a731a0889ef0b5147a963e4 (Snow LP)": "87358937160990184888363",
-        "0xdb279d65225162280facae2f3ca8a3d2f63ea9bf (Snow LP)": "86757661326163280641399",
+        "0xdb279d65225162280facae2f3ca8a3d2f63ea9bf": "87108152609378814923150",
+        "0xd4b2b19a62500bb32a731a0889ef0b5147a963e4": "87008445877774650606612",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "13500000000000000000000"
       },
       "eoa_holders": {
@@ -255,7 +249,6 @@
       "holders_count": 3,
       "contract_holders_count": 1,
       "eoa_holders_count": 2,
-      "contract_balances": {},
       "contract_holders": {
         "0x42866eb5fc4d0e2789d7b4646e3026ae06336863": "27"
       },

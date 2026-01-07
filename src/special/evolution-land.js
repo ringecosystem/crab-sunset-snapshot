@@ -6,36 +6,6 @@ const CrabAnnotations = require('../crab/annotations');
 
 const BASE_URL = "https://crab-scan.darwinia.network/api";
 
-function getTrackedTokenAddresses(dataDir) {
-	console.log(`📂 Loading tracked tokens from data folder...`);
-	const trackedTokens = [];
-	
-	try {
-		const files = fs.readdirSync(dataDir);
-		
-		for (const file of files) {
-			if (file.endsWith('.json') && !file.includes('native') && !file.includes('snow_lps') && !file.includes('evolution')) {
-				const filePath = path.join(dataDir, file);
-				const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-				
-				if (content.address) {
-					trackedTokens.push({
-						address: content.address,
-						symbol: content.symbol || "Unknown",
-						name: content.name || "Unknown"
-					});
-				}
-			}
-		}
-		
-		console.log(`✅ Found ${trackedTokens.length} tracked tokens`);
-	} catch (error) {
-		console.warn(`⚠️  Could not load tracked tokens:`, error.message);
-	}
-	
-	return trackedTokens;
-}
-
 async function fetchAllTokens() {
 	console.log(`\n📋 Fetching all tokens from the chain...`);
 	let nextPageParams = null;
@@ -46,7 +16,7 @@ async function fetchAllTokens() {
 	while (hasMore) {
 		try {
 			let url = `${BASE_URL}/v2/tokens`;
-			
+
 			if (nextPageParams) {
 				const params = new URLSearchParams();
 				for (const [key, value] of Object.entries(nextPageParams)) {
@@ -54,20 +24,20 @@ async function fetchAllTokens() {
 				}
 				url += `?${params.toString()}`;
 			}
-			
+
 			const response = await fetch(url, {
 				headers: {
 					'Accept': 'application/json'
 				}
 			});
-			
+
 			if (!response.ok) {
 				throw new Error(`HTTP Error: ${response.status}`);
 			}
-			
+
 			const data = await response.json();
 			const items = data.items || [];
-			
+
 			if (items.length === 0) {
 				hasMore = false;
 				break;
@@ -102,42 +72,12 @@ function filterEvolutionLand(tokens) {
 		const name = token.name || "";
 		return name.startsWith("Evolution Land");
 	});
-	
+
 	console.log(`✅ Found ${evolutionTokens.length} Evolution Land tokens`);
 	return evolutionTokens;
 }
 
-async function fetchContractBalances(contractAddress, trackedTokens) {
-	const balances = {};
-	
-	for (const token of trackedTokens) {
-		try {
-			// Fetch the contract's balance for this token
-			const url = `${BASE_URL}?module=account&action=tokenbalance&contractaddress=${token.address}&address=${contractAddress}`;
-			
-			const response = await fetch(url);
-			if (!response.ok) continue;
-			
-			const data = await response.json();
-			
-			if (data.result && data.result !== "0") {
-				balances[token.address] = {
-					symbol: token.symbol,
-					name: token.name,
-					balance: data.result
-				};
-			}
-			
-			await new Promise((r) => setTimeout(r, 100));
-		} catch (error) {
-			// Skip if error
-		}
-	}
-	
-	return balances;
-}
-
-async function processEvolutionToken(evolutionToken, api, trackedTokens, annotationsObj) {
+async function processEvolutionToken(evolutionToken, api, annotationsObj) {
 	const address = evolutionToken.address;
 	const name = evolutionToken.name || "Unknown";
 	const symbol = evolutionToken.symbol || "Unknown";
@@ -153,11 +93,6 @@ async function processEvolutionToken(evolutionToken, api, trackedTokens, annotat
 	const addressCache = api.getCache();
 	const { contractHolders, eoaHolders } = await holdersManager.separateHoldersByType(allHolders, addressCache);
 
-	// Fetch contract balances for tracked tokens
-	console.log(`🔍 Fetching contract balances...`);
-	const contractBalances = await fetchContractBalances(address, trackedTokens);
-	console.log(`✅ Fetched balances for ${Object.keys(contractBalances).length} tokens`);
-	
 	return {
 		address: address,
 		name: name,
@@ -167,7 +102,6 @@ async function processEvolutionToken(evolutionToken, api, trackedTokens, annotat
 		holders_count: Object.keys(allHolders).length,
 		contract_holders_count: Object.keys(contractHolders).length,
 		eoa_holders_count: Object.keys(eoaHolders).length,
-		contract_balances: contractBalances,
 		contract_holders: annotationsObj.annotateHolders(holdersManager.sortHoldersByBalance(contractHolders)),
 		eoa_holders: annotationsObj.annotateHolders(holdersManager.sortHoldersByBalance(eoaHolders))
 	};
@@ -180,10 +114,7 @@ async function fetchEvolutionLandSnapshot(outputDir) {
 	// Load cache and annotations
 	const api = new CrabAPI();
 	const annotationsObj = new CrabAnnotations();
-	
-	// Get tracked tokens from data folder
-	const trackedTokens = getTrackedTokenAddresses(outputDir);
-	
+
 	// Fetch all tokens from the chain
 	const allTokens = await fetchAllTokens();
 	
@@ -199,7 +130,7 @@ async function fetchEvolutionLandSnapshot(outputDir) {
 	const results = [];
 	for (let i = 0; i < evolutionTokens.length; i++) {
 		console.log(`\n[${i + 1}/${evolutionTokens.length}]`);
-		const result = await processEvolutionToken(evolutionTokens[i], api, trackedTokens, annotationsObj);
+		const result = await processEvolutionToken(evolutionTokens[i], api, annotationsObj);
 		results.push(result);
 	}
 	

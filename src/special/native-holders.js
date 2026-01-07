@@ -5,30 +5,6 @@ const CrabAnnotations = require('../crab/annotations');
 
 const BASE_URL = "https://crab-scan.darwinia.network/api";
 
-async function fetchAddressInfo(address) {
-	try {
-		const url = `${BASE_URL}/v2/addresses/${address}`;
-		const response = await fetch(url, {
-			headers: {
-				'Accept': 'application/json'
-			}
-		});
-		
-		if (!response.ok) {
-			return null;
-		}
-		
-		const data = await response.json();
-		return {
-			coin_balance: data.coin_balance || "0",
-			transactions_count: data.transactions_count || 0,
-			transaction_count: data.transaction_count || 0
-		};
-	} catch (error) {
-		return null;
-	}
-}
-
 async function fetchNativeHoldersPage(nextPageParams = null) {
 	try {
 		let url = `${BASE_URL}/v2/addresses`;

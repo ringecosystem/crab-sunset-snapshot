@@ -111,12 +111,21 @@ async function processSnowLP(lpToken, api, annotationsObj) {
 	const addressCache = api.getCache();
 	const { contractHolders, eoaHolders } = await holdersManager.separateHoldersByType(allHolders, addressCache);
 	
+	// Fetch tokens held by the LP contract itself
+	console.log(`💰 Fetching LP contract assets...`);
+	const assets = await api.fetchAddressTokens(address);
+	console.log(`✅ Found ${assets.length} asset(s) in LP contract`);
+	
+	// Rate limiting
+	await new Promise((r) => setTimeout(r, 200));
+	
 	return {
 		address: address,
 		name: name,
 		symbol: symbol,
 		decimals: parseInt(lpToken.decimals) || 18,
 		total_supply: lpToken.total_supply || "0",
+		assets: assets,
 		holders_count: Object.keys(allHolders).length,
 		contract_holders_count: Object.keys(contractHolders).length,
 		eoa_holders_count: Object.keys(eoaHolders).length,

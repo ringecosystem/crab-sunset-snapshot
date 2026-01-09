@@ -32,6 +32,36 @@ class BaseAPI {
 		}
 	}
 
+	async fetchAddressTokens(address) {
+		try {
+			const url = `${this.baseUrl}/v2/addresses/${address}/tokens?type=ERC-20`;
+			
+			const response = await fetch(url, {
+				headers: {
+					'Accept': 'application/json'
+				}
+			});
+			
+			if (!response.ok) {
+				console.warn(`⚠️  Could not fetch tokens for address ${address}: ${response.status}`);
+				return [];
+			}
+			
+			const data = await response.json();
+			const items = data.items || [];
+			
+			// Transform to simpler format with only required fields
+			return items.map(item => ({
+				address: item.token.address,
+				symbol: item.token.symbol || "Unknown",
+				balance: item.value || "0"
+			}));
+		} catch (error) {
+			console.warn(`⚠️  Error fetching tokens for address ${address}:`, error.message);
+			return [];
+		}
+	}
+
 	async fetchTokenHolders(contractAddress, page, offset) {
 		const url = `${this.baseUrl}?module=token&action=getTokenHolders&contractaddress=${contractAddress}&page=${page}&offset=${offset}`;
 		

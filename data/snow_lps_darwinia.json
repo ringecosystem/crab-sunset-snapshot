@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-07T08:27:30.864Z",
+  "timestamp": "2026-01-09T06:32:41.318Z",
   "chain": "Darwinia Network",
   "snow_lps_count": 7,
   "snow_lps": [
@@ -9,6 +9,18 @@
       "symbol": "SNOW-LP",
       "decimals": 18,
       "total_supply": "13692021682942304328141",
+      "assets": [
+        {
+          "address": "0xE7578598Aac020abFB918f33A20faD5B71d670b4",
+          "symbol": "WRING",
+          "balance": "661408221473718870476972"
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000402",
+          "symbol": "KTON",
+          "balance": "298224225044249362759"
+        }
+      ],
       "holders_count": 4,
       "contract_holders_count": 1,
       "eoa_holders_count": 3,
@@ -27,6 +39,18 @@
       "symbol": "SNOW-LP",
       "decimals": 18,
       "total_supply": "26838817752299251726419",
+      "assets": [
+        {
+          "address": "0xFFC05D77E021F12878644537398160A54E33B5e4",
+          "symbol": "POLO",
+          "balance": "6321352244009939688255107"
+        },
+        {
+          "address": "0xE7578598Aac020abFB918f33A20faD5B71d670b4",
+          "symbol": "WRING",
+          "balance": "113975377549076441347"
+        }
+      ],
       "holders_count": 3,
       "contract_holders_count": 0,
       "eoa_holders_count": 3,
@@ -43,6 +67,18 @@
       "symbol": "SNOW-LP",
       "decimals": 18,
       "total_supply": "30028198091540286",
+      "assets": [
+        {
+          "address": "0xE7578598Aac020abFB918f33A20faD5B71d670b4",
+          "symbol": "WRING",
+          "balance": "1065077763353210456611010"
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000403",
+          "symbol": "ahUSDT",
+          "balance": "848852304"
+        }
+      ],
       "holders_count": 2,
       "contract_holders_count": 0,
       "eoa_holders_count": 2,
@@ -58,6 +94,18 @@
       "symbol": "SNOW-LP",
       "decimals": 18,
       "total_supply": "4251900858393420007465179",
+      "assets": [
+        {
+          "address": "0x656567Eb75b765FC320783cc6EDd86bD854b2305",
+          "symbol": "xWCRAB",
+          "balance": "12940230179314508844132104"
+        },
+        {
+          "address": "0xE7578598Aac020abFB918f33A20faD5B71d670b4",
+          "symbol": "WRING",
+          "balance": "1405335409727704204064606"
+        }
+      ],
       "holders_count": 2,
       "contract_holders_count": 0,
       "eoa_holders_count": 2,
@@ -73,6 +121,18 @@
       "symbol": "SNOW-LP",
       "decimals": 18,
       "total_supply": "1000000000000000000000",
+      "assets": [
+        {
+          "address": "0x5295C49a8402F1F2FB203DCb0B53eaB55af3f22c",
+          "symbol": "KITTY",
+          "balance": "9901235179088591301765"
+        },
+        {
+          "address": "0xE7578598Aac020abFB918f33A20faD5B71d670b4",
+          "symbol": "WRING",
+          "balance": "101000000000000000000"
+        }
+      ],
       "holders_count": 1,
       "contract_holders_count": 0,
       "eoa_holders_count": 1,
@@ -87,6 +147,18 @@
       "symbol": "SNOW-LP",
       "decimals": 18,
       "total_supply": "19254305000578262195",
+      "assets": [
+        {
+          "address": "0xE7578598Aac020abFB918f33A20faD5B71d670b4",
+          "symbol": "WRING",
+          "balance": "65880630369617992860301"
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000404",
+          "symbol": "ahPINK",
+          "balance": "5678276348361615"
+        }
+      ],
       "holders_count": 1,
       "contract_holders_count": 0,
       "eoa_holders_count": 1,
@@ -101,6 +173,18 @@
       "symbol": "SNOW-LP",
       "decimals": 18,
       "total_supply": "10000000000000000000",
+      "assets": [
+        {
+          "address": "0x656567Eb75b765FC320783cc6EDd86bD854b2305",
+          "symbol": "xWCRAB",
+          "balance": "1453672927271999359244"
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000402",
+          "symbol": "KTON",
+          "balance": "70672689927425596"
+        }
+      ],
       "holders_count": 1,
       "contract_holders_count": 0,
       "eoa_holders_count": 1,

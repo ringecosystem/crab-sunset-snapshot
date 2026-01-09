@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const { calculateAirdrop } = require('../src/special/airdrop-calculation');
+
+async function main() {
+	const outputDir = path.join(__dirname, '..', 'data');
+
+	try {
+		const result = await calculateAirdrop(outputDir);
+		console.log(`\n✅ Airdrop calculation complete!`);
+		console.log(`📊 Total recipients: ${result.statistics.total_recipients}`);
+		console.log(`💾 Saved to: ${result.outputFile}`);
+	} catch (error) {
+		console.error('❌ Fatal error:', error.message);
+		process.exit(1);
+	}
+}
+
+main();

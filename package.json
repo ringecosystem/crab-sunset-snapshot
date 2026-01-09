@@ -20,7 +20,8 @@
     "fetch:crab": "npm run snow-lps && npm run evolution-land && npm run wcrab && npm run gcrab && npm run ckton && npm run wkton && npm run gkton && npm run xring && npm run xwring && npm run wcring && npm run native",
     "xwcrab": "node bin/fetch-darwinia 0x656567Eb75b765FC320783cc6EDd86bD854b2305",
     "fetch:darwinia": "npm run snow-lps-darwinia && npm run xwcrab",
-    "fetch:all": "npm run fetch:crab && npm run fetch:darwinia"
+    "fetch:all": "npm run fetch:crab && npm run fetch:darwinia",
+    "airdrop": "node bin/airdrop-calculation"
   },
   "keywords": [
     "blockchain",

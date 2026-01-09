@@ -49,6 +49,7 @@ npm run fetch:crab     # Fetch all Crab network data
 npm run fetch:darwinia # Fetch all Darwinia network data
 npm run fetch:all      # Fetch all tokens and data from both networks
 npm run fix-cache      # Repair both Crab and Darwinia address caches
+npm run airdrop        # Calculate RING airdrop distribution based on holder snapshots
 ```
 
 ### Testing
@@ -66,6 +67,7 @@ No linting or formatting tools are currently configured. Agents should maintain 
   - `src/crab/` - Crab Network specific implementations
   - `src/darwinia/` - Darwinia Network specific implementations
   - `src/special/` - Special data fetchers (native, evolution-land, snow-lps)
+- `src/special/rules/` - Airdrop calculation rules
 - `data/` - JSON snapshot outputs and cache files
 
 ### CLI Entry Points
@@ -168,7 +170,47 @@ No linting or formatting tools are currently configured. Agents should maintain 
     - Add shebang and argument validation
     - Call functions from network-specific modules in `src/crab/`, `src/darwinia/`, or `src/special/`
 
-## Important Notes
+## Airdrop Calculation
+
+### Overview
+The airdrop calculation system distributes RING tokens to Crab ecosystem holders based on defined distribution rules.
+
+### Distribution Model
+| Token Group | Allocation | Description |
+|-------------|------------|-------------|
+| CRAB Group | 60% | CRAB + WCRAB + gCRAB + xWCRAB |
+| CKTON Group | 20% | CKTON + WCKTON + gCKTON |
+| Evolution Land | 15% | (Future implementation) |
+| Reserve | 5% | (Future use) |
+
+### Rule System
+Rules are implemented as classes extending `BaseAirdropRule`:
+- `src/special/rules/base-rule.js` - Abstract base class
+- `src/special/rules/crab-group-rule.js` - CRAB Group rule (60%)
+- `src/special/rules/ckton-group-rule.js` - CKTON Group rule (20%)
+
+Each rule:
+1. Loads holder data from JSON files in `data/`
+2. Filters for EOA addresses using network caches
+3. Aggregates balances per address
+4. Calculates proportional airdrop allocation
+
+### Adding New Rules
+1. Create new rule class in `src/special/rules/`
+2. Extend `BaseAirdropRule`
+3. Implement `calculate()` method
+4. Register in `src/special/rules/index.js`
+
+### Output
+- File: `data/airdrop_snapshot.json`
+- Contains: recipients, breakdown per rule, statistics, timestamp
+
+### Usage
+```bash
+# Run after fetching all data
+npm run fetch:all
+npm run airdrop
+```
 
 - This is a data processing tool, not a web application
 - All operations are synchronous from CLI perspective

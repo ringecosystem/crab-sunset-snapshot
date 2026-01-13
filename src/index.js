@@ -13,6 +13,7 @@ const { fetchNativeTokenSnapshot } = require('./fetch-native-holders');
 const { fetchEvolutionLandSnapshot } = require('./fetch-evolution-land');
 const { fetchStakingRewardsSnapshot } = require('./special/staking-rewards');
 const { fetchCktonStakingRewardsSnapshot } = require('./special/ckton-staking-rewards');
+const { fetchCrabDepositBalanceSnapshot } = require('./special/crab-deposit-balance');
 
 const DarwiniaAPI = require('./darwinia/api');
 const DarwiniaAnnotations = require('./darwinia/annotations');
@@ -32,6 +33,7 @@ module.exports = {
 	fetchEvolutionLandSnapshot,
 	fetchStakingRewardsSnapshot,
 	fetchCktonStakingRewardsSnapshot,
+	fetchCrabDepositBalanceSnapshot,
 	
 	DarwiniaAPI,
 	DarwiniaAnnotations,

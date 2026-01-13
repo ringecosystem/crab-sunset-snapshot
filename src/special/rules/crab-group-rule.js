@@ -1,6 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 const BaseAirdropRule = require('./base-rule');
+const { buildVirtualHoldings } = require('./lp-virtual-holdings');
 const CrabAPI = require('../../crab/api');
 const DarwiniaAPI = require('../../darwinia/api');
 
@@ -8,7 +9,7 @@ class CrabGroupRule extends BaseAirdropRule {
 	constructor(config = {}) {
 		super(
 			'crab_group',
-			'CRAB Group (CRAB + WCRAB + gCRAB + xWCRAB)',
+			'CRAB Group (CRAB + WCRAB + gCRAB + xWCRAB + WCRING + rewards)',
 			config
 		);
 	}
@@ -23,18 +24,48 @@ class CrabGroupRule extends BaseAirdropRule {
 		const crabNative = this.loadCrabNativeHolders();
 		const wcrabHolders = this.loadTokenHolders(dataDir, 'WCRAB', crabCache);
 		const gcrabHolders = this.loadTokenHolders(dataDir, 'gCRAB', crabCache);
+		const wcringHolders = this.loadTokenHolders(dataDir, 'WCRING', crabCache);
 		const xwcrabHolders = await this.loadXwcrabHolders(dataDir, darwiniaCache);
+		const virtualHoldings = buildVirtualHoldings(['CRAB', 'WCRAB', 'gCRAB', 'xWCRAB', 'WCRING']);
+		// Rewards and deposit balances are added as extra CRAB group balances.
+		const crabStakingRewards = this.loadCrabStakingRewards(crabCache);
+		const cktonStakingRewards = this.loadCktonStakingRewards(crabCache);
+		const crabDepositBalances = this.loadCrabDepositBalances(crabCache);
+
+		const virtualCrab = virtualHoldings.CRAB || {};
+		const virtualWcrab = virtualHoldings.WCRAB || {};
+		const virtualGcrab = virtualHoldings.gCRAB || {};
+		const virtualXwcrab = virtualHoldings.xWCRAB || {};
+		const virtualWcring = virtualHoldings.WCRING || {};
 
 		console.log(`  - CRAB native: ${Object.keys(crabNative).length} EOA holders`);
 		console.log(`  - WCRAB: ${Object.keys(wcrabHolders).length} EOA holders`);
 		console.log(`  - gCRAB: ${Object.keys(gcrabHolders).length} EOA holders`);
+		console.log(`  - WCRING: ${Object.keys(wcringHolders).length} EOA holders`);
 		console.log(`  - xWCRAB: ${Object.keys(xwcrabHolders).length} EOA holders`);
+		console.log(`  - Virtual CRAB: ${Object.keys(virtualCrab).length} holders`);
+		console.log(`  - Virtual WCRAB: ${Object.keys(virtualWcrab).length} holders`);
+		console.log(`  - Virtual gCRAB: ${Object.keys(virtualGcrab).length} holders`);
+		console.log(`  - Virtual xWCRAB: ${Object.keys(virtualXwcrab).length} holders`);
+		console.log(`  - Virtual WCRING: ${Object.keys(virtualWcring).length} holders`);
+		console.log(`  - CRAB staking rewards: ${Object.keys(crabStakingRewards).length} holders`);
+		console.log(`  - CKTON staking rewards: ${Object.keys(cktonStakingRewards).length} holders`);
+		console.log(`  - CRAB deposit balances: ${Object.keys(crabDepositBalances).length} holders`);
 
 		const aggregated = this.aggregateBalances({
 			crab: crabNative,
 			wcrab: wcrabHolders,
 			gcrab: gcrabHolders,
-			xwcrab: xwcrabHolders
+			wcring: wcringHolders,
+			xwcrab: xwcrabHolders,
+			virtual_crab: virtualCrab,
+			virtual_wcrab: virtualWcrab,
+			virtual_gcrab: virtualGcrab,
+			virtual_xwcrab: virtualXwcrab,
+			virtual_wcring: virtualWcring,
+			crab_staking_rewards: crabStakingRewards,
+			ckton_staking_rewards: cktonStakingRewards,
+			crab_deposit_balance: crabDepositBalances
 		});
 
 		console.log(`  - Total unique addresses: ${Object.keys(aggregated).length}`);
@@ -46,7 +77,16 @@ class CrabGroupRule extends BaseAirdropRule {
 			crab: crabNative,
 			wcrab: wcrabHolders,
 			gcrab: gcrabHolders,
-			xwcrab: xwcrabHolders
+			wcring: wcringHolders,
+			xwcrab: xwcrabHolders,
+			virtual_crab: virtualCrab,
+			virtual_wcrab: virtualWcrab,
+			virtual_gcrab: virtualGcrab,
+			virtual_xwcrab: virtualXwcrab,
+			virtual_wcring: virtualWcring,
+			crab_staking_rewards: crabStakingRewards,
+			ckton_staking_rewards: cktonStakingRewards,
+			crab_deposit_balance: crabDepositBalances
 		});
 
 		return {
@@ -61,7 +101,16 @@ class CrabGroupRule extends BaseAirdropRule {
 				crab: crabNative,
 				wcrab: wcrabHolders,
 				gcrab: gcrabHolders,
-				xwcrab: xwcrabHolders
+				wcring: wcringHolders,
+				xwcrab: xwcrabHolders,
+				virtual_crab: virtualCrab,
+				virtual_wcrab: virtualWcrab,
+				virtual_gcrab: virtualGcrab,
+				virtual_xwcrab: virtualXwcrab,
+				virtual_wcring: virtualWcring,
+				crab_staking_rewards: crabStakingRewards,
+				ckton_staking_rewards: cktonStakingRewards,
+				crab_deposit_balance: crabDepositBalances
 			}
 		};
 	}
@@ -122,6 +171,51 @@ class CrabGroupRule extends BaseAirdropRule {
 		const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 		
 		return this.filterEOAs(data.eoa_holders || {}, addressCache);
+	}
+
+	loadCrabStakingRewards(addressCache) {
+		const data = this.loadDataFile('CRAB_staking_rewards.json');
+		const rewards = {};
+
+		for (const entry of data.rewards || []) {
+			const account = (entry.account || '').toLowerCase();
+			if (!account) {
+				continue;
+			}
+			rewards[account] = entry.reward || '0';
+		}
+
+		return this.filterEOAs(rewards, addressCache);
+	}
+
+	loadCktonStakingRewards(addressCache) {
+		const data = this.loadDataFile('CKTON_staking_rewards.json');
+		const rewards = {};
+
+		for (const entry of data.rewards || []) {
+			const account = (entry.account || '').toLowerCase();
+			if (!account) {
+				continue;
+			}
+			rewards[account] = entry.reward || '0';
+		}
+
+		return this.filterEOAs(rewards, addressCache);
+	}
+
+	loadCrabDepositBalances(addressCache) {
+		const data = this.loadDataFile('CRAB_deposit_balance.json');
+		const balances = {};
+
+		for (const entry of data.balances || []) {
+			const account = (entry.account || '').toLowerCase();
+			if (!account) {
+				continue;
+			}
+			balances[account] = entry.total_balance || '0';
+		}
+
+		return this.filterEOAs(balances, addressCache);
 	}
 
 	async loadXwcrabHolders(dataDir, darwiniaCache) {
@@ -193,7 +287,21 @@ class CrabGroupRule extends BaseAirdropRule {
 			name: this.name,
 			description: this.description,
 			allocationPercentage: "0.60",
-			components: ["CRAB", "WCRAB", "gCRAB", "xWCRAB"]
+			components: [
+				"CRAB",
+				"WCRAB",
+				"gCRAB",
+				"xWCRAB",
+				"WCRING",
+				"Virtual CRAB",
+				"Virtual WCRAB",
+				"Virtual gCRAB",
+				"Virtual xWCRAB",
+				"Virtual WCRING",
+				"CRAB staking rewards",
+				"CKTON staking rewards",
+				"CRAB deposit balance"
+			]
 		};
 	}
 }

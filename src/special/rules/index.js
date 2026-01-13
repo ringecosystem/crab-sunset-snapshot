@@ -1,9 +1,11 @@
 const CrabGroupRule = require('./crab-group-rule');
 const CktonGroupRule = require('./ckton-group-rule');
+const EvolutionLandRule = require('./evolution-land-rule');
 
 const ruleRegistry = {
 	crab_group: CrabGroupRule,
-	ckton_group: CktonGroupRule
+	ckton_group: CktonGroupRule,
+	evolution_land: EvolutionLandRule
 };
 
 function getRule(name, config = {}) {

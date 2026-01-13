@@ -1,6 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 const BaseAirdropRule = require('./base-rule');
+const { buildVirtualHoldings } = require('./lp-virtual-holdings');
 
 class CktonGroupRule extends BaseAirdropRule {
 	constructor(config = {}) {
@@ -20,15 +21,26 @@ class CktonGroupRule extends BaseAirdropRule {
 		const cktonHolders = this.loadTokenHolders(dataDir, 'CKTON', crabCache);
 		const wcktonHolders = this.loadTokenHolders(dataDir, 'WCKTON', crabCache);
 		const gcktonHolders = this.loadTokenHolders(dataDir, 'gCKTON', crabCache);
+		const virtualHoldings = buildVirtualHoldings(['CKTON', 'WCKTON', 'gCKTON']);
+
+		const virtualCkton = virtualHoldings.CKTON || {};
+		const virtualWckton = virtualHoldings.WCKTON || {};
+		const virtualGckton = virtualHoldings.gCKTON || {};
 
 		console.log(`  - CKTON: ${Object.keys(cktonHolders).length} holders`);
 		console.log(`  - WCKTON: ${Object.keys(wcktonHolders).length} holders`);
 		console.log(`  - gCKTON: ${Object.keys(gcktonHolders).length} holders`);
+		console.log(`  - Virtual CKTON: ${Object.keys(virtualCkton).length} holders`);
+		console.log(`  - Virtual WCKTON: ${Object.keys(virtualWckton).length} holders`);
+		console.log(`  - Virtual gCKTON: ${Object.keys(virtualGckton).length} holders`);
 
 		const aggregated = this.aggregateBalances({
 			ckton: cktonHolders,
 			wckton: wcktonHolders,
-			gckton: gcktonHolders
+			gckton: gcktonHolders,
+			virtual_ckton: virtualCkton,
+			virtual_wckton: virtualWckton,
+			virtual_gckton: virtualGckton
 		});
 
 		console.log(`  - Total unique addresses: ${Object.keys(aggregated).length}`);
@@ -39,7 +51,10 @@ class CktonGroupRule extends BaseAirdropRule {
 		const componentSupplies = this.calculateComponentSupplies({
 			ckton: cktonHolders,
 			wckton: wcktonHolders,
-			gckton: gcktonHolders
+			gckton: gcktonHolders,
+			virtual_ckton: virtualCkton,
+			virtual_wckton: virtualWckton,
+			virtual_gckton: virtualGckton
 		});
 
 		return {
@@ -53,7 +68,10 @@ class CktonGroupRule extends BaseAirdropRule {
 			rawBalances: {
 				ckton: cktonHolders,
 				wckton: wcktonHolders,
-				gckton: gcktonHolders
+				gckton: gcktonHolders,
+				virtual_ckton: virtualCkton,
+				virtual_wckton: virtualWckton,
+				virtual_gckton: virtualGckton
 			}
 		};
 	}
@@ -100,7 +118,7 @@ class CktonGroupRule extends BaseAirdropRule {
 			name: this.name,
 			description: this.description,
 			allocationPercentage: "0.20",
-			components: ["CKTON", "WCKTON", "gCKTON"]
+			components: ["CKTON", "WCKTON", "gCKTON", "Virtual CKTON", "Virtual WCKTON", "Virtual gCKTON"]
 		};
 	}
 }

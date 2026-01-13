@@ -12,6 +12,7 @@ const { fetchSnowLPsSnapshot } = require('./fetch-snow-lps');
 const { fetchNativeTokenSnapshot } = require('./fetch-native-holders');
 const { fetchEvolutionLandSnapshot } = require('./fetch-evolution-land');
 const { fetchStakingRewardsSnapshot } = require('./special/staking-rewards');
+const { fetchCktonStakingRewardsSnapshot } = require('./special/ckton-staking-rewards');
 
 const DarwiniaAPI = require('./darwinia/api');
 const DarwiniaAnnotations = require('./darwinia/annotations');
@@ -30,6 +31,7 @@ module.exports = {
 	fetchNativeTokenSnapshot,
 	fetchEvolutionLandSnapshot,
 	fetchStakingRewardsSnapshot,
+	fetchCktonStakingRewardsSnapshot,
 	
 	DarwiniaAPI,
 	DarwiniaAnnotations,

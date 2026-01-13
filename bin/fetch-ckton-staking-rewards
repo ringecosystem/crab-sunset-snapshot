@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const { fetchCktonStakingRewardsSnapshot } = require('../src/special/ckton-staking-rewards');
+
+async function main() {
+	const outputDir = path.join(__dirname, '..', 'data');
+
+	try {
+		await fetchCktonStakingRewardsSnapshot(outputDir);
+	} catch (error) {
+		console.error('❌ Fatal error:', error.message);
+		process.exit(1);
+	}
+}
+
+main();

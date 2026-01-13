@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const { fetchStakingRewardsSnapshot } = require('../src/special/staking-rewards');
+
+async function main() {
+	const outputDir = path.join(__dirname, '..', 'data');
+
+	try {
+		await fetchStakingRewardsSnapshot(outputDir);
+	} catch (error) {
+		console.error('❌ Fatal error:', error.message);
+		process.exit(1);
+	}
+}
+
+main();

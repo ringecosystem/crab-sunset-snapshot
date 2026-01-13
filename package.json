@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "native": "node bin/fetch-native",
+    "staking-rewards": "node bin/fetch-staking-rewards",
     "wcrab": "node bin/fetch-crab 0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329",
     "gcrab": "node bin/fetch-crab 0xdafa555e2785DC8834F4Ea9D1ED88B6049142999",
     "ckton": "node bin/fetch-crab 0x0000000000000000000000000000000000000402",
@@ -17,7 +18,7 @@
     "snow-lps-darwinia": "node bin/fetch-snow-lps darwinia",
     "evolution-land": "node bin/fetch-evolution-land",
     "fix-cache": "node bin/fix-cache crab && node bin/fix-cache darwinia",
-    "fetch:crab": "npm run snow-lps && npm run evolution-land && npm run wcrab && npm run gcrab && npm run ckton && npm run wkton && npm run gkton && npm run xring && npm run xwring && npm run wcring && npm run native",
+    "fetch:crab": "npm run snow-lps && npm run evolution-land && npm run wcrab && npm run gcrab && npm run ckton && npm run wkton && npm run gkton && npm run xring && npm run xwring && npm run wcring && npm run native && npm run staking-rewards",
     "xwcrab": "node bin/fetch-darwinia 0x656567Eb75b765FC320783cc6EDd86bD854b2305",
     "fetch:darwinia": "npm run snow-lps-darwinia && npm run xwcrab",
     "fetch:all": "npm run fetch:crab && npm run fetch:darwinia",
@@ -30,5 +31,8 @@
     "snapshot"
   ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "viem": "^2.44.1"
+  }
 }

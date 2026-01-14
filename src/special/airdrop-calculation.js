@@ -217,56 +217,102 @@ function buildBreakdown(ruleName, result, address) {
 
 	if (ruleName === 'crab_group') {
 		const raw = result.rawBalances;
-		details.crab_balance = raw.crab[address] || "0";
-		details.wcrab_balance = raw.wcrab[address] || "0";
-		details.gcrab_balance = raw.gcrab[address] || "0";
-		details.wcring_balance = raw.wcring[address] || "0";
-		details.xwcrab_balance = raw.xwcrab[address] || "0";
-		details.virtual_crab_balance = raw.virtual_crab[address] || "0";
-		details.virtual_wcrab_balance = raw.virtual_wcrab[address] || "0";
-		details.virtual_gcrab_balance = raw.virtual_gcrab[address] || "0";
-		details.virtual_xwcrab_balance = raw.virtual_xwcrab[address] || "0";
-		details.virtual_wcring_balance = raw.virtual_wcring[address] || "0";
-		details.crab_staking_rewards = raw.crab_staking_rewards[address] || "0";
-		details.ckton_staking_rewards = raw.ckton_staking_rewards[address] || "0";
-		details.crab_deposit_balance = raw.crab_deposit_balance[address] || "0";
-		details.ckton_treasury_crab_addon = raw.ckton_treasury_crab_addon[address] || "0";
-		details.ckton_treasury_crab_balance = result.cktonTreasuryCrabBalance || "0";
-		details.ckton_treasury_group_supply = result.cktonTreasuryGroupSupply || "0";
-		details.total_group_balance = (
-			BigInt(details.crab_balance) +
-			BigInt(details.wcrab_balance) +
-			BigInt(details.gcrab_balance) +
-			BigInt(details.wcring_balance) +
-			BigInt(details.xwcrab_balance) +
-			BigInt(details.virtual_crab_balance) +
-			BigInt(details.virtual_wcrab_balance) +
-			BigInt(details.virtual_gcrab_balance) +
-			BigInt(details.virtual_xwcrab_balance) +
-			BigInt(details.virtual_wcring_balance) +
-			BigInt(details.crab_staking_rewards) +
-			BigInt(details.ckton_staking_rewards) +
-			BigInt(details.crab_deposit_balance) +
-			BigInt(details.ckton_treasury_crab_addon)
+
+		const crabBalance = raw.crab[address] || '0';
+		const wcrabBalance = raw.wcrab[address] || '0';
+		const gcrabBalance = raw.gcrab[address] || '0';
+		const wcringBalance = raw.wcring[address] || '0';
+		const xwcrabBalance = raw.xwcrab[address] || '0';
+		const virtualCrabBalance = raw.virtual_crab[address] || '0';
+		const virtualWcrabBalance = raw.virtual_wcrab[address] || '0';
+		const virtualGcrabBalance = raw.virtual_gcrab[address] || '0';
+		const virtualXwcrabBalance = raw.virtual_xwcrab[address] || '0';
+		const virtualWcringBalance = raw.virtual_wcring[address] || '0';
+		const crabStakingRewards = raw.crab_staking_rewards[address] || '0';
+		const cktonStakingRewards = raw.ckton_staking_rewards[address] || '0';
+		const crabDepositBalance = raw.crab_deposit_balance[address] || '0';
+		const cktonTreasuryCrabAddon = raw.ckton_treasury_crab_addon[address] || '0';
+
+		const totalGroupBalance = (
+			BigInt(crabBalance) +
+			BigInt(wcrabBalance) +
+			BigInt(gcrabBalance) +
+			BigInt(wcringBalance) +
+			BigInt(xwcrabBalance) +
+			BigInt(virtualCrabBalance) +
+			BigInt(virtualWcrabBalance) +
+			BigInt(virtualGcrabBalance) +
+			BigInt(virtualXwcrabBalance) +
+			BigInt(virtualWcringBalance) +
+			BigInt(crabStakingRewards) +
+			BigInt(cktonStakingRewards) +
+			BigInt(crabDepositBalance) +
+			BigInt(cktonTreasuryCrabAddon)
 		).toString();
+
+		return {
+			rule_name: ruleName,
+			description: result.description,
+			total_supply: result.totalSupply,
+			group_balance: totalGroupBalance,
+			proportion: data.proportion,
+			proportion_fraction: `(${totalGroupBalance}/${result.totalSupply})`,
+			airdrop_amount: data.amount,
+
+			crab_balance: crabBalance,
+			wcrab_balance: wcrabBalance,
+			gcrab_balance: gcrabBalance,
+			wcring_balance: wcringBalance,
+			xwcrab_balance: xwcrabBalance,
+			virtual_crab_balance: virtualCrabBalance,
+			virtual_wcrab_balance: virtualWcrabBalance,
+			virtual_gcrab_balance: virtualGcrabBalance,
+			virtual_xwcrab_balance: virtualXwcrabBalance,
+			virtual_wcring_balance: virtualWcringBalance,
+			crab_staking_rewards: crabStakingRewards,
+			ckton_staking_rewards: cktonStakingRewards,
+			crab_deposit_balance: crabDepositBalance,
+			ckton_treasury_crab_addon: cktonTreasuryCrabAddon,
+			ckton_treasury_crab_balance: result.cktonTreasuryCrabBalance || '0',
+			ckton_treasury_group_supply: result.cktonTreasuryGroupSupply || '0'
+		};
 	}
 
 	if (ruleName === 'ckton_group') {
 		const raw = result.rawBalances;
-		details.ckton_balance = raw.ckton[address] || "0";
-		details.wckton_balance = raw.wckton[address] || "0";
-		details.gckton_balance = raw.gckton[address] || "0";
-		details.virtual_ckton_balance = raw.virtual_ckton[address] || "0";
-		details.virtual_wckton_balance = raw.virtual_wckton[address] || "0";
-		details.virtual_gckton_balance = raw.virtual_gckton[address] || "0";
-		details.total_group_balance = (
-			BigInt(details.ckton_balance) +
-			BigInt(details.wckton_balance) +
-			BigInt(details.gckton_balance) +
-			BigInt(details.virtual_ckton_balance) +
-			BigInt(details.virtual_wckton_balance) +
-			BigInt(details.virtual_gckton_balance)
+
+		const cktonBalance = raw.ckton[address] || '0';
+		const wcktonBalance = raw.wckton[address] || '0';
+		const gcktonBalance = raw.gckton[address] || '0';
+		const virtualCktonBalance = raw.virtual_ckton[address] || '0';
+		const virtualWcktonBalance = raw.virtual_wckton[address] || '0';
+		const virtualGcktonBalance = raw.virtual_gckton[address] || '0';
+
+		const totalGroupBalance = (
+			BigInt(cktonBalance) +
+			BigInt(wcktonBalance) +
+			BigInt(gcktonBalance) +
+			BigInt(virtualCktonBalance) +
+			BigInt(virtualWcktonBalance) +
+			BigInt(virtualGcktonBalance)
 		).toString();
+
+		return {
+			rule_name: ruleName,
+			description: result.description,
+			total_supply: result.totalSupply,
+			group_balance: totalGroupBalance,
+			proportion: data.proportion,
+			proportion_fraction: `(${totalGroupBalance}/${result.totalSupply})`,
+			airdrop_amount: data.amount,
+
+			ckton_balance: cktonBalance,
+			wckton_balance: wcktonBalance,
+			gckton_balance: gcktonBalance,
+			virtual_ckton_balance: virtualCktonBalance,
+			virtual_wckton_balance: virtualWcktonBalance,
+			virtual_gckton_balance: virtualGcktonBalance
+		};
 	}
 
 	if (ruleName === 'evolution_land') {

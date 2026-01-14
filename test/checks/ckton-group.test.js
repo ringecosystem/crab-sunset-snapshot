@@ -147,7 +147,7 @@ test('CKTON group sample checks', () => {
 		}
 
 		const expectedTotal = BigInt(aggregated[address] || '0').toString();
-		const actualTotal = breakdown.total_group_balance || '0';
+		const actualTotal = breakdown.group_balance || '0';
 		if (expectedTotal !== actualTotal) {
 			warnMismatch(`CKTON group balance for ${address}`, expectedTotal, actualTotal);
 		}

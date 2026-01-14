@@ -56,11 +56,13 @@ class EvolutionLandRule extends BaseAirdropRule {
 					BigInt(airdropPerAddress[address].amount) + BigInt(data.amount)
 				).toString();
 
-				airdropPerAddress[address].lands[symbol] = {
-					proportion: data.proportion,
-					amount: data.amount,
-					balance: holders[address] || '0'
-				};
+			airdropPerAddress[address].lands[symbol] = {
+				proportion: data.proportion,
+				proportion_fraction: `(${holders[address] || '0'}/${totalSupply})`,
+				amount: data.amount,
+				balance: holders[address] || '0'
+			};
+
 			}
 		}
 

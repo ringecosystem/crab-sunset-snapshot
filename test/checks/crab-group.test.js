@@ -150,7 +150,7 @@ test('CRAB group sample checks', () => {
 	if (BigInt(groupSupply || '0') > 0n) {
 		Object.keys(airdrop.recipients).forEach((address) => {
 			const breakdown = airdrop.recipients[address]?.breakdown?.ckton_group;
-			const groupBalance = BigInt(breakdown?.total_group_balance || '0');
+			const groupBalance = BigInt(breakdown?.group_balance || '0');
 			const addon = (groupBalance * BigInt(treasuryBalance)) / BigInt(groupSupply || '1');
 			cktonAddon[address] = addon.toString();
 		});
@@ -189,7 +189,7 @@ test('CRAB group sample checks', () => {
 		}
 
 		const expectedTotal = BigInt(aggregated[address] || '0').toString();
-		const actualTotal = breakdown.total_group_balance || '0';
+		const actualTotal = breakdown.group_balance || '0';
 		if (expectedTotal !== actualTotal) {
 			warnMismatch(`CRAB group balance for ${address}`, expectedTotal, actualTotal);
 		}

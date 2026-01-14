@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 const BaseAirdropRule = require('./base-rule');
-const { buildVirtualHoldings } = require('./lp-virtual-holdings');
+const { buildVirtualHoldings, loadLpTokenAddresses } = require('./lp-virtual-holdings');
 const { createPublicClient, http } = require('viem');
 const CrabAPI = require('../../crab/api');
 const DarwiniaAPI = require('../../darwinia/api');
@@ -26,20 +26,21 @@ class CrabGroupRule extends BaseAirdropRule {
 		const dataDir = path.join(__dirname, '..', '..', '..', 'data');
 		const crabCache = this.loadCrabCache();
 		const darwiniaCache = this.loadDarwiniaCache();
+		const lpTokens = loadLpTokenAddresses();
 
 		console.log(`📊 Processing CRAB Group rule...`);
 
-		const crabNative = this.loadCrabNativeHolders();
-		const wcrabHolders = this.loadTokenHolders(dataDir, 'WCRAB', crabCache);
-		const gcrabHolders = this.loadTokenHolders(dataDir, 'gCRAB', crabCache);
-		const wcringHolders = this.loadTokenHolders(dataDir, 'WCRING', crabCache);
-		const xwcrabHolders = await this.loadXwcrabHolders(dataDir, darwiniaCache);
+		const crabNative = this.loadCrabNativeHolders(lpTokens);
+		const wcrabHolders = this.loadTokenHolders(dataDir, 'WCRAB', crabCache, lpTokens);
+		const gcrabHolders = this.loadTokenHolders(dataDir, 'gCRAB', crabCache, lpTokens);
+		const wcringHolders = this.loadTokenHolders(dataDir, 'WCRING', crabCache, lpTokens);
+		const xwcrabHolders = await this.loadXwcrabHolders(dataDir, darwiniaCache, lpTokens);
 		const virtualHoldings = buildVirtualHoldings(['CRAB', 'WCRAB', 'gCRAB', 'xWCRAB', 'WCRING']);
 		// Rewards and deposit balances are added as extra CRAB group balances.
-		const crabStakingRewards = this.loadCrabStakingRewards(crabCache);
-		const cktonStakingRewards = this.loadCktonStakingRewards(crabCache);
-		const crabDepositBalances = this.loadCrabDepositBalances(crabCache);
-		const cktonGroupBalances = this.loadCktonGroupBalances(dataDir, crabCache);
+		const crabStakingRewards = this.loadCrabStakingRewards(crabCache, lpTokens);
+		const cktonStakingRewards = this.loadCktonStakingRewards(crabCache, lpTokens);
+		const crabDepositBalances = this.loadCrabDepositBalances(crabCache, lpTokens);
+		const cktonGroupBalances = this.loadCktonGroupBalances(dataDir, crabCache, lpTokens);
 		const cktonTreasuryBalance = await this.fetchCktonTreasuryBalance();
 		const cktonTreasuryAddonResult = this.calculateProportionalAirdrop(
 			cktonGroupBalances.balances,
@@ -170,7 +171,7 @@ class CrabGroupRule extends BaseAirdropRule {
 		fs.writeFileSync(cachePath, JSON.stringify(cache, null, 2));
 	}
 
-	loadCrabNativeHolders() {
+	loadCrabNativeHolders(lpTokens = new Set()) {
 		const data = this.loadDataFile('CRAB_native.json');
 		const eoaHolders = {};
 		for (const [address, balance] of Object.entries(data.eoa_holders || {})) {
@@ -178,12 +179,16 @@ class CrabGroupRule extends BaseAirdropRule {
 			if (EXCLUDED_CRAB_NATIVE_ADDRESSES.has(normalized)) {
 				continue;
 			}
+			if (lpTokens.has(normalized)) {
+				continue;
+			}
 			eoaHolders[normalized] = balance;
 		}
 		return eoaHolders;
 	}
 
-	loadTokenHolders(dataDir, symbol, addressCache) {
+	loadTokenHolders(dataDir, symbol, addressCache, lpTokens = new Set()) {
+
 		const files = fs.readdirSync(dataDir);
 		const matchingFiles = files.filter(f => f.startsWith(`${symbol}_`) && f.endsWith('.json'));
 		
@@ -195,10 +200,10 @@ class CrabGroupRule extends BaseAirdropRule {
 		const filePath = path.join(dataDir, matchingFiles[0]);
 		const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 		
-		return this.filterEOAs(data.eoa_holders || {}, addressCache);
+		return this.filterEOAs(data.eoa_holders || {}, addressCache, lpTokens);
 	}
 
-	loadCrabStakingRewards(addressCache) {
+	loadCrabStakingRewards(addressCache, lpTokens = new Set()) {
 		const data = this.loadDataFile('CRAB_staking_rewards.json');
 		const rewards = {};
 
@@ -210,10 +215,10 @@ class CrabGroupRule extends BaseAirdropRule {
 			rewards[account] = entry.reward || '0';
 		}
 
-		return this.filterEOAs(rewards, addressCache);
+		return this.filterEOAs(rewards, addressCache, lpTokens);
 	}
 
-	loadCktonStakingRewards(addressCache) {
+	loadCktonStakingRewards(addressCache, lpTokens = new Set()) {
 		const data = this.loadDataFile('CKTON_staking_rewards.json');
 		const rewards = {};
 
@@ -225,10 +230,10 @@ class CrabGroupRule extends BaseAirdropRule {
 			rewards[account] = entry.reward || '0';
 		}
 
-		return this.filterEOAs(rewards, addressCache);
+		return this.filterEOAs(rewards, addressCache, lpTokens);
 	}
 
-	loadCrabDepositBalances(addressCache) {
+	loadCrabDepositBalances(addressCache, lpTokens = new Set()) {
 		const data = this.loadDataFile('CRAB_deposit_balance.json');
 		const balances = {};
 
@@ -240,22 +245,22 @@ class CrabGroupRule extends BaseAirdropRule {
 			balances[account] = entry.total_balance || '0';
 		}
 
-		return this.filterEOAs(balances, addressCache);
+		return this.filterEOAs(balances, addressCache, lpTokens);
 	}
 
-	loadCktonGroupBalances(dataDir, addressCache) {
-		const cktonHolders = this.loadTokenHolders(dataDir, 'CKTON', addressCache);
-		const wcktonHolders = this.loadTokenHolders(dataDir, 'WCKTON', addressCache);
-		const gcktonHolders = this.loadTokenHolders(dataDir, 'gCKTON', addressCache);
+	loadCktonGroupBalances(dataDir, addressCache, lpTokens = new Set()) {
+		const cktonHolders = this.loadTokenHolders(dataDir, 'CKTON', addressCache, lpTokens);
+		const wcktonHolders = this.loadTokenHolders(dataDir, 'WCKTON', addressCache, lpTokens);
+		const gcktonHolders = this.loadTokenHolders(dataDir, 'gCKTON', addressCache, lpTokens);
 		const virtualHoldings = buildVirtualHoldings(['CKTON', 'WCKTON', 'gCKTON']);
 
 		const aggregated = this.aggregateBalances({
 			ckton: cktonHolders,
 			wckton: wcktonHolders,
 			gckton: gcktonHolders,
-			virtual_ckton: virtualHoldings.CKTON || {},
-			virtual_wckton: virtualHoldings.WCKTON || {},
-			virtual_gckton: virtualHoldings.gCKTON || {}
+			virtual_ckton: this.filterEOAs(virtualHoldings.CKTON || {}, addressCache, lpTokens),
+			virtual_wckton: this.filterEOAs(virtualHoldings.WCKTON || {}, addressCache, lpTokens),
+			virtual_gckton: this.filterEOAs(virtualHoldings.gCKTON || {}, addressCache, lpTokens)
 		});
 
 		const totalSupply = Object.values(aggregated).reduce((sum, balance) => {
@@ -288,7 +293,7 @@ class CrabGroupRule extends BaseAirdropRule {
 		return balances;
 	}
 
-	async loadXwcrabHolders(dataDir, darwiniaCache) {
+	async loadXwcrabHolders(dataDir, darwiniaCache, lpTokens = new Set()) {
 		const files = fs.readdirSync(dataDir);
 		const matchingFiles = files.filter(f => f.startsWith('xWCRAB_') && f.endsWith('.json'));
 		
@@ -310,6 +315,9 @@ class CrabGroupRule extends BaseAirdropRule {
 		for (const [address, balance] of Object.entries(allHolders)) {
 			// Strip annotation and normalize to lowercase
 			const normalizedAddress = address.split(' (')[0].toLowerCase();
+			if (lpTokens.has(normalizedAddress)) {
+				continue;
+			}
 			const isCached = darwiniaCache[normalizedAddress] !== undefined;
 			
 			if (isCached) {
@@ -341,6 +349,21 @@ class CrabGroupRule extends BaseAirdropRule {
 		}
 
 		return eoaHolders;
+	}
+
+	filterEOAs(holders, cache, lpTokens = new Set()) {
+		const filtered = {};
+		for (const [address, balance] of Object.entries(holders || {})) {
+			const normalized = address.split(' (')[0].toLowerCase();
+			if (lpTokens.has(normalized)) {
+				continue;
+			}
+			const isCached = cache[normalized];
+			if (isCached === undefined || isCached === false) {
+				filtered[normalized] = balance;
+			}
+		}
+		return filtered;
 	}
 
 	calculateComponentSupplies(sources) {

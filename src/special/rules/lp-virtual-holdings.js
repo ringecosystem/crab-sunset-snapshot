@@ -12,6 +12,17 @@ function loadSnowLPData() {
 	return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
 
+function loadLpTokenAddresses() {
+	const data = loadSnowLPData();
+	const tokens = new Set();
+	for (const lp of data.snow_lps || []) {
+		if (lp.address) {
+			tokens.add(lp.address.toLowerCase());
+		}
+	}
+	return tokens;
+}
+
 function buildVirtualHoldings(allowedSymbols) {
 	// Calculate per-holder virtual balances based on LP share of assets.
 	const data = loadSnowLPData();
@@ -65,5 +76,6 @@ function buildVirtualHoldings(allowedSymbols) {
 }
 
 module.exports = {
-	buildVirtualHoldings
+	buildVirtualHoldings,
+	loadLpTokenAddresses
 };

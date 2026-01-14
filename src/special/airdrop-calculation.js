@@ -10,6 +10,28 @@ const EXCLUDED_RECIPIENTS = new Set([
 	'0x6d6f646c64612f74727372790000000000000000'
 ]);
 
+function loadLpTokenAddressesForExclusion() {
+	const lpFile = path.join(path.resolve(__dirname, '..', '..'), 'data', 'snow_lps_crab.json');
+	if (!fs.existsSync(lpFile)) {
+		return [];
+	}
+	try {
+		const data = JSON.parse(fs.readFileSync(lpFile, 'utf8'));
+		return (data.snow_lps || []).map((lp) => (lp.address || '').toLowerCase()).filter(Boolean);
+	} catch (err) {
+		console.warn('⚠️  Failed to load LP addresses for exclusion', err.message);
+		return [];
+	}
+}
+
+function buildExcludedRecipients() {
+	const set = new Set(EXCLUDED_RECIPIENTS);
+	for (const addr of loadLpTokenAddressesForExclusion()) {
+		set.add(addr);
+	}
+	return set;
+}
+
 function normalizeAddress(address) {
 	const base = (address || '').split(' (')[0].toLowerCase();
 	return base;
@@ -67,6 +89,7 @@ function buildDistribution(totalTreasury) {
 async function calculateAirdrop(outputDir, config = {}) {
 	const totalTreasury = await fetchTreasuryBalance();
 	const distribution = buildDistribution(totalTreasury);
+	const excludedRecipients = buildExcludedRecipients();
 
 	console.log(`\n💰 Airdrop Calculation`);
 	console.log(`📍 Crab Network`);
@@ -117,7 +140,7 @@ async function calculateAirdrop(outputDir, config = {}) {
 
 		for (const [address, data] of Object.entries(result.airdropPerAddress)) {
 			const normalized = normalizeAddress(address);
-			if (!normalized || EXCLUDED_RECIPIENTS.has(normalized)) {
+			if (!normalized || excludedRecipients.has(normalized)) {
 				continue;
 			}
 
@@ -140,7 +163,7 @@ async function calculateAirdrop(outputDir, config = {}) {
 		.filter(r => r.enabled)
 		.map(r => getRule(r.name).getMetadata());
 
-	const statistics = buildStatistics(allRecipients, ruleResults, EXCLUDED_RECIPIENTS);
+	const statistics = buildStatistics(allRecipients, ruleResults, excludedRecipients);
 
 	const sortedRecipients = Array.from(allRecipients.values()).sort((a, b) => {
 		const amountA = BigInt(a.total_airdrop || '0');

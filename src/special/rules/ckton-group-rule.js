@@ -1,11 +1,12 @@
 const path = require("path");
 const fs = require("fs");
 const BaseAirdropRule = require('./base-rule');
-const { buildVirtualHoldings } = require('./lp-virtual-holdings');
+const { buildVirtualHoldings, loadLpTokenAddresses } = require('./lp-virtual-holdings');
 
 const EXCLUDED_CKTON_ADDRESSES = new Set([
 	'0xb633ad1142941ca2eb9c350579cf88bbe266660d'
 ]);
+
 
 class CktonGroupRule extends BaseAirdropRule {
 	constructor(config = {}) {
@@ -19,13 +20,15 @@ class CktonGroupRule extends BaseAirdropRule {
 	async calculate(existingRecipients, options = {}) {
 		const dataDir = path.join(__dirname, '..', '..', '..', 'data');
 		const crabCache = this.loadCrabCache();
+		const lpTokens = loadLpTokenAddresses();
 
 		console.log(`📊 Processing CKTON Group rule...`);
 
-		const cktonHolders = this.excludeAddresses(this.loadTokenHolders(dataDir, 'CKTON', crabCache));
-		const wcktonHolders = this.excludeAddresses(this.loadTokenHolders(dataDir, 'WCKTON', crabCache));
-		const gcktonHolders = this.excludeAddresses(this.loadTokenHolders(dataDir, 'gCKTON', crabCache));
+		const cktonHolders = this.excludeAddresses(this.loadTokenHolders(dataDir, 'CKTON', crabCache, lpTokens));
+		const wcktonHolders = this.excludeAddresses(this.loadTokenHolders(dataDir, 'WCKTON', crabCache, lpTokens));
+		const gcktonHolders = this.excludeAddresses(this.loadTokenHolders(dataDir, 'gCKTON', crabCache, lpTokens));
 		const virtualHoldings = buildVirtualHoldings(['CKTON', 'WCKTON', 'gCKTON']);
+
 
 		const virtualCkton = this.excludeAddresses(virtualHoldings.CKTON || {});
 		const virtualWckton = this.excludeAddresses(virtualHoldings.WCKTON || {});
@@ -88,7 +91,7 @@ class CktonGroupRule extends BaseAirdropRule {
 		return {};
 	}
 
-	loadTokenHolders(dataDir, symbol, addressCache) {
+	loadTokenHolders(dataDir, symbol, addressCache, lpTokens = new Set()) {
 		const files = fs.readdirSync(dataDir);
 		const matchingFiles = files.filter(f => f.startsWith(`${symbol}_`) && f.endsWith('.json'));
 		
@@ -105,7 +108,7 @@ class CktonGroupRule extends BaseAirdropRule {
 			...(data.contract_holders || {})
 		};
 
-		return this.filterEOAs(allHolders, addressCache);
+		return this.filterEOAs(allHolders, addressCache, lpTokens);
 	}
 
 	excludeAddresses(holders) {
@@ -115,6 +118,21 @@ class CktonGroupRule extends BaseAirdropRule {
 				continue;
 			}
 			filtered[address] = balance;
+		}
+		return filtered;
+	}
+
+	filterEOAs(holders, cache, lpTokens = new Set()) {
+		const filtered = {};
+		for (const [address, balance] of Object.entries(holders || {})) {
+			const normalized = address.split(' (')[0].toLowerCase();
+			if (cache[normalized] === true) {
+				continue;
+			}
+			if (lpTokens.has(normalized)) {
+				continue;
+			}
+			filtered[normalized] = balance;
 		}
 		return filtered;
 	}

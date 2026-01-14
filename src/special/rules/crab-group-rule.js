@@ -2,8 +2,12 @@ const path = require("path");
 const fs = require("fs");
 const BaseAirdropRule = require('./base-rule');
 const { buildVirtualHoldings } = require('./lp-virtual-holdings');
+const { createPublicClient, http } = require('viem');
 const CrabAPI = require('../../crab/api');
 const DarwiniaAPI = require('../../darwinia/api');
+
+const CRAB_RPC_URL = 'https://crab-rpc.darwinia.network';
+const CKTON_TREASURY_ADDRESS = '0xB633Ad1142941CA2Eb9C350579cF88BbE266660D';
 
 class CrabGroupRule extends BaseAirdropRule {
 	constructor(config = {}) {
@@ -31,6 +35,13 @@ class CrabGroupRule extends BaseAirdropRule {
 		const crabStakingRewards = this.loadCrabStakingRewards(crabCache);
 		const cktonStakingRewards = this.loadCktonStakingRewards(crabCache);
 		const crabDepositBalances = this.loadCrabDepositBalances(crabCache);
+		const cktonGroupBalances = this.loadCktonGroupBalances(dataDir, crabCache);
+		const cktonTreasuryBalance = await this.fetchCktonTreasuryBalance();
+		const cktonTreasuryAddonResult = this.calculateProportionalAirdrop(
+			cktonGroupBalances.balances,
+			cktonTreasuryBalance
+		);
+		const cktonTreasuryAddonBalances = this.extractAirdropAmounts(cktonTreasuryAddonResult.airdropPerAddress);
 
 		const virtualCrab = virtualHoldings.CRAB || {};
 		const virtualWcrab = virtualHoldings.WCRAB || {};
@@ -51,6 +62,8 @@ class CrabGroupRule extends BaseAirdropRule {
 		console.log(`  - CRAB staking rewards: ${Object.keys(crabStakingRewards).length} holders`);
 		console.log(`  - CKTON staking rewards: ${Object.keys(cktonStakingRewards).length} holders`);
 		console.log(`  - CRAB deposit balances: ${Object.keys(crabDepositBalances).length} holders`);
+		console.log(`  - CKTON treasury CRAB add-on: ${Object.keys(cktonTreasuryAddonBalances).length} holders`);
+		console.log(`  - CKTON treasury CRAB balance: ${cktonTreasuryBalance}`);
 
 		const aggregated = this.aggregateBalances({
 			crab: crabNative,
@@ -65,7 +78,8 @@ class CrabGroupRule extends BaseAirdropRule {
 			virtual_wcring: virtualWcring,
 			crab_staking_rewards: crabStakingRewards,
 			ckton_staking_rewards: cktonStakingRewards,
-			crab_deposit_balance: crabDepositBalances
+			crab_deposit_balance: crabDepositBalances,
+			ckton_treasury_crab_addon: cktonTreasuryAddonBalances
 		});
 
 		console.log(`  - Total unique addresses: ${Object.keys(aggregated).length}`);
@@ -86,7 +100,8 @@ class CrabGroupRule extends BaseAirdropRule {
 			virtual_wcring: virtualWcring,
 			crab_staking_rewards: crabStakingRewards,
 			ckton_staking_rewards: cktonStakingRewards,
-			crab_deposit_balance: crabDepositBalances
+			crab_deposit_balance: crabDepositBalances,
+			ckton_treasury_crab_addon: cktonTreasuryAddonBalances
 		});
 
 		return {
@@ -97,6 +112,8 @@ class CrabGroupRule extends BaseAirdropRule {
 			totalSupply: totalSupply,
 			componentSupplies: componentSupplies,
 			airdropPerAddress: airdropPerAddress,
+			cktonTreasuryCrabBalance: cktonTreasuryBalance,
+			cktonTreasuryGroupSupply: cktonGroupBalances.totalSupply,
 			rawBalances: {
 				crab: crabNative,
 				wcrab: wcrabHolders,
@@ -110,7 +127,8 @@ class CrabGroupRule extends BaseAirdropRule {
 				virtual_wcring: virtualWcring,
 				crab_staking_rewards: crabStakingRewards,
 				ckton_staking_rewards: cktonStakingRewards,
-				crab_deposit_balance: crabDepositBalances
+				crab_deposit_balance: crabDepositBalances,
+				ckton_treasury_crab_addon: cktonTreasuryAddonBalances
 			}
 		};
 	}
@@ -218,6 +236,51 @@ class CrabGroupRule extends BaseAirdropRule {
 		return this.filterEOAs(balances, addressCache);
 	}
 
+	loadCktonGroupBalances(dataDir, addressCache) {
+		const cktonHolders = this.loadTokenHolders(dataDir, 'CKTON', addressCache);
+		const wcktonHolders = this.loadTokenHolders(dataDir, 'WCKTON', addressCache);
+		const gcktonHolders = this.loadTokenHolders(dataDir, 'gCKTON', addressCache);
+		const virtualHoldings = buildVirtualHoldings(['CKTON', 'WCKTON', 'gCKTON']);
+
+		const aggregated = this.aggregateBalances({
+			ckton: cktonHolders,
+			wckton: wcktonHolders,
+			gckton: gcktonHolders,
+			virtual_ckton: virtualHoldings.CKTON || {},
+			virtual_wckton: virtualHoldings.WCKTON || {},
+			virtual_gckton: virtualHoldings.gCKTON || {}
+		});
+
+		const totalSupply = Object.values(aggregated).reduce((sum, balance) => {
+			return sum + BigInt(balance);
+		}, 0n).toString();
+
+		return {
+			balances: aggregated,
+			totalSupply
+		};
+	}
+
+	async fetchCktonTreasuryBalance() {
+		const client = createPublicClient({
+			transport: http(CRAB_RPC_URL)
+		});
+
+		const balance = await client.getBalance({
+			address: CKTON_TREASURY_ADDRESS
+		});
+
+		return balance.toString();
+	}
+
+	extractAirdropAmounts(airdropPerAddress) {
+		const balances = {};
+		for (const [address, data] of Object.entries(airdropPerAddress || {})) {
+			balances[address] = data.amount || '0';
+		}
+		return balances;
+	}
+
 	async loadXwcrabHolders(dataDir, darwiniaCache) {
 		const files = fs.readdirSync(dataDir);
 		const matchingFiles = files.filter(f => f.startsWith('xWCRAB_') && f.endsWith('.json'));
@@ -300,7 +363,8 @@ class CrabGroupRule extends BaseAirdropRule {
 				"Virtual WCRING",
 				"CRAB staking rewards",
 				"CKTON staking rewards",
-				"CRAB deposit balance"
+				"CRAB deposit balance",
+				"CKTON treasury CRAB add-on"
 			]
 		};
 	}

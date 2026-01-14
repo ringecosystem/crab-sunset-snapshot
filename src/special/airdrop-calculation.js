@@ -195,6 +195,9 @@ function buildBreakdown(ruleName, result, address) {
 		details.crab_staking_rewards = raw.crab_staking_rewards[address] || "0";
 		details.ckton_staking_rewards = raw.ckton_staking_rewards[address] || "0";
 		details.crab_deposit_balance = raw.crab_deposit_balance[address] || "0";
+		details.ckton_treasury_crab_addon = raw.ckton_treasury_crab_addon[address] || "0";
+		details.ckton_treasury_crab_balance = result.cktonTreasuryCrabBalance || "0";
+		details.ckton_treasury_group_supply = result.cktonTreasuryGroupSupply || "0";
 		details.total_group_balance = (
 			BigInt(details.crab_balance) +
 			BigInt(details.wcrab_balance) +
@@ -208,7 +211,8 @@ function buildBreakdown(ruleName, result, address) {
 			BigInt(details.virtual_wcring_balance) +
 			BigInt(details.crab_staking_rewards) +
 			BigInt(details.ckton_staking_rewards) +
-			BigInt(details.crab_deposit_balance)
+			BigInt(details.crab_deposit_balance) +
+			BigInt(details.ckton_treasury_crab_addon)
 		).toString();
 	}
 

@@ -3,6 +3,10 @@ const fs = require("fs");
 const BaseAirdropRule = require('./base-rule');
 const { buildVirtualHoldings } = require('./lp-virtual-holdings');
 
+const EXCLUDED_CKTON_ADDRESSES = new Set([
+	'0xb633ad1142941ca2eb9c350579cf88bbe266660d'
+]);
+
 class CktonGroupRule extends BaseAirdropRule {
 	constructor(config = {}) {
 		super(
@@ -18,14 +22,14 @@ class CktonGroupRule extends BaseAirdropRule {
 
 		console.log(`📊 Processing CKTON Group rule...`);
 
-		const cktonHolders = this.loadTokenHolders(dataDir, 'CKTON', crabCache);
-		const wcktonHolders = this.loadTokenHolders(dataDir, 'WCKTON', crabCache);
-		const gcktonHolders = this.loadTokenHolders(dataDir, 'gCKTON', crabCache);
+		const cktonHolders = this.excludeAddresses(this.loadTokenHolders(dataDir, 'CKTON', crabCache));
+		const wcktonHolders = this.excludeAddresses(this.loadTokenHolders(dataDir, 'WCKTON', crabCache));
+		const gcktonHolders = this.excludeAddresses(this.loadTokenHolders(dataDir, 'gCKTON', crabCache));
 		const virtualHoldings = buildVirtualHoldings(['CKTON', 'WCKTON', 'gCKTON']);
 
-		const virtualCkton = virtualHoldings.CKTON || {};
-		const virtualWckton = virtualHoldings.WCKTON || {};
-		const virtualGckton = virtualHoldings.gCKTON || {};
+		const virtualCkton = this.excludeAddresses(virtualHoldings.CKTON || {});
+		const virtualWckton = this.excludeAddresses(virtualHoldings.WCKTON || {});
+		const virtualGckton = this.excludeAddresses(virtualHoldings.gCKTON || {});
 
 		console.log(`  - CKTON: ${Object.keys(cktonHolders).length} holders`);
 		console.log(`  - WCKTON: ${Object.keys(wcktonHolders).length} holders`);
@@ -102,6 +106,17 @@ class CktonGroupRule extends BaseAirdropRule {
 		};
 
 		return this.filterEOAs(allHolders, addressCache);
+	}
+
+	excludeAddresses(holders) {
+		const filtered = {};
+		for (const [address, balance] of Object.entries(holders)) {
+			if (EXCLUDED_CKTON_ADDRESSES.has(address.toLowerCase())) {
+				continue;
+			}
+			filtered[address] = balance;
+		}
+		return filtered;
 	}
 
 	calculateComponentSupplies(sources) {

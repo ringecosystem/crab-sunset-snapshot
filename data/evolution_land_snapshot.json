@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-09T06:41:34.300Z",
+  "timestamp": "2026-01-14T06:44:53.325Z",
   "chain": "Crab Network",
   "evolution_tokens_count": 7,
   "evolution_tokens": [
@@ -75,8 +75,8 @@
       "contract_holders_count": 4,
       "eoa_holders_count": 18,
       "contract_holders": {
-        "0x15f2fbd98a0657e2afcab08922632e58b1cc9fdd": "159510522911477442800938",
-        "0xa946116131932f2a6b5f2a2a52007418d706168a": "72801671140731738297525",
+        "0x15f2fbd98a0657e2afcab08922632e58b1cc9fdd": "159727182703619606913666",
+        "0xa946116131932f2a6b5f2a2a52007418d706168a": "72585011348589574184797",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "22000000000000000000000",
         "0x90e2fa4099eb1fed203769b99c9c64cdda1acb57": "2515000000000000000000"
       },
@@ -142,13 +142,13 @@
       "name": "Evolution Land Wood",
       "symbol": "WOOD",
       "decimals": 18,
-      "total_supply": "561612177175478467156400",
+      "total_supply": "562398920407298415801869",
       "holders_count": 21,
       "contract_holders_count": 4,
       "eoa_holders_count": 17,
       "contract_holders": {
-        "0x2eb5b4a0624d6e646ba2ad919411072476fa1568": "84048047131384115225571",
-        "0x3710f045307d7e0906f1fbd0b0df12c0bc787382": "44808751864310006824481",
+        "0x2eb5b4a0624d6e646ba2ad919411072476fa1568": "84434681820724474021296",
+        "0x3710f045307d7e0906f1fbd0b0df12c0bc787382": "45208860406789596674225",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "13000000000000000000000",
         "0x316d4f81339d810f0342828868dafe4365f07f22": "3265269223036322727"
       },
@@ -182,8 +182,8 @@
       "contract_holders_count": 5,
       "eoa_holders_count": 15,
       "contract_holders": {
-        "0x1e4b46582bba7e5ddb107d3a640e441774980525": "52632160450835452624127",
-        "0x76f6877ac6b03bf80ab911de4580c51dcb358927": "43091606518539383453145",
+        "0x1e4b46582bba7e5ddb107d3a640e441774980525": "52662069551219369702608",
+        "0x76f6877ac6b03bf80ab911de4580c51dcb358927": "43061697418155466374664",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "20000000000000000000000",
         "0x90e2fa4099eb1fed203769b99c9c64cdda1acb57": "1115000000000000000000",
         "0x58fed52ae6c20bcbdbc2949236595415e5014276": "17654867392444958375"
@@ -211,13 +211,13 @@
       "name": "Evolution Land Water",
       "symbol": "HHO",
       "decimals": 18,
-      "total_supply": "736844757829246532112568",
+      "total_supply": "737644609166774309890041",
       "holders_count": 20,
       "contract_holders_count": 3,
       "eoa_holders_count": 17,
       "contract_holders": {
-        "0xdb279d65225162280facae2f3ca8a3d2f63ea9bf": "87108152609378814923150",
-        "0xd4b2b19a62500bb32a731a0889ef0b5147a963e4": "87008445877774650606612",
+        "0xdb279d65225162280facae2f3ca8a3d2f63ea9bf": "87796321227342316507111",
+        "0xd4b2b19a62500bb32a731a0889ef0b5147a963e4": "87120128597338926800124",
         "0xf4cfd9517a55bf661f135aa17497d4344db3a23e": "13500000000000000000000"
       },
       "eoa_holders": {

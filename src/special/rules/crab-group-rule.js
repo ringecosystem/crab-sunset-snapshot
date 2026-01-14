@@ -8,6 +8,10 @@ const DarwiniaAPI = require('../../darwinia/api');
 
 const CRAB_RPC_URL = 'https://crab-rpc.darwinia.network';
 const CKTON_TREASURY_ADDRESS = '0xB633Ad1142941CA2Eb9C350579cF88BbE266660D';
+const EXCLUDED_CRAB_NATIVE_ADDRESSES = new Set([
+	'0xb633ad1142941ca2eb9c350579cf88bbe266660d',
+	'0x6d6f646c64612f74727372790000000000000000'
+]);
 
 class CrabGroupRule extends BaseAirdropRule {
 	constructor(config = {}) {
@@ -170,8 +174,11 @@ class CrabGroupRule extends BaseAirdropRule {
 		const data = this.loadDataFile('CRAB_native.json');
 		const eoaHolders = {};
 		for (const [address, balance] of Object.entries(data.eoa_holders || {})) {
-			// Normalize to lowercase
-			eoaHolders[address.toLowerCase()] = balance;
+			const normalized = address.toLowerCase();
+			if (EXCLUDED_CRAB_NATIVE_ADDRESSES.has(normalized)) {
+				continue;
+			}
+			eoaHolders[normalized] = balance;
 		}
 		return eoaHolders;
 	}

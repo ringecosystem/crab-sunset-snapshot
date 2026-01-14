@@ -2,7 +2,8 @@ const fs = require("fs");
 const path = require("path");
 
 const SPECIAL_ADDRESSES = {
-	"0x6d6f646c64612f74727372790000000000000000": "Treasury"
+	"0x6d6f646c64612f74727372790000000000000000": "Treasury",
+	"0xb633ad1142941ca2eb9c350579cf88bbe266660d": "CKTON Treasury"
 };
 
 function loadSnowLPAddresses(network = 'crab') {

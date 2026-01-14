@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-09T06:52:24.986Z",
+  "timestamp": "2026-01-14T07:01:57.556Z",
   "chain": "Darwinia Network",
   "snow_lps_count": 7,
   "snow_lps": [
@@ -13,12 +13,12 @@
         {
           "address": "0xE7578598Aac020abFB918f33A20faD5B71d670b4",
           "symbol": "WRING",
-          "balance": "661408221473718870476972"
+          "balance": "698280250752022051849197"
         },
         {
           "address": "0x0000000000000000000000000000000000000402",
           "symbol": "KTON",
-          "balance": "298224225044249362759"
+          "balance": "282514086885351212152"
         }
       ],
       "holders_count": 4,
@@ -98,12 +98,12 @@
         {
           "address": "0x656567Eb75b765FC320783cc6EDd86bD854b2305",
           "symbol": "xWCRAB",
-          "balance": "12940230179314508844132104"
+          "balance": "12940160319471363392614941"
         },
         {
           "address": "0xE7578598Aac020abFB918f33A20faD5B71d670b4",
           "symbol": "WRING",
-          "balance": "1405335409727704204064606"
+          "balance": "1405343015705163501961054"
         }
       ],
       "holders_count": 2,
@@ -177,12 +177,12 @@
         {
           "address": "0x656567Eb75b765FC320783cc6EDd86bD854b2305",
           "symbol": "xWCRAB",
-          "balance": "1453672927271999359244"
+          "balance": "1523532770417450876407"
         },
         {
           "address": "0x0000000000000000000000000000000000000402",
           "symbol": "KTON",
-          "balance": "70672689927425596"
+          "balance": "67439805940305556"
         }
       ],
       "holders_count": 1,

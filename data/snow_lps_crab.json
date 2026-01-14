@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-09T06:57:30.792Z",
+  "timestamp": "2026-01-14T06:43:56.499Z",
   "chain": "Crab Network",
   "snow_lps_count": 32,
   "snow_lps": [
@@ -49,12 +49,12 @@
         {
           "address": "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329",
           "symbol": "WCRAB",
-          "balance": "35321832707417156876876"
+          "balance": "35087985294588096957895"
         },
         {
           "address": "0x273131F7CB50ac002BDd08cA721988731F7e1092",
           "symbol": "xWRING",
-          "balance": "1525265947577382197190"
+          "balance": "1535519000662057238373"
         }
       ],
       "holders_count": 6,
@@ -113,12 +113,12 @@
         {
           "address": "0xEd969c03e8881371754231FE1C8f1D4fE4AF2082",
           "symbol": "FIRE",
-          "balance": "72801671140731738297525"
+          "balance": "72585011348589574184797"
         },
         {
           "address": "0x273131F7CB50ac002BDd08cA721988731F7e1092",
           "symbol": "xWRING",
-          "balance": "3867059154126927711474"
+          "balance": "3878630910569626197011"
         }
       ],
       "holders_count": 6,
@@ -145,12 +145,12 @@
         {
           "address": "0xEd969c03e8881371754231FE1C8f1D4fE4AF2082",
           "symbol": "FIRE",
-          "balance": "159510522911477442800938"
+          "balance": "159727182703619606913666"
         },
         {
           "address": "0x7399Ea6C9d35124d893B8d9808930e9d3F211501",
           "symbol": "xRING",
-          "balance": "8587909954319"
+          "balance": "8576290082165"
         }
       ],
       "holders_count": 5,
@@ -176,12 +176,12 @@
         {
           "address": "0xbA91F2d6d78953881A912f3DF71a541cD30eb980",
           "symbol": "WOOD",
-          "balance": "84048047131384115225571"
+          "balance": "84434681820724474021296"
         },
         {
           "address": "0x273131F7CB50ac002BDd08cA721988731F7e1092",
           "symbol": "xWRING",
-          "balance": "8017146075178462254476"
+          "balance": "7980526247824518994434"
         }
       ],
       "holders_count": 5,
@@ -207,12 +207,12 @@
         {
           "address": "0xbA91F2d6d78953881A912f3DF71a541cD30eb980",
           "symbol": "WOOD",
-          "balance": "44808751864310006824481"
+          "balance": "45208860406789596674225"
         },
         {
           "address": "0x7399Ea6C9d35124d893B8d9808930e9d3F211501",
           "symbol": "xRING",
-          "balance": "4298080068937"
+          "balance": "4260315657759"
         }
       ],
       "holders_count": 4,
@@ -237,12 +237,12 @@
         {
           "address": "0x9AC045F4B69C2DB58fDF70D4bEF8228ef5A2C5a8",
           "symbol": "SIOO",
-          "balance": "43091606518539383453145"
+          "balance": "43061697418155466374664"
         },
         {
           "address": "0x273131F7CB50ac002BDd08cA721988731F7e1092",
           "symbol": "xWRING",
-          "balance": "4395806700643761293104"
+          "balance": "4398867521329334463695"
         }
       ],
       "holders_count": 4,
@@ -297,12 +297,12 @@
         {
           "address": "0x54Eb408696E6b3Cc1795Caaf53B22F38F24200Fa",
           "symbol": "HHO",
-          "balance": "87008445877774650606612"
+          "balance": "87120128597338926800124"
         },
         {
           "address": "0x273131F7CB50ac002BDd08cA721988731F7e1092",
           "symbol": "xWRING",
-          "balance": "3386867781509272265425"
+          "balance": "3382536866038358365077"
         }
       ],
       "holders_count": 4,
@@ -327,12 +327,12 @@
         {
           "address": "0x54Eb408696E6b3Cc1795Caaf53B22F38F24200Fa",
           "symbol": "HHO",
-          "balance": "87108152609378814923150"
+          "balance": "87796321227342316507111"
         },
         {
           "address": "0x7399Ea6C9d35124d893B8d9808930e9d3F211501",
           "symbol": "xRING",
-          "balance": "3426420484684"
+          "balance": "3399651538137"
         }
       ],
       "holders_count": 4,
@@ -357,12 +357,12 @@
         {
           "address": "0x9AC045F4B69C2DB58fDF70D4bEF8228ef5A2C5a8",
           "symbol": "SIOO",
-          "balance": "52632160450835452624127"
+          "balance": "52662069551219369702608"
         },
         {
           "address": "0x7399Ea6C9d35124d893B8d9808930e9d3F211501",
           "symbol": "xRING",
-          "balance": "5418753699092"
+          "balance": "5415683840575"
         }
       ],
       "holders_count": 3,
@@ -385,12 +385,12 @@
         {
           "address": "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329",
           "symbol": "WCRAB",
-          "balance": "23848057130379546327624"
+          "balance": "23789964907299917635486"
         },
         {
           "address": "0x8eb2281bbD90ea671C9f6Cb1e51102B7FE3D480e",
           "symbol": "APO",
-          "balance": "7344413883822"
+          "balance": "7362393004132"
         }
       ],
       "holders_count": 3,
@@ -443,12 +443,12 @@
         {
           "address": "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329",
           "symbol": "WCRAB",
-          "balance": "230041572566278476135356"
+          "balance": "228509964052405454157673"
         },
         {
           "address": "0x7399Ea6C9d35124d893B8d9808930e9d3F211501",
           "symbol": "xRING",
-          "balance": "10009336288317"
+          "balance": "10076781156724"
         }
       ],
       "holders_count": 3,
@@ -499,12 +499,12 @@
         {
           "address": "0x273131F7CB50ac002BDd08cA721988731F7e1092",
           "symbol": "xWRING",
-          "balance": "999810505763992923112"
+          "balance": "1003700870484901292619"
         },
         {
           "address": "0x8eb2281bbD90ea671C9f6Cb1e51102B7FE3D480e",
           "symbol": "APO",
-          "balance": "7168356757463"
+          "balance": "7140641325070"
         }
       ],
       "holders_count": 2,
@@ -526,12 +526,12 @@
         {
           "address": "0x8eb2281bbD90ea671C9f6Cb1e51102B7FE3D480e",
           "symbol": "APO",
-          "balance": "2324767096152"
+          "balance": "2314812490477"
         },
         {
           "address": "0x6a2d262D56735DbA19Dd70682B39F6bE9a931D98",
           "symbol": "USDT",
-          "balance": "1057949"
+          "balance": "1062510"
         }
       ],
       "holders_count": 2,
@@ -631,12 +631,12 @@
         {
           "address": "0x7399Ea6C9d35124d893B8d9808930e9d3F211501",
           "symbol": "xRING",
-          "balance": "172837779894237"
+          "balance": "172839181254842"
         },
         {
           "address": "0x6a2d262D56735DbA19Dd70682B39F6bE9a931D98",
           "symbol": "USDT",
-          "balance": "563949802"
+          "balance": "563945241"
         }
       ],
       "holders_count": 1,
@@ -698,12 +698,12 @@
         {
           "address": "0x8eb2281bbD90ea671C9f6Cb1e51102B7FE3D480e",
           "symbol": "APO",
-          "balance": "5887614550939"
+          "balance": "5876859074978"
         },
         {
           "address": "0x7399Ea6C9d35124d893B8d9808930e9d3F211501",
           "symbol": "xRING",
-          "balance": "829294926686"
+          "balance": "830823495325"
         }
       ],
       "holders_count": 1,
@@ -724,12 +724,12 @@
         {
           "address": "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329",
           "symbol": "WCRAB",
-          "balance": "355681145198905637510980"
+          "balance": "355472800157153979937635"
         },
         {
           "address": "0x81ECac0D6Be0550A00FF064a4f9dd2400585FE9c",
           "symbol": "USDC",
-          "balance": "101222679"
+          "balance": "101282155"
         }
       ],
       "holders_count": 1,
@@ -750,12 +750,12 @@
         {
           "address": "0x8eb2281bbD90ea671C9f6Cb1e51102B7FE3D480e",
           "symbol": "APO",
-          "balance": "1568340344637"
+          "balance": "1572137733218"
         },
         {
           "address": "0x81ECac0D6Be0550A00FF064a4f9dd2400585FE9c",
           "symbol": "USDC",
-          "balance": "1465687"
+          "balance": "1462156"
         }
       ],
       "holders_count": 1,
@@ -802,12 +802,12 @@
         {
           "address": "0x273131F7CB50ac002BDd08cA721988731F7e1092",
           "symbol": "xWRING",
-          "balance": "5360291889854784984529"
+          "balance": "5368746417410868992938"
         },
         {
           "address": "0x6a2d262D56735DbA19Dd70682B39F6bE9a931D98",
           "symbol": "USDT",
-          "balance": "17551502"
+          "balance": "17523932"
         }
       ],
       "holders_count": 1,

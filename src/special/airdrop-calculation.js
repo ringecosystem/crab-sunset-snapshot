@@ -5,6 +5,15 @@ const { getRule } = require('./rules');
 
 const DARWINIA_RPC_URL = 'https://rpc.darwinia.network';
 const TREASURY_ADDRESS = '0xC665138b8AC77086af08d83cfc6410501624FFAa';
+const EXCLUDED_RECIPIENTS = new Set([
+	'0xb633ad1142941ca2eb9c350579cf88bbe266660d',
+	'0x6d6f646c64612f74727372790000000000000000'
+]);
+
+function normalizeAddress(address) {
+	const base = (address || '').split(' (')[0].toLowerCase();
+	return base;
+}
 
 const DISTRIBUTION_PERCENTAGES = {
 	crab_group: "0.60",
@@ -107,18 +116,23 @@ async function calculateAirdrop(outputDir, config = {}) {
 		ruleResults[ruleConfig.name] = result;
 
 		for (const [address, data] of Object.entries(result.airdropPerAddress)) {
-			const existing = allRecipients.get(address) || {
-				address,
+			const normalized = normalizeAddress(address);
+			if (!normalized || EXCLUDED_RECIPIENTS.has(normalized)) {
+				continue;
+			}
+
+			const existing = allRecipients.get(normalized) || {
+				address: normalized,
 				is_contract: data.isContract || false,
 				breakdown: {},
 				total_airdrop: "0",
 				total_airdrop_decimal: "0"
 			};
 
-			existing.breakdown[ruleConfig.name] = buildBreakdown(ruleConfig.name, result, address);
+			existing.breakdown[ruleConfig.name] = buildBreakdown(ruleConfig.name, result, normalized);
 			existing.total_airdrop = (BigInt(existing.total_airdrop) + BigInt(data.amount)).toString();
 			existing.total_airdrop_decimal = formatTokenAmount(existing.total_airdrop, 18);
-			allRecipients.set(address, existing);
+			allRecipients.set(normalized, existing);
 		}
 	}
 
@@ -126,7 +140,7 @@ async function calculateAirdrop(outputDir, config = {}) {
 		.filter(r => r.enabled)
 		.map(r => getRule(r.name).getMetadata());
 
-	const statistics = buildStatistics(allRecipients, ruleResults);
+	const statistics = buildStatistics(allRecipients, ruleResults, EXCLUDED_RECIPIENTS);
 
 	const sortedRecipients = Array.from(allRecipients.values()).sort((a, b) => {
 		const amountA = BigInt(a.total_airdrop || '0');
@@ -147,7 +161,7 @@ async function calculateAirdrop(outputDir, config = {}) {
 		recipients: Object.fromEntries(sortedRecipients.map((entry) => [entry.address, entry]))
 	};
 
-	const outputFile = path.join(outputPath, 'crab_sunset_airdrop_distribution.json');
+	const outputFile = path.join(outputPath, 'airdrop_results.json');
 	fs.writeFileSync(outputFile, JSON.stringify(output, null, 2));
 
 	console.log(`\n✅ Airdrop calculation complete!`);
@@ -243,7 +257,7 @@ function buildBreakdown(ruleName, result, address) {
 	return details;
 }
 
-function buildStatistics(recipients, ruleResults) {
+function buildStatistics(recipients, ruleResults, excludedRecipients) {
 	let totalAirdrop = "0";
 	let eoaCount = 0;
 	let contractCount = 0;
@@ -261,7 +275,7 @@ function buildStatistics(recipients, ruleResults) {
 				eoaMax = amount;
 			}
 			eoaRecipients.push({
-				address: recipient.address,
+				address: normalizeAddress(recipient.address),
 				total_airdrop: recipient.total_airdrop,
 				total_airdrop_decimal: recipient.total_airdrop_decimal
 			});
@@ -290,12 +304,17 @@ function buildStatistics(recipients, ruleResults) {
 	};
 
 	for (const [ruleName, result] of Object.entries(ruleResults)) {
+		const recipientCount = Object.keys(result.airdropPerAddress).filter((address) => {
+			const normalized = normalizeAddress(address);
+			return normalized && !excludedRecipients.has(normalized);
+		}).length;
+
 		statistics.rule_details[ruleName] = {
 			total_supply: result.totalSupply,
 			allocation: result.allocation,
 			allocation_percentage: result.allocationPercentage,
 			component_supplies: result.componentSupplies,
-			recipient_count: Object.keys(result.airdropPerAddress).length
+			recipient_count: recipientCount
 		};
 	}
 

@@ -1,6 +1,5 @@
 {
-  "timestamp": "2026-01-14T08:14:39.088Z",
-  "snapshot_height": null,
+  "timestamp": "2026-01-14T08:29:36.512Z",
   "total_airdrop_treasury": "38431025100900660000000000",
   "treasury_address": "0xC665138b8AC77086af08d83cfc6410501624FFAa",
   "distribution": {
@@ -72,11 +71,7 @@
   ],
   "statistics": {
     "total_recipients": 611,
-    "eoa_recipients": 611,
-    "contract_recipients": 0,
     "total_airdrop_distributed": "36509473845855626999999611",
-    "eoa_airdrop_max": "4544998534422487021368027",
-    "eoa_airdrop_max_decimal": "4544998.534422487021368027",
     "top_20_recipients": [
       {
         "address": "0xefb73e47099485c72b7678cb59fb0da7dacf173f",
@@ -234,7 +229,6 @@
   "recipients": {
     "0xefb73e47099485c72b7678cb59fb0da7dacf173f": {
       "address": "0xefb73e47099485c72b7678cb59fb0da7dacf173f",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -280,7 +274,6 @@
     },
     "0x898b624d296f0af1bcb2853065b1ac151ebc1ccc": {
       "address": "0x898b624d296f0af1bcb2853065b1ac151ebc1ccc",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -326,7 +319,6 @@
     },
     "0xacc87388e55ff12bea590c5608069a90d3f1606a": {
       "address": "0xacc87388e55ff12bea590c5608069a90d3f1606a",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -372,7 +364,6 @@
     },
     "0x74cafa4ef28da1410e1de6f431b009367945df66": {
       "address": "0x74cafa4ef28da1410e1de6f431b009367945df66",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -418,7 +409,6 @@
     },
     "0xb2960e11b253c107f973cd778bbe1520e35e8602": {
       "address": "0xb2960e11b253c107f973cd778bbe1520e35e8602",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -450,7 +440,6 @@
     },
     "0xf4b88608ba19df20815015df57acc9328f1ee2f3": {
       "address": "0xf4b88608ba19df20815015df57acc9328f1ee2f3",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -496,7 +485,6 @@
     },
     "0x87f0c169d8acc432acdb5e7d0907322c80ec6621": {
       "address": "0x87f0c169d8acc432acdb5e7d0907322c80ec6621",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -576,7 +564,6 @@
     },
     "0x4295e87fb5113c85720298d73e4760c240ca41fa": {
       "address": "0x4295e87fb5113c85720298d73e4760c240ca41fa",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -656,7 +643,6 @@
     },
     "0x083b2eb2b3fe204492d196c70bbc8fb6dc3bdd6e": {
       "address": "0x083b2eb2b3fe204492d196c70bbc8fb6dc3bdd6e",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -702,7 +688,6 @@
     },
     "0x7eb4e60a9f84db52a024232dd32cc5608dbf5556": {
       "address": "0x7eb4e60a9f84db52a024232dd32cc5608dbf5556",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -748,7 +733,6 @@
     },
     "0x17863f9473ce423ba00c9a3b13be3af48b93f531": {
       "address": "0x17863f9473ce423ba00c9a3b13be3af48b93f531",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -794,7 +778,6 @@
     },
     "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478": {
       "address": "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -850,7 +833,6 @@
     },
     "0x12d529cfa26891cdf1d25453f9851c73e2720373": {
       "address": "0x12d529cfa26891cdf1d25453f9851c73e2720373",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -930,7 +912,6 @@
     },
     "0xebd9a48ed1128375eb4383ed4d53478b4fd85a8d": {
       "address": "0xebd9a48ed1128375eb4383ed4d53478b4fd85a8d",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -1010,7 +991,6 @@
     },
     "0x1472dcfde6312b9306be95ac98cd59a4e1f39b72": {
       "address": "0x1472dcfde6312b9306be95ac98cd59a4e1f39b72",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -1056,7 +1036,6 @@
     },
     "0x8245744bf4b6b158b4ee1795d5ac6aa55a99b9cb": {
       "address": "0x8245744bf4b6b158b4ee1795d5ac6aa55a99b9cb",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -1102,7 +1081,6 @@
     },
     "0x5a25fed1d5400142435d7ccd80a0d54a71ac835f": {
       "address": "0x5a25fed1d5400142435d7ccd80a0d54a71ac835f",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -1148,7 +1126,6 @@
     },
     "0x1be8ce85d5763e67b37a0817fd99a33ce9b83800": {
       "address": "0x1be8ce85d5763e67b37a0817fd99a33ce9b83800",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -1194,7 +1171,6 @@
     },
     "0x3e25247cff03f99a7d83b28f207112234fee73a6": {
       "address": "0x3e25247cff03f99a7d83b28f207112234fee73a6",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -1226,7 +1202,6 @@
     },
     "0xad0cbb2a5fd04f4c526a32b9dc7859bb479035c2": {
       "address": "0xad0cbb2a5fd04f4c526a32b9dc7859bb479035c2",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -1272,7 +1247,6 @@
     },
     "0x0befd7ecaf8038737438832643f0e51df7abf1e4": {
       "address": "0x0befd7ecaf8038737438832643f0e51df7abf1e4",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -1318,7 +1292,6 @@
     },
     "0x254fb3a427d0168dae92b2782274b53595bca712": {
       "address": "0x254fb3a427d0168dae92b2782274b53595bca712",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -1350,7 +1323,6 @@
     },
     "0x513921f8bef694c7a2957e9a368e3098b179a614": {
       "address": "0x513921f8bef694c7a2957e9a368e3098b179a614",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -1382,7 +1354,6 @@
     },
     "0x34b0b1e9e42721e9e4a3d38a558eb0155a588340": {
       "address": "0x34b0b1e9e42721e9e4a3d38a558eb0155a588340",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -1414,7 +1385,6 @@
     },
     "0xec1d823af449b27f3e6fce58049d20b8e1c84fa5": {
       "address": "0xec1d823af449b27f3e6fce58049d20b8e1c84fa5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -1446,7 +1416,6 @@
     },
     "0x2823fd42b4603f1428173b544c3ee81409f9f82a": {
       "address": "0x2823fd42b4603f1428173b544c3ee81409f9f82a",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -1492,7 +1461,6 @@
     },
     "0xf40373645796acc12849b77767cf444380df548a": {
       "address": "0xf40373645796acc12849b77767cf444380df548a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -1524,7 +1492,6 @@
     },
     "0x73db0f38391583c9f4786f7a317afab23b6749f7": {
       "address": "0x73db0f38391583c9f4786f7a317afab23b6749f7",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -1604,7 +1571,6 @@
     },
     "0xe8a1d8068d15aba5927d29282d6476b7978ed0c1": {
       "address": "0xe8a1d8068d15aba5927d29282d6476b7978ed0c1",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -1636,7 +1602,6 @@
     },
     "0xd4dc3eb21c9ec200ef82c825fbf86188c1a6c03c": {
       "address": "0xd4dc3eb21c9ec200ef82c825fbf86188c1a6c03c",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -1682,7 +1647,6 @@
     },
     "0xc5f04d5d55065f3e34945a59ee0c7eb2656aa07c": {
       "address": "0xc5f04d5d55065f3e34945a59ee0c7eb2656aa07c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -1714,7 +1678,6 @@
     },
     "0x000000000419683a1a03abc21fc9da25fd2b4dd7": {
       "address": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -1736,7 +1699,6 @@
     },
     "0x38f046ae944021351ce5c2486dee3027c949858f": {
       "address": "0x38f046ae944021351ce5c2486dee3027c949858f",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -1782,7 +1744,6 @@
     },
     "0x2d80e2a0e3ffdac600e29b04f321eeafa5dadbc7": {
       "address": "0x2d80e2a0e3ffdac600e29b04f321eeafa5dadbc7",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -1828,7 +1789,6 @@
     },
     "0x7eef076bc5c57afd42ac3cbf3e29b13a7baf4cac": {
       "address": "0x7eef076bc5c57afd42ac3cbf3e29b13a7baf4cac",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -1908,7 +1868,6 @@
     },
     "0x6ab5d3e5069326ff4601e77c3651f0c216d7e036": {
       "address": "0x6ab5d3e5069326ff4601e77c3651f0c216d7e036",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -1954,7 +1913,6 @@
     },
     "0xbff1e53b23d9f5cd13429cd4bacbc017589f51eb": {
       "address": "0xbff1e53b23d9f5cd13429cd4bacbc017589f51eb",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -2029,7 +1987,6 @@
     },
     "0x7302333e1d5d4e14cf0ed162d5f5796634616dc2": {
       "address": "0x7302333e1d5d4e14cf0ed162d5f5796634616dc2",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -2075,7 +2032,6 @@
     },
     "0xacfa39b864e42d1bd3792783a571d2958af0bf1f": {
       "address": "0xacfa39b864e42d1bd3792783a571d2958af0bf1f",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -2107,7 +2063,6 @@
     },
     "0xcfc49d2515ea12a059ab4b0f9f53bb2fc731a536": {
       "address": "0xcfc49d2515ea12a059ab4b0f9f53bb2fc731a536",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -2153,7 +2108,6 @@
     },
     "0xb7e88e1635ea56b6a404cb4e97cf4fa6c40dcbeb": {
       "address": "0xb7e88e1635ea56b6a404cb4e97cf4fa6c40dcbeb",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -2199,7 +2153,6 @@
     },
     "0xb8d018bf6acf616f8e3e5c8d9c213fe509dc9218": {
       "address": "0xb8d018bf6acf616f8e3e5c8d9c213fe509dc9218",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -2245,7 +2198,6 @@
     },
     "0x4de51875c1a58799a0de58fc1049e9c4a83d7ad0": {
       "address": "0x4de51875c1a58799a0de58fc1049e9c4a83d7ad0",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -2277,7 +2229,6 @@
     },
     "0x06052679e8ec2017a6b8e9563a47e73149aeedac": {
       "address": "0x06052679e8ec2017a6b8e9563a47e73149aeedac",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -2309,7 +2260,6 @@
     },
     "0xe784d95cbda57cc9a339a9259aba525a8bacfc68": {
       "address": "0xe784d95cbda57cc9a339a9259aba525a8bacfc68",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -2341,7 +2291,6 @@
     },
     "0xeb965ad19588f48f805465d25c6ae0aa60a46398": {
       "address": "0xeb965ad19588f48f805465d25c6ae0aa60a46398",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -2387,7 +2336,6 @@
     },
     "0xa9a5b82e921b057251833cbdeaa715dbea444480": {
       "address": "0xa9a5b82e921b057251833cbdeaa715dbea444480",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -2419,7 +2367,6 @@
     },
     "0xc7f796260f5b7c747cac5e5a223c9d82354083b1": {
       "address": "0xc7f796260f5b7c747cac5e5a223c9d82354083b1",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -2451,7 +2398,6 @@
     },
     "0xb5540caf9cce89b7da1f26a4cf54cff48853ae00": {
       "address": "0xb5540caf9cce89b7da1f26a4cf54cff48853ae00",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -2483,7 +2429,6 @@
     },
     "0xd5f4940704eb4ce5e4b51877d49b58a3e93531b6": {
       "address": "0xd5f4940704eb4ce5e4b51877d49b58a3e93531b6",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -2505,7 +2450,6 @@
     },
     "0xe178ae2ee58f7c85fee8354b1272c5e6ffc41161": {
       "address": "0xe178ae2ee58f7c85fee8354b1272c5e6ffc41161",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -2537,7 +2481,6 @@
     },
     "0xa789023d50e20880d795810bdf64ee44b8a4d5d8": {
       "address": "0xa789023d50e20880d795810bdf64ee44b8a4d5d8",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -2583,7 +2526,6 @@
     },
     "0xd067bbf6d1f72657716f27135945c8bb78883605": {
       "address": "0xd067bbf6d1f72657716f27135945c8bb78883605",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -2629,7 +2571,6 @@
     },
     "0x3aff35381ab14e39e36273bcefb42deec1072440": {
       "address": "0x3aff35381ab14e39e36273bcefb42deec1072440",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -2661,7 +2602,6 @@
     },
     "0x0c6e81a918328f117bec04cf98562a98af18e2dc": {
       "address": "0x0c6e81a918328f117bec04cf98562a98af18e2dc",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -2693,7 +2633,6 @@
     },
     "0x935b8dfef9bda7866a6f3de2f7cf5c24796f08f3": {
       "address": "0x935b8dfef9bda7866a6f3de2f7cf5c24796f08f3",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -2739,7 +2678,6 @@
     },
     "0xe45fd7bef2736dad2d5620052ca37a9603376aea": {
       "address": "0xe45fd7bef2736dad2d5620052ca37a9603376aea",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -2785,7 +2723,6 @@
     },
     "0x577d2186e4693546b46dcee5f4ae89724fcc4f0c": {
       "address": "0x577d2186e4693546b46dcee5f4ae89724fcc4f0c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -2817,7 +2754,6 @@
     },
     "0x9ca18d6146551145f08d298ad3aee517bef05266": {
       "address": "0x9ca18d6146551145f08d298ad3aee517bef05266",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -2849,7 +2785,6 @@
     },
     "0xf381896eb9280dcb2099523149d42f7b1ed43e9a": {
       "address": "0xf381896eb9280dcb2099523149d42f7b1ed43e9a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -2881,7 +2816,6 @@
     },
     "0xd891ce6a97b4f01a8b9b36d0298aa3631fe2eef5": {
       "address": "0xd891ce6a97b4f01a8b9b36d0298aa3631fe2eef5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -2913,7 +2847,6 @@
     },
     "0x8f49a10fcacd7cd22257b9fd358bcab2cb3cffdc": {
       "address": "0x8f49a10fcacd7cd22257b9fd358bcab2cb3cffdc",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -2959,7 +2892,6 @@
     },
     "0x833f85f3d37d0099f896e19080d713857d2f36bc": {
       "address": "0x833f85f3d37d0099f896e19080d713857d2f36bc",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -3005,7 +2937,6 @@
     },
     "0x77a2c57efb34c05306f3079b1add383920794727": {
       "address": "0x77a2c57efb34c05306f3079b1add383920794727",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -3037,7 +2968,6 @@
     },
     "0xc1c8f6ef43b39c279417e361969d535f2a20b92e": {
       "address": "0xc1c8f6ef43b39c279417e361969d535f2a20b92e",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -3083,7 +3013,6 @@
     },
     "0x726277fa11635f0d50fd36e021219b4660225fb9": {
       "address": "0x726277fa11635f0d50fd36e021219b4660225fb9",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -3115,7 +3044,6 @@
     },
     "0xba5e692e6dd69a3dece374c7c16397e93b46cb33": {
       "address": "0xba5e692e6dd69a3dece374c7c16397e93b46cb33",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -3147,7 +3075,6 @@
     },
     "0x3dd379b5e13c62895da2cea7c0f6716cd8cfec87": {
       "address": "0x3dd379b5e13c62895da2cea7c0f6716cd8cfec87",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -3193,7 +3120,6 @@
     },
     "0x7ae2a0914db8bfbdad538b0eac3fa473a0e07843": {
       "address": "0x7ae2a0914db8bfbdad538b0eac3fa473a0e07843",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -3225,7 +3151,6 @@
     },
     "0x184af8c1a4d19e39a46e1203360e340b8764ef78": {
       "address": "0x184af8c1a4d19e39a46e1203360e340b8764ef78",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -3271,7 +3196,6 @@
     },
     "0xbafaba26d84f48f6e60af5f71ec747b864efd53c": {
       "address": "0xbafaba26d84f48f6e60af5f71ec747b864efd53c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -3303,7 +3227,6 @@
     },
     "0x9f1a5aab55d62d37773a4e6543fd9b25ddcf9f78": {
       "address": "0x9f1a5aab55d62d37773a4e6543fd9b25ddcf9f78",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -3335,7 +3258,6 @@
     },
     "0x894b4b15d1c784e19825f4ddaaf9f339b957b6bd": {
       "address": "0x894b4b15d1c784e19825f4ddaaf9f339b957b6bd",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -3376,7 +3298,6 @@
     },
     "0xf2a758814427b1ec04062da771d151bf4d6e7cce": {
       "address": "0xf2a758814427b1ec04062da771d151bf4d6e7cce",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -3408,7 +3329,6 @@
     },
     "0xf350d955a0d4a4e0de39978a5a8b838466961e60": {
       "address": "0xf350d955a0d4a4e0de39978a5a8b838466961e60",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -3454,7 +3374,6 @@
     },
     "0x82373ccc6ed8ced89293307efdcf31b73b8c49c8": {
       "address": "0x82373ccc6ed8ced89293307efdcf31b73b8c49c8",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -3486,7 +3405,6 @@
     },
     "0xba70e3c0b49e8588a40d504196afbfc6bff195a3": {
       "address": "0xba70e3c0b49e8588a40d504196afbfc6bff195a3",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -3532,7 +3450,6 @@
     },
     "0xb4a488b072b9d75909d7a7c42da8e03e43e40ac3": {
       "address": "0xb4a488b072b9d75909d7a7c42da8e03e43e40ac3",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -3578,7 +3495,6 @@
     },
     "0x9c8957c3edddda379c7cf4f3c2a487eb1b0f6467": {
       "address": "0x9c8957c3edddda379c7cf4f3c2a487eb1b0f6467",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -3610,7 +3526,6 @@
     },
     "0xf1670877bb06df4f0d74d50153dc4e4ed83c46ed": {
       "address": "0xf1670877bb06df4f0d74d50153dc4e4ed83c46ed",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -3656,7 +3571,6 @@
     },
     "0x05e0375b33aef6a5bc6c02f52e02f62aadc586fe": {
       "address": "0x05e0375b33aef6a5bc6c02f52e02f62aadc586fe",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -3702,7 +3616,6 @@
     },
     "0x310eb062f52120e18f2a096e7e9ec07c8116be25": {
       "address": "0x310eb062f52120e18f2a096e7e9ec07c8116be25",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -3748,7 +3661,6 @@
     },
     "0x3aab6779d50181ce73a1fe5b2f545a09eb70eec8": {
       "address": "0x3aab6779d50181ce73a1fe5b2f545a09eb70eec8",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -3818,7 +3730,6 @@
     },
     "0xc3a3fabebdd09e2215b2d2c9fb19f6ff4dcb3f25": {
       "address": "0xc3a3fabebdd09e2215b2d2c9fb19f6ff4dcb3f25",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -3864,7 +3775,6 @@
     },
     "0x12ac25cc6d2cce3a89abc344c8350aca491a1e42": {
       "address": "0x12ac25cc6d2cce3a89abc344c8350aca491a1e42",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -3900,7 +3810,6 @@
     },
     "0x75d56b0103ea3b596d344e153cc89012af3bd22a": {
       "address": "0x75d56b0103ea3b596d344e153cc89012af3bd22a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -3932,7 +3841,6 @@
     },
     "0x784247c21ef75d84e60a22508a4da9b1365de43d": {
       "address": "0x784247c21ef75d84e60a22508a4da9b1365de43d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -3964,7 +3872,6 @@
     },
     "0x7485a5dad2a8945e73f25af804c83966abaf9edf": {
       "address": "0x7485a5dad2a8945e73f25af804c83966abaf9edf",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -3996,7 +3903,6 @@
     },
     "0x00205fdac4d4887de33df1ad324f65e8277508a1": {
       "address": "0x00205fdac4d4887de33df1ad324f65e8277508a1",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -4042,7 +3948,6 @@
     },
     "0xad925294b99b3866ed23d8fdde00a6a325a35217": {
       "address": "0xad925294b99b3866ed23d8fdde00a6a325a35217",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -4074,7 +3979,6 @@
     },
     "0xfa48d48d4d4c2a73f48b1effd7e6ad1ff7134f29": {
       "address": "0xfa48d48d4d4c2a73f48b1effd7e6ad1ff7134f29",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -4120,7 +4024,6 @@
     },
     "0x1b00cccc5483975b1b9abe574bf15a193fbfe773": {
       "address": "0x1b00cccc5483975b1b9abe574bf15a193fbfe773",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -4190,7 +4093,6 @@
     },
     "0x3a5de821111d89c3ad52bf473b70e675766231b6": {
       "address": "0x3a5de821111d89c3ad52bf473b70e675766231b6",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -4222,7 +4124,6 @@
     },
     "0x6328e811a291b6424a0c858526d46fff7c46d647": {
       "address": "0x6328e811a291b6424a0c858526d46fff7c46d647",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -4268,7 +4169,6 @@
     },
     "0xeb7e82a67cdfa3e742e0f3315fd4eed7b05730cc": {
       "address": "0xeb7e82a67cdfa3e742e0f3315fd4eed7b05730cc",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -4300,7 +4200,6 @@
     },
     "0x47f4304824568d257bb40fd7ea6839f8abd5f60c": {
       "address": "0x47f4304824568d257bb40fd7ea6839f8abd5f60c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -4332,7 +4231,6 @@
     },
     "0x4160478bb15e98815697298e114ff79aa76d002d": {
       "address": "0x4160478bb15e98815697298e114ff79aa76d002d",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -4378,7 +4276,6 @@
     },
     "0x85ddb6f86de3584a51bcceea3935840339afead4": {
       "address": "0x85ddb6f86de3584a51bcceea3935840339afead4",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -4424,7 +4321,6 @@
     },
     "0xbf37c7794668caa0bc9741475cccf74153e3e022": {
       "address": "0xbf37c7794668caa0bc9741475cccf74153e3e022",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -4470,7 +4366,6 @@
     },
     "0xba523caad6579b4eed49e70049b53e8928e79d52": {
       "address": "0xba523caad6579b4eed49e70049b53e8928e79d52",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -4516,7 +4411,6 @@
     },
     "0x1d685424dd0807dfdfebd7f887b855a875e118f2": {
       "address": "0x1d685424dd0807dfdfebd7f887b855a875e118f2",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -4562,7 +4456,6 @@
     },
     "0xbf04dbfcacad75e89e78fa0ca2d0a9c4a176bf00": {
       "address": "0xbf04dbfcacad75e89e78fa0ca2d0a9c4a176bf00",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -4594,7 +4487,6 @@
     },
     "0x1e100888d61d332becea0cd22d97fa3d5362c1a5": {
       "address": "0x1e100888d61d332becea0cd22d97fa3d5362c1a5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -4626,7 +4518,6 @@
     },
     "0x32a7ec05a26897e1e162bce792d07934847bea5a": {
       "address": "0x32a7ec05a26897e1e162bce792d07934847bea5a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -4658,7 +4549,6 @@
     },
     "0xe0c73fb826f824e31b3235fe2665e18247fccd88": {
       "address": "0xe0c73fb826f824e31b3235fe2665e18247fccd88",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -4690,7 +4580,6 @@
     },
     "0xba9dca6d3b35fc924e942f18df422d331cdade6f": {
       "address": "0xba9dca6d3b35fc924e942f18df422d331cdade6f",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -4722,7 +4611,6 @@
     },
     "0x56c82cc840621d929a3c98957fa5d34fa008da8d": {
       "address": "0x56c82cc840621d929a3c98957fa5d34fa008da8d",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -4792,7 +4680,6 @@
     },
     "0x21b7b075ed133a7f3faf10698bdc6613998c4180": {
       "address": "0x21b7b075ed133a7f3faf10698bdc6613998c4180",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -4838,7 +4725,6 @@
     },
     "0xcac0864330ac97bf8924005dbc2884638c839734": {
       "address": "0xcac0864330ac97bf8924005dbc2884638c839734",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -4874,7 +4760,6 @@
     },
     "0x61fd367a11f9b1535897e91c065e7a264c5ee6e3": {
       "address": "0x61fd367a11f9b1535897e91c065e7a264c5ee6e3",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -4906,7 +4791,6 @@
     },
     "0x217b3b614349e8d01c5a0b3e6132451c58eef740": {
       "address": "0x217b3b614349e8d01c5a0b3e6132451c58eef740",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -4952,7 +4836,6 @@
     },
     "0xd9b8954ce0970c29a7c65b32babc810ac19cccfe": {
       "address": "0xd9b8954ce0970c29a7c65b32babc810ac19cccfe",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -4984,7 +4867,6 @@
     },
     "0xc4c84ece914dd0f37ef0b3258320c24e479ab381": {
       "address": "0xc4c84ece914dd0f37ef0b3258320c24e479ab381",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -5044,7 +4926,6 @@
     },
     "0x02468737e547de123eb90919e241f64f2480e993": {
       "address": "0x02468737e547de123eb90919e241f64f2480e993",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -5090,7 +4971,6 @@
     },
     "0x823018d63988aafc5f9b36458b04a7bfa405772c": {
       "address": "0x823018d63988aafc5f9b36458b04a7bfa405772c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5122,7 +5002,6 @@
     },
     "0x9aee301d7b11a6dc7293b7b6ba5f11cd048590df": {
       "address": "0x9aee301d7b11a6dc7293b7b6ba5f11cd048590df",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -5168,7 +5047,6 @@
     },
     "0x6e9295d3085ef8f2c1b5d781d6ac4096e3f69d99": {
       "address": "0x6e9295d3085ef8f2c1b5d781d6ac4096e3f69d99",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5200,7 +5078,6 @@
     },
     "0xd9acae2ef73d7c8483643b65e60aad80b755f8a6": {
       "address": "0xd9acae2ef73d7c8483643b65e60aad80b755f8a6",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5232,7 +5109,6 @@
     },
     "0xf98b52d2e4067fa4e803fe7e5002052db5611df7": {
       "address": "0xf98b52d2e4067fa4e803fe7e5002052db5611df7",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5264,7 +5140,6 @@
     },
     "0x0e3fb2df89088928c520e34e89140f3e18a40e66": {
       "address": "0x0e3fb2df89088928c520e34e89140f3e18a40e66",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5296,7 +5171,6 @@
     },
     "0x962a2ccf8f855987f4c225a43ce455b6930965e9": {
       "address": "0x962a2ccf8f855987f4c225a43ce455b6930965e9",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5328,7 +5202,6 @@
     },
     "0x35529d7e0420b3bf5698bd6fe7cfd58137d54edd": {
       "address": "0x35529d7e0420b3bf5698bd6fe7cfd58137d54edd",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5360,7 +5233,6 @@
     },
     "0x8abc0ed7e7885c82395bd1f11091b96375081c59": {
       "address": "0x8abc0ed7e7885c82395bd1f11091b96375081c59",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -5396,7 +5268,6 @@
     },
     "0x423a614b057b1c43f08464cf7a45caf3c9e9276c": {
       "address": "0x423a614b057b1c43f08464cf7a45caf3c9e9276c",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -5442,7 +5313,6 @@
     },
     "0x964c6033d8c5cf7f16821a797ca20fc35079206c": {
       "address": "0x964c6033d8c5cf7f16821a797ca20fc35079206c",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -5488,7 +5358,6 @@
     },
     "0x888ed928636ec2c5c0115dd8464005c9876cd515": {
       "address": "0x888ed928636ec2c5c0115dd8464005c9876cd515",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5520,7 +5389,6 @@
     },
     "0xf8a22b371161d63b1a17f0aace7a953df3ebed80": {
       "address": "0xf8a22b371161d63b1a17f0aace7a953df3ebed80",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -5566,7 +5434,6 @@
     },
     "0x7c821e048c0cb4546fb7162cb308976f706cd3a1": {
       "address": "0x7c821e048c0cb4546fb7162cb308976f706cd3a1",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5598,7 +5465,6 @@
     },
     "0x4586abb5c8ed8a6917131fa4db4ce4c78f800e4c": {
       "address": "0x4586abb5c8ed8a6917131fa4db4ce4c78f800e4c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5630,7 +5496,6 @@
     },
     "0xb2abd0a37bafaf4ace8f9e5e8797f07882bd03e2": {
       "address": "0xb2abd0a37bafaf4ace8f9e5e8797f07882bd03e2",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -5676,7 +5541,6 @@
     },
     "0xef08b045cdbb12587d30c9ad588f74ec4d59b724": {
       "address": "0xef08b045cdbb12587d30c9ad588f74ec4d59b724",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5708,7 +5572,6 @@
     },
     "0x0ff8d2412b13ff129f53ee8dd0eda5f2ae600494": {
       "address": "0x0ff8d2412b13ff129f53ee8dd0eda5f2ae600494",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5740,7 +5603,6 @@
     },
     "0x7f2f53721059c11efdbec26d07c9bf6b10fb57d7": {
       "address": "0x7f2f53721059c11efdbec26d07c9bf6b10fb57d7",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5772,7 +5634,6 @@
     },
     "0xbffadc0f1e9f0e91e792f9761c8799373c357013": {
       "address": "0xbffadc0f1e9f0e91e792f9761c8799373c357013",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -5828,7 +5689,6 @@
     },
     "0xec848ea7ab27445ae6a9d9a4362b7db9eb059409": {
       "address": "0xec848ea7ab27445ae6a9d9a4362b7db9eb059409",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5860,7 +5720,6 @@
     },
     "0x368564ec5ed72533aba9a3b2f9f72ca881a8f164": {
       "address": "0x368564ec5ed72533aba9a3b2f9f72ca881a8f164",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -5906,7 +5765,6 @@
     },
     "0x620c0b128ae1fe7cdb142923e7ae7c572e0468e1": {
       "address": "0x620c0b128ae1fe7cdb142923e7ae7c572e0468e1",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5938,7 +5796,6 @@
     },
     "0xcc96b70840a7b13b45efb4c5c04e22e8a2b277c2": {
       "address": "0xcc96b70840a7b13b45efb4c5c04e22e8a2b277c2",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -5970,7 +5827,6 @@
     },
     "0x1116bffe122485addff8d182caa91c94b05e490c": {
       "address": "0x1116bffe122485addff8d182caa91c94b05e490c",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -6016,7 +5872,6 @@
     },
     "0x1fe43f304ca8f1d99f79f7ec71de9b7e329b91bd": {
       "address": "0x1fe43f304ca8f1d99f79f7ec71de9b7e329b91bd",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -6048,7 +5903,6 @@
     },
     "0x5af9a1be7bc22f9a6b2ce90acd69c23dceeb23c2": {
       "address": "0x5af9a1be7bc22f9a6b2ce90acd69c23dceeb23c2",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -6094,7 +5948,6 @@
     },
     "0xc7809e89482774ae66b01c006fee95e82f1b8a79": {
       "address": "0xc7809e89482774ae66b01c006fee95e82f1b8a79",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -6145,7 +5998,6 @@
     },
     "0xa0b711a8e9dbcd23ab44862c828543ee7521e8cc": {
       "address": "0xa0b711a8e9dbcd23ab44862c828543ee7521e8cc",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -6177,7 +6029,6 @@
     },
     "0xa1e6434192a01a6dc0018d8f9a050fa8f66e5612": {
       "address": "0xa1e6434192a01a6dc0018d8f9a050fa8f66e5612",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -6209,7 +6060,6 @@
     },
     "0x377e59bf88518fbbf9db7159b95928ccba60f8ff": {
       "address": "0x377e59bf88518fbbf9db7159b95928ccba60f8ff",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -6241,7 +6091,6 @@
     },
     "0x25ab128f1e44ff04f74d0ba2989f94b82af098fa": {
       "address": "0x25ab128f1e44ff04f74d0ba2989f94b82af098fa",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -6273,7 +6122,6 @@
     },
     "0x56cad27474b20d72008952a03782d117db31fdd2": {
       "address": "0x56cad27474b20d72008952a03782d117db31fdd2",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -6319,7 +6167,6 @@
     },
     "0x0617f1967f0214391cbfe8ede54912b2e7608c93": {
       "address": "0x0617f1967f0214391cbfe8ede54912b2e7608c93",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -6393,7 +6240,6 @@
     },
     "0xba7f77b4e9772b0afe39b212202c1b5d9da1b539": {
       "address": "0xba7f77b4e9772b0afe39b212202c1b5d9da1b539",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -6439,7 +6285,6 @@
     },
     "0x3774ba6779cfe3e4fac5cb63423fe8716e900801": {
       "address": "0x3774ba6779cfe3e4fac5cb63423fe8716e900801",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -6485,7 +6330,6 @@
     },
     "0x299cd1c791464827ddfb147612244a2c59da91a0": {
       "address": "0x299cd1c791464827ddfb147612244a2c59da91a0",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -6517,7 +6361,6 @@
     },
     "0x0a1287977578f888bdc1c7627781af1cc000e6ab": {
       "address": "0x0a1287977578f888bdc1c7627781af1cc000e6ab",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -6549,7 +6392,6 @@
     },
     "0x197165181e6dddbea11137e3dd748882b1bf6051": {
       "address": "0x197165181e6dddbea11137e3dd748882b1bf6051",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -6581,7 +6423,6 @@
     },
     "0x56fad59d511e08374c6d79bc9731c51278ee2c24": {
       "address": "0x56fad59d511e08374c6d79bc9731c51278ee2c24",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -6613,7 +6454,6 @@
     },
     "0x2dcd241135d2d5b2e9ba2926e436c054fdf8bf0b": {
       "address": "0x2dcd241135d2d5b2e9ba2926e436c054fdf8bf0b",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -6645,7 +6485,6 @@
     },
     "0x40c168503b9758540e18a79907f3fd8678c13f03": {
       "address": "0x40c168503b9758540e18a79907f3fd8678c13f03",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -6677,7 +6516,6 @@
     },
     "0x4f6f81275dc816724e270ddded12609ef0fcce0d": {
       "address": "0x4f6f81275dc816724e270ddded12609ef0fcce0d",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -6723,7 +6561,6 @@
     },
     "0x3f570049fd02128f8039f2b7a9f91b4a634905c7": {
       "address": "0x3f570049fd02128f8039f2b7a9f91b4a634905c7",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -6769,7 +6606,6 @@
     },
     "0x5b63cec873f98e50062541eb136567f0462bfc54": {
       "address": "0x5b63cec873f98e50062541eb136567f0462bfc54",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -6801,7 +6637,6 @@
     },
     "0xf990a853e8d35fe39ea63468421f39d3121d2822": {
       "address": "0xf990a853e8d35fe39ea63468421f39d3121d2822",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -6833,7 +6668,6 @@
     },
     "0x4c4ce94ded4a4c0bac8241215a722eb4b60e63c0": {
       "address": "0x4c4ce94ded4a4c0bac8241215a722eb4b60e63c0",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -6879,7 +6713,6 @@
     },
     "0xa8a5b4e535268a91d330a1b26e11030831eed35f": {
       "address": "0xa8a5b4e535268a91d330a1b26e11030831eed35f",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -6911,7 +6744,6 @@
     },
     "0x274849defc27652ef5fe900149114fc54ad24b07": {
       "address": "0x274849defc27652ef5fe900149114fc54ad24b07",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -6957,7 +6789,6 @@
     },
     "0x8050714fd052d199da891849e490347c31c036da": {
       "address": "0x8050714fd052d199da891849e490347c31c036da",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -7003,7 +6834,6 @@
     },
     "0x72f4fa324b1f3ded55f88d9a2e40fdc601c92e7c": {
       "address": "0x72f4fa324b1f3ded55f88d9a2e40fdc601c92e7c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7035,7 +6865,6 @@
     },
     "0x9c96e543b2e2d5854f9cbff4221dae111af472ee": {
       "address": "0x9c96e543b2e2d5854f9cbff4221dae111af472ee",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7067,7 +6896,6 @@
     },
     "0x60ff1c39b331f4035db7799973893a690ca06360": {
       "address": "0x60ff1c39b331f4035db7799973893a690ca06360",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -7113,7 +6941,6 @@
     },
     "0xc5532432a92053ae600c105e5985cf899408426d": {
       "address": "0xc5532432a92053ae600c105e5985cf899408426d",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -7159,7 +6986,6 @@
     },
     "0x48a0ad495f70884c07e86eccbce331ed55f2a29e": {
       "address": "0x48a0ad495f70884c07e86eccbce331ed55f2a29e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7191,7 +7017,6 @@
     },
     "0x9f33a4809aa708d7a399fedba514e0a0d15efa85": {
       "address": "0x9f33a4809aa708d7a399fedba514e0a0d15efa85",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7223,7 +7048,6 @@
     },
     "0x6ece0b496f2fd1d7038dd025052f2699f9fe57e0": {
       "address": "0x6ece0b496f2fd1d7038dd025052f2699f9fe57e0",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7255,7 +7079,6 @@
     },
     "0x323d9a963cec4760321fdc630992f84d1a9e470a": {
       "address": "0x323d9a963cec4760321fdc630992f84d1a9e470a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7287,7 +7110,6 @@
     },
     "0x2ebe5b80b67b60860da9a50fd202bfb10456aea5": {
       "address": "0x2ebe5b80b67b60860da9a50fd202bfb10456aea5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7319,7 +7141,6 @@
     },
     "0xb550433a9021053c9012e449c0f906d5d4016841": {
       "address": "0xb550433a9021053c9012e449c0f906d5d4016841",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7351,7 +7172,6 @@
     },
     "0x5778a552a143b8883533e5450f8f2e43f6a3bff4": {
       "address": "0x5778a552a143b8883533e5450f8f2e43f6a3bff4",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7383,7 +7203,6 @@
     },
     "0x281ff8ed6fb8637d8bcbd0450dc791aebb774f0a": {
       "address": "0x281ff8ed6fb8637d8bcbd0450dc791aebb774f0a",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -7429,7 +7248,6 @@
     },
     "0x483bfe3ddf6baa3565c9ce3d726c5d470c77becf": {
       "address": "0x483bfe3ddf6baa3565c9ce3d726c5d470c77becf",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -7489,7 +7307,6 @@
     },
     "0x2929d55c27a8d762f50a504fcbae7c392f6787bc": {
       "address": "0x2929d55c27a8d762f50a504fcbae7c392f6787bc",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7521,7 +7338,6 @@
     },
     "0xbf57ab0e40d5343ac04d983339d6addf4a278aa8": {
       "address": "0xbf57ab0e40d5343ac04d983339d6addf4a278aa8",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7553,7 +7369,6 @@
     },
     "0x1194cbebee18d7c8c3440d58161e4e03e9011bf4": {
       "address": "0x1194cbebee18d7c8c3440d58161e4e03e9011bf4",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -7599,7 +7414,6 @@
     },
     "0xb0f22635d702ebada80966f309ec7d596ca154e7": {
       "address": "0xb0f22635d702ebada80966f309ec7d596ca154e7",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7631,7 +7445,6 @@
     },
     "0x6f938612e6a6db49b1e1165c086184b0858fd1c9": {
       "address": "0x6f938612e6a6db49b1e1165c086184b0858fd1c9",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -7677,7 +7490,6 @@
     },
     "0x60cb9dde329456c099dd7ad15c05fe0af9e4a5f2": {
       "address": "0x60cb9dde329456c099dd7ad15c05fe0af9e4a5f2",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -7723,7 +7535,6 @@
     },
     "0x4b8019b7cfe236880a0d1f526b09dd21ab00f9a4": {
       "address": "0x4b8019b7cfe236880a0d1f526b09dd21ab00f9a4",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -7769,7 +7580,6 @@
     },
     "0x4eb385fdd8472f89c3bac4c23f5638f34a5d5d7b": {
       "address": "0x4eb385fdd8472f89c3bac4c23f5638f34a5d5d7b",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7801,7 +7611,6 @@
     },
     "0x9522ce4e7f091502a02dd4699f00e336b5c0d901": {
       "address": "0x9522ce4e7f091502a02dd4699f00e336b5c0d901",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7833,7 +7642,6 @@
     },
     "0xf0d5dbe12bab014f7546abb54b628b8b89938c9b": {
       "address": "0xf0d5dbe12bab014f7546abb54b628b8b89938c9b",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7865,7 +7673,6 @@
     },
     "0x137f4a9938fb06cd309312842557dbcbe4240b36": {
       "address": "0x137f4a9938fb06cd309312842557dbcbe4240b36",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7897,7 +7704,6 @@
     },
     "0xf549db47ff9362db3c4bfc6d26a547de60ef67d9": {
       "address": "0xf549db47ff9362db3c4bfc6d26a547de60ef67d9",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7929,7 +7735,6 @@
     },
     "0x52386be2397e8eac26298f733b390684203fb580": {
       "address": "0x52386be2397e8eac26298f733b390684203fb580",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7961,7 +7766,6 @@
     },
     "0x4867dca57c00641332cdb96a4746b3eb29360618": {
       "address": "0x4867dca57c00641332cdb96a4746b3eb29360618",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -7993,7 +7797,6 @@
     },
     "0x927f7d7e443a87da77a293970a7aed8bb404f955": {
       "address": "0x927f7d7e443a87da77a293970a7aed8bb404f955",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -8039,7 +7842,6 @@
     },
     "0x4b47052498d469ac9521606a67d6f02afeb0985a": {
       "address": "0x4b47052498d469ac9521606a67d6f02afeb0985a",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -8085,7 +7887,6 @@
     },
     "0xedaa936b4a0698d386b253749ad8b996f7111710": {
       "address": "0xedaa936b4a0698d386b253749ad8b996f7111710",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8117,7 +7918,6 @@
     },
     "0x33f0b030bc80809bd287af9177289d8624c04477": {
       "address": "0x33f0b030bc80809bd287af9177289d8624c04477",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8149,7 +7949,6 @@
     },
     "0x0d4b3689e15758f76216ea96bf4757b445a62b64": {
       "address": "0x0d4b3689e15758f76216ea96bf4757b445a62b64",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8181,7 +7980,6 @@
     },
     "0x5adb5940c38f4b15d16fa78c766f444eede63d7d": {
       "address": "0x5adb5940c38f4b15d16fa78c766f444eede63d7d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8213,7 +8011,6 @@
     },
     "0xd7da6c065fb6ada5a9f2e8b2f88e84f4a63d0d93": {
       "address": "0xd7da6c065fb6ada5a9f2e8b2f88e84f4a63d0d93",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8245,7 +8042,6 @@
     },
     "0x2f4f70a13a28542108a93fd538d1d776549a833f": {
       "address": "0x2f4f70a13a28542108a93fd538d1d776549a833f",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8277,7 +8073,6 @@
     },
     "0xede9129da3340414d172b45cbef924a1b500f6e0": {
       "address": "0xede9129da3340414d172b45cbef924a1b500f6e0",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -8323,7 +8118,6 @@
     },
     "0x0dc5be10ec62a3ea25aa5843d2130e89d6227433": {
       "address": "0x0dc5be10ec62a3ea25aa5843d2130e89d6227433",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8355,7 +8149,6 @@
     },
     "0x0b39402f404f956148485f1a8614bf72a86479d6": {
       "address": "0x0b39402f404f956148485f1a8614bf72a86479d6",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -8401,7 +8194,6 @@
     },
     "0xae0222ea1c24c3579b4cc751a2be757abedfd78e": {
       "address": "0xae0222ea1c24c3579b4cc751a2be757abedfd78e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8433,7 +8225,6 @@
     },
     "0x89edb9a39ecd222c217b08aecb22c530178ae595": {
       "address": "0x89edb9a39ecd222c217b08aecb22c530178ae595",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8465,7 +8256,6 @@
     },
     "0x59ca61a9a253bf8c9e6059d8c3f9934f947b52cd": {
       "address": "0x59ca61a9a253bf8c9e6059d8c3f9934f947b52cd",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8497,7 +8287,6 @@
     },
     "0x8658f0732e340c3b300f0e6236914c0394e7b2e6": {
       "address": "0x8658f0732e340c3b300f0e6236914c0394e7b2e6",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -8543,7 +8332,6 @@
     },
     "0x293a72eeafadb3c2153adffae37da84c1a2ad70d": {
       "address": "0x293a72eeafadb3c2153adffae37da84c1a2ad70d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8575,7 +8363,6 @@
     },
     "0x00e6c9104a59600f920317aa909befe67f7c76db": {
       "address": "0x00e6c9104a59600f920317aa909befe67f7c76db",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8607,7 +8394,6 @@
     },
     "0x9a155521e258b2ed3575cb2743ac7a14fb3c5508": {
       "address": "0x9a155521e258b2ed3575cb2743ac7a14fb3c5508",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -8653,7 +8439,6 @@
     },
     "0x9b0abee957cb0427290bd5ebc84b7d77364dc09a": {
       "address": "0x9b0abee957cb0427290bd5ebc84b7d77364dc09a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8685,7 +8470,6 @@
     },
     "0xf63a8cd1ef7458aa2f3af6e39d6f91aff844fee5": {
       "address": "0xf63a8cd1ef7458aa2f3af6e39d6f91aff844fee5",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -8731,7 +8515,6 @@
     },
     "0x7065aef707f7a58947cebf52af9647a29c7edee8": {
       "address": "0x7065aef707f7a58947cebf52af9647a29c7edee8",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -8777,7 +8560,6 @@
     },
     "0x958c50a13afe090c24a43fff5f4334e6f92a2891": {
       "address": "0x958c50a13afe090c24a43fff5f4334e6f92a2891",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8809,7 +8591,6 @@
     },
     "0x1397bb71e99d2e688ee78a8483d280f48027be2b": {
       "address": "0x1397bb71e99d2e688ee78a8483d280f48027be2b",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8841,7 +8622,6 @@
     },
     "0x1143b26acc769d50c56bc86f9e9986af390d1bbe": {
       "address": "0x1143b26acc769d50c56bc86f9e9986af390d1bbe",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8873,7 +8653,6 @@
     },
     "0x570fca2c6f902949dbb90664be5680fec94a84f6": {
       "address": "0x570fca2c6f902949dbb90664be5680fec94a84f6",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8905,7 +8684,6 @@
     },
     "0xa7b44dc94364c1c545a7d36d2e886f04538b9a24": {
       "address": "0xa7b44dc94364c1c545a7d36d2e886f04538b9a24",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -8937,7 +8715,6 @@
     },
     "0x0f02880c95d3ab8ab30ac2fc6227f432f58333fa": {
       "address": "0x0f02880c95d3ab8ab30ac2fc6227f432f58333fa",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -8983,7 +8760,6 @@
     },
     "0xf5ddacaaf8dcee0bb972caef1b238066f5c1573c": {
       "address": "0xf5ddacaaf8dcee0bb972caef1b238066f5c1573c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9015,7 +8791,6 @@
     },
     "0x8f7131da7c374566ad3084049d4e1806ed183a27": {
       "address": "0x8f7131da7c374566ad3084049d4e1806ed183a27",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9047,7 +8822,6 @@
     },
     "0xe593e848f3c14eff6fd1ca61ea334e3b67a58bc7": {
       "address": "0xe593e848f3c14eff6fd1ca61ea334e3b67a58bc7",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9079,7 +8853,6 @@
     },
     "0x90c11c8f649ec6a1ab0bec86a6ce4fe3fbeadd49": {
       "address": "0x90c11c8f649ec6a1ab0bec86a6ce4fe3fbeadd49",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9111,7 +8884,6 @@
     },
     "0x6500868ab045433784046cfd0ad6337af505cde7": {
       "address": "0x6500868ab045433784046cfd0ad6337af505cde7",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9143,7 +8915,6 @@
     },
     "0xf0427162e6a4701be0a66e639d156b7eadacb4a6": {
       "address": "0xf0427162e6a4701be0a66e639d156b7eadacb4a6",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9175,7 +8946,6 @@
     },
     "0x81e98c5cc3f0e98b5032f92e44006ad6efc20320": {
       "address": "0x81e98c5cc3f0e98b5032f92e44006ad6efc20320",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9207,7 +8977,6 @@
     },
     "0x3d6d656c1bf92f7028ce4c352563e1c363c58ed5": {
       "address": "0x3d6d656c1bf92f7028ce4c352563e1c363c58ed5",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -9253,7 +9022,6 @@
     },
     "0xdb53c7d23fa1b8f971480e133e1ff34f45e15f5b": {
       "address": "0xdb53c7d23fa1b8f971480e133e1ff34f45e15f5b",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -9299,7 +9067,6 @@
     },
     "0x264ba4b171eec8079b53eeb5edf0b6ba7d9bbaaf": {
       "address": "0x264ba4b171eec8079b53eeb5edf0b6ba7d9bbaaf",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9331,7 +9098,6 @@
     },
     "0x6282072b4b5fdf0579293d28e9d7788870c6523a": {
       "address": "0x6282072b4b5fdf0579293d28e9d7788870c6523a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9363,7 +9129,6 @@
     },
     "0xa26ec02245c14f995c39e51f35339fd9ddf85694": {
       "address": "0xa26ec02245c14f995c39e51f35339fd9ddf85694",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9395,7 +9160,6 @@
     },
     "0x161fbbe61e224c1aaa9bd0b3444e45af7fff779d": {
       "address": "0x161fbbe61e224c1aaa9bd0b3444e45af7fff779d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9427,7 +9191,6 @@
     },
     "0x003ececc24694ba39f149b445a7f84bfe715d9d2": {
       "address": "0x003ececc24694ba39f149b445a7f84bfe715d9d2",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -9473,7 +9236,6 @@
     },
     "0xa59d2948de0aa16468f13328d141b14dd57fd5ed": {
       "address": "0xa59d2948de0aa16468f13328d141b14dd57fd5ed",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -9519,7 +9281,6 @@
     },
     "0x0f14341a7f464320319025540e8fe48ad0fe5aec": {
       "address": "0x0f14341a7f464320319025540e8fe48ad0fe5aec",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -9565,7 +9326,6 @@
     },
     "0xfb24080398dae85be90714f53ba41c0eb94cfe5d": {
       "address": "0xfb24080398dae85be90714f53ba41c0eb94cfe5d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9597,7 +9357,6 @@
     },
     "0x44fb3f95118bf09ba74e31dc8a125f2934c7b934": {
       "address": "0x44fb3f95118bf09ba74e31dc8a125f2934c7b934",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -9643,7 +9402,6 @@
     },
     "0x7e884e885ac2ec3241fef4b560f7d1aaedcc0e50": {
       "address": "0x7e884e885ac2ec3241fef4b560f7d1aaedcc0e50",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9675,7 +9433,6 @@
     },
     "0x1a351fb54ef5eb9b827c4b148d2cae352ef064ae": {
       "address": "0x1a351fb54ef5eb9b827c4b148d2cae352ef064ae",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -9721,7 +9478,6 @@
     },
     "0xffd2b2a65bd8b855c77e591e7258a39b0f071814": {
       "address": "0xffd2b2a65bd8b855c77e591e7258a39b0f071814",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9753,7 +9509,6 @@
     },
     "0xba79cb48c62c608f96b3a87ee0d11b0e7b7628c4": {
       "address": "0xba79cb48c62c608f96b3a87ee0d11b0e7b7628c4",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9785,7 +9540,6 @@
     },
     "0xc1a3fee4132e9285f41f5389570fd9fbbcb10a1d": {
       "address": "0xc1a3fee4132e9285f41f5389570fd9fbbcb10a1d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9817,7 +9571,6 @@
     },
     "0x50013640dd8728fe5ecd211bd8b8c43997b89c6e": {
       "address": "0x50013640dd8728fe5ecd211bd8b8c43997b89c6e",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -9863,7 +9616,6 @@
     },
     "0xd93e82b9969cc9a016bc58f5d1d7f83918fd9c79": {
       "address": "0xd93e82b9969cc9a016bc58f5d1d7f83918fd9c79",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9895,7 +9647,6 @@
     },
     "0x5781ba401cd4540cf6d4a56af297884030131949": {
       "address": "0x5781ba401cd4540cf6d4a56af297884030131949",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -9927,7 +9678,6 @@
     },
     "0xa78aad9716ee572857ba0c0e7e516c7a6a361479": {
       "address": "0xa78aad9716ee572857ba0c0e7e516c7a6a361479",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -9987,7 +9737,6 @@
     },
     "0x9dc9d5913ce8ccc6b05fd1cd857b025a31f7acd9": {
       "address": "0x9dc9d5913ce8ccc6b05fd1cd857b025a31f7acd9",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10019,7 +9768,6 @@
     },
     "0x7369626cd0070000000000000000000000000000": {
       "address": "0x7369626cd0070000000000000000000000000000",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10051,7 +9799,6 @@
     },
     "0x5bc61f217708786ffc5ce920292e906c80e2787a": {
       "address": "0x5bc61f217708786ffc5ce920292e906c80e2787a",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -10097,7 +9844,6 @@
     },
     "0x84119843f8cbc7abd9a1b7ee3e3a2fc579631a2c": {
       "address": "0x84119843f8cbc7abd9a1b7ee3e3a2fc579631a2c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10129,7 +9875,6 @@
     },
     "0x01f9b28fb09d25d3774415bc0b9f3e083ace7a42": {
       "address": "0x01f9b28fb09d25d3774415bc0b9f3e083ace7a42",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10161,7 +9906,6 @@
     },
     "0xabcf7060a68f62624f7569ada9d78b5a5db0782a": {
       "address": "0xabcf7060a68f62624f7569ada9d78b5a5db0782a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10193,7 +9937,6 @@
     },
     "0x50c127828c5007a227b87240198e08151fe3d1d3": {
       "address": "0x50c127828c5007a227b87240198e08151fe3d1d3",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -10253,7 +9996,6 @@
     },
     "0x6e195bab8e9d751d42c467ae94078c60d9ce2c91": {
       "address": "0x6e195bab8e9d751d42c467ae94078c60d9ce2c91",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -10299,7 +10041,6 @@
     },
     "0x15e844bdcaf1a38b55ac76e40921c81282ef4c20": {
       "address": "0x15e844bdcaf1a38b55ac76e40921c81282ef4c20",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10331,7 +10072,6 @@
     },
     "0x60b82642d08eb67148175f1782563eadbad88888": {
       "address": "0x60b82642d08eb67148175f1782563eadbad88888",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10363,7 +10103,6 @@
     },
     "0x7e093ba1474b79481f9b87d66c99a819f25e82e2": {
       "address": "0x7e093ba1474b79481f9b87d66c99a819f25e82e2",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10395,7 +10134,6 @@
     },
     "0xc1314ecdf8b95934ea374476db1ceb742bc18e07": {
       "address": "0xc1314ecdf8b95934ea374476db1ceb742bc18e07",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10427,7 +10165,6 @@
     },
     "0x6a7acb326acd78ad2fee10de87145acb16c7c0eb": {
       "address": "0x6a7acb326acd78ad2fee10de87145acb16c7c0eb",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -10473,7 +10210,6 @@
     },
     "0x9c821b4b5d633f8035fe86da5277c9468c7427fc": {
       "address": "0x9c821b4b5d633f8035fe86da5277c9468c7427fc",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10505,7 +10241,6 @@
     },
     "0xad160f5fe0a7e6a7077bfc4e3db763ba64f4ebe3": {
       "address": "0xad160f5fe0a7e6a7077bfc4e3db763ba64f4ebe3",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10537,7 +10272,6 @@
     },
     "0x88a39b052d477cfde47600a7c9950a441ce61cb4": {
       "address": "0x88a39b052d477cfde47600a7c9950a441ce61cb4",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10569,7 +10303,6 @@
     },
     "0xd164e1a50959dedff7c75725324a1c9d455e4606": {
       "address": "0xd164e1a50959dedff7c75725324a1c9d455e4606",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10601,7 +10334,6 @@
     },
     "0xc9f325ef3900d56e3ddc7eedc82b7447a623e7af": {
       "address": "0xc9f325ef3900d56e3ddc7eedc82b7447a623e7af",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10633,7 +10365,6 @@
     },
     "0x9c5933b31da8b545261d6a35cfe556255ca2e853": {
       "address": "0x9c5933b31da8b545261d6a35cfe556255ca2e853",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10665,7 +10396,6 @@
     },
     "0x6fe2d8204df433d5115e1839a87afad598e7aece": {
       "address": "0x6fe2d8204df433d5115e1839a87afad598e7aece",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10697,7 +10427,6 @@
     },
     "0x735182c782cb8e7806f8903de7913e6880cbf82e": {
       "address": "0x735182c782cb8e7806f8903de7913e6880cbf82e",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -10777,7 +10506,6 @@
     },
     "0x8e50eab759a937ae28be85d1477287113aefa14e": {
       "address": "0x8e50eab759a937ae28be85d1477287113aefa14e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10809,7 +10537,6 @@
     },
     "0xc16125cfcd0b82681a776fe7ce8ff8b090a8cbf5": {
       "address": "0xc16125cfcd0b82681a776fe7ce8ff8b090a8cbf5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10841,7 +10568,6 @@
     },
     "0x4e3c172d0e7fa56daa873860b4fb0ec8a647f78d": {
       "address": "0x4e3c172d0e7fa56daa873860b4fb0ec8a647f78d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10873,7 +10599,6 @@
     },
     "0xef0d6c11cbee22fa642582024380efbd893aa1a6": {
       "address": "0xef0d6c11cbee22fa642582024380efbd893aa1a6",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -10919,7 +10644,6 @@
     },
     "0xae354a3233e36bc91149419e068658c01bacb9a8": {
       "address": "0xae354a3233e36bc91149419e068658c01bacb9a8",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -10951,7 +10675,6 @@
     },
     "0x5c597e485e9b7b55074ffca365497ec61a842ae3": {
       "address": "0x5c597e485e9b7b55074ffca365497ec61a842ae3",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -11045,7 +10768,6 @@
     },
     "0xc6add77471359860aa176a7fb7097df5b41f851a": {
       "address": "0xc6add77471359860aa176a7fb7097df5b41f851a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11077,7 +10799,6 @@
     },
     "0x202e95b57f12be510d52341ec01a763e4356b821": {
       "address": "0x202e95b57f12be510d52341ec01a763e4356b821",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11109,7 +10830,6 @@
     },
     "0x15c06e8344f9bcc6d4bc99707f11713c37e03261": {
       "address": "0x15c06e8344f9bcc6d4bc99707f11713c37e03261",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11141,7 +10861,6 @@
     },
     "0xb530487117d717cd89dad97b62935255e865d159": {
       "address": "0xb530487117d717cd89dad97b62935255e865d159",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11173,7 +10892,6 @@
     },
     "0xa7547faeabbdfe5d805133622fbe3c7d473c188b": {
       "address": "0xa7547faeabbdfe5d805133622fbe3c7d473c188b",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11205,7 +10923,6 @@
     },
     "0x63097899c0fbabc302a5d10484f22bec9fe454dd": {
       "address": "0x63097899c0fbabc302a5d10484f22bec9fe454dd",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -11265,7 +10982,6 @@
     },
     "0xb89fc15f5b4a2739f49aa8089d78a69951fa1d91": {
       "address": "0xb89fc15f5b4a2739f49aa8089d78a69951fa1d91",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -11311,7 +11027,6 @@
     },
     "0x5e6ae357047a1ed1a83737cbfa8fc691cdff61a5": {
       "address": "0x5e6ae357047a1ed1a83737cbfa8fc691cdff61a5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11343,7 +11058,6 @@
     },
     "0x10d0739e251f5c212312d023c9fcfe0fdcafca23": {
       "address": "0x10d0739e251f5c212312d023c9fcfe0fdcafca23",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -11389,7 +11103,6 @@
     },
     "0x32212774827946630b48683aa05b82f7e9777301": {
       "address": "0x32212774827946630b48683aa05b82f7e9777301",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11421,7 +11134,6 @@
     },
     "0xc6e8bcff17a2838650c180f2fa7d0dbfa6866d72": {
       "address": "0xc6e8bcff17a2838650c180f2fa7d0dbfa6866d72",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11453,7 +11165,6 @@
     },
     "0xcc8e48ff6512fefb3acf32de714d5b63462ba564": {
       "address": "0xcc8e48ff6512fefb3acf32de714d5b63462ba564",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11485,7 +11196,6 @@
     },
     "0xbf859a5254b130991f1c15fdf78cdaa59b13fd3c": {
       "address": "0xbf859a5254b130991f1c15fdf78cdaa59b13fd3c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11517,7 +11227,6 @@
     },
     "0x0afc4e73473eedcdb0b7f1e353ba7c55b4b25ee9": {
       "address": "0x0afc4e73473eedcdb0b7f1e353ba7c55b4b25ee9",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11549,7 +11258,6 @@
     },
     "0xbaa91b4ce7deac713d13a692e7439578b9ecf1b2": {
       "address": "0xbaa91b4ce7deac713d13a692e7439578b9ecf1b2",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11581,7 +11289,6 @@
     },
     "0x90139354e9aa6b142578fb8c7ac82a57cffa886d": {
       "address": "0x90139354e9aa6b142578fb8c7ac82a57cffa886d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11613,7 +11320,6 @@
     },
     "0x67a7e31fc12a00df144b520c900bed82254d5db3": {
       "address": "0x67a7e31fc12a00df144b520c900bed82254d5db3",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -11659,7 +11365,6 @@
     },
     "0x0d59bb0cffeeb43ebf2d42517f0d6069f1f393bb": {
       "address": "0x0d59bb0cffeeb43ebf2d42517f0d6069f1f393bb",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -11695,7 +11400,6 @@
     },
     "0x000000000f681d85374225edeeadc25560c1fb3f": {
       "address": "0x000000000f681d85374225edeeadc25560c1fb3f",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11727,7 +11431,6 @@
     },
     "0x6e9dcc05c020172e35aaa8f394cf414ef8f23cf6": {
       "address": "0x6e9dcc05c020172e35aaa8f394cf414ef8f23cf6",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11759,7 +11462,6 @@
     },
     "0x3f054ac8f87c90d42e49e5363664ce3edcc6ecc2": {
       "address": "0x3f054ac8f87c90d42e49e5363664ce3edcc6ecc2",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11791,7 +11493,6 @@
     },
     "0xeae961c8bc0548456cab29b860bd900cfc36cc38": {
       "address": "0xeae961c8bc0548456cab29b860bd900cfc36cc38",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11823,7 +11524,6 @@
     },
     "0x9405a3bfefd50b511a1f2fad040d6c5d931da9ea": {
       "address": "0x9405a3bfefd50b511a1f2fad040d6c5d931da9ea",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -11869,7 +11569,6 @@
     },
     "0x0000000000000000000000000000000000000000": {
       "address": "0x0000000000000000000000000000000000000000",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11901,7 +11600,6 @@
     },
     "0xc14b5dfbdadceae6d4c5a04e97b8a42e098a2abd": {
       "address": "0xc14b5dfbdadceae6d4c5a04e97b8a42e098a2abd",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -11933,7 +11631,6 @@
     },
     "0x050066b4c414db66954e496972c05852c505c7f4": {
       "address": "0x050066b4c414db66954e496972c05852c505c7f4",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -11979,7 +11676,6 @@
     },
     "0x036e4393a41bd954e9b5c80c7c6ab0557cf1bc95": {
       "address": "0x036e4393a41bd954e9b5c80c7c6ab0557cf1bc95",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12011,7 +11707,6 @@
     },
     "0x33544b792d93973d201ecc5aab5eac7f37720866": {
       "address": "0x33544b792d93973d201ecc5aab5eac7f37720866",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -12057,7 +11752,6 @@
     },
     "0x22d9d6e26d7af6b8a01da05f4354eb4c691948b5": {
       "address": "0x22d9d6e26d7af6b8a01da05f4354eb4c691948b5",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -12103,7 +11797,6 @@
     },
     "0xa97365deb322ffe6e415a011485e54197883e6e7": {
       "address": "0xa97365deb322ffe6e415a011485e54197883e6e7",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12135,7 +11828,6 @@
     },
     "0xf0819f81e42ddccf29df39d2e3dc870b5ab666b9": {
       "address": "0xf0819f81e42ddccf29df39d2e3dc870b5ab666b9",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12167,7 +11859,6 @@
     },
     "0xfd2eef72f3c6806940f289509eb11f9b412b2b51": {
       "address": "0xfd2eef72f3c6806940f289509eb11f9b412b2b51",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12199,7 +11890,6 @@
     },
     "0x4d3d5958b948e8d749fab0236b179fcc55d9aac0": {
       "address": "0x4d3d5958b948e8d749fab0236b179fcc55d9aac0",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12231,7 +11921,6 @@
     },
     "0x196f03b77a1acd0db080006b04d2f3a991ebbe68": {
       "address": "0x196f03b77a1acd0db080006b04d2f3a991ebbe68",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12263,7 +11952,6 @@
     },
     "0x39278b9e346faf4b453d3c2e53515a594abd8484": {
       "address": "0x39278b9e346faf4b453d3c2e53515a594abd8484",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12295,7 +11983,6 @@
     },
     "0x13783f40743729a5180a200a07dd8c6c0ea14bb6": {
       "address": "0x13783f40743729a5180a200a07dd8c6c0ea14bb6",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12327,7 +12014,6 @@
     },
     "0x67131485a916b02f50006d01cc82b93d2778dc65": {
       "address": "0x67131485a916b02f50006d01cc82b93d2778dc65",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12359,7 +12045,6 @@
     },
     "0xd46a2f6808b0ed324b2bbbf60a5ff4c3e307542b": {
       "address": "0xd46a2f6808b0ed324b2bbbf60a5ff4c3e307542b",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12391,7 +12076,6 @@
     },
     "0x46c61eb9e516cb14fdec2c4711cc2b57b15b8cd0": {
       "address": "0x46c61eb9e516cb14fdec2c4711cc2b57b15b8cd0",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12423,7 +12107,6 @@
     },
     "0xb778ef14b0cc6009e798e21a25847b4756ed5975": {
       "address": "0xb778ef14b0cc6009e798e21a25847b4756ed5975",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12455,7 +12138,6 @@
     },
     "0x466a8c62ea9eb6f49c718a0244b095ab05519dea": {
       "address": "0x466a8c62ea9eb6f49c718a0244b095ab05519dea",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -12515,7 +12197,6 @@
     },
     "0x7ae77149ed38c5dd313e9069d790ce7085caf0a6": {
       "address": "0x7ae77149ed38c5dd313e9069d790ce7085caf0a6",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12547,7 +12228,6 @@
     },
     "0xf15d35d68e67cd2fd6e6fe9268cf210ee45c677d": {
       "address": "0xf15d35d68e67cd2fd6e6fe9268cf210ee45c677d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12579,7 +12259,6 @@
     },
     "0x020f80fb107ca01beea3b4e916a81e226d730bcf": {
       "address": "0x020f80fb107ca01beea3b4e916a81e226d730bcf",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -12625,7 +12304,6 @@
     },
     "0x6d58244f839cc6a5d71c0d6bccccf99fe5ae2966": {
       "address": "0x6d58244f839cc6a5d71c0d6bccccf99fe5ae2966",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12657,7 +12335,6 @@
     },
     "0xf9587bbf429d985809bba6a12caaf71e0cc75187": {
       "address": "0xf9587bbf429d985809bba6a12caaf71e0cc75187",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12689,7 +12366,6 @@
     },
     "0x534516fa00d43b8799a9cd29e7e48283f029fa23": {
       "address": "0x534516fa00d43b8799a9cd29e7e48283f029fa23",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12721,7 +12397,6 @@
     },
     "0xeadef1ae573b3eb6b609d93d7cad909a798ca428": {
       "address": "0xeadef1ae573b3eb6b609d93d7cad909a798ca428",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12753,7 +12428,6 @@
     },
     "0x97d16d82e1b4ac753884848de865942696154805": {
       "address": "0x97d16d82e1b4ac753884848de865942696154805",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12785,7 +12459,6 @@
     },
     "0xb156c425f325d750968702d4bd4226573edc3aed": {
       "address": "0xb156c425f325d750968702d4bd4226573edc3aed",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12817,7 +12490,6 @@
     },
     "0x24ed08f26f112cff62236bab10f7f0bcbf51c377": {
       "address": "0x24ed08f26f112cff62236bab10f7f0bcbf51c377",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12849,7 +12521,6 @@
     },
     "0x740d5718a79a8559feee8b00922f8cd773a81d84": {
       "address": "0x740d5718a79a8559feee8b00922f8cd773a81d84",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12881,7 +12552,6 @@
     },
     "0xf1caa29541a5bd79f52e61072fd212139d6e01b0": {
       "address": "0xf1caa29541a5bd79f52e61072fd212139d6e01b0",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12913,7 +12583,6 @@
     },
     "0x849887b4ebd54eda52485844dff9bc4574bdfdcd": {
       "address": "0x849887b4ebd54eda52485844dff9bc4574bdfdcd",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -12959,7 +12628,6 @@
     },
     "0xa23d90f2fb496f3055d3d96a2dc991e9133efee9": {
       "address": "0xa23d90f2fb496f3055d3d96a2dc991e9133efee9",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -12991,7 +12659,6 @@
     },
     "0xf25f97f6f7657a210daeb1cd6042b769fae95488": {
       "address": "0xf25f97f6f7657a210daeb1cd6042b769fae95488",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13023,7 +12690,6 @@
     },
     "0xed08134b20a62c24855b844ef7b7d366116304dc": {
       "address": "0xed08134b20a62c24855b844ef7b7d366116304dc",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13055,7 +12721,6 @@
     },
     "0x2e3681007e91347657f314637a20b64ebd3c5cbd": {
       "address": "0x2e3681007e91347657f314637a20b64ebd3c5cbd",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13087,7 +12752,6 @@
     },
     "0xd2c7008400f54aa70af01cf8c747a4473246593e": {
       "address": "0xd2c7008400f54aa70af01cf8c747a4473246593e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13119,7 +12783,6 @@
     },
     "0x9435baadedcf25516867bf774bee7460923363d5": {
       "address": "0x9435baadedcf25516867bf774bee7460923363d5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13151,7 +12814,6 @@
     },
     "0x1fcb63fb0caacea3d346bb96b7c27e29db30bb55": {
       "address": "0x1fcb63fb0caacea3d346bb96b7c27e29db30bb55",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13183,7 +12845,6 @@
     },
     "0x674dd5f4baba87805efe4ac35c43defe50f5b30b": {
       "address": "0x674dd5f4baba87805efe4ac35c43defe50f5b30b",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -13229,7 +12890,6 @@
     },
     "0x946343a16b3b88dca7dad175f927949203723991": {
       "address": "0x946343a16b3b88dca7dad175f927949203723991",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13261,7 +12921,6 @@
     },
     "0x3efa13bb61d5749264a0704fa5b0da85aa154758": {
       "address": "0x3efa13bb61d5749264a0704fa5b0da85aa154758",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13293,7 +12952,6 @@
     },
     "0x50b124786343eda92e715103642d4b3fc29c0ce1": {
       "address": "0x50b124786343eda92e715103642d4b3fc29c0ce1",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13325,7 +12983,6 @@
     },
     "0x120ea90253c7c1d353dac0c645a45f750a767c8d": {
       "address": "0x120ea90253c7c1d353dac0c645a45f750a767c8d",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -13347,7 +13004,6 @@
     },
     "0xbcd2e02eade1cbf23f130e382a8cb7b3cdf8ca65": {
       "address": "0xbcd2e02eade1cbf23f130e382a8cb7b3cdf8ca65",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13379,7 +13035,6 @@
     },
     "0x0501426fda52b1c1412c950a5abf40ef53cd6c86": {
       "address": "0x0501426fda52b1c1412c950a5abf40ef53cd6c86",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13411,7 +13066,6 @@
     },
     "0x528608f40f9835cc5e26244309384c8c15e07e60": {
       "address": "0x528608f40f9835cc5e26244309384c8c15e07e60",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13443,7 +13097,6 @@
     },
     "0x8a19ac68b010d1b9a840f5a417751fea500db2a8": {
       "address": "0x8a19ac68b010d1b9a840f5a417751fea500db2a8",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -13489,7 +13142,6 @@
     },
     "0x2c02c4f3db094788bdb60c093d96f834f0fb4bce": {
       "address": "0x2c02c4f3db094788bdb60c093d96f834f0fb4bce",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13521,7 +13173,6 @@
     },
     "0x76a7d086df4927c588de0f62de79db2ffdead666": {
       "address": "0x76a7d086df4927c588de0f62de79db2ffdead666",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13553,7 +13204,6 @@
     },
     "0xb071e64ce2636ebd0aed6569e06f9f87c6f6ae1e": {
       "address": "0xb071e64ce2636ebd0aed6569e06f9f87c6f6ae1e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13585,7 +13235,6 @@
     },
     "0xf2467f14818b778fa5a55cc34d231e22e9c7a3b4": {
       "address": "0xf2467f14818b778fa5a55cc34d231e22e9c7a3b4",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -13621,7 +13270,6 @@
     },
     "0x3ec5b42376bfbe988cc619a0acfe68049d4fb9bc": {
       "address": "0x3ec5b42376bfbe988cc619a0acfe68049d4fb9bc",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13653,7 +13301,6 @@
     },
     "0xafe5d2284ab5bee3f1bbaf1349910a1c4b5ad0a2": {
       "address": "0xafe5d2284ab5bee3f1bbaf1349910a1c4b5ad0a2",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13685,7 +13332,6 @@
     },
     "0xce2191a070d9f9bf7912954f0117c0013e82ee47": {
       "address": "0xce2191a070d9f9bf7912954f0117c0013e82ee47",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13717,7 +13363,6 @@
     },
     "0x5070f5cc1a839c216dc99952dddb95537804e518": {
       "address": "0x5070f5cc1a839c216dc99952dddb95537804e518",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13749,7 +13394,6 @@
     },
     "0xc95f3bc48aed59667521eed0108ba7ae9a2480b7": {
       "address": "0xc95f3bc48aed59667521eed0108ba7ae9a2480b7",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13781,7 +13425,6 @@
     },
     "0xa4ccff4d2b441a62324dc5336d56f7fbf87da07e": {
       "address": "0xa4ccff4d2b441a62324dc5336d56f7fbf87da07e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13813,7 +13456,6 @@
     },
     "0x39331d3d008ae22ca71cc37d8ed89dc01a3dcc13": {
       "address": "0x39331d3d008ae22ca71cc37d8ed89dc01a3dcc13",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13845,7 +13487,6 @@
     },
     "0x9fc3d617873c95d8dd8dbbdb8377a16cf11376ee": {
       "address": "0x9fc3d617873c95d8dd8dbbdb8377a16cf11376ee",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13877,7 +13518,6 @@
     },
     "0xe2cc4f1e7d609df4b69f35fe3b851f03f228e9ed": {
       "address": "0xe2cc4f1e7d609df4b69f35fe3b851f03f228e9ed",
-      "is_contract": false,
       "breakdown": {
         "evolution_land": {
           "rule_name": "evolution_land",
@@ -13952,7 +13592,6 @@
     },
     "0x00cb275d0ec53715c10328c399f04db847523e66": {
       "address": "0x00cb275d0ec53715c10328c399f04db847523e66",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -13984,7 +13623,6 @@
     },
     "0x59851f1e99ce5cb66797515a54fd7704c27507a2": {
       "address": "0x59851f1e99ce5cb66797515a54fd7704c27507a2",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14016,7 +13654,6 @@
     },
     "0x08a34d53ea8a8956e3a1ea556895c5b85d165b2a": {
       "address": "0x08a34d53ea8a8956e3a1ea556895c5b85d165b2a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14048,7 +13685,6 @@
     },
     "0x48d73e326fb7eac6888b7c5a290e3ddf3d1b8806": {
       "address": "0x48d73e326fb7eac6888b7c5a290e3ddf3d1b8806",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14080,7 +13716,6 @@
     },
     "0x46701c35793873c889d627a2de2013303a4664c0": {
       "address": "0x46701c35793873c889d627a2de2013303a4664c0",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -14126,7 +13761,6 @@
     },
     "0xb7ae3beb06dd402962cef689e7fc6d025ea1028c": {
       "address": "0xb7ae3beb06dd402962cef689e7fc6d025ea1028c",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -14172,7 +13806,6 @@
     },
     "0x6155403432c1020a94e92d39d2c820b4ba98488a": {
       "address": "0x6155403432c1020a94e92d39d2c820b4ba98488a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14204,7 +13837,6 @@
     },
     "0x36238af69f342bed62f69fb1397d809cefe3e029": {
       "address": "0x36238af69f342bed62f69fb1397d809cefe3e029",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14236,7 +13868,6 @@
     },
     "0xe2d73cbd82d663525a625b13cdde76f3640c7444": {
       "address": "0xe2d73cbd82d663525a625b13cdde76f3640c7444",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14268,7 +13899,6 @@
     },
     "0x2854759ff0136038f7326fce6900d6ebf97edd51": {
       "address": "0x2854759ff0136038f7326fce6900d6ebf97edd51",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -14314,7 +13944,6 @@
     },
     "0xd29eba272d899cebdf6606568e7ba43416fc3e89": {
       "address": "0xd29eba272d899cebdf6606568e7ba43416fc3e89",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14346,7 +13975,6 @@
     },
     "0x0fc565c7b8dd952281eb3829a3e95067d41363e5": {
       "address": "0x0fc565c7b8dd952281eb3829a3e95067d41363e5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14378,7 +14006,6 @@
     },
     "0x809274f57e9cb570a1efbb444169237bb615ef72": {
       "address": "0x809274f57e9cb570a1efbb444169237bb615ef72",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14410,7 +14037,6 @@
     },
     "0x666666a66658d97ed8963c979fd260a44c113298": {
       "address": "0x666666a66658d97ed8963c979fd260a44c113298",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14442,7 +14068,6 @@
     },
     "0x178e699c9a6bb2cd624557fbd85ed219e6faba77": {
       "address": "0x178e699c9a6bb2cd624557fbd85ed219e6faba77",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14474,7 +14099,6 @@
     },
     "0xbcdf24077c76026dbd911840df4de861a0e44b20": {
       "address": "0xbcdf24077c76026dbd911840df4de861a0e44b20",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14506,7 +14130,6 @@
     },
     "0x912d7601569cbc2df8a7f0aae50bfd18e8c64d05": {
       "address": "0x912d7601569cbc2df8a7f0aae50bfd18e8c64d05",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14538,7 +14161,6 @@
     },
     "0x617da9f879dd4b0677096fafaab660d5d696c94d": {
       "address": "0x617da9f879dd4b0677096fafaab660d5d696c94d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14570,7 +14192,6 @@
     },
     "0xcb1bedf29b61c1448f57a8805b401d91cff5e7ca": {
       "address": "0xcb1bedf29b61c1448f57a8805b401d91cff5e7ca",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14602,7 +14223,6 @@
     },
     "0x390d9a55eef37581f183afff7b0d4f8ebb8d23fd": {
       "address": "0x390d9a55eef37581f183afff7b0d4f8ebb8d23fd",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14634,7 +14254,6 @@
     },
     "0xc5cf70818024406541e50202c535cc7b234092eb": {
       "address": "0xc5cf70818024406541e50202c535cc7b234092eb",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14666,7 +14285,6 @@
     },
     "0x9dc5886d928a51182dd97c43a1ebc342c6da4516": {
       "address": "0x9dc5886d928a51182dd97c43a1ebc342c6da4516",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -14712,7 +14330,6 @@
     },
     "0x0b001c95e86d64c1ad6e43944c568a6c31b53887": {
       "address": "0x0b001c95e86d64c1ad6e43944c568a6c31b53887",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14744,7 +14361,6 @@
     },
     "0x7657aaf0148e8909cb3ef2f34453a8da88e61e2c": {
       "address": "0x7657aaf0148e8909cb3ef2f34453a8da88e61e2c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14776,7 +14392,6 @@
     },
     "0x1eff28284ec053527a48afe5108806319c3ca667": {
       "address": "0x1eff28284ec053527a48afe5108806319c3ca667",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -14798,7 +14413,6 @@
     },
     "0x2d815240a61731c75fa01b2793e1d3ed09f289d0": {
       "address": "0x2d815240a61731c75fa01b2793e1d3ed09f289d0",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14830,7 +14444,6 @@
     },
     "0x9bdbdb4a8f7f816c87a67f5281484ed902c6b942": {
       "address": "0x9bdbdb4a8f7f816c87a67f5281484ed902c6b942",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14862,7 +14475,6 @@
     },
     "0xd07e6eef663761a0074646d9effe9958e5b0dba3": {
       "address": "0xd07e6eef663761a0074646d9effe9958e5b0dba3",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14894,7 +14506,6 @@
     },
     "0x3e8436e87abb49efe1a958ee73fbb7a12b419aab": {
       "address": "0x3e8436e87abb49efe1a958ee73fbb7a12b419aab",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14926,7 +14537,6 @@
     },
     "0x5d21ec711d3740f21e48d84152e5ca2eb066bbaa": {
       "address": "0x5d21ec711d3740f21e48d84152e5ca2eb066bbaa",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14958,7 +14568,6 @@
     },
     "0x3b9e571adecb0c277486036d6097e9c2cccfa9d9": {
       "address": "0x3b9e571adecb0c277486036d6097e9c2cccfa9d9",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -14990,7 +14599,6 @@
     },
     "0x54ed7cdccca9335b1bb257d937aeeebd5d3a8695": {
       "address": "0x54ed7cdccca9335b1bb257d937aeeebd5d3a8695",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15022,7 +14630,6 @@
     },
     "0x824933b63dfa7d4260273e7fa0e88f54dc4da847": {
       "address": "0x824933b63dfa7d4260273e7fa0e88f54dc4da847",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15054,7 +14661,6 @@
     },
     "0x822e4e429adedd91c96a81db39401a1770b96a5b": {
       "address": "0x822e4e429adedd91c96a81db39401a1770b96a5b",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15086,7 +14692,6 @@
     },
     "0x3039f20d4d8a6432ba620577d1dc9243bf3034e4": {
       "address": "0x3039f20d4d8a6432ba620577d1dc9243bf3034e4",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15118,7 +14723,6 @@
     },
     "0x9ef442ec149dd3bb61b1324209c332a9f2b78e61": {
       "address": "0x9ef442ec149dd3bb61b1324209c332a9f2b78e61",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15150,7 +14754,6 @@
     },
     "0xe59261f6d4088bcd69985a3d369ff14cc54ef1e5": {
       "address": "0xe59261f6d4088bcd69985a3d369ff14cc54ef1e5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15182,7 +14785,6 @@
     },
     "0x5a91fe74ab3788ff58187acaf3fb0a039534428e": {
       "address": "0x5a91fe74ab3788ff58187acaf3fb0a039534428e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15214,7 +14816,6 @@
     },
     "0x07c178bb33d82c2102b47028061ca825e9c8e06a": {
       "address": "0x07c178bb33d82c2102b47028061ca825e9c8e06a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15246,7 +14847,6 @@
     },
     "0x983436f91410e211c0f121908406cf1ca827b83d": {
       "address": "0x983436f91410e211c0f121908406cf1ca827b83d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15278,7 +14878,6 @@
     },
     "0xe892508518c018b2b95b31acd8a5729a8e81b7d4": {
       "address": "0xe892508518c018b2b95b31acd8a5729a8e81b7d4",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15310,7 +14909,6 @@
     },
     "0x0085a7739de16716b5dd5a07d42d08708769c988": {
       "address": "0x0085a7739de16716b5dd5a07d42d08708769c988",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15342,7 +14940,6 @@
     },
     "0x51447ce0a502366658168bf5aaf96f51d22adcee": {
       "address": "0x51447ce0a502366658168bf5aaf96f51d22adcee",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15374,7 +14971,6 @@
     },
     "0xa73c646e14859db9c12a8d96e746d22538ac6324": {
       "address": "0xa73c646e14859db9c12a8d96e746d22538ac6324",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15406,7 +15002,6 @@
     },
     "0xf9d2652bbf716b02bf392b0068b8d4d46290cf27": {
       "address": "0xf9d2652bbf716b02bf392b0068b8d4d46290cf27",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15438,7 +15033,6 @@
     },
     "0xee868bd125655875a9f8871a737a89a73ac7ff36": {
       "address": "0xee868bd125655875a9f8871a737a89a73ac7ff36",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15470,7 +15064,6 @@
     },
     "0x33f572d61ca18a6c5cb8b0f7eb09e2253f415a55": {
       "address": "0x33f572d61ca18a6c5cb8b0f7eb09e2253f415a55",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15502,7 +15095,6 @@
     },
     "0xcf622433d1739db259904867992e572f48a7bd42": {
       "address": "0xcf622433d1739db259904867992e572f48a7bd42",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15534,7 +15126,6 @@
     },
     "0x15290cd9955154de5d18e0cc1ef375bb7f9f2e26": {
       "address": "0x15290cd9955154de5d18e0cc1ef375bb7f9f2e26",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15566,7 +15157,6 @@
     },
     "0xd70a2e6eacbdeda77a5d4bbae3bc70239a0e088f": {
       "address": "0xd70a2e6eacbdeda77a5d4bbae3bc70239a0e088f",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15598,7 +15188,6 @@
     },
     "0xb2a0654c6b2d0975846968d5a3e729f5006c2894": {
       "address": "0xb2a0654c6b2d0975846968d5a3e729f5006c2894",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15630,7 +15219,6 @@
     },
     "0x75dc6c1987a7b49e5e397776814f38ddcf3f9401": {
       "address": "0x75dc6c1987a7b49e5e397776814f38ddcf3f9401",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15662,7 +15250,6 @@
     },
     "0x755d783fd1cb2133a1ae25c2c1d73947cb5deb79": {
       "address": "0x755d783fd1cb2133a1ae25c2c1d73947cb5deb79",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15694,7 +15281,6 @@
     },
     "0x53d64776e99226cf8d41dea1bd5740316f1e0c0d": {
       "address": "0x53d64776e99226cf8d41dea1bd5740316f1e0c0d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15726,7 +15312,6 @@
     },
     "0x90b1df0a21a626170e996079145ee118db7b9d15": {
       "address": "0x90b1df0a21a626170e996079145ee118db7b9d15",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15758,7 +15343,6 @@
     },
     "0x47d1f327db34c828f919fd133590a68a4255f88d": {
       "address": "0x47d1f327db34c828f919fd133590a68a4255f88d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15790,7 +15374,6 @@
     },
     "0xcb3357f8d499543a07131c881c6f4d689552c5d5": {
       "address": "0xcb3357f8d499543a07131c881c6f4d689552c5d5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15822,7 +15405,6 @@
     },
     "0x23b1f02ac08d722e6eacfca220c88ae1d03be7b2": {
       "address": "0x23b1f02ac08d722e6eacfca220c88ae1d03be7b2",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15854,7 +15436,6 @@
     },
     "0xb0aeee83a2358888263a4e5b38a539272f8f87ed": {
       "address": "0xb0aeee83a2358888263a4e5b38a539272f8f87ed",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15886,7 +15467,6 @@
     },
     "0xcd682940b29dc5fc79d6fdabfe67efd311a5f4a6": {
       "address": "0xcd682940b29dc5fc79d6fdabfe67efd311a5f4a6",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15918,7 +15498,6 @@
     },
     "0x84bf2ad689bb579bad1dc856a9c2ede979000e99": {
       "address": "0x84bf2ad689bb579bad1dc856a9c2ede979000e99",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15950,7 +15529,6 @@
     },
     "0xdcbe5dec74162be3ee1063f8c32c71efc7d4cab7": {
       "address": "0xdcbe5dec74162be3ee1063f8c32c71efc7d4cab7",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -15982,7 +15560,6 @@
     },
     "0xb822c9e990817c7cea0a1b393468ba3f85f6a79d": {
       "address": "0xb822c9e990817c7cea0a1b393468ba3f85f6a79d",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -16028,7 +15605,6 @@
     },
     "0x98f19db4501a5a7d593282fcf7a3478ca2d0a219": {
       "address": "0x98f19db4501a5a7d593282fcf7a3478ca2d0a219",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16060,7 +15636,6 @@
     },
     "0x701cbf1d4d6033b0ad5be367b705dad09e0f5845": {
       "address": "0x701cbf1d4d6033b0ad5be367b705dad09e0f5845",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16092,7 +15667,6 @@
     },
     "0xb1bc0a27490e0db6bd19e96ea75c59351898ab4a": {
       "address": "0xb1bc0a27490e0db6bd19e96ea75c59351898ab4a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16124,7 +15698,6 @@
     },
     "0x178d8546c5f78e01133858958355b06ec3406a1a": {
       "address": "0x178d8546c5f78e01133858958355b06ec3406a1a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16156,7 +15729,6 @@
     },
     "0x927951f0e3b2445a4e673fecc0e6c56486a633a9": {
       "address": "0x927951f0e3b2445a4e673fecc0e6c56486a633a9",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16188,7 +15760,6 @@
     },
     "0xb53c9ab4f40196560fdf7811d6a23a8f64dbaa05": {
       "address": "0xb53c9ab4f40196560fdf7811d6a23a8f64dbaa05",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16220,7 +15791,6 @@
     },
     "0x3fbe6a4d2d9b6c662264f21de76da510d1972fef": {
       "address": "0x3fbe6a4d2d9b6c662264f21de76da510d1972fef",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16252,7 +15822,6 @@
     },
     "0x5812d493ad61f762ebab70b57f0865ecf1ff8078": {
       "address": "0x5812d493ad61f762ebab70b57f0865ecf1ff8078",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16284,7 +15853,6 @@
     },
     "0xfa60362c3964cc3a670bfbe8a2e92ae65c3d71e9": {
       "address": "0xfa60362c3964cc3a670bfbe8a2e92ae65c3d71e9",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16316,7 +15884,6 @@
     },
     "0x3884a8a0de69cbf6c9209037b8c478b03c667f55": {
       "address": "0x3884a8a0de69cbf6c9209037b8c478b03c667f55",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16348,7 +15915,6 @@
     },
     "0x49be35d7776032f5c7a7c71d6a51d848db8d15ea": {
       "address": "0x49be35d7776032f5c7a7c71d6a51d848db8d15ea",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16380,7 +15946,6 @@
     },
     "0x29a50a874c7794027df7abec2d1d38ec9a1bfeed": {
       "address": "0x29a50a874c7794027df7abec2d1d38ec9a1bfeed",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16412,7 +15977,6 @@
     },
     "0x431462209f16ba6d0f22b5c8f01540df01ecf686": {
       "address": "0x431462209f16ba6d0f22b5c8f01540df01ecf686",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16444,7 +16008,6 @@
     },
     "0x34cfaeb727b4eb13dba6b8c856f17c3af48f5733": {
       "address": "0x34cfaeb727b4eb13dba6b8c856f17c3af48f5733",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16476,7 +16039,6 @@
     },
     "0x973e72a80e3979b6ab6367cb9ac15d7f62e3687a": {
       "address": "0x973e72a80e3979b6ab6367cb9ac15d7f62e3687a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16508,7 +16070,6 @@
     },
     "0xb25805118f1b471844687a1d1374ffb18207de6c": {
       "address": "0xb25805118f1b471844687a1d1374ffb18207de6c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16540,7 +16101,6 @@
     },
     "0x01c8bf44c4b0a3f57a4aee3c022bad3e441d7b0d": {
       "address": "0x01c8bf44c4b0a3f57a4aee3c022bad3e441d7b0d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16572,7 +16132,6 @@
     },
     "0xd807a82d9e1c08fee63716a3fe2673d7eb82d833": {
       "address": "0xd807a82d9e1c08fee63716a3fe2673d7eb82d833",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16604,7 +16163,6 @@
     },
     "0xdc3d7272851a57d0cc492732cb49efcfe2e6d3b5": {
       "address": "0xdc3d7272851a57d0cc492732cb49efcfe2e6d3b5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16636,7 +16194,6 @@
     },
     "0xcdd05390ced5f4708206ec2f67b124e9ce405aa1": {
       "address": "0xcdd05390ced5f4708206ec2f67b124e9ce405aa1",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -16682,7 +16239,6 @@
     },
     "0xcaeaf98f2131022a62841f798f47b904cdcb7114": {
       "address": "0xcaeaf98f2131022a62841f798f47b904cdcb7114",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16714,7 +16270,6 @@
     },
     "0xaeb5d41337667ebe2028dea9752ff06e9c874e42": {
       "address": "0xaeb5d41337667ebe2028dea9752ff06e9c874e42",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16746,7 +16301,6 @@
     },
     "0xb1543d879c0274937d8e217285f6273e0679d1e3": {
       "address": "0xb1543d879c0274937d8e217285f6273e0679d1e3",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16778,7 +16332,6 @@
     },
     "0xc5c1c9c3cea2f4a68e540b18e63310310fd8af57": {
       "address": "0xc5c1c9c3cea2f4a68e540b18e63310310fd8af57",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16810,7 +16363,6 @@
     },
     "0x5d3c814f82ef2b22101635f8c6a3e7c8e09e7dd6": {
       "address": "0x5d3c814f82ef2b22101635f8c6a3e7c8e09e7dd6",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16842,7 +16394,6 @@
     },
     "0x0000000000000000000000000000000000000201": {
       "address": "0x0000000000000000000000000000000000000201",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16874,7 +16425,6 @@
     },
     "0xd0acdbbbe667143673758c964ca29db14753d867": {
       "address": "0xd0acdbbbe667143673758c964ca29db14753d867",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16906,7 +16456,6 @@
     },
     "0xd88f34679b914c4c677ddc78ae0bad7cdf6760cc": {
       "address": "0xd88f34679b914c4c677ddc78ae0bad7cdf6760cc",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16938,7 +16487,6 @@
     },
     "0xf98f1a9187fda37e4adc82cc4063adef701339bc": {
       "address": "0xf98f1a9187fda37e4adc82cc4063adef701339bc",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -16970,7 +16518,6 @@
     },
     "0x7d0caefbe8a6f66aea68389f8cbff9052acd8fd7": {
       "address": "0x7d0caefbe8a6f66aea68389f8cbff9052acd8fd7",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17002,7 +16549,6 @@
     },
     "0x0000000000000000000000000000000000000101": {
       "address": "0x0000000000000000000000000000000000000101",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17034,7 +16580,6 @@
     },
     "0x5357749232f2ec655e3d87204c84a5c6457b2d45": {
       "address": "0x5357749232f2ec655e3d87204c84a5c6457b2d45",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17066,7 +16611,6 @@
     },
     "0x61450faad2074d2e52fb4acaaeaca74a414c05b1": {
       "address": "0x61450faad2074d2e52fb4acaaeaca74a414c05b1",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17098,7 +16642,6 @@
     },
     "0xe32c5673b152571e57976bf3a75068917da2da9c": {
       "address": "0xe32c5673b152571e57976bf3a75068917da2da9c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17130,7 +16673,6 @@
     },
     "0x0232ea6cf17f32fe71a3b7980104e3886dcb8c13": {
       "address": "0x0232ea6cf17f32fe71a3b7980104e3886dcb8c13",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17162,7 +16704,6 @@
     },
     "0x60116d44cbc616d4dc112cd37bcf2e40afc1cec7": {
       "address": "0x60116d44cbc616d4dc112cd37bcf2e40afc1cec7",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17194,7 +16735,6 @@
     },
     "0xeb814112d97d159736b8cef4da11ba1300cb6f77": {
       "address": "0xeb814112d97d159736b8cef4da11ba1300cb6f77",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17226,7 +16766,6 @@
     },
     "0xcf2a29f8489cad9d193195a530e43f82a9a626d8": {
       "address": "0xcf2a29f8489cad9d193195a530e43f82a9a626d8",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -17272,7 +16811,6 @@
     },
     "0x66a99fea12f37883c2d82dc4fa8179428e0c3d34": {
       "address": "0x66a99fea12f37883c2d82dc4fa8179428e0c3d34",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -17318,7 +16856,6 @@
     },
     "0x61e1592941555533dc9a53b40e6f04bedd721daf": {
       "address": "0x61e1592941555533dc9a53b40e6f04bedd721daf",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17350,7 +16887,6 @@
     },
     "0xdda50999e94049d288ded0555f6fd6406f27b27c": {
       "address": "0xdda50999e94049d288ded0555f6fd6406f27b27c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17382,7 +16918,6 @@
     },
     "0x6a8cfdf197eb48593ac86738b3b23edcd91923c7": {
       "address": "0x6a8cfdf197eb48593ac86738b3b23edcd91923c7",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17414,7 +16949,6 @@
     },
     "0xf422673cb7a673f595852f7b00906408a0b073db": {
       "address": "0xf422673cb7a673f595852f7b00906408a0b073db",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17446,7 +16980,6 @@
     },
     "0x54431487399334c8e44756e36b9c2ec41e2d2adf": {
       "address": "0x54431487399334c8e44756e36b9c2ec41e2d2adf",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17478,7 +17011,6 @@
     },
     "0x866d56c7f6cb8d958a60a2c9823d1a878604584d": {
       "address": "0x866d56c7f6cb8d958a60a2c9823d1a878604584d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17510,7 +17042,6 @@
     },
     "0xc1c3d0cd8c23bdec19b7f8d2601cc3b3b35c2629": {
       "address": "0xc1c3d0cd8c23bdec19b7f8d2601cc3b3b35c2629",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17542,7 +17073,6 @@
     },
     "0x5ebdfe236a8a75cc379ac2ad8cd754ee38297477": {
       "address": "0x5ebdfe236a8a75cc379ac2ad8cd754ee38297477",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17574,7 +17104,6 @@
     },
     "0xdd2447027374b49fdd8ffd55f36d5dd7a68b1eab": {
       "address": "0xdd2447027374b49fdd8ffd55f36d5dd7a68b1eab",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17606,7 +17135,6 @@
     },
     "0x8bec6f67b64d428f6d61db5bd859a98b23a2bb78": {
       "address": "0x8bec6f67b64d428f6d61db5bd859a98b23a2bb78",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17638,7 +17166,6 @@
     },
     "0x0e059f47cb04ce5ef7502f5ca2545d8102c0f9cd": {
       "address": "0x0e059f47cb04ce5ef7502f5ca2545d8102c0f9cd",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -17684,7 +17211,6 @@
     },
     "0xcaf089b715fe1ef13b17fc82b046d67a7caf37ec": {
       "address": "0xcaf089b715fe1ef13b17fc82b046d67a7caf37ec",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17716,7 +17242,6 @@
     },
     "0x02781de9cb2a77dace2cc02c8c7f53f7ce176050": {
       "address": "0x02781de9cb2a77dace2cc02c8c7f53f7ce176050",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17748,7 +17273,6 @@
     },
     "0x486302761676596ecd74758b99f7f886ccb24154": {
       "address": "0x486302761676596ecd74758b99f7f886ccb24154",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17780,7 +17304,6 @@
     },
     "0x675ee25611307e630bffec1e26ceae5e4f7faaa8": {
       "address": "0x675ee25611307e630bffec1e26ceae5e4f7faaa8",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17812,7 +17335,6 @@
     },
     "0x0000000000000000000000000000000000000019": {
       "address": "0x0000000000000000000000000000000000000019",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17844,7 +17366,6 @@
     },
     "0x0000000000000000000000000000000000000100": {
       "address": "0x0000000000000000000000000000000000000100",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17876,7 +17397,6 @@
     },
     "0x0000000000000000000000000000000000000200": {
       "address": "0x0000000000000000000000000000000000000200",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17908,7 +17428,6 @@
     },
     "0x4726b9bc01b89b9ea837d70083c5d254a033b3be": {
       "address": "0x4726b9bc01b89b9ea837d70083c5d254a033b3be",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17940,7 +17459,6 @@
     },
     "0x7b156c51ab341b56ccc06a5c70bc55e225d8149f": {
       "address": "0x7b156c51ab341b56ccc06a5c70bc55e225d8149f",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -17972,7 +17490,6 @@
     },
     "0x500ab76d119f52b5cc3acb3e69f56c233ba19378": {
       "address": "0x500ab76d119f52b5cc3acb3e69f56c233ba19378",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18004,7 +17521,6 @@
     },
     "0x18f8f927a9a4241e3b4f74dfc5303b4bc0801cc7": {
       "address": "0x18f8f927a9a4241e3b4f74dfc5303b4bc0801cc7",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18036,7 +17552,6 @@
     },
     "0x5dec2357ce64341e77fb7fc040d776f00ad583ac": {
       "address": "0x5dec2357ce64341e77fb7fc040d776f00ad583ac",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18068,7 +17583,6 @@
     },
     "0x7f79acea907581eee21d2e0a85e44b0476b23d98": {
       "address": "0x7f79acea907581eee21d2e0a85e44b0476b23d98",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18100,7 +17614,6 @@
     },
     "0xd41f35b0eb9acc747ed2a603a06a45a2aa48e028": {
       "address": "0xd41f35b0eb9acc747ed2a603a06a45a2aa48e028",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18132,7 +17645,6 @@
     },
     "0xae9dc6a768bb39f376ee9526b98ef0dbc13f313d": {
       "address": "0xae9dc6a768bb39f376ee9526b98ef0dbc13f313d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18164,7 +17676,6 @@
     },
     "0x68a0e137814cdb50e445824ef6af5a5bf9b8bd8d": {
       "address": "0x68a0e137814cdb50e445824ef6af5a5bf9b8bd8d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18196,7 +17707,6 @@
     },
     "0x585aea55bc6191ffaa9d5606af3bf1f34ff85e27": {
       "address": "0x585aea55bc6191ffaa9d5606af3bf1f34ff85e27",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18228,7 +17738,6 @@
     },
     "0x42038c1fd16bcf423891d89631447e8a12846c68": {
       "address": "0x42038c1fd16bcf423891d89631447e8a12846c68",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18260,7 +17769,6 @@
     },
     "0xaff5ccb996125dee3c12fbe4910b418c138646d0": {
       "address": "0xaff5ccb996125dee3c12fbe4910b418c138646d0",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18292,7 +17800,6 @@
     },
     "0x14f8680954cd0b4f31111aebf3b2e20e953aac5d": {
       "address": "0x14f8680954cd0b4f31111aebf3b2e20e953aac5d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18324,7 +17831,6 @@
     },
     "0x42e76f8ce07e6a2525c0467e2b3792395e41a50b": {
       "address": "0x42e76f8ce07e6a2525c0467e2b3792395e41a50b",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18356,7 +17862,6 @@
     },
     "0xfa0227bcea2e4bca6461c9163b1611904857e237": {
       "address": "0xfa0227bcea2e4bca6461c9163b1611904857e237",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18388,7 +17893,6 @@
     },
     "0x215995d647a6d0d2c470e26e2696fc36b0567691": {
       "address": "0x215995d647a6d0d2c470e26e2696fc36b0567691",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18420,7 +17924,6 @@
     },
     "0xc665138b8ac77086af08d83cfc6410501624ffaa": {
       "address": "0xc665138b8ac77086af08d83cfc6410501624ffaa",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18452,7 +17955,6 @@
     },
     "0x18d66f9f62d31897de13278b0e309ca7682f29bb": {
       "address": "0x18d66f9f62d31897de13278b0e309ca7682f29bb",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18484,7 +17986,6 @@
     },
     "0x99934615148074b7d4202ae8c371bcaa23b0a843": {
       "address": "0x99934615148074b7d4202ae8c371bcaa23b0a843",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18516,7 +18017,6 @@
     },
     "0xb62d0f26cee350c515191a53b6531cfc5ba323f9": {
       "address": "0xb62d0f26cee350c515191a53b6531cfc5ba323f9",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18548,7 +18048,6 @@
     },
     "0x79e6ced2cdefbd7399ce1afb99d19650c2340e00": {
       "address": "0x79e6ced2cdefbd7399ce1afb99d19650c2340e00",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -18594,7 +18093,6 @@
     },
     "0x672a40671c39e8adf9b2e91e7b73005cbc4c7ed5": {
       "address": "0x672a40671c39e8adf9b2e91e7b73005cbc4c7ed5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18626,7 +18124,6 @@
     },
     "0x12aaede3e58fc973a5798066153be925610d9da5": {
       "address": "0x12aaede3e58fc973a5798066153be925610d9da5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18658,7 +18155,6 @@
     },
     "0x1bf74fc7740ad909967cd3863f591a8c750c381c": {
       "address": "0x1bf74fc7740ad909967cd3863f591a8c750c381c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18690,7 +18186,6 @@
     },
     "0x1dcb831d4ac18d5b7e2c73a9e67169492f4622c1": {
       "address": "0x1dcb831d4ac18d5b7e2c73a9e67169492f4622c1",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18722,7 +18217,6 @@
     },
     "0x28c1cda3d422930c6083c50c28d6e506e994fa36": {
       "address": "0x28c1cda3d422930c6083c50c28d6e506e994fa36",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18754,7 +18248,6 @@
     },
     "0x2957f0befa3d49792eec03f4eb87cfb17c94e7dd": {
       "address": "0x2957f0befa3d49792eec03f4eb87cfb17c94e7dd",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18786,7 +18279,6 @@
     },
     "0x2c545e3f6e7c579f14c707db6f91e93a0a2d52a1": {
       "address": "0x2c545e3f6e7c579f14c707db6f91e93a0a2d52a1",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18818,7 +18310,6 @@
     },
     "0x3874649a4e6ec48d7cd2b9abeb28607169d5ce86": {
       "address": "0x3874649a4e6ec48d7cd2b9abeb28607169d5ce86",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18850,7 +18341,6 @@
     },
     "0x3985392fc301e1a2fc1d88834abb4fd07584e344": {
       "address": "0x3985392fc301e1a2fc1d88834abb4fd07584e344",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18882,7 +18372,6 @@
     },
     "0x3cd3e171ac4378a1fd5534c5c83cb4892c40ab6a": {
       "address": "0x3cd3e171ac4378a1fd5534c5c83cb4892c40ab6a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18914,7 +18403,6 @@
     },
     "0x543c1e9873a17954b57d414028c8f9372476bd5f": {
       "address": "0x543c1e9873a17954b57d414028c8f9372476bd5f",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18946,7 +18434,6 @@
     },
     "0x56065926a3c899d407293b4d72d61c249d052f97": {
       "address": "0x56065926a3c899d407293b4d72d61c249d052f97",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -18978,7 +18465,6 @@
     },
     "0x592436f762d8c4a22054dc2a4751e61fae67cee3": {
       "address": "0x592436f762d8c4a22054dc2a4751e61fae67cee3",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19010,7 +18496,6 @@
     },
     "0x60d9bb53a8dda804b3ab7edf0c799a9a440939a0": {
       "address": "0x60d9bb53a8dda804b3ab7edf0c799a9a440939a0",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19042,7 +18527,6 @@
     },
     "0x61aaf45fdb4f181fe646cb82212df49575e71b9d": {
       "address": "0x61aaf45fdb4f181fe646cb82212df49575e71b9d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19074,7 +18558,6 @@
     },
     "0x72c4d4e938cc03f24479fa91cd6fe89318a1c95d": {
       "address": "0x72c4d4e938cc03f24479fa91cd6fe89318a1c95d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19106,7 +18589,6 @@
     },
     "0x7995fc81329318142002cde830fac846f1f035cd": {
       "address": "0x7995fc81329318142002cde830fac846f1f035cd",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19138,7 +18620,6 @@
     },
     "0x84c191dcfd652f6b1012bde262aaa933a793e56f": {
       "address": "0x84c191dcfd652f6b1012bde262aaa933a793e56f",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19170,7 +18651,6 @@
     },
     "0x913ba9ae53292f0de9b351a253e01a4e3718cc4a": {
       "address": "0x913ba9ae53292f0de9b351a253e01a4e3718cc4a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19202,7 +18682,6 @@
     },
     "0x931594f5f0b5da92b188d106af59234083497c69": {
       "address": "0x931594f5f0b5da92b188d106af59234083497c69",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19234,7 +18713,6 @@
     },
     "0x96f55215484075440ae5d60d8c0ab2140edad18e": {
       "address": "0x96f55215484075440ae5d60d8c0ab2140edad18e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19266,7 +18744,6 @@
     },
     "0x974bb5516a37f52ef6f1746b94dc5714fec715a2": {
       "address": "0x974bb5516a37f52ef6f1746b94dc5714fec715a2",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19298,7 +18775,6 @@
     },
     "0x9fa7d1e71d66137877383d9b6bf73110ea67db4a": {
       "address": "0x9fa7d1e71d66137877383d9b6bf73110ea67db4a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19330,7 +18806,6 @@
     },
     "0xa350d1a0b25133f4a1497ceeb4baf4f8e663cb40": {
       "address": "0xa350d1a0b25133f4a1497ceeb4baf4f8e663cb40",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19362,7 +18837,6 @@
     },
     "0xae1d81369d271805f38fae262da4938bfc07021c": {
       "address": "0xae1d81369d271805f38fae262da4938bfc07021c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19394,7 +18868,6 @@
     },
     "0xc4aeaf737583b0078fecca4d2b9886d63d937f92": {
       "address": "0xc4aeaf737583b0078fecca4d2b9886d63d937f92",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19426,7 +18899,6 @@
     },
     "0xd1f6e0d0f0d9f86f12c18e4ced284f4fc06e5c1e": {
       "address": "0xd1f6e0d0f0d9f86f12c18e4ced284f4fc06e5c1e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19458,7 +18930,6 @@
     },
     "0xf17f52151ebef6c7334fad080c5704d77216b732": {
       "address": "0xf17f52151ebef6c7334fad080c5704d77216b732",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19490,7 +18961,6 @@
     },
     "0x88ea1b7877107d0d8a5f67e0b5e7c3bbc8a6020a": {
       "address": "0x88ea1b7877107d0d8a5f67e0b5e7c3bbc8a6020a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19522,7 +18992,6 @@
     },
     "0x00000005a796df0489b6f16120e9a72bbc954c96": {
       "address": "0x00000005a796df0489b6f16120e9a72bbc954c96",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19554,7 +19023,6 @@
     },
     "0x031fc27a7a230930d42862cb23afe051cb1adf71": {
       "address": "0x031fc27a7a230930d42862cb23afe051cb1adf71",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19586,7 +19054,6 @@
     },
     "0x08809efa3c1b94c97a67343212d7f9d82c444ffb": {
       "address": "0x08809efa3c1b94c97a67343212d7f9d82c444ffb",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19618,7 +19085,6 @@
     },
     "0x0eda88da5a84b04055356bf75d92f5621673f600": {
       "address": "0x0eda88da5a84b04055356bf75d92f5621673f600",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19650,7 +19116,6 @@
     },
     "0x108091ca2c29500334e8171c710fde45c7fe41db": {
       "address": "0x108091ca2c29500334e8171c710fde45c7fe41db",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19682,7 +19147,6 @@
     },
     "0x1eca49c976bd46a06517c6b0ce251f9f471ce693": {
       "address": "0x1eca49c976bd46a06517c6b0ce251f9f471ce693",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19714,7 +19178,6 @@
     },
     "0x1f447bb3e45edae444eccdaebaf9bd71cbb1b412": {
       "address": "0x1f447bb3e45edae444eccdaebaf9bd71cbb1b412",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19746,7 +19209,6 @@
     },
     "0x25ebd056a0092d2adf63c682f96d3e124aaad5f9": {
       "address": "0x25ebd056a0092d2adf63c682f96d3e124aaad5f9",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19778,7 +19240,6 @@
     },
     "0x26e5dbfcefc4c3a32f04f76e99f23a8cb522671a": {
       "address": "0x26e5dbfcefc4c3a32f04f76e99f23a8cb522671a",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19810,7 +19271,6 @@
     },
     "0x37aa9415f2eafef6e36a6ecdddb363b0a1666f9e": {
       "address": "0x37aa9415f2eafef6e36a6ecdddb363b0a1666f9e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19842,7 +19302,6 @@
     },
     "0x3921c6fdb6776cd4de3421854bc59c1568fdc493": {
       "address": "0x3921c6fdb6776cd4de3421854bc59c1568fdc493",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19874,7 +19333,6 @@
     },
     "0x3aa9d1fbd5604035be6d0eec02504696a079865e": {
       "address": "0x3aa9d1fbd5604035be6d0eec02504696a079865e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19906,7 +19364,6 @@
     },
     "0x3eefd793bee7cec4dcc5b92b2bb43927313c71f8": {
       "address": "0x3eefd793bee7cec4dcc5b92b2bb43927313c71f8",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19938,7 +19395,6 @@
     },
     "0x3f346976cbd0437ed21d28cd4efd443b22dbd095": {
       "address": "0x3f346976cbd0437ed21d28cd4efd443b22dbd095",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -19970,7 +19426,6 @@
     },
     "0x43442b78b4e1a423447650869eca9908764203bd": {
       "address": "0x43442b78b4e1a423447650869eca9908764203bd",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20002,7 +19457,6 @@
     },
     "0x459a21e1112c035c2f35e13f98bf180c1e1c4098": {
       "address": "0x459a21e1112c035c2f35e13f98bf180c1e1c4098",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20034,7 +19488,6 @@
     },
     "0x4958f797fc5833f7663e4b7e27a08c288ab8c906": {
       "address": "0x4958f797fc5833f7663e4b7e27a08c288ab8c906",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20066,7 +19519,6 @@
     },
     "0x50c3e8ca75446f06416d6884daf78c8c87f21461": {
       "address": "0x50c3e8ca75446f06416d6884daf78c8c87f21461",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20098,7 +19550,6 @@
     },
     "0x5c57c52856d6d9cc8678ad3b6b52267221ec5e4f": {
       "address": "0x5c57c52856d6d9cc8678ad3b6b52267221ec5e4f",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20130,7 +19581,6 @@
     },
     "0x5cb729c7f20d724f73bcfa6e77d37135caa862c0": {
       "address": "0x5cb729c7f20d724f73bcfa6e77d37135caa862c0",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20162,7 +19612,6 @@
     },
     "0x6101029fec38b24a99813baf9061e782fc90ed2e": {
       "address": "0x6101029fec38b24a99813baf9061e782fc90ed2e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20194,7 +19643,6 @@
     },
     "0x64d3c1594dadfd2e9d995fee03676b5a2dba1ae5": {
       "address": "0x64d3c1594dadfd2e9d995fee03676b5a2dba1ae5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20226,7 +19674,6 @@
     },
     "0x735c2852ad9bc0185ee2ddbe0c39d586b886cc94": {
       "address": "0x735c2852ad9bc0185ee2ddbe0c39d586b886cc94",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20258,7 +19705,6 @@
     },
     "0x7e5e0fbe3c3d094565c4ae8e57e5ea8589b2bac6": {
       "address": "0x7e5e0fbe3c3d094565c4ae8e57e5ea8589b2bac6",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20290,7 +19736,6 @@
     },
     "0x7f020053c5720814818f681e080108183f5b4256": {
       "address": "0x7f020053c5720814818f681e080108183f5b4256",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20322,7 +19767,6 @@
     },
     "0x88a178f57b7c31b7da8b19c18e1df31322806a77": {
       "address": "0x88a178f57b7c31b7da8b19c18e1df31322806a77",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20354,7 +19798,6 @@
     },
     "0x9015adfdd3de4b858e6195c7632fb8736339ff76": {
       "address": "0x9015adfdd3de4b858e6195c7632fb8736339ff76",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20386,7 +19829,6 @@
     },
     "0x91bef930b52195ab7a54c478a4675ade63cf6a0e": {
       "address": "0x91bef930b52195ab7a54c478a4675ade63cf6a0e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20418,7 +19860,6 @@
     },
     "0x928467b3bed9cccd5169d0c7bd2ffa41d54864f3": {
       "address": "0x928467b3bed9cccd5169d0c7bd2ffa41d54864f3",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20450,7 +19891,6 @@
     },
     "0x939f4b8fbf7a3ca337ab11d4aa64ca7c4dbb9754": {
       "address": "0x939f4b8fbf7a3ca337ab11d4aa64ca7c4dbb9754",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20482,7 +19922,6 @@
     },
     "0x962bad1615d1b53ca400b34370ada2d260e89dee": {
       "address": "0x962bad1615d1b53ca400b34370ada2d260e89dee",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20514,7 +19953,6 @@
     },
     "0x965658b4bd00dd1967cc4f8220462b6007f15860": {
       "address": "0x965658b4bd00dd1967cc4f8220462b6007f15860",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20546,7 +19984,6 @@
     },
     "0x9bc05396dc39eb7d08f785e57b3666f52698d9b3": {
       "address": "0x9bc05396dc39eb7d08f785e57b3666f52698d9b3",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20578,7 +20015,6 @@
     },
     "0x9f6b03cb6d8ab8239cf1045ab28b9df43dfcc823": {
       "address": "0x9f6b03cb6d8ab8239cf1045ab28b9df43dfcc823",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20610,7 +20046,6 @@
     },
     "0xa2dd0b358a1df6ba9fd29abfdf2b8e525dc7339b": {
       "address": "0xa2dd0b358a1df6ba9fd29abfdf2b8e525dc7339b",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20642,7 +20077,6 @@
     },
     "0xaa5a1c6bd0ceeb179e3317fba9d8baba423e5407": {
       "address": "0xaa5a1c6bd0ceeb179e3317fba9d8baba423e5407",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20674,7 +20108,6 @@
     },
     "0xab449a47bccab5a6391d23c51b17eddbb69f694e": {
       "address": "0xab449a47bccab5a6391d23c51b17eddbb69f694e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20706,7 +20139,6 @@
     },
     "0xbad3d97e71ae9da650e18436f563e1334a38ab17": {
       "address": "0xbad3d97e71ae9da650e18436f563e1334a38ab17",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20738,7 +20170,6 @@
     },
     "0xbfb29f4e107eedbaf3964e31f75da244815b742b": {
       "address": "0xbfb29f4e107eedbaf3964e31f75da244815b742b",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20770,7 +20201,6 @@
     },
     "0xc27dfdaea03683d19cca80d5ab2e8c8bcb55bed3": {
       "address": "0xc27dfdaea03683d19cca80d5ab2e8c8bcb55bed3",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20802,7 +20232,6 @@
     },
     "0xc6d713de545ca961fb9feac29e8f925af17923ea": {
       "address": "0xc6d713de545ca961fb9feac29e8f925af17923ea",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20834,7 +20263,6 @@
     },
     "0xc7b46703ba55a938a1ce605360231d271d6b9d4c": {
       "address": "0xc7b46703ba55a938a1ce605360231d271d6b9d4c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20866,7 +20294,6 @@
     },
     "0xc990cb902f73769b2fc2d7faf8c7d25259f7249c": {
       "address": "0xc990cb902f73769b2fc2d7faf8c7d25259f7249c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20898,7 +20325,6 @@
     },
     "0xcad7d52db7cc17633f4f48f256cb9c815a7a2c7e": {
       "address": "0xcad7d52db7cc17633f4f48f256cb9c815a7a2c7e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20930,7 +20356,6 @@
     },
     "0xd48f281c8304236b820aa1de53d1f088d8766aa6": {
       "address": "0xd48f281c8304236b820aa1de53d1f088d8766aa6",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20962,7 +20387,6 @@
     },
     "0xd96819eae275ff824367f347b303d7514a4d90ca": {
       "address": "0xd96819eae275ff824367f347b303d7514a4d90ca",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -20994,7 +20418,6 @@
     },
     "0xdb3e9e0108951ed4b222a69b35e508ce5d57c2a5": {
       "address": "0xdb3e9e0108951ed4b222a69b35e508ce5d57c2a5",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21026,7 +20449,6 @@
     },
     "0xe3b474ea507924e8858e9b6eca19e5e5374d3825": {
       "address": "0xe3b474ea507924e8858e9b6eca19e5e5374d3825",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21058,7 +20480,6 @@
     },
     "0xe7f1c2e08dc81237cadcf7eb8d788fbb33d6edbe": {
       "address": "0xe7f1c2e08dc81237cadcf7eb8d788fbb33d6edbe",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21090,7 +20511,6 @@
     },
     "0xe976dc0157f83c59a1e591cff88ce68eb87beade": {
       "address": "0xe976dc0157f83c59a1e591cff88ce68eb87beade",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21122,7 +20542,6 @@
     },
     "0xf25d5adf70c1cb9202153fe3c7320bac5391abe0": {
       "address": "0xf25d5adf70c1cb9202153fe3c7320bac5391abe0",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21154,7 +20573,6 @@
     },
     "0xf563781f6428a2f6b7eea796e15d7644eb5ea68c": {
       "address": "0xf563781f6428a2f6b7eea796e15d7644eb5ea68c",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21186,7 +20604,6 @@
     },
     "0xf6269d724462443c36c260f6875b31edcb94fa85": {
       "address": "0xf6269d724462443c36c260f6875b31edcb94fa85",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21218,7 +20635,6 @@
     },
     "0xfa30d4b626f2f991911dc27022f4e1a0abb7bd17": {
       "address": "0xfa30d4b626f2f991911dc27022f4e1a0abb7bd17",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21250,7 +20666,6 @@
     },
     "0xfb693659fd849e08fe6723986e298b45657bd1b4": {
       "address": "0xfb693659fd849e08fe6723986e298b45657bd1b4",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21282,7 +20697,6 @@
     },
     "0xfce67477d578f6acb67980bdbadba69f15dd2253": {
       "address": "0xfce67477d578f6acb67980bdbadba69f15dd2253",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21314,7 +20728,6 @@
     },
     "0x4b4d1c779dd3ffe9b2aa0c2e892b96a480eda406": {
       "address": "0x4b4d1c779dd3ffe9b2aa0c2e892b96a480eda406",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21346,7 +20759,6 @@
     },
     "0x149106d4b37837af5a503ea9791757513bae3699": {
       "address": "0x149106d4b37837af5a503ea9791757513bae3699",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21378,7 +20790,6 @@
     },
     "0x3b49e8183519a5d70a424297e84c65ee207c8fca": {
       "address": "0x3b49e8183519a5d70a424297e84c65ee207c8fca",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21410,7 +20821,6 @@
     },
     "0x5e08bdbd00535c9fb49f68b0a3def8c834875028": {
       "address": "0x5e08bdbd00535c9fb49f68b0a3def8c834875028",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21442,7 +20852,6 @@
     },
     "0x6d9399cabfe303e6cd70f8f3d5eb99661ff992ec": {
       "address": "0x6d9399cabfe303e6cd70f8f3d5eb99661ff992ec",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21474,7 +20883,6 @@
     },
     "0x7b24314e00c9cb15e0b67969c3cf5ab8329a8599": {
       "address": "0x7b24314e00c9cb15e0b67969c3cf5ab8329a8599",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21506,7 +20914,6 @@
     },
     "0xa39d9bdc9a146d5daa28ac94122289af0d0e7767": {
       "address": "0xa39d9bdc9a146d5daa28ac94122289af0d0e7767",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21538,7 +20945,6 @@
     },
     "0xec7d342709c08f207996253e144b4bd318e9be97": {
       "address": "0xec7d342709c08f207996253e144b4bd318e9be97",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21570,7 +20976,6 @@
     },
     "0x665e0739ee32f5e0b25d54e25a9f8a7c43c2d223": {
       "address": "0x665e0739ee32f5e0b25d54e25a9f8a7c43c2d223",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21602,7 +21007,6 @@
     },
     "0x69377613d9ae4b2da7e122600822b9bf05e3dd4d": {
       "address": "0x69377613d9ae4b2da7e122600822b9bf05e3dd4d",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21634,7 +21038,6 @@
     },
     "0x0000ecb077818de0d6d18b2722ef636a4c4694b8": {
       "address": "0x0000ecb077818de0d6d18b2722ef636a4c4694b8",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21666,7 +21069,6 @@
     },
     "0x0c573fc3729a7b754ea1ed7c25db55e83d860335": {
       "address": "0x0c573fc3729a7b754ea1ed7c25db55e83d860335",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21698,7 +21100,6 @@
     },
     "0x2eb9916b9c6b7ac84912ffabd3d165dc0ba4b788": {
       "address": "0x2eb9916b9c6b7ac84912ffabd3d165dc0ba4b788",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21730,7 +21131,6 @@
     },
     "0x3458e9c12609eba31c0850095a8025c5c2e93250": {
       "address": "0x3458e9c12609eba31c0850095a8025c5c2e93250",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21762,7 +21162,6 @@
     },
     "0x5968e9adf2ef3f31f19ca499f196c677988dd6f3": {
       "address": "0x5968e9adf2ef3f31f19ca499f196c677988dd6f3",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21794,7 +21193,6 @@
     },
     "0x70edff1c27b575aee7fc5cfcd4217c43a5c9ca95": {
       "address": "0x70edff1c27b575aee7fc5cfcd4217c43a5c9ca95",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21826,7 +21224,6 @@
     },
     "0x796c5f718df91da5b99cdc38b70f039f1c781f8e": {
       "address": "0x796c5f718df91da5b99cdc38b70f039f1c781f8e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21858,7 +21255,6 @@
     },
     "0xb9f4fd093f522047757fa28395fa3412aad89a12": {
       "address": "0xb9f4fd093f522047757fa28395fa3412aad89a12",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21890,7 +21286,6 @@
     },
     "0xed62002bb7697c12d1f7fb6c7d98dd2fd995b618": {
       "address": "0xed62002bb7697c12d1f7fb6c7d98dd2fd995b618",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21922,7 +21317,6 @@
     },
     "0xf0d407cf519514341e2dc6ac0b52ce1e29b40bf9": {
       "address": "0xf0d407cf519514341e2dc6ac0b52ce1e29b40bf9",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21954,7 +21348,6 @@
     },
     "0x6f8eff08b9e99e5b3fb0de5c1e7b8c8d77fe031e": {
       "address": "0x6f8eff08b9e99e5b3fb0de5c1e7b8c8d77fe031e",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -21986,7 +21379,6 @@
     },
     "0xda3f9969cf6d7327897889c3b78bed7b9288f444": {
       "address": "0xda3f9969cf6d7327897889c3b78bed7b9288f444",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -22018,7 +21410,6 @@
     },
     "0xf24ff3a9cf04c71dbc94d0b566f7a27b94566cac": {
       "address": "0xf24ff3a9cf04c71dbc94d0b566f7a27b94566cac",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -22050,7 +21441,6 @@
     },
     "0xfcadc5bd924e54c41c0302f677568a46e0fba7d3": {
       "address": "0xfcadc5bd924e54c41c0302f677568a46e0fba7d3",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -22082,7 +21472,6 @@
     },
     "0xbdefc746620a84bea9c48f8c10ad5769f8e2e997": {
       "address": "0xbdefc746620a84bea9c48f8c10ad5769f8e2e997",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -22114,7 +21503,6 @@
     },
     "0x6be02d1d3665660d22ff9624b7be0551ee1ac91b": {
       "address": "0x6be02d1d3665660d22ff9624b7be0551ee1ac91b",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -22146,7 +21534,6 @@
     },
     "0x0008434c0517ebf553c647ec7da3d0bba5e91f91": {
       "address": "0x0008434c0517ebf553c647ec7da3d0bba5e91f91",
-      "is_contract": false,
       "breakdown": {
         "ckton_group": {
           "rule_name": "ckton_group",
@@ -22168,7 +21555,6 @@
     },
     "0x26e4021a19d681d227bf8d25b660fb8d066e1d25": {
       "address": "0x26e4021a19d681d227bf8d25b660fb8d066e1d25",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -22200,7 +21586,6 @@
     },
     "0x2924951d63655c9ae57364522149d85a9d69b009": {
       "address": "0x2924951d63655c9ae57364522149d85a9d69b009",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",
@@ -22232,7 +21617,6 @@
     },
     "0x650e3dc899d4be6aa0804a9a494b0a2ac1008aa9": {
       "address": "0x650e3dc899d4be6aa0804a9a494b0a2ac1008aa9",
-      "is_contract": false,
       "breakdown": {
         "crab_group": {
           "rule_name": "crab_group",

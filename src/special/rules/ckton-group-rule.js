@@ -126,10 +126,11 @@ class CktonGroupRule extends BaseAirdropRule {
 		const filtered = {};
 		for (const [address, balance] of Object.entries(holders || {})) {
 			const normalized = address.split(' (')[0].toLowerCase();
-			if (cache[normalized] === true) {
+			if (lpTokens.has(normalized)) {
 				continue;
 			}
-			if (lpTokens.has(normalized)) {
+			const isContract = cache[normalized];
+			if (isContract === true) {
 				continue;
 			}
 			filtered[normalized] = balance;

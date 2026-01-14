@@ -358,10 +358,11 @@ class CrabGroupRule extends BaseAirdropRule {
 			if (lpTokens.has(normalized)) {
 				continue;
 			}
-			const isCached = cache[normalized];
-			if (isCached === undefined || isCached === false) {
-				filtered[normalized] = balance;
+			const isContract = cache[normalized];
+			if (isContract === true) {
+				continue;
 			}
+			filtered[normalized] = balance;
 		}
 		return filtered;
 	}

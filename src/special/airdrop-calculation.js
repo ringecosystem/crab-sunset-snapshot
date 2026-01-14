@@ -146,7 +146,6 @@ async function calculateAirdrop(outputDir, config = {}) {
 
 			const existing = allRecipients.get(normalized) || {
 				address: normalized,
-				is_contract: data.isContract || false,
 				breakdown: {},
 				total_airdrop: "0",
 				total_airdrop_decimal: "0"
@@ -175,7 +174,6 @@ async function calculateAirdrop(outputDir, config = {}) {
 
 	const output = {
 		timestamp: new Date().toISOString(),
-		snapshot_height: config.snapshotHeight || null,
 		total_airdrop_treasury: totalTreasury,
 		treasury_address: TREASURY_ADDRESS,
 		distribution: distribution,
@@ -281,31 +279,8 @@ function buildBreakdown(ruleName, result, address) {
 }
 
 function buildStatistics(recipients, ruleResults, excludedRecipients) {
-	let totalAirdrop = "0";
-	let eoaCount = 0;
-	let contractCount = 0;
-	let eoaMax = 0n;
-	const eoaRecipients = [];
-
-	for (const recipient of recipients.values()) {
-		totalAirdrop = (BigInt(totalAirdrop) + BigInt(recipient.total_airdrop)).toString();
-		if (recipient.is_contract) {
-			contractCount++;
-		} else {
-			eoaCount++;
-			const amount = BigInt(recipient.total_airdrop || '0');
-			if (amount > eoaMax) {
-				eoaMax = amount;
-			}
-			eoaRecipients.push({
-				address: normalizeAddress(recipient.address),
-				total_airdrop: recipient.total_airdrop,
-				total_airdrop_decimal: recipient.total_airdrop_decimal
-			});
-		}
-	}
-
-	const topRecipients = eoaRecipients
+	let totalAirdrop = 0n;
+	const topRecipients = Array.from(recipients.values())
 		.sort((a, b) => {
 			const amountA = BigInt(a.total_airdrop || '0');
 			const amountB = BigInt(b.total_airdrop || '0');
@@ -313,15 +288,20 @@ function buildStatistics(recipients, ruleResults, excludedRecipients) {
 			if (amountA < amountB) return 1;
 			return 0;
 		})
-		.slice(0, 20);
+		.slice(0, 20)
+		.map((recipient) => ({
+			address: recipient.address,
+			total_airdrop: recipient.total_airdrop,
+			total_airdrop_decimal: recipient.total_airdrop_decimal
+		}));
+
+	for (const recipient of recipients.values()) {
+		totalAirdrop += BigInt(recipient.total_airdrop || '0');
+	}
 
 	const statistics = {
 		total_recipients: recipients.size,
-		eoa_recipients: eoaCount,
-		contract_recipients: contractCount,
-		total_airdrop_distributed: totalAirdrop,
-		eoa_airdrop_max: eoaMax.toString(),
-		eoa_airdrop_max_decimal: formatTokenAmount(eoaMax.toString(), 18),
+		total_airdrop_distributed: totalAirdrop.toString(),
 		top_20_recipients: topRecipients,
 		rule_details: {}
 	};

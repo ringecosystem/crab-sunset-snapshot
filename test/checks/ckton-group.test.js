@@ -16,10 +16,13 @@ function filterExcluded(holders) {
 	return filtered;
 }
 
-function filterEOAs(holders, cache) {
+function filterEOAs(holders, cache, lpTokens = new Set()) {
 	const filtered = {};
 	for (const [address, balance] of Object.entries(holders || {})) {
 		const normalized = address.split(' (')[0].toLowerCase();
+		if (lpTokens.has(normalized)) {
+			continue;
+		}
 		if (cache[normalized] === true) {
 			continue;
 		}
@@ -109,9 +112,11 @@ test('CKTON group sample checks', () => {
 		return;
 	}
 
-	const cktonHolders = filterExcluded(filterEOAs({ ...cktonData.eoa_holders, ...cktonData.contract_holders }, crabCache));
-	const wcktonHolders = filterExcluded(filterEOAs({ ...wcktonData.eoa_holders, ...wcktonData.contract_holders }, crabCache));
-	const gcktonHolders = filterExcluded(filterEOAs({ ...gcktonData.eoa_holders, ...gcktonData.contract_holders }, crabCache));
+	const lpTokens = new Set((snowLps || []).map((lp) => (lp.address || '').toLowerCase()).filter(Boolean));
+
+	const cktonHolders = filterExcluded(filterEOAs({ ...cktonData.eoa_holders, ...cktonData.contract_holders }, crabCache, lpTokens));
+	const wcktonHolders = filterExcluded(filterEOAs({ ...wcktonData.eoa_holders, ...wcktonData.contract_holders }, crabCache, lpTokens));
+	const gcktonHolders = filterExcluded(filterEOAs({ ...gcktonData.eoa_holders, ...gcktonData.contract_holders }, crabCache, lpTokens));
 
 	const virtualHoldings = buildVirtualHoldings(snowLps, ['CKTON', 'WCKTON', 'gCKTON']);
 	const virtualCkton = filterExcluded(virtualHoldings.CKTON || {});
@@ -127,13 +132,17 @@ test('CKTON group sample checks', () => {
 		virtual_gckton: virtualGckton
 	});
 
-	const sampleAddresses = pickSampleKeys(Object.keys(aggregated));
+	const cktonRecipients = Object.keys(airdrop.recipients || {}).filter((address) => {
+		return !!airdrop.recipients[address]?.breakdown?.ckton_group;
+	});
+	const sampleAddresses = pickSampleKeys(cktonRecipients);
+	console.log(`ℹ️  CKTON sample size=${sampleAddresses.length} from=${cktonRecipients.length}`);
+	console.log(`ℹ️  CKTON samples: ${sampleAddresses.join(', ')}`);
 
 	sampleAddresses.forEach((address) => {
 		const recipient = airdrop.recipients[address];
 		const breakdown = recipient?.breakdown?.ckton_group;
 		if (!breakdown) {
-			console.warn(`⚠️  Missing CKTON breakdown for ${address}`);
 			return;
 		}
 

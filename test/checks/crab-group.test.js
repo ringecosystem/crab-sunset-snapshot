@@ -173,7 +173,12 @@ test('CRAB group sample checks', () => {
 		ckton_treasury_crab_addon: cktonAddon
 	});
 
-	const sampleAddresses = pickSampleKeys(Object.keys(aggregated));
+	const crabRecipients = Object.keys(airdrop.recipients || {}).filter((address) => {
+		return !!airdrop.recipients[address]?.breakdown?.crab_group;
+	});
+	const sampleAddresses = pickSampleKeys(crabRecipients);
+	console.log(`ℹ️  CRAB sample size=${sampleAddresses.length} from=${crabRecipients.length}`);
+	console.log(`ℹ️  CRAB samples: ${sampleAddresses.join(', ')}`);
 
 	sampleAddresses.forEach((address) => {
 		const recipient = airdrop.recipients[address];

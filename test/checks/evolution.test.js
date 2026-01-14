@@ -24,6 +24,7 @@ test('Evolution Land sample checks', () => {
 		const holders = token.eoa_holders || {};
 		const totalSupply = sumBalances(holders);
 		const sampleAddresses = pickSampleKeys(Object.keys(holders));
+		console.log(`ℹ️  EVOL ${symbol} sample size=${sampleAddresses.length} from=${Object.keys(holders).length}`);
 
 		sampleAddresses.forEach((address) => {
 			const normalized = address.toLowerCase();

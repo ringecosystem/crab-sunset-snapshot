@@ -12,6 +12,9 @@ const EXCLUDED_CRAB_NATIVE_ADDRESSES = new Set([
 	'0xb633ad1142941ca2eb9c350579cf88bbe266660d',
 	'0x6d6f646c64612f74727372790000000000000000'
 ]);
+const EXCLUDED_CKTON_ADDRESSES = new Set([
+	'0xb633ad1142941ca2eb9c350579cf88bbe266660d'
+]);
 
 class CrabGroupRule extends BaseAirdropRule {
 	constructor(config = {}) {
@@ -119,6 +122,7 @@ class CrabGroupRule extends BaseAirdropRule {
 			airdropPerAddress: airdropPerAddress,
 			cktonTreasuryCrabBalance: cktonTreasuryBalance,
 			cktonTreasuryGroupSupply: cktonGroupBalances.totalSupply,
+			cktonTreasuryGroupBalances: cktonGroupBalances.balances,
 			rawBalances: {
 				crab: crabNative,
 				wcrab: wcrabHolders,
@@ -203,6 +207,37 @@ class CrabGroupRule extends BaseAirdropRule {
 		return this.filterEOAs(data.eoa_holders || {}, addressCache, lpTokens);
 	}
 
+	loadTokenHoldersIncludingContracts(dataDir, symbol, addressCache, lpTokens = new Set()) {
+		const files = fs.readdirSync(dataDir);
+		const matchingFiles = files.filter(f => f.startsWith(`${symbol}_`) && f.endsWith('.json'));
+
+		if (matchingFiles.length === 0) {
+			console.warn(`  ⚠️  No ${symbol} data file found`);
+			return {};
+		}
+
+		const filePath = path.join(dataDir, matchingFiles[0]);
+		const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+
+		const allHolders = {
+			...(data.eoa_holders || {}),
+			...(data.contract_holders || {})
+		};
+
+		return this.filterEOAs(allHolders, addressCache, lpTokens);
+	}
+
+	excludeCktonAddresses(holders) {
+		const filtered = {};
+		for (const [address, balance] of Object.entries(holders || {})) {
+			if (EXCLUDED_CKTON_ADDRESSES.has(address.toLowerCase())) {
+				continue;
+			}
+			filtered[address] = balance;
+		}
+		return filtered;
+	}
+
 	loadCrabStakingRewards(addressCache, lpTokens = new Set()) {
 		const data = this.loadDataFile('CRAB_staking_rewards.json');
 		const rewards = {};
@@ -249,18 +284,34 @@ class CrabGroupRule extends BaseAirdropRule {
 	}
 
 	loadCktonGroupBalances(dataDir, addressCache, lpTokens = new Set()) {
-		const cktonHolders = this.loadTokenHolders(dataDir, 'CKTON', addressCache, lpTokens);
-		const wcktonHolders = this.loadTokenHolders(dataDir, 'WCKTON', addressCache, lpTokens);
-		const gcktonHolders = this.loadTokenHolders(dataDir, 'gCKTON', addressCache, lpTokens);
+		const cktonHolders = this.excludeCktonAddresses(
+			this.loadTokenHoldersIncludingContracts(dataDir, 'CKTON', addressCache, lpTokens)
+		);
+		const wcktonHolders = this.excludeCktonAddresses(
+			this.loadTokenHoldersIncludingContracts(dataDir, 'WCKTON', addressCache, lpTokens)
+		);
+		const gcktonHolders = this.excludeCktonAddresses(
+			this.loadTokenHoldersIncludingContracts(dataDir, 'gCKTON', addressCache, lpTokens)
+		);
 		const virtualHoldings = buildVirtualHoldings(['CKTON', 'WCKTON', 'gCKTON']);
+
+		const virtualCkton = this.excludeCktonAddresses(
+			this.filterEOAs(virtualHoldings.CKTON || {}, addressCache, lpTokens)
+		);
+		const virtualWckton = this.excludeCktonAddresses(
+			this.filterEOAs(virtualHoldings.WCKTON || {}, addressCache, lpTokens)
+		);
+		const virtualGckton = this.excludeCktonAddresses(
+			this.filterEOAs(virtualHoldings.gCKTON || {}, addressCache, lpTokens)
+		);
 
 		const aggregated = this.aggregateBalances({
 			ckton: cktonHolders,
 			wckton: wcktonHolders,
 			gckton: gcktonHolders,
-			virtual_ckton: this.filterEOAs(virtualHoldings.CKTON || {}, addressCache, lpTokens),
-			virtual_wckton: this.filterEOAs(virtualHoldings.WCKTON || {}, addressCache, lpTokens),
-			virtual_gckton: this.filterEOAs(virtualHoldings.gCKTON || {}, addressCache, lpTokens)
+			virtual_ckton: virtualCkton,
+			virtual_wckton: virtualWckton,
+			virtual_gckton: virtualGckton
 		});
 
 		const totalSupply = Object.values(aggregated).reduce((sum, balance) => {

@@ -143,8 +143,8 @@ test('CRAB group sample checks', () => {
 	const crabDepositBalances = loadRewardsBalances('CRAB_deposit_balance.json', 'balances');
 
 	const firstRecipient = airdrop.recipients[Object.keys(airdrop.recipients)[0]];
-	const treasuryBalance = firstRecipient?.breakdown?.crab_group?.ckton_treasury_crab_balance || '0';
-	const groupSupply = firstRecipient?.breakdown?.crab_group?.ckton_treasury_group_supply || '0';
+	const treasuryBalance = firstRecipient?.breakdown?.crab_group?.ckton_treasury_crab_addon?.ckton_treasury_crab_balance || '0';
+	const groupSupply = firstRecipient?.breakdown?.crab_group?.ckton_treasury_crab_addon?.ckton_treasury_group_supply || '0';
 	const cktonAddon = {};
 
 	if (BigInt(groupSupply || '0') > 0n) {

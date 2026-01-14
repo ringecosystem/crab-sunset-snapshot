@@ -159,8 +159,19 @@ async function calculateAirdrop(outputDir, config = {}) {
 	}
 
 	const rulesApplied = rules
-		.filter(r => r.enabled)
-		.map(r => getRule(r.name).getMetadata());
+		.filter((r) => r.enabled)
+		.map((r) => {
+			const metadata = getRule(r.name).getMetadata();
+			const result = ruleResults[r.name];
+
+			return {
+				name: metadata.name,
+				description: metadata.description,
+				allocationPercentage: metadata.allocationPercentage,
+				total_supply: result?.totalSupply || '0',
+				components: metadata.components
+			};
+		});
 
 	const statistics = buildStatistics(allRecipients, ruleResults, excludedRecipients);
 
@@ -205,6 +216,22 @@ function formatTokenAmount(amount, decimals = 18) {
 	return fractional.length > 0 ? `${integerPart}.${fractional}` : integerPart.toString();
 }
 
+function formatRatio(numerator, denominator, decimals = 18) {
+	const denom = BigInt(denominator || '0');
+	if (denom === 0n) {
+		return '0';
+	}
+
+	const num = BigInt(numerator || '0');
+	const scale = 10n ** BigInt(decimals);
+	const scaled = (num * scale) / denom;
+	const integerPart = scaled / scale;
+	const fractionalPart = scaled % scale;
+	const fractional = fractionalPart.toString().padStart(decimals, '0').replace(/0+$/, '');
+
+	return fractional.length > 0 ? `${integerPart}.${fractional}` : integerPart.toString();
+}
+
 function buildBreakdown(ruleName, result, address) {
 	const data = result.airdropPerAddress[address];
 	const details = {
@@ -231,7 +258,7 @@ function buildBreakdown(ruleName, result, address) {
 		const crabStakingRewards = raw.crab_staking_rewards[address] || '0';
 		const cktonStakingRewards = raw.ckton_staking_rewards[address] || '0';
 		const crabDepositBalance = raw.crab_deposit_balance[address] || '0';
-		const cktonTreasuryCrabAddon = raw.ckton_treasury_crab_addon[address] || '0';
+		const cktonTreasuryCrabAddonAmount = raw.ckton_treasury_crab_addon[address] || '0';
 
 		const totalGroupBalance = (
 			BigInt(crabBalance) +
@@ -247,8 +274,12 @@ function buildBreakdown(ruleName, result, address) {
 			BigInt(crabStakingRewards) +
 			BigInt(cktonStakingRewards) +
 			BigInt(crabDepositBalance) +
-			BigInt(cktonTreasuryCrabAddon)
+			BigInt(cktonTreasuryCrabAddonAmount)
 		).toString();
+
+		const cktonTreasuryGroupBalance = result.cktonTreasuryGroupBalances?.[address] || '0';
+		const cktonTreasuryGroupSupply = result.cktonTreasuryGroupSupply || '0';
+		const cktonTreasuryCrabBalance = result.cktonTreasuryCrabBalance || '0';
 
 		return {
 			rule_name: ruleName,
@@ -264,19 +295,24 @@ function buildBreakdown(ruleName, result, address) {
 			gcrab_balance: gcrabBalance,
 			wcring_balance: wcringBalance,
 			xwcrab_balance: xwcrabBalance,
-			virtual_crab_balance: virtualCrabBalance,
-			virtual_wcrab_balance: virtualWcrabBalance,
-			virtual_gcrab_balance: virtualGcrabBalance,
-			virtual_xwcrab_balance: virtualXwcrabBalance,
-			virtual_wcring_balance: virtualWcringBalance,
+			virtual_crab_from_lp: virtualCrabBalance,
+			virtual_wcrab_from_lp: virtualWcrabBalance,
+			virtual_gcrab_from_lp: virtualGcrabBalance,
+			virtual_xwcrab_from_lp: virtualXwcrabBalance,
+			virtual_wcring_from_lp: virtualWcringBalance,
+			virtual_from_ckton_treasury: {
+				ckton_treasury_crab_balance: cktonTreasuryCrabBalance,
+				amount: cktonTreasuryCrabAddonAmount,
+				portion: formatRatio(cktonTreasuryGroupBalance, cktonTreasuryGroupSupply, 18),
+				portion_fraction: `(${cktonTreasuryGroupBalance}/${cktonTreasuryGroupSupply})`,
+				ckton_group_total_supply: cktonTreasuryGroupSupply
+			},
 			crab_staking_rewards: crabStakingRewards,
 			ckton_staking_rewards: cktonStakingRewards,
-			crab_deposit_balance: crabDepositBalance,
-			ckton_treasury_crab_addon: cktonTreasuryCrabAddon,
-			ckton_treasury_crab_balance: result.cktonTreasuryCrabBalance || '0',
-			ckton_treasury_group_supply: result.cktonTreasuryGroupSupply || '0'
+			crab_deposit_balance: crabDepositBalance
 		};
 	}
+
 
 	if (ruleName === 'ckton_group') {
 		const raw = result.rawBalances;

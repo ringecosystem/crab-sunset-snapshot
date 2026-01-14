@@ -1,12 +1,13 @@
 const BaseAirdropRule = require('./base-rule');
 
-const LAND_SYMBOLS = ['FIRE', 'GOLD', 'WOOD', 'SIOO', 'WATER'];
+const LAND_SYMBOLS = ['FIRE', 'GOLD', 'WOOD', 'SIOO', 'HHO'];
 
 class EvolutionLandRule extends BaseAirdropRule {
 	constructor(config = {}) {
 		super(
 			'evolution_land',
-			'Evolution Land (FIRE + GOLD + WOOD + SIOO + WATER)',
+			'Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)',
+
 			config
 		);
 	}

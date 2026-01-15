@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-15T06:53:29.268Z",
+  "timestamp": "2026-01-15T07:40:38.845Z",
   "total_airdrop_treasury": "38431025100900660000000000",
   "total_airdrop_treasury_with_decimal": "38431025.10090066",
   "treasury_address": "0xC665138b8AC77086af08d83cfc6410501624FFAa",
@@ -180,6 +180,40 @@
         "address": "0xad0cbb2a5fd04f4c526a32b9dc7859bb479035c2",
         "total_airdrop": "464948523682247742765918",
         "total_airdrop_decimal": "464948.523682247742765918"
+      }
+    ],
+    "airdrop_amount_ranges": [
+      {
+        "range": "<1",
+        "count": 175
+      },
+      {
+        "range": "1-10",
+        "count": 62
+      },
+      {
+        "range": "10-100",
+        "count": 66
+      },
+      {
+        "range": "100-1k",
+        "count": 77
+      },
+      {
+        "range": "1k-10k",
+        "count": 96
+      },
+      {
+        "range": "10k-100k",
+        "count": 82
+      },
+      {
+        "range": "100k-1M",
+        "count": 45
+      },
+      {
+        "range": "1M+",
+        "count": 8
       }
     ],
     "rule_details": {

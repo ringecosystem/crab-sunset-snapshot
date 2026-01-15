@@ -373,6 +373,41 @@ function buildBreakdown(ruleName, result, address) {
 	return details;
 }
 
+function buildAirdropAmountRanges(recipients, decimals = 18) {
+	const scale = 10n ** BigInt(decimals);
+	const ranges = [
+		{ label: '<1', min: 0n, max: 1n * scale },
+		{ label: '1-10', min: 1n * scale, max: 10n * scale },
+		{ label: '10-100', min: 10n * scale, max: 100n * scale },
+		{ label: '100-1k', min: 100n * scale, max: 1000n * scale },
+		{ label: '1k-10k', min: 1000n * scale, max: 10000n * scale },
+		{ label: '10k-100k', min: 10000n * scale, max: 100000n * scale },
+		{ label: '100k-1M', min: 100000n * scale, max: 1000000n * scale },
+		{ label: '1M+', min: 1000000n * scale, max: null }
+	];
+
+	const buckets = ranges.map((range) => ({
+		range: range.label,
+		count: 0
+	}));
+
+	for (const recipient of recipients.values()) {
+		const amount = BigInt(recipient.total_airdrop || '0');
+		const index = ranges.findIndex((range) => {
+			if (range.max === null) {
+				return amount >= range.min;
+			}
+			return amount >= range.min && amount < range.max;
+		});
+
+		if (index !== -1) {
+			buckets[index].count += 1;
+		}
+	}
+
+	return buckets;
+}
+
 function buildStatistics(recipients, ruleResults, excludedRecipients) {
 	let totalAirdrop = 0n;
 	const topRecipients = Array.from(recipients.values())
@@ -399,6 +434,7 @@ function buildStatistics(recipients, ruleResults, excludedRecipients) {
 		total_airdrop_distributed: totalAirdrop.toString(),
 		total_airdrop_distributed_with_decimal: formatTokenAmount(totalAirdrop.toString(), 18),
 		top_20_recipients: topRecipients,
+		airdrop_amount_ranges: buildAirdropAmountRanges(recipients, 18),
 		rule_details: {}
 	};
 

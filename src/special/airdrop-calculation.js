@@ -373,6 +373,7 @@ function buildBreakdown(ruleName, result, address) {
 	return details;
 }
 
+// Bucket recipient totals into log-scale ranges (human units).
 function buildAirdropAmountRanges(recipients, decimals = 18) {
 	const scale = 10n ** BigInt(decimals);
 	const ranges = [
@@ -408,6 +409,7 @@ function buildAirdropAmountRanges(recipients, decimals = 18) {
 	return buckets;
 }
 
+// Aggregate recipient and rule-level statistics for output.
 function buildStatistics(recipients, ruleResults, excludedRecipients) {
 	let totalAirdrop = 0n;
 	const topRecipients = Array.from(recipients.values())

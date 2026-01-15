@@ -3,6 +3,7 @@ const { pickSampleKeys } = require('../helpers/sample');
 const { sumBalances } = require('../helpers/math');
 
 const EXCLUDED = new Set(['0xb633ad1142941ca2eb9c350579cf88bbe266660d']);
+const AIRDROP_TOLERANCE = 1000n;
 
 function filterExcluded(holders) {
 	const filtered = {};
@@ -99,6 +100,15 @@ function assertMatch(message, expected, actual) {
 	}
 }
 
+function assertWithinTolerance(message, expected, actual) {
+	const expectedValue = BigInt(expected || '0');
+	const actualValue = BigInt(actual || '0');
+	const delta = expectedValue >= actualValue ? expectedValue - actualValue : actualValue - expectedValue;
+	if (delta > AIRDROP_TOLERANCE) {
+		throw new Error(`${message} expected=${expected} actual=${actual} delta=${delta}`);
+	}
+}
+
 test('CKTON group sample checks', () => {
 	const crabCache = loadJson('crab-cache.json');
 	const snowLps = loadJson('snow_lps_crab.json').snow_lps || [];
@@ -139,6 +149,8 @@ test('CKTON group sample checks', () => {
 	console.log(`ℹ️  CKTON sample size=${sampleAddresses.length} from=${cktonRecipients.length}`);
 	console.log(`ℹ️  CKTON samples: ${sampleAddresses.join(', ')}`);
 
+	const allocation = airdrop.statistics?.rule_details?.ckton_group?.allocation || '0';
+
 	sampleAddresses.forEach((address) => {
 		const recipient = airdrop.recipients[address];
 		const breakdown = recipient?.breakdown?.ckton_group;
@@ -151,5 +163,12 @@ test('CKTON group sample checks', () => {
 		if (expectedTotal !== actualTotal) {
 			assertMatch(`CKTON group balance for ${address}`, expectedTotal, actualTotal);
 		}
+
+		const expectedAirdrop = (BigInt(expectedTotal) * BigInt(allocation)) / BigInt(breakdown.total_supply || '1');
+		assertWithinTolerance(
+			`CKTON airdrop amount for ${address}`,
+			expectedAirdrop.toString(),
+			breakdown.airdrop_amount
+		);
 	});
 });

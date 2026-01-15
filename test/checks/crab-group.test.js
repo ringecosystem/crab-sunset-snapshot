@@ -5,6 +5,7 @@ const EXCLUDED_NATIVE = new Set([
 	'0xb633ad1142941ca2eb9c350579cf88bbe266660d',
 	'0x6d6f646c64612f74727372790000000000000000'
 ]);
+const AIRDROP_TOLERANCE = 1000n;
 
 function filterEOAs(holders, cache, lpTokens = new Set()) {
 	const filtered = {};
@@ -105,6 +106,15 @@ function assertMatch(message, expected, actual) {
 	}
 }
 
+function assertWithinTolerance(message, expected, actual) {
+	const expectedValue = BigInt(expected || '0');
+	const actualValue = BigInt(actual || '0');
+	const delta = expectedValue >= actualValue ? expectedValue - actualValue : actualValue - expectedValue;
+	if (delta > AIRDROP_TOLERANCE) {
+		throw new Error(`${message} expected=${expected} actual=${actual} delta=${delta}`);
+	}
+}
+
 function loadRewardsBalances(filename, field) {
 	const data = loadJson(filename);
 	const balances = {};
@@ -188,6 +198,8 @@ test('CRAB group sample checks', () => {
 	console.log(`ℹ️  CRAB sample size=${sampleAddresses.length} from=${crabRecipients.length}`);
 	console.log(`ℹ️  CRAB samples: ${sampleAddresses.join(', ')}`);
 
+	const allocation = airdrop.statistics?.rule_details?.crab_group?.allocation || '0';
+
 	sampleAddresses.forEach((address) => {
 		const recipient = airdrop.recipients[address];
 		const breakdown = recipient?.breakdown?.crab_group;
@@ -200,5 +212,12 @@ test('CRAB group sample checks', () => {
 		if (expectedTotal !== actualTotal) {
 			assertMatch(`CRAB group balance for ${address}`, expectedTotal, actualTotal);
 		}
+
+		const expectedAirdrop = (BigInt(expectedTotal) * BigInt(allocation)) / BigInt(breakdown.total_supply || '1');
+		assertWithinTolerance(
+			`CRAB airdrop amount for ${address}`,
+			expectedAirdrop.toString(),
+			breakdown.airdrop_amount
+		);
 	});
 });

@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-01-14T06:58:07.279Z",
+  "timestamp": "2026-01-15T08:23:36.281Z",
   "rpc_url": "https://crab-rpc.darwinia.network",
-  "snapshot_block": "9694699",
+  "snapshot_block": "9702179",
   "staked_events_count": 965,
   "reward_pairs_count": 172,
   "non_zero_rewards_count": 92,
@@ -9667,7 +9667,7 @@
     {
       "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
       "account": "0x5a25fed1d5400142435d7ccd80a0d54a71ac835f",
-      "reward": "256760347091836454828907"
+      "reward": "257710211011285986340601"
     },
     {
       "pool": "0x41f508265452349a15216deb1c50378b0defc232",
@@ -9677,7 +9677,7 @@
     {
       "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
       "account": "0xf4b88608ba19df20815015df57acc9328f1ee2f3",
-      "reward": "145006003356452430000000"
+      "reward": "147544778205871040000000"
     },
     {
       "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
@@ -9687,7 +9687,7 @@
     {
       "pool": "0xbcd224c24acc3ec60acaa89590dfb65fc16de193",
       "account": "0x083b2eb2b3fe204492d196c70bbc8fb6dc3bdd6e",
-      "reward": "84581116391437335000000"
+      "reward": "85969470787015375000000"
     },
     {
       "pool": "0x41f508265452349a15216deb1c50378b0defc232",
@@ -9697,17 +9697,17 @@
     {
       "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
       "account": "0xa789023d50e20880d795810bdf64ee44b8a4d5d8",
-      "reward": "36696017725152238200000"
+      "reward": "36848344216117354800000"
     },
     {
       "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
       "account": "0xf381896eb9280dcb2099523149d42f7b1ed43e9a",
-      "reward": "32073709479835322177413"
+      "reward": "32197564461346021241290"
     },
     {
       "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
       "account": "0x7485a5dad2a8945e73f25af804c83966abaf9edf",
-      "reward": "27566991696533576775102"
+      "reward": "27622970429581858163666"
     },
     {
       "pool": "0x7a2ce31fedf0e326a9f6113d39793a154b0f1c11",
@@ -9732,7 +9732,7 @@
     {
       "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
       "account": "0x935b8dfef9bda7866a6f3de2f7cf5c24796f08f3",
-      "reward": "16724483493858225240720"
+      "reward": "16828033306243023873840"
     },
     {
       "pool": "0x7a2ce31fedf0e326a9f6113d39793a154b0f1c11",
@@ -9742,7 +9742,12 @@
     {
       "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
       "account": "0xb5540caf9cce89b7da1f26a4cf54cff48853ae00",
-      "reward": "14048132343338777252712"
+      "reward": "14089083797169839199456"
+    },
+    {
+      "pool": "0xede4a03c13e00a909a2bd0bf815681c52d9b0cd8",
+      "account": "0xefb73e47099485c72b7678cb59fb0da7dacf173f",
+      "reward": "13455176639129087762592"
     },
     {
       "pool": "0xe510866dc87b0742c756d7482a06f2477b8e5141",
@@ -9752,12 +9757,12 @@
     {
       "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
       "account": "0xb7e88e1635ea56b6a404cb4e97cf4fa6c40dcbeb",
-      "reward": "11610550980081205373764"
+      "reward": "11885690011541038449134"
     },
     {
       "pool": "0xbcd224c24acc3ec60acaa89590dfb65fc16de193",
       "account": "0x74cafa4ef28da1410e1de6f431b009367945df66",
-      "reward": "10578481893822904000000"
+      "reward": "11689165410285336000000"
     },
     {
       "pool": "0x7a2ce31fedf0e326a9f6113d39793a154b0f1c11",
@@ -9770,24 +9775,29 @@
       "reward": "9442802830815731481400"
     },
     {
-      "pool": "0xede4a03c13e00a909a2bd0bf815681c52d9b0cd8",
-      "account": "0xefb73e47099485c72b7678cb59fb0da7dacf173f",
-      "reward": "8966680900955372704536"
-    },
-    {
       "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
       "account": "0x02468737e547de123eb90919e241f64f2480e993",
-      "reward": "8015413506209276870369"
+      "reward": "8042363654917475141073"
     },
     {
       "pool": "0xbcd224c24acc3ec60acaa89590dfb65fc16de193",
       "account": "0x184af8c1a4d19e39a46e1203360e340b8764ef78",
-      "reward": "7472813340898945021020"
+      "reward": "7626126540093836822140"
+    },
+    {
+      "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
+      "account": "0xefb73e47099485c72b7678cb59fb0da7dacf173f",
+      "reward": "5824094003562248381370"
     },
     {
       "pool": "0x37e815d6363e4faa54e20f9e8a85460f5830be06",
       "account": "0xeb7e82a67cdfa3e742e0f3315fd4eed7b05730cc",
       "reward": "5399782117157241606000"
+    },
+    {
+      "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
+      "account": "0xefb73e47099485c72b7678cb59fb0da7dacf173f",
+      "reward": "5322162915910778935572"
     },
     {
       "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
@@ -9797,17 +9807,17 @@
     {
       "pool": "0xede4a03c13e00a909a2bd0bf815681c52d9b0cd8",
       "account": "0xc1c8f6ef43b39c279417e361969d535f2a20b92e",
-      "reward": "4047164176720375838400"
+      "reward": "4230924661220943487200"
+    },
+    {
+      "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
+      "account": "0xad0cbb2a5fd04f4c526a32b9dc7859bb479035c2",
+      "reward": "3939567405864383704170"
     },
     {
       "pool": "0x2f09c888c2081342892d8adc9cd2668870a55b58",
       "account": "0x299cd1c791464827ddfb147612244a2c59da91a0",
       "reward": "3906284660136363533500"
-    },
-    {
-      "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
-      "account": "0xefb73e47099485c72b7678cb59fb0da7dacf173f",
-      "reward": "3884953377638155405554"
     },
     {
       "pool": "0xe510866dc87b0742c756d7482a06f2477b8e5141",
@@ -9825,14 +9835,9 @@
       "reward": "3622006053201827451450"
     },
     {
-      "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
-      "account": "0xefb73e47099485c72b7678cb59fb0da7dacf173f",
-      "reward": "3553997278114610665872"
-    },
-    {
       "pool": "0xbcd224c24acc3ec60acaa89590dfb65fc16de193",
       "account": "0x47f4304824568d257bb40fd7ea6839f8abd5f60c",
-      "reward": "3436668137447995020000"
+      "reward": "3444998263821463260000"
     },
     {
       "pool": "0x37e815d6363e4faa54e20f9e8a85460f5830be06",
@@ -9842,52 +9847,57 @@
     {
       "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
       "account": "0xbf04dbfcacad75e89e78fa0ca2d0a9c4a176bf00",
-      "reward": "3196121231693555700000"
+      "reward": "3213814795425494500000"
     },
     {
       "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
       "account": "0x217b3b614349e8d01c5a0b3e6132451c58eef740",
-      "reward": "3053920349168334079234"
-    },
-    {
-      "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
-      "account": "0xad0cbb2a5fd04f4c526a32b9dc7859bb479035c2",
-      "reward": "2779645643529035071636"
+      "reward": "3096992185456504624374"
     },
     {
       "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
       "account": "0x3a5de821111d89c3ad52bf473b70e675766231b6",
-      "reward": "2613004997742845070000"
-    },
-    {
-      "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
-      "account": "0x4f6f81275dc816724e270ddded12609ef0fcce0d",
-      "reward": "2515957772462625558391"
-    },
-    {
-      "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
-      "account": "0xf8a22b371161d63b1a17f0aace7a953df3ebed80",
-      "reward": "2439721444177184531000"
-    },
-    {
-      "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
-      "account": "0x9c8957c3edddda379c7cf4f3c2a487eb1b0f6467",
-      "reward": "2327275311571359805902"
+      "reward": "2620621322291100900000"
     },
     {
       "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
       "account": "0x6ab5d3e5069326ff4601e77c3651f0c216d7e036",
-      "reward": "2308402625045878496000"
+      "reward": "2611365859936869696000"
     },
     {
       "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
-      "account": "0x6328e811a291b6424a0c858526d46fff7c46d647",
-      "reward": "2252360337198386408434"
+      "account": "0x4f6f81275dc816724e270ddded12609ef0fcce0d",
+      "reward": "2524676329471459039699"
+    },
+    {
+      "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
+      "account": "0xf8a22b371161d63b1a17f0aace7a953df3ebed80",
+      "reward": "2453071442836949431000"
     },
     {
       "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
       "account": "0x74cafa4ef28da1410e1de6f431b009367945df66",
-      "reward": "2148975647239010020000"
+      "reward": "2372383788075892020000"
+    },
+    {
+      "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
+      "account": "0x9c8957c3edddda379c7cf4f3c2a487eb1b0f6467",
+      "reward": "2340000322631208857302"
+    },
+    {
+      "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
+      "account": "0x6328e811a291b6424a0c858526d46fff7c46d647",
+      "reward": "2310237557661954508260"
+    },
+    {
+      "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
+      "account": "0x0befd7ecaf8038737438832643f0e51df7abf1e4",
+      "reward": "2303408942385588349902"
+    },
+    {
+      "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
+      "account": "0xd891ce6a97b4f01a8b9b36d0298aa3631fe2eef5",
+      "reward": "2032760330401773000000"
     },
     {
       "pool": "0x2f09c888c2081342892d8adc9cd2668870a55b58",
@@ -9895,29 +9905,19 @@
       "reward": "1970894511562158022185"
     },
     {
-      "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
-      "account": "0x0befd7ecaf8038737438832643f0e51df7abf1e4",
-      "reward": "1939996799517862460773"
-    },
-    {
-      "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
-      "account": "0xd891ce6a97b4f01a8b9b36d0298aa3631fe2eef5",
-      "reward": "1908905384278201400000"
+      "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
+      "account": "0x2823fd42b4603f1428173b544c3ee81409f9f82a",
+      "reward": "1696266128976813114600"
     },
     {
       "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
       "account": "0x60ff1c39b331f4035db7799973893a690ca06360",
-      "reward": "1550496750111254932440"
-    },
-    {
-      "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
-      "account": "0x2823fd42b4603f1428173b544c3ee81409f9f82a",
-      "reward": "1270208933747381984400"
+      "reward": "1561296146808817746369"
     },
     {
       "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
       "account": "0x3f570049fd02128f8039f2b7a9f91b4a634905c7",
-      "reward": "1108983342798868499100"
+      "reward": "1112391123173639911980"
     },
     {
       "pool": "0x7a2ce31fedf0e326a9f6113d39793a154b0f1c11",
@@ -9927,17 +9927,22 @@
     {
       "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
       "account": "0x3d6d656c1bf92f7028ce4c352563e1c363c58ed5",
-      "reward": "788782549893310287700"
+      "reward": "791261835358695197700"
     },
     {
       "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
       "account": "0x9522ce4e7f091502a02dd4699f00e336b5c0d901",
-      "reward": "770855817288643952352"
+      "reward": "773832582450905336064"
     },
     {
       "pool": "0xede4a03c13e00a909a2bd0bf815681c52d9b0cd8",
       "account": "0x7485a5dad2a8945e73f25af804c83966abaf9edf",
-      "reward": "675140646085014054292"
+      "reward": "676199338836888053519"
+    },
+    {
+      "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
+      "account": "0x3f570049fd02128f8039f2b7a9f91b4a634905c7",
+      "reward": "451538012509213690000"
     },
     {
       "pool": "0x10c77dee49010f186ee65e00e2e95413a91c91a5",
@@ -9945,19 +9950,14 @@
       "reward": "451135190421318135000"
     },
     {
-      "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
-      "account": "0x3f570049fd02128f8039f2b7a9f91b4a634905c7",
-      "reward": "448999237659795080000"
-    },
-    {
       "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
       "account": "0x935b8dfef9bda7866a6f3de2f7cf5c24796f08f3",
-      "reward": "409013678628108152400"
+      "reward": "413127657806933662400"
     },
     {
       "pool": "0xbcd224c24acc3ec60acaa89590dfb65fc16de193",
       "account": "0x1fe43f304ca8f1d99f79f7ec71de9b7e329b91bd",
-      "reward": "360352775015410829600"
+      "reward": "385808530529213308608"
     },
     {
       "pool": "0x41f508265452349a15216deb1c50378b0defc232",
@@ -9967,12 +9967,17 @@
     {
       "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
       "account": "0x44fb3f95118bf09ba74e31dc8a125f2934c7b934",
-      "reward": "252572684424240393000"
+      "reward": "253334316879065976000"
     },
     {
       "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
       "account": "0xa59d2948de0aa16468f13328d141b14dd57fd5ed",
-      "reward": "197556078496348377224"
+      "reward": "198828258573392042695"
+    },
+    {
+      "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
+      "account": "0x6328e811a291b6424a0c858526d46fff7c46d647",
+      "reward": "152935418493268196800"
     },
     {
       "pool": "0xe510866dc87b0742c756d7482a06f2477b8e5141",
@@ -9980,19 +9985,14 @@
       "reward": "150956731328744325301"
     },
     {
-      "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
-      "account": "0x6328e811a291b6424a0c858526d46fff7c46d647",
-      "reward": "148708358368986211150"
-    },
-    {
       "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
       "account": "0x60ff1c39b331f4035db7799973893a690ca06360",
-      "reward": "110110481465774428943"
+      "reward": "110747816215625312988"
     },
     {
       "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
       "account": "0xede9129da3340414d172b45cbef924a1b500f6e0",
-      "reward": "103236938457815715300"
+      "reward": "106575427384801187450"
     },
     {
       "pool": "0x41f508265452349a15216deb1c50378b0defc232",
@@ -10007,12 +10007,12 @@
     {
       "pool": "0xbcd224c24acc3ec60acaa89590dfb65fc16de193",
       "account": "0xa59d2948de0aa16468f13328d141b14dd57fd5ed",
-      "reward": "81550255818799168000"
+      "reward": "81994529225384140800"
     },
     {
       "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
       "account": "0x2823fd42b4603f1428173b544c3ee81409f9f82a",
-      "reward": "53151987785347189900"
+      "reward": "71712536140150991100"
     },
     {
       "pool": "0xe510866dc87b0742c756d7482a06f2477b8e5141",
@@ -10022,7 +10022,7 @@
     {
       "pool": "0xbcd224c24acc3ec60acaa89590dfb65fc16de193",
       "account": "0x5357749232f2ec655e3d87204c84a5c6457b2d45",
-      "reward": "5727780229079991700"
+      "reward": "5741663773035772100"
     },
     {
       "pool": "0xe510866dc87b0742c756d7482a06f2477b8e5141",
@@ -10042,7 +10042,7 @@
     {
       "pool": "0xbcd224c24acc3ec60acaa89590dfb65fc16de193",
       "account": "0xe59261f6d4088bcd69985a3d369ff14cc54ef1e5",
-      "reward": "983296508315283324"
+      "reward": "985795546227323796"
     },
     {
       "pool": "0x10c77dee49010f186ee65e00e2e95413a91c91a5",
@@ -10057,17 +10057,17 @@
     {
       "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
       "account": "0x3d6d656c1bf92f7028ce4c352563e1c363c58ed5",
-      "reward": "765683305280896020"
+      "reward": "768222080130314630"
     },
     {
       "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
       "account": "0xe59261f6d4088bcd69985a3d369ff14cc54ef1e5",
-      "reward": "528694835684449962"
+      "reward": "530329529397890562"
     },
     {
       "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
       "account": "0x4de51875c1a58799a0de58fc1049e9c4a83d7ad0",
-      "reward": "438712596838824789"
+      "reward": "438889532476144177"
     },
     {
       "pool": "0xe510866dc87b0742c756d7482a06f2477b8e5141",
@@ -10077,7 +10077,7 @@
     {
       "pool": "0x33b68913e59d4a5165aa02d30705d20b55667b12",
       "account": "0x0f14341a7f464320319025540e8fe48ad0fe5aec",
-      "reward": "172283376165793540"
+      "reward": "172828274070273740"
     },
     {
       "pool": "0x1bec463de2b9cd6ab92c064595dda59b0d8cf3b9",
@@ -10092,7 +10092,7 @@
     {
       "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
       "account": "0xe59261f6d4088bcd69985a3d369ff14cc54ef1e5",
-      "reward": "81369306731376055"
+      "reward": "81623184216317916"
     },
     {
       "pool": "0xbcd224c24acc3ec60acaa89590dfb65fc16de193",
@@ -10107,7 +10107,7 @@
     {
       "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",
       "account": "0x5af9a1be7bc22f9a6b2ce90acd69c23dceeb23c2",
-      "reward": "11941617979413404"
+      "reward": "12195495464355265"
     },
     {
       "pool": "0x34e3e8a2022256ee17b6196681b7d4d79741b1a6",

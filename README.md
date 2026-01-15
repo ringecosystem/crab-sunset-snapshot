@@ -2,6 +2,8 @@
 
 Crab Sunset calculates RING airdrop distributions from on-chain holder snapshots across the Crab and Darwinia ecosystems. It fetches token holder data, applies group allocation rules, and writes a final `airdrop_results.json` for distribution.
 
+For calculation details, see [`docs/airdrop_calculation.md`](docs/airdrop_calculation.md).
+
 ## Install and Run
 
 Install dependencies and run the full snapshot + airdrop pipeline:

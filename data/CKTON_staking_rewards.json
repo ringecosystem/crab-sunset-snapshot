@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-01-14T06:59:07.242Z",
+  "timestamp": "2026-01-15T08:24:35.804Z",
   "rpc_url": "https://crab-rpc.darwinia.network",
   "contract_address": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
-  "snapshot_block": "9694708",
+  "snapshot_block": "9702190",
   "staked_events_count": 194,
   "reward_accounts_count": 73,
   "non_zero_rewards_count": 30,
@@ -1371,137 +1371,137 @@
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0xd4dc3eb21c9ec200ef82c825fbf86188c1a6c03c",
-      "reward": "249215440417028409280418"
+      "reward": "249421507620696361201684"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0xe8a1d8068d15aba5927d29282d6476b7978ed0c1",
-      "reward": "163748458502400693875307"
+      "reward": "163883747630179545331531"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0xb5540caf9cce89b7da1f26a4cf54cff48853ae00",
-      "reward": "87720274196585933074829"
+      "reward": "87792748460320040638939"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x25ab128f1e44ff04f74d0ba2989f94b82af098fa",
-      "reward": "49381462863373070177727"
+      "reward": "49424721837490109984081"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x21b7b075ed133a7f3faf10698bdc6613998c4180",
-      "reward": "44074833833683290109912"
+      "reward": "44112750265343847791851"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0xc5532432a92053ae600c105e5985cf899408426d",
-      "reward": "29421052720819807242650"
+      "reward": "29452302513472235949031"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x52386be2397e8eac26298f733b390684203fb580",
-      "reward": "20353567102376029919088"
+      "reward": "20370380945128832760233"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0xba70e3c0b49e8588a40d504196afbfc6bff195a3",
-      "reward": "6877383276247841580595"
+      "reward": "6883065400168734674664"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x6a7acb326acd78ad2fee10de87145acb16c7c0eb",
-      "reward": "3979980576327255575792"
+      "reward": "3984291838987032323169"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0xbf57ab0e40d5343ac04d983339d6addf4a278aa8",
-      "reward": "2885607249585682411488"
+      "reward": "2888237579841227167435"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0xb530487117d717cd89dad97b62935255e865d159",
-      "reward": "2671391428767747204714"
+      "reward": "2673821126125961440536"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0xc1314ecdf8b95934ea374476db1ceb742bc18e07",
-      "reward": "2343726184552207808250"
+      "reward": "2345662575538238521812"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x137f4a9938fb06cd309312842557dbcbe4240b36",
-      "reward": "2179992226831856811411"
+      "reward": "2181799311445445855561"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x0d4b3689e15758f76216ea96bf4757b445a62b64",
-      "reward": "2118188987014769498214"
+      "reward": "2120127869291882771695"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x81e98c5cc3f0e98b5032f92e44006ad6efc20320",
-      "reward": "1947628794703895700813"
+      "reward": "1949240574139542768140"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x4867dca57c00641332cdb96a4746b3eb29360618",
-      "reward": "1767404465235843978961"
+      "reward": "1768869536190435901007"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x6e9dcc05c020172e35aaa8f394cf414ef8f23cf6",
-      "reward": "1727158440019037030940"
+      "reward": "1728601824588273210636"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0xeae961c8bc0548456cab29b860bd900cfc36cc38",
-      "reward": "1477672777074637933769"
+      "reward": "1478918693490036099453"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x036e4393a41bd954e9b5c80c7c6ab0557cf1bc95",
-      "reward": "1377091617867166012578"
+      "reward": "1378278083225882151172"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x22d9d6e26d7af6b8a01da05f4354eb4c691948b5",
-      "reward": "1061054307958454347877"
+      "reward": "1061932366904739690525"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0xfd2eef72f3c6806940f289509eb11f9b412b2b51",
-      "reward": "1008729282095339373531"
+      "reward": "1009591676872967844578"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x3d6d656c1bf92f7028ce4c352563e1c363c58ed5",
-      "reward": "871212099233520827259"
+      "reward": "871933791518138917107"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x299cd1c791464827ddfb147612244a2c59da91a0",
-      "reward": "784023558764134454422"
+      "reward": "784836759543786716862"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x6f938612e6a6db49b1e1165c086184b0858fd1c9",
-      "reward": "687096885712373230764"
+      "reward": "687835176919537536679"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0xed08134b20a62c24855b844ef7b7d366116304dc",
-      "reward": "538753623411634849553"
+      "reward": "539329358875356440139"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x1fe43f304ca8f1d99f79f7ec71de9b7e329b91bd",
-      "reward": "265023301851189260762"
+      "reward": "265263865946061957378"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",
       "account": "0x53d64776e99226cf8d41dea1bd5740316f1e0c0d",
-      "reward": "23344639821457388727"
+      "reward": "23366044143708057646"
     },
     {
       "contract": "0x000000000419683a1a03abc21fc9da25fd2b4dd7",

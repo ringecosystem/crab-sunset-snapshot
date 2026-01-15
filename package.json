@@ -26,7 +26,7 @@
     "snapshot": "npm run fetch:crab && npm run fetch:darwinia",
     "airdrop": "node bin/airdrop-calculation",
     "airdrop:all": "npm run snapshot && npm run airdrop",
-    "test:airdrop": "node --test test/checks"
+    "test:airdrop": "jest"
   },
   "keywords": [
     "blockchain",
@@ -38,5 +38,8 @@
   "license": "MIT",
   "dependencies": {
     "viem": "^2.44.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

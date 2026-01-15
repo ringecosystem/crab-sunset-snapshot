@@ -167,14 +167,18 @@ async function calculateAirdrop(outputDir, config = {}) {
 		.map((r) => {
 			const metadata = getRule(r.name).getMetadata();
 			const result = ruleResults[r.name];
-
-			return {
+			const entry = {
 				name: metadata.name,
 				description: metadata.description,
 				allocationPercentage: metadata.allocationPercentage,
-				total_supply: result?.totalSupply || '0',
 				components: metadata.components
 			};
+
+			if (r.name !== 'evolution_land') {
+				entry.total_supply = result?.totalSupply || '0';
+			}
+
+			return entry;
 		});
 
 	const statistics = buildStatistics(allRecipients, ruleResults, excludedRecipients);
@@ -242,10 +246,13 @@ function buildBreakdown(ruleName, result, address) {
 	const details = {
 		rule_name: ruleName,
 		description: result.description,
-		total_supply: result.totalSupply,
 		proportion: data.proportion,
 		airdrop_amount: data.amount
 	};
+
+	if (ruleName !== 'evolution_land') {
+		details.total_supply = result.totalSupply;
+	}
 
 	if (ruleName === 'crab_group') {
 		const raw = result.rawBalances;
@@ -357,6 +364,7 @@ function buildBreakdown(ruleName, result, address) {
 	}
 
 	if (ruleName === 'evolution_land') {
+		delete details.proportion;
 		details.land_allocations = result.landAllocations || {};
 		details.land_supplies = result.componentSupplies || {};
 		details.land_breakdown = data.lands || {};
@@ -401,12 +409,15 @@ function buildStatistics(recipients, ruleResults, excludedRecipients) {
 		}).length;
 
 		statistics.rule_details[ruleName] = {
-			total_supply: result.totalSupply,
 			allocation: result.allocation,
 			allocation_percentage: result.allocationPercentage,
 			component_supplies: result.componentSupplies,
 			recipient_count: recipientCount
 		};
+
+		if (ruleName !== 'evolution_land') {
+			statistics.rule_details[ruleName].total_supply = result.totalSupply;
+		}
 	}
 
 	return statistics;

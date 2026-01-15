@@ -1,6 +1,7 @@
-const test = require('node:test');
 const { loadJson } = require('../helpers/data');
-const { info, warn, formatDelta } = require('../helpers/log');
+const { info, formatDelta } = require('../helpers/log');
+
+const ROUNDING_TOLERANCE = 1000n;
 
 function sumBigInt(values) {
 	return (values || []).reduce((sum, value) => sum + BigInt(value || '0'), 0n);
@@ -22,27 +23,27 @@ test('Rule allocations sum to expected allocations', () => {
 	}
 	const totalDistributed = BigInt(stats.total_airdrop_distributed || '0');
 	info(`Recipients sum=${recipientsSum} statistics.total_airdrop_distributed=${totalDistributed}`);
+	const { delta, direction } = formatDelta(totalDistributed.toString(), recipientsSum.toString());
 	if (recipientsSum !== totalDistributed) {
-		const { delta, direction } = formatDelta(totalDistributed.toString(), recipientsSum.toString());
-		warn(`total_airdrop_distributed mismatch (delta=${delta} ${direction})`);
+		throw new Error(`total_airdrop_distributed mismatch (delta=${delta} ${direction})`);
 	}
 
 	// Check: group allocations sum to total airdrop treasury.
 	const totalTreasury = BigInt(airdrop.total_airdrop_treasury || '0');
 	const distributionTotal = sumBigInt(Object.values(distribution).map((d) => d.allocation));
 	info(`Distribution total=${distributionTotal} treasury=${totalTreasury}`);
+	const distributionDelta = formatDelta(totalTreasury.toString(), distributionTotal.toString());
 	if (distributionTotal !== totalTreasury) {
-		const { delta, direction } = formatDelta(totalTreasury.toString(), distributionTotal.toString());
-		warn(`distribution allocations sum mismatch (delta=${delta} ${direction})`);
+		throw new Error(`distribution allocations sum mismatch (delta=${distributionDelta.delta} ${distributionDelta.direction})`);
 	}
 
 	const reserveAllocation = BigInt(distribution.reserve?.allocation || '0');
 	const expectedRulesTotal = totalTreasury - reserveAllocation;
 	const rulesTotal = sumBigInt(Object.values(ruleDetails).map((d) => d.allocation));
 	info(`Rules total=${rulesTotal} (treasury-reserve)=${expectedRulesTotal} reserve=${reserveAllocation}`);
+	const rulesDelta = formatDelta(expectedRulesTotal.toString(), rulesTotal.toString());
 	if (rulesTotal !== expectedRulesTotal) {
-		const { delta, direction } = formatDelta(expectedRulesTotal.toString(), rulesTotal.toString());
-		warn(`rule allocations sum mismatch (delta=${delta} ${direction})`);
+		throw new Error(`rule allocations sum mismatch (delta=${rulesDelta.delta} ${rulesDelta.direction})`);
 	}
 
 	['evolution_land', 'ckton_group', 'crab_group'].forEach((ruleName) => {
@@ -61,8 +62,9 @@ test('Rule allocations sum to expected allocations', () => {
 
 		const { delta, direction } = formatDelta(expectedAllocation.toString(), distributed.toString());
 		info(`${ruleName} recipients=${recipientCount} distributed=${distributed} allocation=${expectedAllocation} delta=${delta} (${direction})`);
-		if (distributed !== expectedAllocation) {
-			warn(`${ruleName} distributed sum differs from allocation (likely rounding)`);
+		const deltaValue = BigInt(delta);
+		if (distributed !== expectedAllocation && deltaValue > ROUNDING_TOLERANCE) {
+			throw new Error(`${ruleName} distributed sum differs from allocation (delta=${delta} ${direction})`);
 		}
 	});
 });

@@ -1,6 +1,5 @@
-const test = require('node:test');
 const { loadJson, loadTokenSnapshot } = require('../helpers/data');
-const { info, warn, formatDelta } = require('../helpers/log');
+const { info, formatDelta } = require('../helpers/log');
 
 const EXCLUDED_SPECIALS = new Set([
 	'0xb633ad1142941ca2eb9c350579cf88bbe266660d',
@@ -136,7 +135,7 @@ test('Group total_supply matches original snapshots', () => {
 		const gcktonData = loadTokenSnapshot('gCKTON');
 
 		if (!cktonData || !wcktonData || !gcktonData) {
-			warn('Missing CKTON token snapshots; skipping CKTON supply test');
+			throw new Error('Missing CKTON token snapshots; cannot verify CKTON supply');
 		} else {
 			const virtual = buildVirtualHoldings(snowLps, ['CKTON', 'WCKTON', 'gCKTON']);
 			const balances = {};
@@ -181,7 +180,7 @@ test('Group total_supply matches original snapshots', () => {
 			info(`CKTON supply expected=${expectedCktonSupply} computed=${computed} holders=${Object.keys(balances).length}`);
 			if (expectedCktonSupply !== computed) {
 				const { delta, direction } = formatDelta(expectedCktonSupply.toString(), computed.toString());
-				warn(`CKTON supply mismatch (delta=${delta} ${direction})`);
+				throw new Error(`CKTON supply mismatch (delta=${delta} ${direction})`);
 			}
 
 			// Store for CRAB add-on calculation
@@ -199,8 +198,7 @@ test('Group total_supply matches original snapshots', () => {
 		const xwcrabData = loadTokenSnapshot('xWCRAB');
 
 		if (!wcrabData || !gcrabData || !wcringData || !xwcrabData) {
-			warn('Missing CRAB token snapshots; skipping CRAB supply test');
-			return;
+			throw new Error('Missing CRAB token snapshots; cannot verify CRAB supply');
 		}
 
 		const virtual = buildVirtualHoldings(snowLps, ['CRAB', 'WCRAB', 'gCRAB', 'xWCRAB', 'WCRING']);
@@ -210,8 +208,8 @@ test('Group total_supply matches original snapshots', () => {
 
 		// Treasury CRAB for CKTON add-on is stored in crab_group breakdown.
 		const firstCrabRecipient = Object.values(airdrop.recipients || {}).find((r) => r.breakdown?.crab_group);
-		const treasuryCrab = BigInt(firstCrabRecipient?.breakdown?.crab_group?.ckton_treasury_crab_addon?.ckton_treasury_crab_balance || '0');
-		const cktonTreasuryGroupSupplyExpected = BigInt(firstCrabRecipient?.breakdown?.crab_group?.ckton_treasury_crab_addon?.ckton_treasury_group_supply || '0');
+		const treasuryCrab = BigInt(firstCrabRecipient?.breakdown?.crab_group?.virtual_from_ckton_treasury?.ckton_treasury_crab_balance || '0');
+		const cktonTreasuryGroupSupplyExpected = BigInt(firstCrabRecipient?.breakdown?.crab_group?.virtual_from_ckton_treasury?.ckton_group_total_supply || '0');
 
 		// CRAB-group add-on uses CKTON/WCKTON/gCKTON group balances (EOA holders only) + virtual holdings.
 		const cktonAddonData = loadTokenSnapshot('CKTON');
@@ -267,7 +265,7 @@ test('Group total_supply matches original snapshots', () => {
 		const cktonAddonSupply = sumMapBalances(cktonAddonBalances);
 		if (cktonTreasuryGroupSupplyExpected !== 0n && cktonTreasuryGroupSupplyExpected !== cktonAddonSupply) {
 			const { delta, direction } = formatDelta(cktonTreasuryGroupSupplyExpected.toString(), cktonAddonSupply.toString());
-			warn(`CKTON treasury group supply mismatch sources vs output (delta=${delta} ${direction})`);
+			throw new Error(`CKTON treasury group supply mismatch sources vs output (delta=${delta} ${direction})`);
 		}
 
 		const balances = {};
@@ -362,7 +360,12 @@ test('Group total_supply matches original snapshots', () => {
 		info(`CRAB supply expected=${expectedCrabSupply} computed=${computed} holders=${Object.keys(balances).length}`);
 		if (expectedCrabSupply !== computed) {
 			const { delta, direction } = formatDelta(expectedCrabSupply.toString(), computed.toString());
-			warn(`CRAB supply mismatch (delta=${delta} ${direction})`);
+			const componentSupplies = airdrop.statistics?.rule_details?.crab_group?.component_supplies || {};
+			const expectedAddon = BigInt(componentSupplies.ckton_treasury_crab_addon || '0');
+			const deltaValue = BigInt(delta);
+			if (expectedAddon === 0n || deltaValue !== expectedAddon) {
+				throw new Error(`CRAB supply mismatch (delta=${delta} ${direction})`);
+			}
 		}
 	}
 });

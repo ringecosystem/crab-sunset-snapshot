@@ -1,12 +1,13 @@
-const test = require('node:test');
 const { loadJson } = require('../helpers/data');
 const { pickSampleKeys } = require('../helpers/sample');
 const { bigIntToDecimalString, sumBalances } = require('../helpers/math');
 
 const LAND_SYMBOLS = ['FIRE', 'GOLD', 'WOOD', 'SIOO', 'HHO'];
 
-function warnMismatch(message, expected, actual) {
-	console.warn(`⚠️  ${message} expected=${expected} actual=${actual}`);
+function assertMatch(message, expected, actual) {
+	if (expected !== actual) {
+		throw new Error(`${message} expected=${expected} actual=${actual}`);
+	}
 }
 
 test('Evolution Land sample checks', () => {
@@ -17,8 +18,7 @@ test('Evolution Land sample checks', () => {
 	for (const symbol of LAND_SYMBOLS) {
 		const token = tokens.find((item) => item.symbol === symbol);
 		if (!token) {
-			console.warn(`⚠️  Missing Evolution Land token for ${symbol}`);
-			continue;
+			throw new Error(`Missing Evolution Land token for ${symbol}`);
 		}
 
 		const holders = token.eoa_holders || {};
@@ -34,16 +34,15 @@ test('Evolution Land sample checks', () => {
 			const breakdown = recipient?.breakdown?.evolution_land?.land_breakdown?.[symbol];
 
 			if (!breakdown) {
-				console.warn(`⚠️  Missing evolution_land breakdown for ${symbol} ${normalized}`);
-				return;
+				throw new Error(`Missing evolution_land breakdown for ${symbol} ${normalized}`);
 			}
 
 			if (breakdown.balance !== balance.toString()) {
-				warnMismatch(`Evolution ${symbol} balance for ${normalized}`, balance, breakdown.balance);
+				assertMatch(`Evolution ${symbol} balance for ${normalized}`, balance, breakdown.balance);
 			}
 
 			if (breakdown.proportion !== expectedProportion) {
-				warnMismatch(`Evolution ${symbol} proportion for ${normalized}`, expectedProportion, breakdown.proportion);
+				assertMatch(`Evolution ${symbol} proportion for ${normalized}`, expectedProportion, breakdown.proportion);
 			}
 		});
 	}

@@ -1,4 +1,3 @@
-const test = require('node:test');
 const { loadJson, loadTokenSnapshot } = require('../helpers/data');
 const { pickSampleKeys } = require('../helpers/sample');
 const { sumBalances } = require('../helpers/math');
@@ -94,8 +93,10 @@ function aggregateBalances(sources) {
 	return aggregated;
 }
 
-function warnMismatch(message, expected, actual) {
-	console.warn(`⚠️  ${message} expected=${expected} actual=${actual}`);
+function assertMatch(message, expected, actual) {
+	if (expected !== actual) {
+		throw new Error(`${message} expected=${expected} actual=${actual}`);
+	}
 }
 
 test('CKTON group sample checks', () => {
@@ -108,8 +109,7 @@ test('CKTON group sample checks', () => {
 	const gcktonData = loadTokenSnapshot('gCKTON');
 
 	if (!cktonData || !wcktonData || !gcktonData) {
-		console.warn('⚠️  Missing CKTON token snapshots for test');
-		return;
+		throw new Error('Missing CKTON token snapshots for test');
 	}
 
 	const lpTokens = new Set((snowLps || []).map((lp) => (lp.address || '').toLowerCase()).filter(Boolean));
@@ -149,7 +149,7 @@ test('CKTON group sample checks', () => {
 		const expectedTotal = BigInt(aggregated[address] || '0').toString();
 		const actualTotal = breakdown.group_balance || '0';
 		if (expectedTotal !== actualTotal) {
-			warnMismatch(`CKTON group balance for ${address}`, expectedTotal, actualTotal);
+			assertMatch(`CKTON group balance for ${address}`, expectedTotal, actualTotal);
 		}
 	});
 });

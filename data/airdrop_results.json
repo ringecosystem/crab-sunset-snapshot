@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-15T05:47:25.952Z",
+  "timestamp": "2026-01-15T06:53:29.268Z",
   "total_airdrop_treasury": "38431025100900660000000000",
   "total_airdrop_treasury_with_decimal": "38431025.10090066",
   "treasury_address": "0xC665138b8AC77086af08d83cfc6410501624FFAa",
@@ -31,7 +31,6 @@
       "name": "evolution_land",
       "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
       "allocationPercentage": "0.15",
-      "total_supply": "2233293320617780169817028",
       "components": [
         "FIRE",
         "GOLD",
@@ -44,7 +43,6 @@
       "name": "ckton_group",
       "description": "CKTON Group (CKTON + WCKTON + gCKTON)",
       "allocationPercentage": "0.20",
-      "total_supply": "86379718734631116680719",
       "components": [
         "CKTON",
         "WCKTON",
@@ -52,13 +50,13 @@
         "Virtual CKTON",
         "Virtual WCKTON",
         "Virtual gCKTON"
-      ]
+      ],
+      "total_supply": "86379718734631116680719"
     },
     {
       "name": "crab_group",
       "description": "CRAB Group (CRAB + WCRAB + gCRAB + xWCRAB + WCRING + rewards)",
       "allocationPercentage": "0.60",
-      "total_supply": "227897406670488999247018960",
       "components": [
         "CRAB",
         "WCRAB",
@@ -74,7 +72,8 @@
         "CKTON staking rewards",
         "CRAB deposit balance",
         "CKTON treasury CRAB add-on"
-      ]
+      ],
+      "total_supply": "227897406670488999247018960"
     }
   ],
   "statistics": {
@@ -185,7 +184,6 @@
     ],
     "rule_details": {
       "evolution_land": {
-        "total_supply": "2233293320617780169817028",
         "allocation": "5764653765135099000000000",
         "allocation_percentage": "0.15",
         "component_supplies": {
@@ -198,7 +196,6 @@
         "recipient_count": 29
       },
       "ckton_group": {
-        "total_supply": "86379718734631116680719",
         "allocation": "7686205020180132000000000",
         "allocation_percentage": "0.20",
         "component_supplies": {
@@ -209,10 +206,10 @@
           "virtual_wckton": "0",
           "virtual_gckton": "0"
         },
-        "recipient_count": 123
+        "recipient_count": 123,
+        "total_supply": "86379718734631116680719"
       },
       "crab_group": {
-        "total_supply": "227897406670488999247018960",
         "allocation": "23058615060540396000000000",
         "allocation_percentage": "0.60",
         "component_supplies": {
@@ -231,7 +228,8 @@
           "crab_deposit_balance": "3583240431527602000000129",
           "ckton_treasury_crab_addon": "2494168350213498675251869"
         },
-        "recipient_count": 602
+        "recipient_count": 602,
+        "total_supply": "227897406670488999247018960"
       }
     }
   },
@@ -533,8 +531,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "1484673008240031997627398",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -622,8 +618,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "1163882650412528600698748",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -864,8 +858,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "815629704582516463173482",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -924,8 +916,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "804421442890580195367106",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -1013,8 +1003,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "689665658341358824924920",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -1675,8 +1663,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "233007117464257941180595",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -2040,8 +2026,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "181367240909848745426502",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -2180,8 +2164,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "166385815435390048774400",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -3748,8 +3730,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "46531011829427615589978",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -4204,8 +4184,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "35753620164646467591318",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -4332,8 +4310,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "34882559164146779652191",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -4614,8 +4590,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "27321802032879773647245",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -5285,8 +5259,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "15414763935639144777181",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -5413,8 +5385,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "16348933059959690193697",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -5572,8 +5542,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "15624778798026148936526",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -5991,8 +5959,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "11944397724232898080703",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -6447,8 +6413,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "10348285161233032691119",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -6804,8 +6768,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "8651587095922234508136",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -7053,8 +7015,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "29561695149879049084",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -8291,8 +8251,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "649201438431222239794",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -11083,8 +11041,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "729022724686435257816",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -11379,8 +11335,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "604379357093377730658",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -11942,8 +11896,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "118528514746427004443",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -12226,8 +12178,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "194721092009271406801",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -12510,8 +12460,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "222241006994322727848",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -13016,8 +12964,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "185663895089437161897",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -13904,8 +13850,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "39376537066749927150",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -15196,8 +15140,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "23039999447917291712",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",
@@ -15520,8 +15462,6 @@
         "evolution_land": {
           "rule_name": "evolution_land",
           "description": "Evolution Land (FIRE + GOLD + WOOD + SIOO + HHO)",
-          "total_supply": "2233293320617780169817028",
-          "proportion": "0",
           "airdrop_amount": "3651631757357361510",
           "land_allocations": {
             "FIRE": "1152930753027019800000000",

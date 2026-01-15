@@ -1,4 +1,3 @@
-const test = require('node:test');
 const { loadJson, loadTokenSnapshot } = require('../helpers/data');
 const { pickSampleKeys } = require('../helpers/sample');
 
@@ -7,10 +6,13 @@ const EXCLUDED_NATIVE = new Set([
 	'0x6d6f646c64612f74727372790000000000000000'
 ]);
 
-function filterEOAs(holders, cache) {
+function filterEOAs(holders, cache, lpTokens = new Set()) {
 	const filtered = {};
 	for (const [address, balance] of Object.entries(holders || {})) {
 		const normalized = address.split(' (')[0].toLowerCase();
+		if (lpTokens.has(normalized)) {
+			continue;
+		}
 		if (cache[normalized] === true) {
 			continue;
 		}
@@ -19,13 +21,17 @@ function filterEOAs(holders, cache) {
 	return filtered;
 }
 
-function filterExcludedNative(holders) {
+function filterExcludedNative(holders, lpTokens = new Set()) {
 	const filtered = {};
 	for (const [address, balance] of Object.entries(holders || {})) {
-		if (EXCLUDED_NATIVE.has(address.toLowerCase())) {
+		const normalized = address.toLowerCase();
+		if (EXCLUDED_NATIVE.has(normalized)) {
 			continue;
 		}
-		filtered[address.toLowerCase()] = balance;
+		if (lpTokens.has(normalized)) {
+			continue;
+		}
+		filtered[normalized] = balance;
 	}
 	return filtered;
 }
@@ -93,8 +99,10 @@ function aggregateBalances(sources) {
 	return aggregated;
 }
 
-function warnMismatch(message, expected, actual) {
-	console.warn(`⚠️  ${message} expected=${expected} actual=${actual}`);
+function assertMatch(message, expected, actual) {
+	if (expected !== actual) {
+		throw new Error(`${message} expected=${expected} actual=${actual}`);
+	}
 }
 
 function loadRewardsBalances(filename, field) {
@@ -117,34 +125,34 @@ test('CRAB group sample checks', () => {
 	const airdrop = loadJson('airdrop_results.json');
 
 	const crabNativeData = loadJson('CRAB_native.json');
-	const crabNative = filterExcludedNative(crabNativeData.eoa_holders || {});
+	const lpTokens = new Set((snowLps || []).map((lp) => (lp.address || '').toLowerCase()).filter(Boolean));
+	const crabNative = filterExcludedNative(crabNativeData.eoa_holders || {}, lpTokens);
 	const wcrabData = loadTokenSnapshot('WCRAB');
 	const gcrabData = loadTokenSnapshot('gCRAB');
 	const wcringData = loadTokenSnapshot('WCRING');
 	const xwcrabData = loadTokenSnapshot('xWCRAB');
 
 	if (!wcrabData || !gcrabData || !wcringData || !xwcrabData) {
-		console.warn('⚠️  Missing CRAB token snapshots for test');
-		return;
+		throw new Error('Missing CRAB token snapshots for test');
 	}
 
-	const wcrabHolders = filterEOAs(wcrabData.eoa_holders || {}, crabCache);
-	const gcrabHolders = filterEOAs(gcrabData.eoa_holders || {}, crabCache);
-	const wcringHolders = filterEOAs(wcringData.eoa_holders || {}, crabCache);
+	const wcrabHolders = filterEOAs(wcrabData.eoa_holders || {}, crabCache, lpTokens);
+	const gcrabHolders = filterEOAs(gcrabData.eoa_holders || {}, crabCache, lpTokens);
+	const wcringHolders = filterEOAs(wcringData.eoa_holders || {}, crabCache, lpTokens);
 
 	const xwcrabHolders = filterEOAs({
 		...(xwcrabData.eoa_holders || {}),
 		...(xwcrabData.contract_holders || {})
-	}, darwiniaCache);
+	}, darwiniaCache, lpTokens);
 
 	const virtualHoldings = buildVirtualHoldings(snowLps, ['CRAB', 'WCRAB', 'gCRAB', 'xWCRAB', 'WCRING']);
 	const crabStakingRewards = loadRewardsBalances('CRAB_staking_rewards.json', 'rewards');
 	const cktonStakingRewards = loadRewardsBalances('CKTON_staking_rewards.json', 'rewards');
 	const crabDepositBalances = loadRewardsBalances('CRAB_deposit_balance.json', 'balances');
 
-	const firstRecipient = airdrop.recipients[Object.keys(airdrop.recipients)[0]];
-	const treasuryBalance = firstRecipient?.breakdown?.crab_group?.ckton_treasury_crab_addon?.ckton_treasury_crab_balance || '0';
-	const groupSupply = firstRecipient?.breakdown?.crab_group?.ckton_treasury_crab_addon?.ckton_treasury_group_supply || '0';
+	const firstRecipient = Object.values(airdrop.recipients || {}).find((recipient) => recipient?.breakdown?.crab_group);
+	const treasuryBalance = firstRecipient?.breakdown?.crab_group?.virtual_from_ckton_treasury?.ckton_treasury_crab_balance || '0';
+	const groupSupply = firstRecipient?.breakdown?.crab_group?.virtual_from_ckton_treasury?.ckton_group_total_supply || '0';
 	const cktonAddon = {};
 
 	if (BigInt(groupSupply || '0') > 0n) {
@@ -184,14 +192,13 @@ test('CRAB group sample checks', () => {
 		const recipient = airdrop.recipients[address];
 		const breakdown = recipient?.breakdown?.crab_group;
 		if (!breakdown) {
-			console.warn(`⚠️  Missing CRAB breakdown for ${address}`);
-			return;
+			throw new Error(`Missing CRAB breakdown for ${address}`);
 		}
 
 		const expectedTotal = BigInt(aggregated[address] || '0').toString();
 		const actualTotal = breakdown.group_balance || '0';
 		if (expectedTotal !== actualTotal) {
-			warnMismatch(`CRAB group balance for ${address}`, expectedTotal, actualTotal);
+			assertMatch(`CRAB group balance for ${address}`, expectedTotal, actualTotal);
 		}
 	});
 });

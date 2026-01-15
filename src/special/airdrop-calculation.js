@@ -68,19 +68,23 @@ function buildDistribution(totalTreasury) {
 	return {
 		crab_group: {
 			percentage: DISTRIBUTION_PERCENTAGES.crab_group,
-			allocation: crabGroup.toString()
+			allocation: crabGroup.toString(),
+			allocation_with_decimal: formatTokenAmount(crabGroup.toString(), 18)
 		},
 		ckton_group: {
 			percentage: DISTRIBUTION_PERCENTAGES.ckton_group,
-			allocation: cktonGroup.toString()
+			allocation: cktonGroup.toString(),
+			allocation_with_decimal: formatTokenAmount(cktonGroup.toString(), 18)
 		},
 		evolution_land: {
 			percentage: DISTRIBUTION_PERCENTAGES.evolution_land,
-			allocation: evolutionLand.toString()
+			allocation: evolutionLand.toString(),
+			allocation_with_decimal: formatTokenAmount(evolutionLand.toString(), 18)
 		},
 		reserve: {
 			percentage: DISTRIBUTION_PERCENTAGES.reserve,
 			allocation: reserve.toString(),
+			allocation_with_decimal: formatTokenAmount(reserve.toString(), 18),
 			recipient: TREASURY_ADDRESS
 		}
 	};
@@ -186,6 +190,7 @@ async function calculateAirdrop(outputDir, config = {}) {
 	const output = {
 		timestamp: new Date().toISOString(),
 		total_airdrop_treasury: totalTreasury,
+		total_airdrop_treasury_with_decimal: formatTokenAmount(totalTreasury, 18),
 		treasury_address: TREASURY_ADDRESS,
 		distribution: distribution,
 		rules_applied: rulesApplied,
@@ -384,6 +389,7 @@ function buildStatistics(recipients, ruleResults, excludedRecipients) {
 	const statistics = {
 		total_recipients: recipients.size,
 		total_airdrop_distributed: totalAirdrop.toString(),
+		total_airdrop_distributed_with_decimal: formatTokenAmount(totalAirdrop.toString(), 18),
 		top_20_recipients: topRecipients,
 		rule_details: {}
 	};

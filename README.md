@@ -28,6 +28,7 @@ The pipeline writes the following JSON outputs under `data/`:
 | [`data/gCKTON_0xB633Ad1142941CA2Eb9C350579cF88BbE266660D.json`](data/gCKTON_0xB633Ad1142941CA2Eb9C350579cF88BbE266660D.json) | gCKTON holder snapshot. |
 | [`data/xRING_0x7399Ea6C9d35124d893B8d9808930e9d3F211501.json`](data/xRING_0x7399Ea6C9d35124d893B8d9808930e9d3F211501.json) | xRING holder snapshot (Crab). |
 | [`data/xWRING_0x273131F7CB50ac002BDd08cA721988731F7e1092.json`](data/xWRING_0x273131F7CB50ac002BDd08cA721988731F7e1092.json) | xWRING holder snapshot (Crab). |
+| [`data/xRING_xWRING_lp_providers.json`](data/xRING_xWRING_lp_providers.json) | Merged xRING/xWRING Snow LP EOA providers (Crab). |
 | [`data/WCRING_0xA3eE184ed6eA8fa276AfA282980f83A7091b1E8C.json`](data/WCRING_0xA3eE184ed6eA8fa276AfA282980f83A7091b1E8C.json) | WCRING holder snapshot. |
 | [`data/xWCRAB_0x656567Eb75b765FC320783cc6EDd86bD854b2305.json`](data/xWCRAB_0x656567Eb75b765FC320783cc6EDd86bD854b2305.json) | xWCRAB holder snapshot (Darwinia). |
 | [`data/CRAB_staking_rewards.json`](data/CRAB_staking_rewards.json) | CRAB staking reward balances. |

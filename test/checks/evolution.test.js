@@ -32,13 +32,24 @@ test('Evolution Land sample checks', () => {
 		}
 
 		const holders = token.eoa_holders || {};
-		const totalSupply = sumBalances(holders);
-		const sampleAddresses = pickSampleKeys(Object.keys(holders));
-		console.log(`ℹ️  EVOL ${symbol} sample size=${sampleAddresses.length} from=${Object.keys(holders).length}`);
+		const eoaCache = loadJson('eoa-verified-cache.json');
+		const filteredHolders = Object.fromEntries(
+			Object.entries(holders).filter(([address, balance]) => {
+				const normalized = address.toLowerCase();
+				if (BigInt(balance || '0') === 0n) {
+					return false;
+				}
+				return eoaCache[normalized] === 'eoa';
+			})
+		);
+		const totalSupply = sumBalances(filteredHolders);
+		const sampleAddresses = pickSampleKeys(Object.keys(filteredHolders));
+		console.log(`ℹ️  EVOL ${symbol} sample size=${sampleAddresses.length} from=${Object.keys(filteredHolders).length}`);
 
-		sampleAddresses.forEach((address) => {
-			const normalized = address.toLowerCase();
-			const balance = holders[address] || holders[normalized] || '0';
+			sampleAddresses.forEach((address) => {
+				const normalized = address.toLowerCase();
+				const balance = filteredHolders[address] || filteredHolders[normalized] || '0';
+
 			const expectedProportion = bigIntToDecimalString(balance, totalSupply, 18);
 			const recipient = airdrop.recipients[normalized];
 			const evolutionBreakdown = recipient?.breakdown?.evolution_land;
@@ -57,7 +68,8 @@ test('Evolution Land sample checks', () => {
 			}
 
 			const allocation = evolutionBreakdown.land_allocations?.[symbol] || '0';
-			const expectedAmount = (BigInt(balance || '0') * BigInt(allocation)) / totalSupply;
+				const expectedAmount = totalSupply === 0n ? 0n : (BigInt(balance || '0') * BigInt(allocation)) / totalSupply;
+
 			assertWithinTolerance(
 				`Evolution ${symbol} amount for ${normalized}`,
 				expectedAmount.toString(),

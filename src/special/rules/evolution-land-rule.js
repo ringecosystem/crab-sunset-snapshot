@@ -1,4 +1,5 @@
 const BaseAirdropRule = require('./base-rule');
+const { filterBalancesByVerifiedEoa } = require('../../base/eoa-verified-cache');
 
 const LAND_SYMBOLS = ['FIRE', 'GOLD', 'WOOD', 'SIOO', 'HHO'];
 
@@ -50,7 +51,7 @@ class EvolutionLandRule extends BaseAirdropRule {
 
 		for (const land of landTokens) {
 			const symbol = land.symbol;
-			const holders = this.normalizeHolders(land.eoa_holders || {});
+			const holders = await filterBalancesByVerifiedEoa(this.normalizeHolders(land.eoa_holders || {}));
 			landBalances[symbol] = holders;
 
 			const { airdropPerAddress: landAirdrop, totalSupply } = this.calculateProportionalAirdrop(

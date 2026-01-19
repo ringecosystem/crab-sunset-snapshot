@@ -3,6 +3,7 @@ const fs = require("fs");
 const BaseAirdropRule = require('./base-rule');
 const { buildVirtualHoldings, loadLpTokenAddresses } = require('./lp-virtual-holdings');
 const { createPublicClient, http } = require('viem');
+const { filterManyBalanceMapsByVerifiedEoa } = require('../../base/eoa-verified-cache');
 const CrabAPI = require('../../crab/api');
 const DarwiniaAPI = require('../../darwinia/api');
 
@@ -68,7 +69,7 @@ class CrabGroupRule extends BaseAirdropRule {
 		const crabStakingRewards = this.loadCrabStakingRewards(crabCache, lpTokens);
 		const cktonStakingRewards = this.loadCktonStakingRewards(crabCache, lpTokens);
 		const crabDepositBalances = this.loadCrabDepositBalances(crabCache, lpTokens);
-		const cktonGroupBalances = this.loadCktonGroupBalances(dataDir, crabCache, lpTokens);
+		const cktonGroupBalances = await this.loadCktonGroupBalances(dataDir, crabCache, lpTokens);
 		const cktonTreasuryBalance = await this.fetchCktonTreasuryBalance();
 		const cktonTreasuryAddonResult = this.calculateProportionalAirdrop(
 			cktonGroupBalances.balances,
@@ -99,7 +100,7 @@ class CrabGroupRule extends BaseAirdropRule {
 		console.log(`  - CKTON treasury CRAB add-on: ${Object.keys(cktonTreasuryAddonBalances).length} holders`);
 		console.log(`  - CKTON treasury CRAB balance: ${cktonTreasuryBalance}`);
 
-		const aggregated = this.aggregateBalances({
+		const rawBalances = {
 			crab: crabNative,
 			crab_locked: crabLocked,
 			wcrab: wcrabHolders,
@@ -115,30 +116,17 @@ class CrabGroupRule extends BaseAirdropRule {
 			ckton_staking_rewards: cktonStakingRewards,
 			crab_deposit_balance: crabDepositBalances,
 			ckton_treasury_crab_addon: cktonTreasuryAddonBalances
-		});
+		};
+
+		const { filteredMaps: filteredBalances } = await filterManyBalanceMapsByVerifiedEoa(rawBalances);
+		const aggregated = this.aggregateBalances(filteredBalances);
 
 		console.log(`  - Total unique addresses: ${Object.keys(aggregated).length}`);
 
 		const allocation = this.config.allocation || "21480557978160396696626883";
 		const { airdropPerAddress, totalSupply } = this.calculateProportionalAirdrop(aggregated, allocation);
 
-		const componentSupplies = this.calculateComponentSupplies({
-			crab: crabNative,
-			crab_locked: crabLocked,
-			wcrab: wcrabHolders,
-			gcrab: gcrabHolders,
-			wcring: wcringHolders,
-			xwcrab: xwcrabHolders,
-			virtual_crab: virtualCrab,
-			virtual_wcrab: virtualWcrab,
-			virtual_gcrab: virtualGcrab,
-			virtual_xwcrab: virtualXwcrab,
-			virtual_wcring: virtualWcring,
-			crab_staking_rewards: crabStakingRewards,
-			ckton_staking_rewards: cktonStakingRewards,
-			crab_deposit_balance: crabDepositBalances,
-			ckton_treasury_crab_addon: cktonTreasuryAddonBalances
-		});
+		const componentSupplies = this.calculateComponentSupplies(filteredBalances);
 
 		return {
 			ruleName: this.name,
@@ -151,23 +139,7 @@ class CrabGroupRule extends BaseAirdropRule {
 			cktonTreasuryCrabBalance: cktonTreasuryBalance,
 			cktonTreasuryGroupSupply: cktonGroupBalances.totalSupply,
 			cktonTreasuryGroupBalances: cktonGroupBalances.balances,
-			rawBalances: {
-				crab: crabNative,
-				crab_locked: crabLocked,
-				wcrab: wcrabHolders,
-				gcrab: gcrabHolders,
-				wcring: wcringHolders,
-				xwcrab: xwcrabHolders,
-				virtual_crab: virtualCrab,
-				virtual_wcrab: virtualWcrab,
-				virtual_gcrab: virtualGcrab,
-				virtual_xwcrab: virtualXwcrab,
-				virtual_wcring: virtualWcring,
-				crab_staking_rewards: crabStakingRewards,
-				ckton_staking_rewards: cktonStakingRewards,
-				crab_deposit_balance: crabDepositBalances,
-				ckton_treasury_crab_addon: cktonTreasuryAddonBalances
-			}
+			rawBalances: filteredBalances
 		};
 	}
 
@@ -334,7 +306,7 @@ class CrabGroupRule extends BaseAirdropRule {
 		return this.filterEOAs(balances, addressCache, lpTokens);
 	}
 
-	loadCktonGroupBalances(dataDir, addressCache, lpTokens = new Set()) {
+	async loadCktonGroupBalances(dataDir, addressCache, lpTokens = new Set()) {
 		const cktonHolders = this.excludeCktonAddresses(
 			this.loadTokenHoldersIncludingContracts(dataDir, 'CKTON', addressCache, lpTokens)
 		);
@@ -356,14 +328,17 @@ class CrabGroupRule extends BaseAirdropRule {
 			this.filterEOAs(virtualHoldings.gCKTON || {}, addressCache, lpTokens)
 		);
 
-		const aggregated = this.aggregateBalances({
+		const rawBalances = {
 			ckton: cktonHolders,
 			wckton: wcktonHolders,
 			gckton: gcktonHolders,
 			virtual_ckton: virtualCkton,
 			virtual_wckton: virtualWckton,
 			virtual_gckton: virtualGckton
-		});
+		};
+
+		const { filteredMaps: filteredBalances } = await filterManyBalanceMapsByVerifiedEoa(rawBalances);
+		const aggregated = this.aggregateBalances(filteredBalances);
 
 		const totalSupply = Object.values(aggregated).reduce((sum, balance) => {
 			return sum + BigInt(balance);

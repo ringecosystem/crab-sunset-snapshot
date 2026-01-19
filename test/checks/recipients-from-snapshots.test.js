@@ -40,6 +40,7 @@ function isExcluded(address) {
 test('Snapshot EOAs appear in recipients (except XRING/XWRING)', () => {
 	const airdrop = loadJson('airdrop_results.json');
 	const recipients = airdrop.recipients || {};
+	const eoaCache = loadJson('eoa-verified-cache.json');
 	let checked = 0;
 	let missing = 0;
 
@@ -51,8 +52,11 @@ test('Snapshot EOAs appear in recipients (except XRING/XWRING)', () => {
 		if (BigInt(balance || '0') === 0n) {
 			continue;
 		}
-		checked += 1;
 		const normalized = normalizeAddress(address);
+		if (eoaCache[normalized] !== 'eoa') {
+			continue;
+		}
+		checked += 1;
 		if (!recipients[normalized]) {
 			missing += 1;
 			throw new Error(`Missing recipient for CRAB_native holder: ${normalized}`);
@@ -71,8 +75,11 @@ test('Snapshot EOAs appear in recipients (except XRING/XWRING)', () => {
 			if (BigInt(balance || '0') === 0n) {
 				continue;
 			}
-			checked += 1;
 			const normalized = normalizeAddress(address);
+			if (eoaCache[normalized] !== 'eoa') {
+				continue;
+			}
+			checked += 1;
 			if (!recipients[normalized]) {
 				missing += 1;
 				throw new Error(`Missing recipient for ${prefix} holder: ${normalized}`);

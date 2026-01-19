@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-01-19T07:11:44.646Z",
+  "timestamp": "2026-01-19T13:37:46.068Z",
   "rpc_url": "wss://crab-rpc.darwinia.network",
-  "snapshot_block": "9725302",
+  "snapshot_block": "9726654",
   "holders_count": 7,
   "total_locked_balance": "16057978949040210643459097",
   "locked_balances": {

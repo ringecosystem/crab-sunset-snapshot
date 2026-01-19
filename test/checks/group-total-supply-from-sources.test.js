@@ -26,7 +26,7 @@ function buildLpTokenSet(snowLps) {
 	return new Set((snowLps || []).map((lp) => normalizeAddress(lp.address)).filter(Boolean));
 }
 
-function isIncludedEoa(address, crabCache, lpTokens) {
+function isIncludedEoa(address, crabCache, lpTokens, eoaCache) {
 	const normalized = normalizeAddress(address);
 	if (!normalized) {
 		return false;
@@ -38,6 +38,9 @@ function isIncludedEoa(address, crabCache, lpTokens) {
 		return false;
 	}
 	if (crabCache[normalized] === true) {
+		return false;
+	}
+	if (eoaCache && eoaCache[normalized] !== 'eoa') {
 		return false;
 	}
 	return true;
@@ -131,6 +134,7 @@ function loadDepositBalanceMap() {
 test('Group total_supply matches original snapshots', () => {
 	const airdrop = loadJson('airdrop_results.json');
 	const crabCache = loadJson('crab-cache.json');
+	const eoaCache = loadJson('eoa-verified-cache.json');
 	const snowLpData = loadJson('snow_lps_crab.json');
 	const snowLps = snowLpData.snow_lps || [];
 	const lpTokens = buildLpTokenSet(snowLps);
@@ -157,33 +161,33 @@ test('Group total_supply matches original snapshots', () => {
 			const gcktonAll = { ...(gcktonData.eoa_holders || {}), ...(gcktonData.contract_holders || {}) };
 
 			for (const [address, bal] of Object.entries(cktonAll)) {
-				if (isIncludedEoa(address, crabCache, lpTokens)) {
+				if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 					addBalance(balances, address, bal);
 				}
 			}
 			for (const [address, bal] of Object.entries(wcktonAll)) {
-				if (isIncludedEoa(address, crabCache, lpTokens)) {
+				if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 					addBalance(balances, address, bal);
 				}
 			}
 			for (const [address, bal] of Object.entries(gcktonAll)) {
-				if (isIncludedEoa(address, crabCache, lpTokens)) {
+				if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 					addBalance(balances, address, bal);
 				}
 			}
 
 			for (const [address, bal] of Object.entries(virtual.CKTON || {})) {
-				if (isIncludedEoa(address, crabCache, lpTokens)) {
+				if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 					addBalance(balances, address, bal);
 				}
 			}
 			for (const [address, bal] of Object.entries(virtual.WCKTON || {})) {
-				if (isIncludedEoa(address, crabCache, lpTokens)) {
+				if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 					addBalance(balances, address, bal);
 				}
 			}
 			for (const [address, bal] of Object.entries(virtual.gCKTON || {})) {
-				if (isIncludedEoa(address, crabCache, lpTokens)) {
+				if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 					addBalance(balances, address, bal);
 				}
 			}
@@ -245,32 +249,32 @@ test('Group total_supply matches original snapshots', () => {
 		};
 
 		for (const [address, bal] of Object.entries(cktonAddonAll)) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(cktonAddonBalances, address, bal);
 			}
 		}
 		for (const [address, bal] of Object.entries(wcktonAddonAll)) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(cktonAddonBalances, address, bal);
 			}
 		}
 		for (const [address, bal] of Object.entries(gcktonAddonAll)) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(cktonAddonBalances, address, bal);
 			}
 		}
 		for (const [address, bal] of Object.entries(virtualCktonAddon.CKTON || {})) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(cktonAddonBalances, address, bal);
 			}
 		}
 		for (const [address, bal] of Object.entries(virtualCktonAddon.WCKTON || {})) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(cktonAddonBalances, address, bal);
 			}
 		}
 		for (const [address, bal] of Object.entries(virtualCktonAddon.gCKTON || {})) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(cktonAddonBalances, address, bal);
 			}
 		}
@@ -288,7 +292,7 @@ test('Group total_supply matches original snapshots', () => {
 			if (EXCLUDED_SPECIALS.has(normalized)) {
 				continue;
 			}
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(balances, address, bal);
 			}
 		}
@@ -298,72 +302,72 @@ test('Group total_supply matches original snapshots', () => {
 			if (EXCLUDED_SPECIALS.has(normalized)) {
 				continue;
 			}
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(balances, address, bal);
 			}
 		}
 
 		for (const [address, bal] of Object.entries(wcrabData.eoa_holders || {})) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(balances, address, bal);
 			}
 		}
 		for (const [address, bal] of Object.entries(gcrabData.eoa_holders || {})) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(balances, address, bal);
 			}
 		}
 		for (const [address, bal] of Object.entries(wcringData.eoa_holders || {})) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(balances, address, bal);
 			}
 		}
 
 		// Per your instruction: use xWCRAB eoa_holders only.
 		for (const [address, bal] of Object.entries(xwcrabData.eoa_holders || {})) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(balances, address, bal);
 			}
 		}
 
 		for (const [address, bal] of Object.entries(virtual.CRAB || {})) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(balances, address, bal);
 			}
 		}
 		for (const [address, bal] of Object.entries(virtual.WCRAB || {})) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(balances, address, bal);
 			}
 		}
 		for (const [address, bal] of Object.entries(virtual.gCRAB || {})) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(balances, address, bal);
 			}
 		}
 		for (const [address, bal] of Object.entries(virtual.xWCRAB || {})) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(balances, address, bal);
 			}
 		}
 		for (const [address, bal] of Object.entries(virtual.WCRING || {})) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(balances, address, bal);
 			}
 		}
 
 		for (const [address, bal] of Object.entries(crabStakingRewards)) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(balances, address, bal);
 			}
 		}
 		for (const [address, bal] of Object.entries(cktonStakingRewards)) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(balances, address, bal);
 			}
 		}
 		for (const [address, bal] of Object.entries(depositBalances)) {
-			if (isIncludedEoa(address, crabCache, lpTokens)) {
+			if (isIncludedEoa(address, crabCache, lpTokens, eoaCache)) {
 				addBalance(balances, address, bal);
 			}
 		}

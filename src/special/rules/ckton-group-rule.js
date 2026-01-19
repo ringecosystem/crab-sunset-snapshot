@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const BaseAirdropRule = require('./base-rule');
 const { buildVirtualHoldings, loadLpTokenAddresses } = require('./lp-virtual-holdings');
+const { filterManyBalanceMapsByVerifiedEoa } = require('../../base/eoa-verified-cache');
 
 const EXCLUDED_CKTON_ADDRESSES = new Set([
 	'0xb633ad1142941ca2eb9c350579cf88bbe266660d',
@@ -53,28 +54,24 @@ class CktonGroupRule extends BaseAirdropRule {
 		console.log(`  - Virtual WCKTON: ${Object.keys(virtualWckton).length} holders`);
 		console.log(`  - Virtual gCKTON: ${Object.keys(virtualGckton).length} holders`);
 
-		const aggregated = this.aggregateBalances({
+		const rawBalances = {
 			ckton: cktonHolders,
 			wckton: wcktonHolders,
 			gckton: gcktonHolders,
 			virtual_ckton: virtualCkton,
 			virtual_wckton: virtualWckton,
 			virtual_gckton: virtualGckton
-		});
+		};
+
+		const { filteredMaps: filteredBalances } = await filterManyBalanceMapsByVerifiedEoa(rawBalances);
+		const aggregated = this.aggregateBalances(filteredBalances);
 
 		console.log(`  - Total unique addresses: ${Object.keys(aggregated).length}`);
 
 		const allocation = this.config.allocation || "7160185992720132232208961";
 		const { airdropPerAddress, totalSupply } = this.calculateProportionalAirdrop(aggregated, allocation);
 
-		const componentSupplies = this.calculateComponentSupplies({
-			ckton: cktonHolders,
-			wckton: wcktonHolders,
-			gckton: gcktonHolders,
-			virtual_ckton: virtualCkton,
-			virtual_wckton: virtualWckton,
-			virtual_gckton: virtualGckton
-		});
+		const componentSupplies = this.calculateComponentSupplies(filteredBalances);
 
 		return {
 			ruleName: this.name,
@@ -84,14 +81,7 @@ class CktonGroupRule extends BaseAirdropRule {
 			totalSupply: totalSupply,
 			componentSupplies: componentSupplies,
 			airdropPerAddress: airdropPerAddress,
-			rawBalances: {
-				ckton: cktonHolders,
-				wckton: wcktonHolders,
-				gckton: gcktonHolders,
-				virtual_ckton: virtualCkton,
-				virtual_wckton: virtualWckton,
-				virtual_gckton: virtualGckton
-			}
+			rawBalances: filteredBalances
 		};
 	}
 

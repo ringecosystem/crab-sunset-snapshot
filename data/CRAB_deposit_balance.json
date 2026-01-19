@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-01-19T07:17:37.635Z",
+  "timestamp": "2026-01-19T13:43:38.827Z",
   "rpc_url": "https://crab-rpc.darwinia.network",
   "deposit_contract": "0x46275d29113f065c2aac262f34c7a3d8a8b7377d",
-  "snapshot_block": "9725315",
+  "snapshot_block": "9726666",
   "excluded_hub": "0xa4ffac7a5da311d724ed47393848f694baee7930",
   "staked_events_count": 965,
   "deposit_accounts_count": 87,

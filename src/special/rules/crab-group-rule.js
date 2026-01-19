@@ -10,10 +10,34 @@ const CRAB_RPC_URL = 'https://crab-rpc.darwinia.network';
 const CKTON_TREASURY_ADDRESS = '0xB633Ad1142941CA2Eb9C350579cF88BbE266660D';
 const EXCLUDED_CRAB_NATIVE_ADDRESSES = new Set([
 	'0xb633ad1142941ca2eb9c350579cf88bbe266660d',
-	'0x6d6f646c64612f74727372790000000000000000'
+	'0x6d6f646c64612f74727372790000000000000000',
+
+	// Special system contracts without code (treat as contracts)
+	'0x000000000f681d85374225edeeadc25560c1fb3f',
+	'0x0000000000000000000000000000000000000000',
+	'0x000000000419683a1a03abc21fc9da25fd2b4dd7',
+	'0x7369626cd0070000000000000000000000000000',
+	'0x0000000000000000000000000000000000000201',
+	'0x0000000000000000000000000000000000000101',
+	'0x0000000000000000000000000000000000000019',
+	'0x0000000000000000000000000000000000000100',
+	'0x0000000000000000000000000000000000000200',
+	'0x00000005a796df0489b6f16120e9a72bbc954c96'
 ]);
 const EXCLUDED_CKTON_ADDRESSES = new Set([
-	'0xb633ad1142941ca2eb9c350579cf88bbe266660d'
+	'0xb633ad1142941ca2eb9c350579cf88bbe266660d',
+
+	// Special system contracts without code (treat as contracts)
+	'0x000000000f681d85374225edeeadc25560c1fb3f',
+	'0x0000000000000000000000000000000000000000',
+	'0x000000000419683a1a03abc21fc9da25fd2b4dd7',
+	'0x7369626cd0070000000000000000000000000000',
+	'0x0000000000000000000000000000000000000201',
+	'0x0000000000000000000000000000000000000101',
+	'0x0000000000000000000000000000000000000019',
+	'0x0000000000000000000000000000000000000100',
+	'0x0000000000000000000000000000000000000200',
+	'0x00000005a796df0489b6f16120e9a72bbc954c96'
 ]);
 
 class CrabGroupRule extends BaseAirdropRule {
@@ -256,7 +280,8 @@ class CrabGroupRule extends BaseAirdropRule {
 	excludeCktonAddresses(holders) {
 		const filtered = {};
 		for (const [address, balance] of Object.entries(holders || {})) {
-			if (EXCLUDED_CKTON_ADDRESSES.has(address.toLowerCase())) {
+			const normalized = address.toLowerCase();
+			if (EXCLUDED_CKTON_ADDRESSES.has(normalized)) {
 				continue;
 			}
 			filtered[address] = balance;
@@ -432,6 +457,9 @@ class CrabGroupRule extends BaseAirdropRule {
 		const filtered = {};
 		for (const [address, balance] of Object.entries(holders || {})) {
 			const normalized = address.split(' (')[0].toLowerCase();
+			if (EXCLUDED_CRAB_NATIVE_ADDRESSES.has(normalized)) {
+				continue;
+			}
 			if (lpTokens.has(normalized)) {
 				continue;
 			}
@@ -442,6 +470,7 @@ class CrabGroupRule extends BaseAirdropRule {
 			filtered[normalized] = balance;
 		}
 		return filtered;
+
 	}
 
 	calculateComponentSupplies(sources) {

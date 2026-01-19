@@ -27,7 +27,8 @@
     "fetch:darwinia": "npm run snow-lps-darwinia && npm run xwcrab",
     "snapshot": "npm run fetch:crab && npm run fetch:darwinia",
     "airdrop:calculate": "node bin/airdrop-calculation",
-    "airdrop:all": "npm run snapshot && npm run airdrop:calculate",
+    "airdrop:csv": "node bin/generate-safe-airdrop-csv",
+    "airdrop:all": "npm run snapshot && npm run airdrop:calculate && npm run airdrop:csv",
     "airdrop:test": "jest"
   },
   "keywords": [

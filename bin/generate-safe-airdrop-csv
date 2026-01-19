@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const { generateSafeAirdropCsvFiles } = require('../src/special/safe-airdrop-csv');
+
+async function main() {
+	const outputDir = path.join(__dirname, '..', 'data');
+	const firstCount = 350;
+
+	try {
+		const result = generateSafeAirdropCsvFiles(outputDir, { firstCount });
+		console.log('✅ Safe airdrop CSV generated');
+		console.log(`📄 Input: ${path.basename(result.input)}`);
+		console.log(`📄 Output: ${path.basename(result.outputs[0])} recipients=${result.recipients_part1}`);
+		console.log(`📄 Output: ${path.basename(result.outputs[1])} recipients=${result.recipients_part2}`);
+	} catch (error) {
+		console.error('❌ Fatal error:', error.message);
+		process.exit(1);
+	}
+}
+
+main();

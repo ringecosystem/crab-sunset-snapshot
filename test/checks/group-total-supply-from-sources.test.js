@@ -192,6 +192,7 @@ test('Group total_supply matches original snapshots', () => {
 	// CRAB group supply from original snapshots
 	{
 		const crabNative = loadJson('CRAB_native.json').eoa_holders || {};
+		const crabLocked = loadJson('CRAB_locked.json').locked_balances || {};
 		const wcrabData = loadTokenSnapshot('WCRAB');
 		const gcrabData = loadTokenSnapshot('gCRAB');
 		const wcringData = loadTokenSnapshot('WCRING');
@@ -271,6 +272,16 @@ test('Group total_supply matches original snapshots', () => {
 		const balances = {};
 
 		for (const [address, bal] of Object.entries(crabNative)) {
+			const normalized = normalizeAddress(address);
+			if (EXCLUDED_SPECIALS.has(normalized)) {
+				continue;
+			}
+			if (isIncludedEoa(address, crabCache, lpTokens)) {
+				addBalance(balances, address, bal);
+			}
+		}
+
+		for (const [address, bal] of Object.entries(crabLocked)) {
 			const normalized = normalizeAddress(address);
 			if (EXCLUDED_SPECIALS.has(normalized)) {
 				continue;

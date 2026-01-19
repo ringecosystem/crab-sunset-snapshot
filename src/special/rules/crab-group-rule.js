@@ -34,6 +34,7 @@ class CrabGroupRule extends BaseAirdropRule {
 		console.log(`📊 Processing CRAB Group rule...`);
 
 		const crabNative = this.loadCrabNativeHolders(lpTokens);
+		const crabLocked = this.loadCrabLockedBalances(lpTokens);
 		const wcrabHolders = this.loadTokenHolders(dataDir, 'WCRAB', crabCache, lpTokens);
 		const gcrabHolders = this.loadTokenHolders(dataDir, 'gCRAB', crabCache, lpTokens);
 		const wcringHolders = this.loadTokenHolders(dataDir, 'WCRING', crabCache, lpTokens);
@@ -58,6 +59,7 @@ class CrabGroupRule extends BaseAirdropRule {
 		const virtualWcring = virtualHoldings.WCRING || {};
 
 		console.log(`  - CRAB native: ${Object.keys(crabNative).length} EOA holders`);
+		console.log(`  - CRAB locked: ${Object.keys(crabLocked).length} EOA holders`);
 		console.log(`  - WCRAB: ${Object.keys(wcrabHolders).length} EOA holders`);
 		console.log(`  - gCRAB: ${Object.keys(gcrabHolders).length} EOA holders`);
 		console.log(`  - WCRING: ${Object.keys(wcringHolders).length} EOA holders`);
@@ -75,6 +77,7 @@ class CrabGroupRule extends BaseAirdropRule {
 
 		const aggregated = this.aggregateBalances({
 			crab: crabNative,
+			crab_locked: crabLocked,
 			wcrab: wcrabHolders,
 			gcrab: gcrabHolders,
 			wcring: wcringHolders,
@@ -97,6 +100,7 @@ class CrabGroupRule extends BaseAirdropRule {
 
 		const componentSupplies = this.calculateComponentSupplies({
 			crab: crabNative,
+			crab_locked: crabLocked,
 			wcrab: wcrabHolders,
 			gcrab: gcrabHolders,
 			wcring: wcringHolders,
@@ -125,6 +129,7 @@ class CrabGroupRule extends BaseAirdropRule {
 			cktonTreasuryGroupBalances: cktonGroupBalances.balances,
 			rawBalances: {
 				crab: crabNative,
+				crab_locked: crabLocked,
 				wcrab: wcrabHolders,
 				gcrab: gcrabHolders,
 				wcring: wcringHolders,
@@ -189,6 +194,27 @@ class CrabGroupRule extends BaseAirdropRule {
 			eoaHolders[normalized] = balance;
 		}
 		return eoaHolders;
+	}
+
+	loadCrabLockedBalances(lpTokens = new Set()) {
+		try {
+			const data = this.loadDataFile('CRAB_locked.json');
+			const locked = {};
+			for (const [address, balance] of Object.entries(data.locked_balances || {})) {
+				const normalized = address.toLowerCase();
+				if (EXCLUDED_CRAB_NATIVE_ADDRESSES.has(normalized)) {
+					continue;
+				}
+				if (lpTokens.has(normalized)) {
+					continue;
+				}
+				locked[normalized] = balance || '0';
+			}
+			return locked;
+		} catch (err) {
+			console.warn(`  ⚠️  Missing CRAB_locked.json; locked balances will be 0`);
+			return {};
+		}
 	}
 
 	loadTokenHolders(dataDir, symbol, addressCache, lpTokens = new Set()) {
@@ -434,6 +460,7 @@ class CrabGroupRule extends BaseAirdropRule {
 			allocationPercentage: "0.60",
 			components: [
 				"CRAB",
+				"CRAB locked",
 				"WCRAB",
 				"gCRAB",
 				"xWCRAB",

@@ -135,8 +135,10 @@ test('CRAB group sample checks', () => {
 	const airdrop = loadJson('airdrop_results.json');
 
 	const crabNativeData = loadJson('CRAB_native.json');
+	const crabLockedData = loadJson('CRAB_locked.json');
 	const lpTokens = new Set((snowLps || []).map((lp) => (lp.address || '').toLowerCase()).filter(Boolean));
 	const crabNative = filterExcludedNative(crabNativeData.eoa_holders || {}, lpTokens);
+	const crabLocked = filterExcludedNative(crabLockedData.locked_balances || {}, lpTokens);
 	const wcrabData = loadTokenSnapshot('WCRAB');
 	const gcrabData = loadTokenSnapshot('gCRAB');
 	const wcringData = loadTokenSnapshot('WCRING');
@@ -176,6 +178,7 @@ test('CRAB group sample checks', () => {
 
 	const aggregated = aggregateBalances({
 		crab: crabNative,
+		crab_locked: crabLocked,
 		wcrab: wcrabHolders,
 		gcrab: gcrabHolders,
 		wcring: wcringHolders,

@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const { fetchCrabLockedBalanceSnapshot } = require('../src/special/crab-locked-balance');
+
+async function main() {
+	const outputDir = path.join(__dirname, '..', 'data');
+
+	try {
+		await fetchCrabLockedBalanceSnapshot(outputDir);
+	} catch (error) {
+		console.error('❌ Fatal error:', error.message);
+		process.exit(1);
+	}
+}
+
+main();

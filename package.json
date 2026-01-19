@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "native": "node bin/fetch-native",
+    "crab-locked": "node bin/fetch-crab-locked-balance",
     "staking-rewards": "node bin/fetch-staking-rewards",
     "ckton-staking-rewards": "node bin/fetch-ckton-staking-rewards",
     "crab-deposit-balance": "node bin/fetch-crab-deposit-balance",
@@ -21,7 +22,7 @@
     "xring-xwring-lp-providers": "node bin/fetch-xring-xwring-lp-providers",
     "evolution-land": "node bin/fetch-evolution-land",
     "fix-cache": "node bin/fix-cache crab && node bin/fix-cache darwinia",
-    "fetch:crab": "npm run snow-lps && npm run evolution-land && npm run wcrab && npm run gcrab && npm run ckton && npm run wkton && npm run gkton && npm run xring && npm run xwring && npm run wcring && npm run native && npm run staking-rewards && npm run ckton-staking-rewards && npm run crab-deposit-balance && npm run xring-xwring-lp-providers",
+    "fetch:crab": "npm run snow-lps && npm run evolution-land && npm run wcrab && npm run gcrab && npm run ckton && npm run wkton && npm run gkton && npm run xring && npm run xwring && npm run wcring && npm run native && npm run crab-locked && npm run staking-rewards && npm run ckton-staking-rewards && npm run crab-deposit-balance && npm run xring-xwring-lp-providers",
     "xwcrab": "node bin/fetch-darwinia 0x656567Eb75b765FC320783cc6EDd86bD854b2305",
     "fetch:darwinia": "npm run snow-lps-darwinia && npm run xwcrab",
     "snapshot": "npm run fetch:crab && npm run fetch:darwinia",
@@ -38,6 +39,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@polkadot/api": "^15.10.2",
     "viem": "^2.44.1"
   },
   "devDependencies": {

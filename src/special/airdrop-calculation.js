@@ -258,6 +258,7 @@ function buildBreakdown(ruleName, result, address) {
 		const raw = result.rawBalances;
 
 		const crabBalance = raw.crab[address] || '0';
+		const crabLockedBalance = raw.crab_locked[address] || '0';
 		const wcrabBalance = raw.wcrab[address] || '0';
 		const gcrabBalance = raw.gcrab[address] || '0';
 		const wcringBalance = raw.wcring[address] || '0';
@@ -274,6 +275,7 @@ function buildBreakdown(ruleName, result, address) {
 
 		const totalGroupBalance = (
 			BigInt(crabBalance) +
+			BigInt(crabLockedBalance) +
 			BigInt(wcrabBalance) +
 			BigInt(gcrabBalance) +
 			BigInt(wcringBalance) +
@@ -303,6 +305,7 @@ function buildBreakdown(ruleName, result, address) {
 			airdrop_amount: data.amount,
 
 			crab_balance: crabBalance,
+			crab_locked_balance: crabLockedBalance,
 			wcrab_balance: wcrabBalance,
 			gcrab_balance: gcrabBalance,
 			wcring_balance: wcringBalance,

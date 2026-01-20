@@ -14,10 +14,10 @@ function addBalance(target, address, amount) {
 	target[address] = (BigInt(target[address]) + BigInt(amount || '0')).toString();
 }
 
-function sortBalances(balances) {
-	const entries = Object.entries(balances).sort((a, b) => {
-		const balanceA = BigInt(a[1]);
-		const balanceB = BigInt(b[1]);
+function sortProviders(providers) {
+	const entries = Object.entries(providers).sort((a, b) => {
+		const balanceA = BigInt(a[1].total || '0');
+		const balanceB = BigInt(b[1].total || '0');
 		if (balanceA > balanceB) return -1;
 		if (balanceA < balanceB) return 1;
 		return 0;
@@ -25,7 +25,19 @@ function sortBalances(balances) {
 	return Object.fromEntries(entries);
 }
 
+function buildLpAssets(assets) {
+	const lpAssets = {};
+	for (const asset of assets || []) {
+		if (!TARGET_SYMBOLS.includes(asset.symbol)) {
+			continue;
+		}
+		lpAssets[asset.symbol] = asset.balance || '0';
+	}
+	return lpAssets;
+}
+
 function buildLpProviders(snowLps) {
+	const totals = {};
 	const providers = {};
 
 	for (const lp of snowLps || []) {
@@ -34,6 +46,8 @@ function buildLpProviders(snowLps) {
 		if (!includesTarget) {
 			continue;
 		}
+		const lpAssets = buildLpAssets(assets);
+		const lpAddress = normalizeAddress(lp.address);
 
 		for (const [holder, balance] of Object.entries(lp.eoa_holders || {})) {
 			const normalized = normalizeAddress(holder);
@@ -44,11 +58,42 @@ function buildLpProviders(snowLps) {
 			if (holderBalance === 0n) {
 				continue;
 			}
-			addBalance(providers, normalized, holderBalance.toString());
+			addBalance(totals, normalized, holderBalance.toString());
+			if (!providers[normalized]) {
+				providers[normalized] = {
+					total: '0',
+					breakdown: []
+				};
+			}
+			providers[normalized].breakdown.push({
+				lp_address: lpAddress,
+				provider_balance: holderBalance.toString(),
+				lp_assets: lpAssets
+			});
 		}
 	}
 
-	return sortBalances(providers);
+	const sortedTotals = sortProviders(
+		Object.fromEntries(Object.entries(totals).map(([address, total]) => [
+			address,
+			{ total }
+		]))
+	);
+	const sortedProviders = {};
+	Object.keys(sortedTotals).forEach((address) => {
+		sortedProviders[address] = {
+			total: totals[address],
+			breakdown: providers[address] ? providers[address].breakdown : []
+		};
+	});
+	return {
+		metadata: {
+			generated_at: new Date().toISOString(),
+			source: 'snow_lps_crab.json',
+			symbols: [...TARGET_SYMBOLS]
+		},
+		providers: sortedProviders
+	};
 }
 
 function loadCrabSnowLps(dataDir) {
@@ -72,7 +117,7 @@ function writeXringXwringLpProviders(outputDir) {
 	const outputFile = path.join(dataDir, 'xRING_xWRING_lp_providers.json');
 	fs.writeFileSync(outputFile, JSON.stringify(providers, null, 2));
 
-	console.log(`✅ xRING/xWRING LP providers: ${Object.keys(providers).length}`);
+	console.log(`✅ xRING/xWRING LP providers: ${Object.keys(providers.providers).length}`);
 	console.log(`💾 Saved: ${path.basename(outputFile)}`);
 
 	return {

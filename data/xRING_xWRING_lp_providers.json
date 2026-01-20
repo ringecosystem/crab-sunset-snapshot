@@ -1,9 +1,208 @@
 {
-  "0x73db0f38391583c9f4786f7a317afab23b6749f7": "51060753532642590293517",
-  "0x050066b4c414db66954e496972c05852c505c7f4": "186933750256801201014",
-  "0x05e0375b33aef6a5bc6c02f52e02f62aadc586fe": "177360000000000000000",
-  "0x8f49a10fcacd7cd22257b9fd358bcab2cb3cffdc": "113881443500249068167",
-  "0x735182c782cb8e7806f8903de7913e6880cbf82e": "34415110859755028867",
-  "0x12d529cfa26891cdf1d25453f9851c73e2720373": "16282329795810020627",
-  "0x7d0caefbe8a6f66aea68389f8cbff9052acd8fd7": "240000000000000000"
+  "metadata": {
+    "generated_at": "2026-01-20T07:28:54.158Z",
+    "source": "snow_lps_crab.json",
+    "symbols": [
+      "xRING",
+      "xWRING"
+    ]
+  },
+  "providers": {
+    "0x73db0f38391583c9f4786f7a317afab23b6749f7": {
+      "total": "51060753532642590293517",
+      "breakdown": [
+        {
+          "lp_address": "0x05f0bc920a23d1662764907910b150c819c110aa",
+          "provider_balance": "3053344779743549005227",
+          "lp_assets": {
+            "xWRING": "1535519000662057238373"
+          }
+        },
+        {
+          "lp_address": "0x506c391b6c1eb4911241a918de5c3984a603e112",
+          "provider_balance": "8228929636813924982986",
+          "lp_assets": {
+            "xWRING": "8207399044632500286644"
+          }
+        },
+        {
+          "lp_address": "0xa946116131932f2a6b5f2a2a52007418d706168a",
+          "provider_balance": "10717098175124107839493",
+          "lp_assets": {
+            "xWRING": "3878630910569626197011"
+          }
+        },
+        {
+          "lp_address": "0x2eb5b4a0624d6e646ba2ad919411072476fa1568",
+          "provider_balance": "10471813415498049072303",
+          "lp_assets": {
+            "xWRING": "7980526247824518994434"
+          }
+        },
+        {
+          "lp_address": "0x76f6877ac6b03bf80ab911de4580c51dcb358927",
+          "provider_balance": "9430532644228145143888",
+          "lp_assets": {
+            "xWRING": "4398867521329334463695"
+          }
+        },
+        {
+          "lp_address": "0xd4b2b19a62500bb32a731a0889ef0b5147a963e4",
+          "provider_balance": "9159034881234814249620",
+          "lp_assets": {
+            "xWRING": "3382536866038358365077"
+          }
+        }
+      ]
+    },
+    "0x050066b4c414db66954e496972c05852c505c7f4": {
+      "total": "186933750256801201014",
+      "breakdown": [
+        {
+          "lp_address": "0x05f0bc920a23d1662764907910b150c819c110aa",
+          "provider_balance": "186933750256801201014",
+          "lp_assets": {
+            "xWRING": "1535519000662057238373"
+          }
+        }
+      ]
+    },
+    "0x05e0375b33aef6a5bc6c02f52e02f62aadc586fe": {
+      "total": "177360000000000000000",
+      "breakdown": [
+        {
+          "lp_address": "0x506c391b6c1eb4911241a918de5c3984a603e112",
+          "provider_balance": "84000000000000000000",
+          "lp_assets": {
+            "xWRING": "8207399044632500286644"
+          }
+        },
+        {
+          "lp_address": "0x2eb5b4a0624d6e646ba2ad919411072476fa1568",
+          "provider_balance": "93300000000000000000",
+          "lp_assets": {
+            "xWRING": "7980526247824518994434"
+          }
+        },
+        {
+          "lp_address": "0xf157c9393255db1728bc6483c3545ca8a1655a0f",
+          "provider_balance": "60000000000000000",
+          "lp_assets": {
+            "xRING": "10076781156724"
+          }
+        }
+      ]
+    },
+    "0x8f49a10fcacd7cd22257b9fd358bcab2cb3cffdc": {
+      "total": "113881443500249068167",
+      "breakdown": [
+        {
+          "lp_address": "0x05f0bc920a23d1662764907910b150c819c110aa",
+          "provider_balance": "113881443500249068167",
+          "lp_assets": {
+            "xWRING": "1535519000662057238373"
+          }
+        }
+      ]
+    },
+    "0x735182c782cb8e7806f8903de7913e6880cbf82e": {
+      "total": "34415110859755028867",
+      "breakdown": [
+        {
+          "lp_address": "0x05f0bc920a23d1662764907910b150c819c110aa",
+          "provider_balance": "32531084857614252640",
+          "lp_assets": {
+            "xWRING": "1535519000662057238373"
+          }
+        },
+        {
+          "lp_address": "0x506c391b6c1eb4911241a918de5c3984a603e112",
+          "provider_balance": "447656729670174231",
+          "lp_assets": {
+            "xWRING": "8207399044632500286644"
+          }
+        },
+        {
+          "lp_address": "0xa946116131932f2a6b5f2a2a52007418d706168a",
+          "provider_balance": "380594102013849983",
+          "lp_assets": {
+            "xWRING": "3878630910569626197011"
+          }
+        },
+        {
+          "lp_address": "0x2eb5b4a0624d6e646ba2ad919411072476fa1568",
+          "provider_balance": "373939667489117752",
+          "lp_assets": {
+            "xWRING": "7980526247824518994434"
+          }
+        },
+        {
+          "lp_address": "0x76f6877ac6b03bf80ab911de4580c51dcb358927",
+          "provider_balance": "391918233450444746",
+          "lp_assets": {
+            "xWRING": "4398867521329334463695"
+          }
+        },
+        {
+          "lp_address": "0xd4b2b19a62500bb32a731a0889ef0b5147a963e4",
+          "provider_balance": "289917269517189515",
+          "lp_assets": {
+            "xWRING": "3382536866038358365077"
+          }
+        }
+      ]
+    },
+    "0x12d529cfa26891cdf1d25453f9851c73e2720373": {
+      "total": "16282329795810020627",
+      "breakdown": [
+        {
+          "lp_address": "0xa946116131932f2a6b5f2a2a52007418d706168a",
+          "provider_balance": "16277606944873532103",
+          "lp_assets": {
+            "xWRING": "3878630910569626197011"
+          }
+        },
+        {
+          "lp_address": "0x15f2fbd98a0657e2afcab08922632e58b1cc9fdd",
+          "provider_balance": "4722850936488524",
+          "lp_assets": {
+            "xRING": "8576290082165"
+          }
+        }
+      ]
+    },
+    "0x7d0caefbe8a6f66aea68389f8cbff9052acd8fd7": {
+      "total": "240000000000000000",
+      "breakdown": [
+        {
+          "lp_address": "0x15f2fbd98a0657e2afcab08922632e58b1cc9fdd",
+          "provider_balance": "90000000000000000",
+          "lp_assets": {
+            "xRING": "8576290082165"
+          }
+        },
+        {
+          "lp_address": "0x3710f045307d7e0906f1fbd0b0df12c0bc787382",
+          "provider_balance": "30000000000000000",
+          "lp_assets": {
+            "xRING": "4260315657759"
+          }
+        },
+        {
+          "lp_address": "0x8e97f45bd127e7af3034d82a34d665746d348841",
+          "provider_balance": "75000000000000000",
+          "lp_assets": {
+            "xRING": "9922306417670"
+          }
+        },
+        {
+          "lp_address": "0xdb279d65225162280facae2f3ca8a3d2f63ea9bf",
+          "provider_balance": "45000000000000000",
+          "lp_assets": {
+            "xRING": "3399651538137"
+          }
+        }
+      ]
+    }
+  }
 }

@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const TARGET_SYMBOLS = ['xRING', 'xWRING'];
+const XRING_SCALE = 10n ** 9n;
 
 function normalizeAddress(address) {
 	return (address || '').split(' (')[0].toLowerCase();
@@ -36,6 +37,40 @@ function buildLpAssets(assets) {
 	return lpAssets;
 }
 
+function buildProviderAssets(lpAssets, holderBalance, totalSupply) {
+	const providerAssets = {};
+	const balanceRatio = BigInt(holderBalance || '0');
+	const supply = BigInt(totalSupply || '0');
+	if (supply === 0n || balanceRatio === 0n) {
+		return providerAssets;
+	}
+	if (lpAssets.xRING) {
+		providerAssets.xRING = (
+			(BigInt(lpAssets.xRING || '0') * balanceRatio) / supply
+		).toString();
+	}
+	if (lpAssets.xWRING) {
+		providerAssets.xWRING = (
+			(BigInt(lpAssets.xWRING || '0') * balanceRatio) / supply
+		).toString();
+	}
+	return providerAssets;
+}
+
+function buildProviderTotal(providerAssets) {
+	const xringBalance = BigInt(providerAssets.xRING || '0') * XRING_SCALE;
+	const xwringBalance = BigInt(providerAssets.xWRING || '0');
+	return (xringBalance + xwringBalance).toString();
+}
+
+function formatWithDecimals(value, decimals) {
+	const numeric = BigInt(value || '0');
+	const scale = 10n ** BigInt(decimals);
+	const integerPart = numeric / scale;
+	const fractionalPart = (numeric % scale).toString().padStart(decimals, '0');
+	return `${integerPart.toString()}.${fractionalPart}`;
+}
+
 function buildLpProviders(snowLps) {
 	const totals = {};
 	const providers = {};
@@ -48,6 +83,7 @@ function buildLpProviders(snowLps) {
 		}
 		const lpAssets = buildLpAssets(assets);
 		const lpAddress = normalizeAddress(lp.address);
+		const totalSupply = lp.total_supply || '0';
 
 		for (const [holder, balance] of Object.entries(lp.eoa_holders || {})) {
 			const normalized = normalizeAddress(holder);
@@ -58,7 +94,12 @@ function buildLpProviders(snowLps) {
 			if (holderBalance === 0n) {
 				continue;
 			}
-			addBalance(totals, normalized, holderBalance.toString());
+			const providerAssets = buildProviderAssets(lpAssets, holderBalance, totalSupply);
+			if (!Object.keys(providerAssets).length) {
+				continue;
+			}
+			const providerTotal = buildProviderTotal(providerAssets);
+			addBalance(totals, normalized, providerTotal);
 			if (!providers[normalized]) {
 				providers[normalized] = {
 					total: '0',
@@ -67,12 +108,15 @@ function buildLpProviders(snowLps) {
 			}
 			providers[normalized].breakdown.push({
 				lp_address: lpAddress,
-				provider_balance: holderBalance.toString(),
-				lp_assets: lpAssets
+				provided_assets: providerAssets
 			});
 		}
 	}
 
+	const totalAmount = Object.values(totals).reduce(
+		(sum, total) => sum + BigInt(total || '0'),
+		0n
+	);
 	const sortedTotals = sortProviders(
 		Object.fromEntries(Object.entries(totals).map(([address, total]) => [
 			address,
@@ -90,7 +134,10 @@ function buildLpProviders(snowLps) {
 		metadata: {
 			generated_at: new Date().toISOString(),
 			source: 'snow_lps_crab.json',
-			symbols: [...TARGET_SYMBOLS]
+			symbols: [...TARGET_SYMBOLS],
+			holders_count: Object.keys(sortedProviders).length,
+			total_amount: totalAmount.toString(),
+			total_amount_with_decimal: formatWithDecimals(totalAmount.toString(), 18)
 		},
 		providers: sortedProviders
 	};

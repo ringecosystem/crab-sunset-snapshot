@@ -1,6 +1,8 @@
 const { loadJson } = require('../helpers/data');
 const { buildLpProviders } = require('../../src/special/xring-xwring-lp-providers');
 
+const XRING_SCALE = 10n ** 9n;
+
 function normalizeAddress(address) {
 	return (address || '').split(' (')[0].toLowerCase();
 }
@@ -29,6 +31,7 @@ function buildExpectedProviders(snowLps) {
 				return accumulator;
 			}, {});
 		const lpAddress = normalizeAddress(lp.address);
+		const totalSupply = lp.total_supply || '0';
 
 		for (const [holder, balance] of Object.entries(lp.eoa_holders || {})) {
 			const normalized = normalizeAddress(holder);
@@ -39,14 +42,31 @@ function buildExpectedProviders(snowLps) {
 			if (holderBalance === 0n) {
 				continue;
 			}
-			addBalance(totals, normalized, holderBalance.toString());
+			const supply = BigInt(totalSupply || '0');
+			if (supply === 0n) {
+				continue;
+			}
+			const providerAssets = {};
+			if (lpAssets.xRING) {
+				providerAssets.xRING = ((BigInt(lpAssets.xRING) * holderBalance) / supply).toString();
+			}
+			if (lpAssets.xWRING) {
+				providerAssets.xWRING = ((BigInt(lpAssets.xWRING) * holderBalance) / supply).toString();
+			}
+			if (!Object.keys(providerAssets).length) {
+				continue;
+			}
+			const combinedTotal = (
+				(BigInt(providerAssets.xRING || '0') * XRING_SCALE) +
+				BigInt(providerAssets.xWRING || '0')
+			).toString();
+			addBalance(totals, normalized, combinedTotal);
 			if (!providers[normalized]) {
 				providers[normalized] = [];
 			}
 			providers[normalized].push({
 				lp_address: lpAddress,
-				provider_balance: holderBalance.toString(),
-				lp_assets: lpAssets
+				provided_assets: providerAssets
 			});
 		}
 	}
@@ -69,29 +89,49 @@ test('xRING/xWRING LP provider merge matches snapshot', () => {
 	const expectedKeys = Object.keys(expected).sort();
 	const actualKeys = Object.keys(actual.providers).sort();
 	const outputKeys = Object.keys(output.providers).sort();
+	const expectedTotalAmount = Object.values(expected).reduce(
+		(sum, entry) => sum + BigInt(entry.total || '0'),
+		0n
+	);
+	const expectedTotalDecimal = `${expectedTotalAmount / 10n ** 18n}.${
+		(expectedTotalAmount % 10n ** 18n).toString().padStart(18, '0')
+	}`;
 
 	expect(actualKeys).toEqual(expectedKeys);
 	expect(outputKeys).toEqual(expectedKeys);
+	expect(actual.metadata.holders_count).toBe(expectedKeys.length);
+	expect(output.metadata.holders_count).toBe(expectedKeys.length);
+	expect(actual.metadata.total_amount).toBe(expectedTotalAmount.toString());
+	expect(output.metadata.total_amount).toBe(expectedTotalAmount.toString());
+	expect(actual.metadata.total_amount_with_decimal).toBe(expectedTotalDecimal);
+	expect(output.metadata.total_amount_with_decimal).toBe(expectedTotalDecimal);
 
 	expectedKeys.forEach((address) => {
 		expect(actual.providers[address].total).toBe(expected[address].total);
 		expect(output.providers[address].total).toBe(expected[address].total);
 		const expectedBreakdown = expected[address].breakdown || [];
-		const actualBreakdown = actual.providers[address].breakdown || [];
-		const outputBreakdown = output.providers[address].breakdown || [];
-		expect(actualBreakdown.length).toBe(expectedBreakdown.length);
-		expect(outputBreakdown.length).toBe(expectedBreakdown.length);
+			const actualBreakdown = actual.providers[address].breakdown || [];
+			const outputBreakdown = output.providers[address].breakdown || [];
+			expect(actualBreakdown.length).toBe(expectedBreakdown.length);
+			expect(outputBreakdown.length).toBe(expectedBreakdown.length);
 		actualBreakdown.forEach((entry) => {
-			Object.keys(entry.lp_assets || {}).forEach((symbol) => {
+			Object.keys(entry.provided_assets || {}).forEach((symbol) => {
 				expect(['xRING', 'xWRING']).toContain(symbol);
 			});
+			expect(entry.lp_assets).toBeUndefined();
 		});
 		outputBreakdown.forEach((entry) => {
-			Object.keys(entry.lp_assets || {}).forEach((symbol) => {
+			Object.keys(entry.provided_assets || {}).forEach((symbol) => {
 				expect(['xRING', 'xWRING']).toContain(symbol);
 			});
+			expect(entry.lp_assets).toBeUndefined();
 		});
-		const actualTotal = actualBreakdown.reduce((sum, entry) => sum + BigInt(entry.provider_balance || '0'), 0n);
-		expect(actualTotal.toString()).toBe(expected[address].total);
-	});
+		const actualTotal = actualBreakdown.reduce((sum, entry) => {
+			const providerAssets = entry.provided_assets || {};
+			const xringTotal = BigInt(providerAssets.xRING || '0') * XRING_SCALE;
+			const xwringTotal = BigInt(providerAssets.xWRING || '0');
+			return sum + xringTotal + xwringTotal;
+		}, 0n);
+			expect(actualTotal.toString()).toBe(expected[address].total);
+		});
 });

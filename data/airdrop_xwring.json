@@ -1,0 +1,1808 @@
+{
+  "statistics": {
+    "BlockNumber": 9745249,
+    "TotalXRING": "967535818092022",
+    "TotalXWRING": "499095704099062481125858",
+    "TotalEOA": 972563.079730825,
+    "TotalLP": 23729.52615646333,
+    "TotalContract": 517797.96861672285,
+    "Total": 1466631.5221910847
+  },
+  "details": [
+    {
+      "account": "0xaA3C043f0FEdCd9F94c9d032Da6e99Be6e9DdFe0",
+      "xring": "1",
+      "xwring": "0",
+      "amount": 1e-9,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xC2835441055a190F6878aEB5A5254f2016B6a5f9",
+      "xring": "0",
+      "xwring": "104581691777005704",
+      "amount": 0.1045816917770057,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xA796964E8C6D73F78963439D1882E8f4A1808178",
+      "xring": "0",
+      "xwring": "136995436848440781",
+      "amount": 0.1369954368484408,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x02B04c69918808083ac8fc60AbE786855999F2Bd",
+      "xring": "0",
+      "xwring": "141096576421135908",
+      "amount": 0.1410965764211359,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x3aa4F2daF93803B789a2233f1c9Cb374Ceb96a6B",
+      "xring": "0",
+      "xwring": "801000000000000000",
+      "amount": 0.801,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x94C614DAeFDbf151E1BB53d6A201ae5fF56A9337",
+      "xring": "0",
+      "xwring": "1000000000000000000",
+      "amount": 1,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x04Cd063018cC55279C81c31E298E51094C3D1e43",
+      "xring": "0",
+      "xwring": "1403017623626218805",
+      "amount": 1.4030176236262188,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xf00Ac864EC122AF91e556b0EdfEb5E161aDE5035",
+      "xring": "1446925012",
+      "xwring": "0",
+      "amount": 1.446925012,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xE11ac68B9Cc9a8191F4D1916bEb285561e13F67C",
+      "xring": "0",
+      "xwring": "2352821753232632376",
+      "amount": 2.3528217532326323,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x4CA75992d2750BEC270731A72DfDedE6b9E71cC7",
+      "xring": "0",
+      "xwring": "2500000000000000000",
+      "amount": 2.5,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x7982f2d3eBc7540AB4D6c252Df459330a919b27c",
+      "xring": "0",
+      "xwring": "2666953158320642100",
+      "amount": 2.6669531583206423,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x0E059F47CB04Ce5eF7502f5Ca2545D8102c0F9cd",
+      "xring": "3147857939",
+      "xwring": "0",
+      "amount": 3.147857939,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x21Dc35da3262f6Fe9BD60c6225a0FE478322441a",
+      "xring": "0",
+      "xwring": "5769776893514602366",
+      "amount": 5.769776893514602,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x9579391A03FFB1F30641dcb453a6212558935065",
+      "xring": "0",
+      "xwring": "7465923584140372033",
+      "amount": 7.465923584140372,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xF2Cdf22824BfaFDcd78d3bb937cD8450d52f749F",
+      "xring": "0",
+      "xwring": "11471503394981753896",
+      "amount": 11.471503394981754,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x554F6311580607DcFaa846Ecf41b3799b58e98a8",
+      "xring": "0",
+      "xwring": "100863114197530864198",
+      "amount": 100.86311419753086,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x000000000f681D85374225EdEeADC25560C1fb3F",
+      "xring": "0",
+      "xwring": "190000000000000000000",
+      "amount": 190,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xA3304b1a0c88393e5d28Ded0B1E8C6d41f1B17d4",
+      "xring": "2000000002",
+      "xwring": "784000000000000000002",
+      "amount": 786.000000002,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x669eA16ccE83b98dA83eEEEf665Af5Aa4Ea93a7e",
+      "xring": "830823495325",
+      "xwring": "0",
+      "amount": 830.823495325,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xfbA6fC2e805838519c0B1DA6987c3d76a33c8Bd9",
+      "xring": "970220785429",
+      "xwring": "0",
+      "amount": 970.220785429,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x05751685Bf5BE88A4CD39380A0ee5E04fa39D9F1",
+      "xring": "0",
+      "xwring": "1003700870484901292619",
+      "amount": 1003.7008704849013,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xE77164DC95057337E40367F66416bE6D394D6fe6",
+      "xring": "1314772381276",
+      "xwring": "0",
+      "amount": 1314.772381276,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x998b736aA535e2333CE2462A49681B69c4d44aAc",
+      "xring": "1396814451194",
+      "xwring": "0",
+      "amount": 1396.814451194,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x6317Fe2f7a7Bbbd08770CB6E0a8523292F74a9D0",
+      "xring": "1528185362458",
+      "xwring": "0",
+      "amount": 1528.185362458,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x05F0Bc920A23D1662764907910b150C819C110aa",
+      "xring": "0",
+      "xwring": "1535519000662057238373",
+      "amount": 1535.5190006620574,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x33Dcd10d19a4875637fDc359D1eb4Ff6972AB5C0",
+      "xring": "1919899917167",
+      "xwring": "0",
+      "amount": 1919.899917167,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x304a8103A36C145C41d6c2542e08b634FbA249A5",
+      "xring": "2500250000000",
+      "xwring": "0",
+      "amount": 2500.25,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xB74200016e1296F2a41e7EFe44b3908F5762c859",
+      "xring": "2974296150428",
+      "xwring": "0",
+      "amount": 2974.296150428,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x49868674f98875DE56d90C0838366B260a109e96",
+      "xring": "1580954735028",
+      "xwring": "1571460039027212611307",
+      "amount": 3152.4147740552125,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xd4b2b19a62500bb32a731a0889eF0b5147A963E4",
+      "xring": "0",
+      "xwring": "3382536866038358365077",
+      "amount": 3382.5368660383583,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xdb279D65225162280fACae2F3Ca8A3D2F63ea9BF",
+      "xring": "3399651538137",
+      "xwring": "0",
+      "amount": 3399.651538137,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xA946116131932f2a6B5f2A2A52007418d706168A",
+      "xring": "0",
+      "xwring": "3878630910569626197011",
+      "amount": 3878.6309105696264,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x3710F045307d7e0906F1Fbd0B0dF12c0Bc787382",
+      "xring": "4260315657759",
+      "xwring": "0",
+      "amount": 4260.315657759,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x76F6877Ac6b03BF80AB911DE4580C51dcb358927",
+      "xring": "0",
+      "xwring": "4398867521329334463695",
+      "amount": 4398.8675213293345,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x595Ef7c4Ab61D6F9Fe9b368dC83cE7FD9aeC0d83",
+      "xring": "5175281349024",
+      "xwring": "0",
+      "amount": 5175.281349024,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xb0fe91f4fa6ac7bedFB741FDf2d521766db4a925",
+      "xring": "0",
+      "xwring": "5368746417410868992938",
+      "amount": 5368.746417410869,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x1E4b46582bbA7E5Ddb107d3a640e441774980525",
+      "xring": "5415683840575",
+      "xwring": "0",
+      "amount": 5415.683840575,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xD02F1E68bc8973AE8638FAfcCbb8a22D010661C8",
+      "xring": "7509680332055",
+      "xwring": "0",
+      "amount": 7509.680332055,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x2Eb5b4A0624d6E646Ba2aD919411072476FA1568",
+      "xring": "0",
+      "xwring": "7980526247824518994434",
+      "amount": 7980.526247824519,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x506C391b6c1eb4911241A918de5c3984A603E112",
+      "xring": "0",
+      "xwring": "8207399044632500286644",
+      "amount": 8207.3990446325,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x15f2fBD98a0657e2afcAB08922632e58B1cC9FdD",
+      "xring": "8576290082165",
+      "xwring": "0",
+      "amount": 8576.290082165,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x8e97f45bD127E7af3034d82a34d665746d348841",
+      "xring": "9922306417670",
+      "xwring": "0",
+      "amount": 9922.30641767,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xF157c9393255Db1728bC6483c3545Ca8a1655a0F",
+      "xring": "10076781156724",
+      "xwring": "0",
+      "amount": 10076.781156724,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x9De583525b19C59c1E8fF4dC601826c27A825e6E",
+      "xring": "10520745680061",
+      "xwring": "43200000000000000000",
+      "amount": 10563.945680061,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x852b7223270E2776Dd0C137541b354cB8547bfc0",
+      "xring": "0",
+      "xwring": "41288384081408592592592",
+      "amount": 41288.38408140859,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x9A256C4A039d8C20dcf520dac3FfE08403586265",
+      "xring": "0",
+      "xwring": "54873768450842530864197",
+      "amount": 54873.76845084253,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0xEFB8F5a7479A6532a71f70919C00a18aE8A164d6",
+      "xring": "0",
+      "xwring": "64331328265755365687248",
+      "amount": 64331.328265755365,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x81bC43e2ca13571D2bb63630CfA27FfbA6028648",
+      "xring": "0",
+      "xwring": "66104494746155592592592",
+      "amount": 66104.49474615559,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x29BF15B31029c889E397Cc153C1F225e200581BC",
+      "xring": "172839181254842",
+      "xwring": "0",
+      "amount": 172839.181254842,
+      "isEOA": false,
+      "lp": []
+    },
+    {
+      "account": "0x7aE77149ed38c5dD313e9069d790Ce7085caf0A6",
+      "xring": "0",
+      "xwring": "1",
+      "amount": 1e-18,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xbFf1e53b23d9F5CD13429cD4BACBc017589f51eB",
+      "xring": "0",
+      "xwring": "1",
+      "amount": 1e-18,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x74cAfa4ef28Da1410E1DE6F431B009367945DF66",
+      "xring": "0",
+      "xwring": "1161044805",
+      "amount": 1.161044805e-9,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xD9B8954CE0970C29A7C65b32babC810AC19cCCFE",
+      "xring": "0",
+      "xwring": "2813450253663",
+      "amount": 0.000002813450253663,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x6a7acb326aCD78Ad2fee10dE87145acB16C7C0EB",
+      "xring": "0",
+      "xwring": "3473443991465",
+      "amount": 0.000003473443991465,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x75DC6C1987a7b49E5E397776814F38dDcF3F9401",
+      "xring": "0",
+      "xwring": "10844244270168",
+      "amount": 0.000010844244270168,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x5070f5Cc1A839c216dC99952dDdb95537804E518",
+      "xring": "0",
+      "xwring": "16979641262768",
+      "amount": 0.000016979641262768,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x33544b792d93973d201ECc5aaB5Eac7F37720866",
+      "xring": "0",
+      "xwring": "32572669167419",
+      "amount": 0.000032572669167419,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xCD682940b29dc5fC79D6FdaBfE67EFD311A5F4a6",
+      "xring": "0",
+      "xwring": "33058088599877",
+      "amount": 0.000033058088599877,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xb53c9Ab4F40196560FdF7811d6A23A8f64DbAA05",
+      "xring": "0",
+      "xwring": "39354939151580",
+      "amount": 0.00003935493915158,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x1FE43f304CA8F1D99f79f7EC71DE9b7e329B91bD",
+      "xring": "0",
+      "xwring": "51674740828923",
+      "amount": 0.000051674740828923,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xb51F283935c6Ef93164eB2A3a20f93E016BAabA8",
+      "xring": "0",
+      "xwring": "90309000000000",
+      "amount": 0.000090309,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x5d21ec711d3740F21E48d84152E5Ca2eb066BBAA",
+      "xring": "0",
+      "xwring": "156757735462755",
+      "amount": 0.000156757735462755,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xB85da778f37C5ade3448814A77A0bb77748467c5",
+      "xring": "0",
+      "xwring": "276610580464498",
+      "amount": 0.000276610580464498,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xE45FD7BEf2736Dad2d5620052cA37A9603376aeA",
+      "xring": "0",
+      "xwring": "303089122131454",
+      "amount": 0.000303089122131454,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x530cAFdc90c5353C6654999cBdb16ab14Af1fcc4",
+      "xring": "360796",
+      "xwring": "0",
+      "amount": 0.000360796,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xaFf5ccb996125dee3c12Fbe4910B418c138646D0",
+      "xring": "0",
+      "xwring": "400173572513447",
+      "amount": 0.000400173572513447,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x172FD468A3F463bf4e2B5Bb05529519a9EBE443c",
+      "xring": "0",
+      "xwring": "427208015933034",
+      "amount": 0.000427208015933034,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x2E18b45EC212C9781027660d621D6b7327504679",
+      "xring": "0",
+      "xwring": "1197154216112257",
+      "amount": 0.001197154216112257,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x00205fdaC4d4887DE33Df1Ad324F65E8277508A1",
+      "xring": "0",
+      "xwring": "1679496195135175",
+      "amount": 0.001679496195135175,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x06Aa1ed29Dc8C1E0046D3e6e0D3a955d17b50aF9",
+      "xring": "0",
+      "xwring": "9687130447496572",
+      "amount": 0.009687130447496571,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x5f797392890980068f1214836A0cdA213ecA6293",
+      "xring": "0",
+      "xwring": "12416766341639578",
+      "amount": 0.012416766341639579,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x2854759ff0136038F7326fCE6900D6eBF97eDD51",
+      "xring": "0",
+      "xwring": "29033087997286395",
+      "amount": 0.029033087997286395,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x0BefD7ecAf8038737438832643f0e51DF7aBf1E4",
+      "xring": "0",
+      "xwring": "44177684805813017",
+      "amount": 0.044177684805813015,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x3039f20D4d8A6432bA620577D1dC9243BF3034e4",
+      "xring": "0",
+      "xwring": "44959351956691165",
+      "amount": 0.044959351956691165,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xB7e88e1635EA56b6A404cb4E97cF4FA6C40DcbeB",
+      "xring": "0",
+      "xwring": "51404360599875198",
+      "amount": 0.0514043605998752,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x88a39B052d477CfdE47600a7C9950a441Ce61cb4",
+      "xring": "0",
+      "xwring": "100000000000000000",
+      "amount": 0.1,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x38f046Ae944021351CE5C2486dee3027c949858F",
+      "xring": "0",
+      "xwring": "103549045286797763",
+      "amount": 0.10354904528679776,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xAe354A3233e36Bc91149419e068658c01bAcb9A8",
+      "xring": "0",
+      "xwring": "111305284888823473",
+      "amount": 0.11130528488882348,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xC1c3D0Cd8c23bDeC19b7F8D2601cc3b3B35c2629",
+      "xring": "0",
+      "xwring": "127585561060960180",
+      "amount": 0.12758556106096017,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x49BE35d7776032F5C7a7C71D6A51d848dB8D15Ea",
+      "xring": "0",
+      "xwring": "216682756153597152",
+      "amount": 0.21668275615359714,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x390D9a55eEF37581F183aFFf7b0d4f8EBB8D23fD",
+      "xring": "0",
+      "xwring": "225287827414273500",
+      "amount": 0.2252878274142735,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x9c8957C3EDdDdA379C7cf4f3c2a487Eb1b0f6467",
+      "xring": "0",
+      "xwring": "250813967392056406",
+      "amount": 0.2508139673920564,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x4B47052498D469AC9521606A67d6F02AFeB0985A",
+      "xring": "0",
+      "xwring": "255846083000000000",
+      "amount": 0.255846083,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xd2c7008400F54aA70Af01CF8C747a4473246593E",
+      "xring": "0",
+      "xwring": "357582757000000000",
+      "amount": 0.357582757,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x202e95B57f12Be510D52341Ec01A763e4356B821",
+      "xring": "0",
+      "xwring": "367355153048183279",
+      "amount": 0.3673551530481833,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xcDd05390CeD5f4708206Ec2F67b124E9Ce405AA1",
+      "xring": "0",
+      "xwring": "392741142790107147",
+      "amount": 0.39274114279010713,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xb9fDF953A975cA5F12FFEdEa4F5259C75ce2eBCF",
+      "xring": "0",
+      "xwring": "397767729596561676",
+      "amount": 0.3977677295965617,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x32212774827946630B48683aa05B82F7E9777301",
+      "xring": "0",
+      "xwring": "420890872845382486",
+      "amount": 0.4208908728453825,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x98f19db4501A5A7d593282FCF7A3478CA2d0A219",
+      "xring": "0",
+      "xwring": "489636067508151481",
+      "amount": 0.4896360675081515,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x217B3b614349E8d01c5a0b3E6132451C58eEf740",
+      "xring": "0",
+      "xwring": "499804402022439915",
+      "amount": 0.4998044020224399,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x615E1690Dfe1Fe7ca505D19C0Ca9B2c4881F2bbE",
+      "xring": "613249505",
+      "xwring": "0",
+      "amount": 0.613249505,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x3B9E571AdeCB0c277486036D6097E9C2CCcfa9d9",
+      "xring": "0",
+      "xwring": "654691115613113820",
+      "amount": 0.6546911156131138,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x186B16e6c7685915E0A06495adB37B8dfFddD99e",
+      "xring": "730513043",
+      "xwring": "0",
+      "amount": 0.730513043,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x4295e87Fb5113C85720298D73E4760c240Ca41fA",
+      "xring": "0",
+      "xwring": "743396429604000000",
+      "amount": 0.743396429604,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xaFE5D2284AB5BeE3F1bbaf1349910a1C4b5AD0A2",
+      "xring": "0",
+      "xwring": "773651477616355343",
+      "amount": 0.7736514776163553,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x47D1F327Db34C828F919fD133590a68a4255F88D",
+      "xring": "0",
+      "xwring": "792516720133167594",
+      "amount": 0.7925167201331675,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xFd2EeF72f3C6806940F289509Eb11f9b412B2b51",
+      "xring": "0",
+      "xwring": "927569869429610539",
+      "amount": 0.9275698694296105,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x2823fd42b4603f1428173B544C3Ee81409f9F82A",
+      "xring": "0",
+      "xwring": "931122044000000000",
+      "amount": 0.931122044,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xf15D35d68E67cd2fD6e6fe9268cf210eE45c677d",
+      "xring": "0",
+      "xwring": "937710562181780751",
+      "amount": 0.9377105621817807,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x67A7e31fc12a00dF144b520c900beD82254D5db3",
+      "xring": "0",
+      "xwring": "942651274847158192",
+      "amount": 0.9426512748471582,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x88Bae23319b2E7Bf62b296EcBbf0a0bB9f19337B",
+      "xring": "0",
+      "xwring": "996491230481470975",
+      "amount": 0.9964912304814709,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x8E4137ED1d3b2eFBac0bDFC419738e637d4536c5",
+      "xring": "1000000000",
+      "xwring": "0",
+      "amount": 1,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xB156C425F325d750968702D4Bd4226573EDC3aED",
+      "xring": "0",
+      "xwring": "1000000000000000000",
+      "amount": 1,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x1BE8Ce85D5763E67b37A0817FD99A33CE9b83800",
+      "xring": "709083007",
+      "xwring": "594925759040902985",
+      "amount": 1.304008766040903,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x5c597e485e9b7b55074fFcA365497ec61a842AE3",
+      "xring": "0",
+      "xwring": "1901384778349938138",
+      "amount": 1.9013847783499382,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x0f14341A7f464320319025540E8Fe48Ad0fe5aec",
+      "xring": "0",
+      "xwring": "2199000000000000000",
+      "amount": 2.199,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x5781bA401cd4540Cf6D4a56aF297884030131949",
+      "xring": "0",
+      "xwring": "2403064650239498830",
+      "amount": 2.403064650239499,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xa09b260809915dA08f831A53da431Aa3c1d03618",
+      "xring": "3425290218",
+      "xwring": "26418826567667",
+      "amount": 3.425316636826568,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xC1c8F6Ef43b39C279417E361969d535F2a20b92e",
+      "xring": "0",
+      "xwring": "4002299426653981573",
+      "amount": 4.002299426653981,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xa789023d50e20880d795810BdF64Ee44b8a4d5D8",
+      "xring": "0",
+      "xwring": "5256936053990528322",
+      "amount": 5.256936053990528,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xE178Ae2eE58F7C85feE8354B1272C5e6Ffc41161",
+      "xring": "0",
+      "xwring": "5663367328627177840",
+      "amount": 5.663367328627178,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xF32A403a1dC01EB44b6AAD0fF1c31aaff62bce30",
+      "xring": "0",
+      "xwring": "6424297813613232710",
+      "amount": 6.424297813613233,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x735182c782CB8e7806F8903dE7913e6880CbF82E",
+      "xring": "0",
+      "xwring": "0",
+      "amount": 7.384874862260187,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x506C391b6c1eb4911241A918de5c3984A603E112",
+          "totalBalance": 8207.3990446325,
+          "totalSupply": "26818164663432996664208",
+          "lpBalance": "447656729670174231",
+          "amount": 0.13700033024362732
+        },
+        {
+          "address": "0xA946116131932f2a6B5f2A2A52007418d706168A",
+          "totalBalance": 3878.6309105696264,
+          "totalSupply": "16235422743183455606883",
+          "lpBalance": "380594102013849983",
+          "amount": 0.0909236594452826
+        },
+        {
+          "address": "0x2Eb5b4A0624d6E646Ba2aD919411072476FA1568",
+          "totalBalance": 7980.526247824519,
+          "totalSupply": "25553069239145709301943",
+          "lpBalance": "373939667489117752",
+          "amount": 0.11678578817952774
+        },
+        {
+          "address": "0x76F6877Ac6b03BF80AB911DE4580C51dcb358927",
+          "totalBalance": 4398.8675213293345,
+          "totalSupply": "13451763375493142240143",
+          "lpBalance": "391918233450444746",
+          "amount": 0.12816136739981332
+        },
+        {
+          "address": "0xd4b2b19a62500bb32a731a0889eF0b5147A963E4",
+          "totalBalance": 3382.5368660383583,
+          "totalSupply": "16678990620535841363043",
+          "lpBalance": "289917269517189515",
+          "amount": 0.0587958752753089
+        },
+        {
+          "address": "0x05F0Bc920A23D1662764907910b150C819C110aa",
+          "totalBalance": 1535.5190006620574,
+          "totalSupply": "7288863852479361649032",
+          "lpBalance": "32531084857614252640",
+          "amount": 6.853207841716627
+        }
+      ]
+    },
+    {
+      "account": "0xb8D018BF6aCF616f8e3E5c8D9c213Fe509DC9218",
+      "xring": "0",
+      "xwring": "8000035476049158453",
+      "amount": 8.000035476049158,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xef0d6c11CBee22FA642582024380EFBD893AA1A6",
+      "xring": "0",
+      "xwring": "8299893377015420528",
+      "amount": 8.29989337701542,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x850c3f267Fdb0d9a1a93354ccc107A2D08c0D4cD",
+      "xring": "0",
+      "xwring": "8846453586020528915",
+      "amount": 8.846453586020528,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x5a25FED1D5400142435d7CCD80A0d54A71Ac835F",
+      "xring": "5000000000",
+      "xwring": "4000000000000000000",
+      "amount": 9,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x14F8680954Cd0b4F31111aEBf3B2e20E953AAc5D",
+      "xring": "0",
+      "xwring": "9620105546899949454",
+      "amount": 9.62010554689995,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x9F8D9C183150F15ffbA39b7b17C3e1A78E5e5478",
+      "xring": "0",
+      "xwring": "9416496",
+      "amount": 11.536072820663096,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x15f2fBD98a0657e2afcAB08922632e58B1cC9FdD",
+          "totalBalance": 8576.290082165,
+          "totalSupply": "1150780946677922272",
+          "lpBalance": "198570970718738",
+          "amount": 1.4798665651332004
+        },
+        {
+          "address": "0x3710F045307d7e0906F1Fbd0B0dF12c0Bc787382",
+          "totalBalance": 4260.315657759,
+          "totalSupply": "427137893620209816",
+          "lpBalance": "673416039217240",
+          "amount": 6.716718275092211
+        },
+        {
+          "address": "0x8e97f45bD127E7af3034d82a34d665746d348841",
+          "totalBalance": 9922.30641767,
+          "totalSupply": "1024302403616730512",
+          "lpBalance": "13229506171692",
+          "amount": 0.12815279308775446
+        },
+        {
+          "address": "0xdb279D65225162280fACae2F3Ca8A3D2F63ea9BF",
+          "totalBalance": 3399.651538137,
+          "totalSupply": "533579431024594854",
+          "lpBalance": "504022951431489",
+          "amount": 3.2113351873405134
+        }
+      ]
+    },
+    {
+      "account": "0xB4A6F46AA86C02EAf9785113Aa38019a16122543",
+      "xring": "394733",
+      "xwring": "0",
+      "amount": 12.380744821505699,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x1E4b46582bbA7E5Ddb107d3a640e441774980525",
+          "totalBalance": 5415.683840575,
+          "totalSupply": "521767216067441130",
+          "lpBalance": "1192769184793120",
+          "amount": 12.380350088505699
+        }
+      ]
+    },
+    {
+      "account": "0x5a91fe74aB3788FF58187ACAf3fB0A039534428E",
+      "xring": "0",
+      "xwring": "13000000000000000000",
+      "amount": 13,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xe59261f6D4088BcD69985A3D369Ff14cC54EF1E5",
+      "xring": "0",
+      "xwring": "14465370746806036941",
+      "amount": 14.465370746806038,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x8f49A10fcacd7cd22257B9FD358BcaB2cb3CfFDc",
+      "xring": "0",
+      "xwring": "2716048199253733",
+      "amount": 23.99371435144958,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x05F0Bc920A23D1662764907910b150C819C110aa",
+          "totalBalance": 1535.5190006620574,
+          "totalSupply": "7288863852479361649032",
+          "lpBalance": "113881443500249068167",
+          "amount": 23.990998303250326
+        }
+      ]
+    },
+    {
+      "account": "0x1A351fb54EF5eb9b827C4B148D2Cae352ef064Ae",
+      "xring": "23258517132",
+      "xwring": "5000000736590770065",
+      "amount": 28.258517868590772,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x84BF2Ad689bB579BaD1dC856a9C2ede979000E99",
+      "xring": "0",
+      "xwring": "33062288401044010307",
+      "amount": 33.06228840104401,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x050066b4C414dB66954E496972c05852C505C7F4",
+      "xring": "0",
+      "xwring": "0",
+      "amount": 39.38066771362385,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x05F0Bc920A23D1662764907910b150C819C110aa",
+          "totalBalance": 1535.5190006620574,
+          "totalSupply": "7288863852479361649032",
+          "lpBalance": "186933750256801201014",
+          "amount": 39.38066771362385
+        }
+      ]
+    },
+    {
+      "account": "0xC4C84ECe914dd0F37ef0b3258320C24E479ab381",
+      "xring": "47040000000",
+      "xwring": "0",
+      "amount": 47.42115521155534,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x3710F045307d7e0906F1Fbd0B0dF12c0Bc787382",
+          "totalBalance": 4260.315657759,
+          "totalSupply": "427137893620209816",
+          "lpBalance": "38214500352716",
+          "amount": 0.38115521155533866
+        }
+      ]
+    },
+    {
+      "account": "0x54aA55E501ad33987Ed0D17DFC4022423908225d",
+      "xring": "62284382366",
+      "xwring": "0",
+      "amount": 62.284382366,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x67131485a916B02f50006d01CC82b93D2778dC65",
+      "xring": "0",
+      "xwring": "64486513931977068557",
+      "amount": 64.48651393197707,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x833F85F3d37D0099f896E19080D713857D2F36bC",
+      "xring": "0",
+      "xwring": "65731335558168033999",
+      "amount": 65.73133555816803,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x87F0C169D8ACc432AcdB5E7D0907322c80Ec6621",
+      "xring": "0",
+      "xwring": "75000000000000000000",
+      "amount": 75,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xa252635B33bb23931bC5c45c3acB15DEBc2985E6",
+      "xring": "0",
+      "xwring": "87688687276745858032",
+      "amount": 87.68868727674585,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xf422673CB7a673f595852f7B00906408A0b073db",
+      "xring": "0",
+      "xwring": "99000000000000000000",
+      "amount": 99,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x528608F40F9835cC5e26244309384c8C15e07e60",
+      "xring": "0",
+      "xwring": "99637314219585319032",
+      "amount": 99.63731421958532,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x63097899c0FBABc302a5D10484f22bEC9fE454dd",
+      "xring": "135170555480",
+      "xwring": "0",
+      "amount": 135.1961678652473,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x15f2fBD98a0657e2afcAB08922632e58B1cC9FdD",
+          "totalBalance": 8576.290082165,
+          "totalSupply": "1150780946677922272",
+          "lpBalance": "312564975244",
+          "amount": 0.0023294163019954126
+        },
+        {
+          "address": "0x3710F045307d7e0906F1Fbd0B0dF12c0Bc787382",
+          "totalBalance": 4260.315657759,
+          "totalSupply": "427137893620209816",
+          "lpBalance": "752004852441",
+          "amount": 0.007500570882183967
+        },
+        {
+          "address": "0x8e97f45bD127E7af3034d82a34d665746d348841",
+          "totalBalance": 9922.30641767,
+          "totalSupply": "1024302403616730512",
+          "lpBalance": "551758070633",
+          "amount": 0.005344820656392349
+        },
+        {
+          "address": "0xdb279D65225162280fACae2F3Ca8A3D2F63ea9BF",
+          "totalBalance": 3399.651538137,
+          "totalSupply": "533579431024594854",
+          "lpBalance": "643440497201",
+          "amount": 0.0040996210663678785
+        },
+        {
+          "address": "0x1E4b46582bbA7E5Ddb107d3a640e441774980525",
+          "totalBalance": 5415.683840575,
+          "totalSupply": "521767216067441130",
+          "lpBalance": "610622394627",
+          "amount": 0.006337956340375391
+        }
+      ]
+    },
+    {
+      "account": "0x12D529Cfa26891CdF1D25453F9851C73e2720373",
+      "xring": "0",
+      "xwring": "101468854579446881720",
+      "amount": 140.5550000698846,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0xA946116131932f2a6B5f2A2A52007418d706168A",
+          "totalBalance": 3878.6309105696264,
+          "totalSupply": "16235422743183455606883",
+          "lpBalance": "16277606944873532103",
+          "amount": 3.8887086862580684
+        },
+        {
+          "address": "0x15f2fBD98a0657e2afcAB08922632e58B1cC9FdD",
+          "totalBalance": 8576.290082165,
+          "totalSupply": "1150780946677922272",
+          "lpBalance": "4722850936488524",
+          "amount": 35.19743680417966
+        }
+      ]
+    },
+    {
+      "account": "0x178D8546C5f78e01133858958355B06EC3406A1A",
+      "xring": "0",
+      "xwring": "192000000000000000001",
+      "amount": 192,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x281ff8ED6FB8637d8bCbd0450dc791AeBB774f0a",
+      "xring": "0",
+      "xwring": "231678662348489935872",
+      "amount": 231.67866234848992,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xeae961C8Bc0548456caB29B860BD900cfC36cC38",
+      "xring": "0",
+      "xwring": "239741010507065897617",
+      "amount": 239.7410105070659,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xAc95E9DeC056835D88817A8A59A06B1667C515D7",
+      "xring": "245000000000",
+      "xwring": "0",
+      "amount": 245,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xfa48d48D4d4c2a73F48B1eFfD7E6AD1Ff7134f29",
+      "xring": "0",
+      "xwring": "273151754582826961052",
+      "amount": 273.151754582827,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xb27483860b23c1d33142f9cdBF9F07cbF0318396",
+      "xring": "0",
+      "xwring": "345000000000000000000",
+      "amount": 345,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xE2Cc4F1E7d609dF4b69f35FE3b851F03f228E9eD",
+      "xring": "0",
+      "xwring": "346545116614771210021",
+      "amount": 346.5451166147712,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x0d59bB0CfFeEb43EbF2d42517F0d6069f1f393bB",
+      "xring": "348496035447",
+      "xwring": "0",
+      "amount": 348.496035447,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x68A0E137814cdB50e445824eF6af5a5BF9b8Bd8D",
+      "xring": "0",
+      "xwring": "444466488369833248385",
+      "amount": 444.46648836983326,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x675Ee25611307E630BFFEc1e26cEAE5E4f7fAAa8",
+      "xring": "0",
+      "xwring": "484929974185063309977",
+      "amount": 484.9299741850633,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x3e25247CfF03F99a7D83b28F207112234feE73a6",
+      "xring": "625000000000",
+      "xwring": "0",
+      "amount": 625,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x1472DcFdE6312b9306Be95Ac98cD59A4e1F39B72",
+      "xring": "0",
+      "xwring": "653923123259095023434",
+      "amount": 653.9231232590951,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x048C592C8FDcCE21ff6AF18365D37208a9954f95",
+      "xring": "0",
+      "xwring": "664494038070000000000",
+      "amount": 664.49403807,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x5ebdFe236a8a75Cc379ac2Ad8cD754Ee38297477",
+      "xring": "0",
+      "xwring": "685000000000000000000",
+      "amount": 685,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xb62d0f26ceE350c515191A53b6531CfC5bA323f9",
+      "xring": "0",
+      "xwring": "737356287722282338451",
+      "amount": 737.3562877222823,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xd88f34679b914C4C677DdC78ae0bAD7cdF6760cc",
+      "xring": "0",
+      "xwring": "1000000000000000000000",
+      "amount": 1000,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x76bf5D4A2f217Ea22AAF2aDB5FfeD987183c2dc4",
+      "xring": "1008583123275",
+      "xwring": "0",
+      "amount": 1008.583123275,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x10Cdedd6346C21a2eBf9e1708B6de16b58d95B15",
+      "xring": "0",
+      "xwring": "1103472655275833999973",
+      "amount": 1103.472655275834,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x25ab128F1e44ff04f74D0bA2989F94B82AF098FA",
+      "xring": "0",
+      "xwring": "1232388923475707807145",
+      "amount": 1232.3889234757078,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xb25165E01A7d74B72794855404A9A422c2B97426",
+      "xring": "0",
+      "xwring": "1607568418465405150219",
+      "amount": 1607.568418465405,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xA26c2744757A7c7FAd021073108D843ECe8bA648",
+      "xring": "0",
+      "xwring": "1750876547758024712246",
+      "amount": 1750.8765477580248,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xb4a614256Dbc815ba58C33Ac4D6089F0b6dE9BdF",
+      "xring": "0",
+      "xwring": "1787777458407549034361",
+      "amount": 1787.7774584075491,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x7D0CAeFbe8a6F66AeA68389f8cbff9052ACd8fd7",
+      "xring": "0",
+      "xwring": "980341158054643413",
+      "amount": 1984.1659228335625,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x15f2fBD98a0657e2afcAB08922632e58B1cC9FdD",
+          "totalBalance": 8576.290082165,
+          "totalSupply": "1150780946677922272",
+          "lpBalance": "90000000000000000",
+          "amount": 670.7324357629271
+        },
+        {
+          "address": "0x3710F045307d7e0906F1Fbd0B0dF12c0Bc787382",
+          "totalBalance": 4260.315657759,
+          "totalSupply": "427137893620209816",
+          "lpBalance": "30000000000000000",
+          "amount": 299.2229714145005
+        },
+        {
+          "address": "0x8e97f45bD127E7af3034d82a34d665746d348841",
+          "totalBalance": 9922.30641767,
+          "totalSupply": "1024302403616730512",
+          "lpBalance": "75000000000000000",
+          "amount": 726.5168749947616
+        },
+        {
+          "address": "0xdb279D65225162280fACae2F3Ca8A3D2F63ea9BF",
+          "totalBalance": 3399.651538137,
+          "totalSupply": "533579431024594854",
+          "lpBalance": "45000000000000000",
+          "amount": 286.7132995033186
+        }
+      ]
+    },
+    {
+      "account": "0x9435baADeDCf25516867bf774bEE7460923363D5",
+      "xring": "9266669228",
+      "xwring": "1979529261869409741003",
+      "amount": 1988.7959310974097,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x1B00CCCc5483975b1B9abE574Bf15a193fbfE773",
+      "xring": "0",
+      "xwring": "2343809910676278747979",
+      "amount": 2343.826007575239,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x15f2fBD98a0657e2afcAB08922632e58B1cC9FdD",
+          "totalBalance": 8576.290082165,
+          "totalSupply": "1150780946677922272",
+          "lpBalance": "355735744890",
+          "amount": 0.0026511500295334327
+        },
+        {
+          "address": "0x3710F045307d7e0906F1Fbd0B0dF12c0Bc787382",
+          "totalBalance": 4260.315657759,
+          "totalSupply": "427137893620209816",
+          "lpBalance": "789260369869",
+          "amount": 0.007872161103063663
+        },
+        {
+          "address": "0x8e97f45bD127E7af3034d82a34d665746d348841",
+          "totalBalance": 9922.30641767,
+          "totalSupply": "1024302403616730512",
+          "lpBalance": "232387746063",
+          "amount": 0.0022511149207568933
+        },
+        {
+          "address": "0xdb279D65225162280fACae2F3Ca8A3D2F63ea9BF",
+          "totalBalance": 3399.651538137,
+          "totalSupply": "533579431024594854",
+          "lpBalance": "521466151282",
+          "amount": 0.003322472906963531
+        }
+      ]
+    },
+    {
+      "account": "0xbfFadC0F1E9F0E91E792F9761C8799373C357013",
+      "xring": "2666713178875",
+      "xwring": "0",
+      "amount": 2666.713178875,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xB7AE3beb06dd402962CEF689e7fc6d025EA1028c",
+      "xring": "0",
+      "xwring": "3041811712052288890986",
+      "amount": 3041.811712052289,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x466a8c62eA9Eb6f49c718A0244B095AB05519DEa",
+      "xring": "0",
+      "xwring": "86276581556930025",
+      "amount": 3136.4233245310625,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x49868674f98875DE56d90C0838366B260a109e96",
+          "totalBalance": 3152.4147740552125,
+          "totalSupply": "47997607432442912",
+          "lpBalance": "47752813380473872",
+          "amount": 3136.3370479495056
+        }
+      ]
+    },
+    {
+      "account": "0x4de51875c1A58799A0de58fC1049e9C4A83d7Ad0",
+      "xring": "0",
+      "xwring": "4592902365254780605760",
+      "amount": 4592.90236525478,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xD4DC3EB21c9ec200Ef82c825FBf86188c1A6C03C",
+      "xring": "0",
+      "xwring": "5807048875995936485033",
+      "amount": 5807.048875995936,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x880D7082A89D6E2E217A9311083C6B04f7c42890",
+      "xring": "0",
+      "xwring": "6844055688641008468618",
+      "amount": 6844.055688641009,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x958C50A13Afe090c24a43fFf5f4334e6F92a2891",
+      "xring": "0",
+      "xwring": "7048471852798297515472",
+      "amount": 7048.471852798298,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x8aBC0eD7E7885C82395bd1F11091B96375081C59",
+      "xring": "0",
+      "xwring": "7382734979485644318699",
+      "amount": 7382.7349794856445,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x56c82cc840621d929A3c98957Fa5D34fa008dA8D",
+      "xring": "0",
+      "xwring": "7573977909761061822341",
+      "amount": 7649.368668874007,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x506C391b6c1eb4911241A918de5c3984A603E112",
+          "totalBalance": 8207.3990446325,
+          "totalSupply": "26818164663432996664208",
+          "lpBalance": "246343790645153324676",
+          "amount": 75.39075911294535
+        }
+      ]
+    },
+    {
+      "account": "0x7C9B3D4cfc78c681B7460acdE2801452aEF073A9",
+      "xring": "8833145098499",
+      "xwring": "0",
+      "amount": 8906.715673996814,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0xF157c9393255Db1728bC6483c3545Ca8a1655a0F",
+          "totalBalance": 10076.781156724,
+          "totalSupply": "139366547884667145",
+          "lpBalance": "1017515114553889",
+          "amount": 73.57057549781311
+        }
+      ]
+    },
+    {
+      "account": "0x07c178Bb33D82c2102b47028061Ca825E9c8E06a",
+      "xring": "0",
+      "xwring": "9420896898482297443612",
+      "amount": 9420.896898482297,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x13783f40743729a5180A200A07dD8c6C0EA14Bb6",
+      "xring": "0",
+      "xwring": "10001000000000000000000",
+      "amount": 10001,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xD41f35B0EB9ACC747ED2A603A06a45A2Aa48E028",
+      "xring": "0",
+      "xwring": "10425739845806110888257",
+      "amount": 10425.73984580611,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0xAd160f5FE0a7E6A7077bFc4E3dB763ba64f4ebe3",
+      "xring": "16434083237672",
+      "xwring": "0",
+      "amount": 16434.083237672,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x73Db0F38391583C9F4786f7a317AfAB23b6749F7",
+      "xring": "0",
+      "xwring": "2756627361270282713207",
+      "amount": 16690.37077552354,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x506C391b6c1eb4911241A918de5c3984A603E112",
+          "totalBalance": 8207.3990446325,
+          "totalSupply": "26818164663432996664208",
+          "lpBalance": "8228929636813924982986",
+          "amount": 2518.3717859568515
+        },
+        {
+          "address": "0xA946116131932f2a6B5f2A2A52007418d706168A",
+          "totalBalance": 3878.6309105696264,
+          "totalSupply": "16235422743183455606883",
+          "lpBalance": "10717098175124107839493",
+          "amount": 2560.307108177897
+        },
+        {
+          "address": "0x2Eb5b4A0624d6E646Ba2aD919411072476FA1568",
+          "totalBalance": 7980.526247824519,
+          "totalSupply": "25553069239145709301943",
+          "lpBalance": "10471813415498049072303",
+          "amount": 3270.4713880976055
+        },
+        {
+          "address": "0x76F6877Ac6b03BF80AB911DE4580C51dcb358927",
+          "totalBalance": 4398.8675213293345,
+          "totalSupply": "13451763375493142240143",
+          "lpBalance": "9430532644228145143888",
+          "amount": 3083.882952706968
+        },
+        {
+          "address": "0xd4b2b19a62500bb32a731a0889eF0b5147A963E4",
+          "totalBalance": 3382.5368660383583,
+          "totalSupply": "16678990620535841363043",
+          "lpBalance": "9159034881234814249620",
+          "amount": 1857.4729039635797
+        },
+        {
+          "address": "0x05F0Bc920A23D1662764907910b150C819C110aa",
+          "totalBalance": 1535.5190006620574,
+          "totalSupply": "7288863852479361649032",
+          "lpBalance": "3053344779743549005227",
+          "amount": 643.237275350356
+        }
+      ]
+    },
+    {
+      "account": "0x6628FCfaF1d86faD0c337f2143bc243EF4b99d04",
+      "xring": "0",
+      "xwring": "35131143322643000000000",
+      "amount": 35131.15667074894,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x15f2fBD98a0657e2afcAB08922632e58B1cC9FdD",
+          "totalBalance": 8576.290082165,
+          "totalSupply": "1150780946677922272",
+          "lpBalance": "728169751124",
+          "amount": 0.0054267452313365
+        },
+        {
+          "address": "0x3710F045307d7e0906F1Fbd0B0dF12c0Bc787382",
+          "totalBalance": 4260.315657759,
+          "totalSupply": "427137893620209816",
+          "lpBalance": "540886569160",
+          "amount": 0.005394856214074997
+        },
+        {
+          "address": "0xdb279D65225162280fACae2F3Ca8A3D2F63ea9BF",
+          "totalBalance": 3399.651538137,
+          "totalSupply": "533579431024594854",
+          "lpBalance": "396537944021",
+          "amount": 0.002526504495744959
+        }
+      ]
+    },
+    {
+      "account": "0x05e0375b33aeF6a5BC6c02f52E02F62aadc586FE",
+      "xring": "23802960534309",
+      "xwring": "7513858160516288462775",
+      "amount": 35709.914241007245,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x506C391b6c1eb4911241A918de5c3984A603E112",
+          "totalBalance": 8207.3990446325,
+          "totalSupply": "26818164663432996664208",
+          "lpBalance": "84000000000000000000",
+          "amount": 25.70725955341633
+        },
+        {
+          "address": "0x2Eb5b4A0624d6E646Ba2aD919411072476FA1568",
+          "totalBalance": 7980.526247824519,
+          "totalSupply": "25553069239145709301943",
+          "lpBalance": "93300000000000000000",
+          "amount": 29.13869531497894
+        },
+        {
+          "address": "0xF157c9393255Db1728bC6483c3545Ca8a1655a0F",
+          "totalBalance": 10076.781156724,
+          "totalSupply": "139366547884667145",
+          "lpBalance": "60000000000000000",
+          "amount": 4338.249591313567
+        }
+      ]
+    },
+    {
+      "account": "0x254fB3a427d0168DaE92B2782274B53595bCa712",
+      "xring": "0",
+      "xwring": "46795006392592719705710",
+      "amount": 46795.00639259272,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x75d56B0103ea3b596D344e153CC89012aF3bD22A",
+      "xring": "0",
+      "xwring": "50800000000000000000000",
+      "amount": 50800,
+      "isEOA": true,
+      "lp": []
+    },
+    {
+      "account": "0x577D2186e4693546B46dCEe5f4ae89724fCC4F0C",
+      "xring": "257276948656362",
+      "xwring": "37445316942882616134",
+      "amount": 257314.40188321678,
+      "isEOA": true,
+      "lp": [
+        {
+          "address": "0x15f2fBD98a0657e2afcAB08922632e58B1cC9FdD",
+          "totalBalance": 8576.290082165,
+          "totalSupply": "1150780946677922272",
+          "lpBalance": "770914724515",
+          "amount": 0.005745305677105021
+        },
+        {
+          "address": "0xdb279D65225162280fACae2F3Ca8A3D2F63ea9BF",
+          "totalBalance": 3399.651538137,
+          "totalSupply": "533579431024594854",
+          "lpBalance": "339737571816",
+          "amount": 0.002164606226235801
+        }
+      ]
+    },
+    {
+      "account": "0xd0AcDBbBe667143673758C964cA29DB14753D867",
+      "xring": "403287659841804",
+      "xwring": "0",
+      "amount": 403287.659841804,
+      "isEOA": true,
+      "lp": []
+    }
+  ]
+}

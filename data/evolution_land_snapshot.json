@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-19T13:26:39.931Z",
+  "timestamp": "2026-01-26T03:38:12.381Z",
   "chain": "Crab Network",
   "evolution_tokens_count": 7,
   "evolution_tokens": [
@@ -70,7 +70,7 @@
       "name": "Evolution Land Fire",
       "symbol": "FIRE",
       "decimals": 18,
-      "total_supply": "836231202253344164825952",
+      "total_supply": "836690873364152901308844",
       "holders_count": 22,
       "contract_holders_count": 4,
       "eoa_holders_count": 18,
@@ -82,7 +82,7 @@
       },
       "eoa_holders": {
         "0x87f0c169d8acc432acdb5e7d0907322c80ec6621": "152727500419480261838470",
-        "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478": "130922724715334385250549",
+        "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478": "131382395826143121733441",
         "0x4295e87fb5113c85720298d73e4760c240ca41fa": "129572132774417577301327",
         "0x12d529cfa26891cdf1d25453f9851c73e2720373": "67069407057071746321531",
         "0xebd9a48ed1128375eb4383ed4d53478b4fd85a8d": "33853190664803120595846",
@@ -106,7 +106,7 @@
       "name": "Evolution Land Gold",
       "symbol": "GOLD",
       "decimals": 18,
-      "total_supply": "832295011798766048812246",
+      "total_supply": "833016975713570424555108",
       "holders_count": 22,
       "contract_holders_count": 4,
       "eoa_holders_count": 18,
@@ -117,7 +117,7 @@
         "0x90e2fa4099eb1fed203769b99c9c64cdda1acb57": "3135000000000000000000"
       },
       "eoa_holders": {
-        "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478": "196206520628348649630647",
+        "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478": "196928484543153025373509",
         "0x87f0c169d8acc432acdb5e7d0907322c80ec6621": "116934682682369581376582",
         "0x4295e87fb5113c85720298d73e4760c240ca41fa": "82565634298918938255125",
         "0x12d529cfa26891cdf1d25453f9851c73e2720373": "68475237199371788256567",
@@ -142,7 +142,7 @@
       "name": "Evolution Land Wood",
       "symbol": "WOOD",
       "decimals": 18,
-      "total_supply": "601315102932798427687392",
+      "total_supply": "601566415131244258754756",
       "holders_count": 21,
       "contract_holders_count": 4,
       "eoa_holders_count": 17,
@@ -154,7 +154,7 @@
       },
       "eoa_holders": {
         "0x87f0c169d8acc432acdb5e7d0907322c80ec6621": "96096637012234057768133",
-        "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478": "71961210394503303871175",
+        "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478": "72212522592949134938539",
         "0xebd9a48ed1128375eb4383ed4d53478b4fd85a8d": "69255455768658130489465",
         "0x4295e87fb5113c85720298d73e4760c240ca41fa": "66750099251864281790957",
         "0x12d529cfa26891cdf1d25453f9851c73e2720373": "52461615166823969761516",
@@ -177,7 +177,7 @@
       "name": "Evolution Land Silicon",
       "symbol": "SIOO",
       "decimals": 18,
-      "total_supply": "595672130267410941017077",
+      "total_supply": "596392533799370706740187",
       "holders_count": 20,
       "contract_holders_count": 5,
       "eoa_holders_count": 15,
@@ -189,7 +189,7 @@
         "0x58fed52ae6c20bcbdbc2949236595415e5014276": "17654867392444958375"
       },
       "eoa_holders": {
-        "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478": "191442748267636282324088",
+        "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478": "192163151799596048047198",
         "0x87f0c169d8acc432acdb5e7d0907322c80ec6621": "65588004220813004285022",
         "0x4295e87fb5113c85720298d73e4760c240ca41fa": "53701655787814038444605",
         "0xebd9a48ed1128375eb4383ed4d53478b4fd85a8d": "52040617278935821082884",
@@ -211,7 +211,7 @@
       "name": "Evolution Land Water",
       "symbol": "HHO",
       "decimals": 18,
-      "total_supply": "795482245162256515192229",
+      "total_supply": "795856610196507364865239",
       "holders_count": 20,
       "contract_holders_count": 3,
       "eoa_holders_count": 17,
@@ -223,7 +223,7 @@
       "eoa_holders": {
         "0x87f0c169d8acc432acdb5e7d0907322c80ec6621": "157179032014274609584948",
         "0x4295e87fb5113c85720298d73e4760c240ca41fa": "130841661407899268495140",
-        "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478": "106441480758547102711875",
+        "0x9f8d9c183150f15ffba39b7b17c3e1a78e5e5478": "106815845792797952384885",
         "0x12d529cfa26891cdf1d25453f9851c73e2720373": "84031252020958926519922",
         "0xebd9a48ed1128375eb4383ed4d53478b4fd85a8d": "41627916238654281818765",
         "0x73db0f38391583c9f4786f7a317afab23b6749f7": "17521297684491492816437",

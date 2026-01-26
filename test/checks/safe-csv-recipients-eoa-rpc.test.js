@@ -8,7 +8,8 @@ const DARWINIA_RPC_URL = 'https://rpc.darwinia.network';
 const CRAB_RPC_URL = 'https://crab-rpc.darwinia.network';
 const CSV_FILES = [
 	'safe_airdrop_part1.csv',
-	'safe_airdrop_part2.csv'
+	'safe_airdrop_part2.csv',
+	'safe_airdrop_xwring.csv'
 ];
 
 function requestRpc(body, rpcUrl) {

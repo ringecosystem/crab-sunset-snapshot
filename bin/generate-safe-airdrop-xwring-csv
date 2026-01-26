@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const { generateSafeAirdropXwringCsvFile } = require('../src/special/safe-airdrop-xwring-csv');
+
+async function main() {
+	const outputDir = path.join(__dirname, '..', 'data');
+
+	try {
+		const result = generateSafeAirdropXwringCsvFile(outputDir);
+		console.log('✅ Safe xWRING airdrop CSV generated');
+		console.log(`📄 Input: ${path.basename(result.input)}`);
+		console.log(`📄 Output: ${path.basename(result.output)} recipients=${result.recipients_total}`);
+	} catch (error) {
+		console.error('❌ Fatal error:', error.message);
+		process.exit(1);
+	}
+}
+
+main();
